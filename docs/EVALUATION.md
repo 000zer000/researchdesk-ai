@@ -23,3 +23,34 @@ Raw source excerpts for review remain local in ignored `data/runtime/evaluation-
 `attempt-02-incomplete.json` retains the next run (40 lexical / 32 hybrid cases), including fabricated-price, forecast and company-attribution failures. It stopped on the evaluator's empty-date-window retrieval bug. After correction, the final pipeline adds a deterministic capability gate; summaries report origins so policy refusals are not mistaken for model abstention skill. Conflict cases can still fail: the model may confidently prefer a source without acknowledging the synthetic conflicting record.
 
 `attempt-03-complete.json` and its summary preserve the first complete comparison. Its conflict-case abstentions came from a false-positive company-subject heuristic, not conflict reasoning. The subject boundary was corrected and covered by regression tests before the final full replay. The final reported results replace this misleading success signal.
+
+## Executed final replay
+
+Evaluated research runtime commit: `e39bf9ae118b4b031a2408cfa4e56260cd81742c`. Run started 2026-10-30T21:06:44.601040+00:00. The delivery validator checks that the research/finance runtime sources still match this evaluated revision.
+
+
+| Method | Split | Mean recall@5 | Numeric narrative | Supported displayed claims* | Answered / invalid / abstained | Median / p95 seconds |
+|---|---|---:|---:|---:|---|---|
+| lexical | dev replay | 7.3% (n=16) | 9/9 | 11/15 | 15 / 1 / 4 | 5.19 / 11.02 |
+| lexical | final replay | 22.9% (n=16) | 5/9 | 13/16 | 16 / 0 / 4 | 5.02 / 7.07 |
+| hybrid | dev replay | 27.6% (n=16) | 8/9 | 11/13 | 13 / 3 / 4 | 5.78 / 11.52 |
+| hybrid | final replay | 34.4% (n=16) | 6/9 | 14/16 | 16 / 0 / 4 | 5.92 / 6.98 |
+
+*Coding-agent source assessment; independent human review pending. Rejected outputs and refusals are excluded from the displayed-claim support denominator and remain visible in the status counts. Citation relevance is separately recorded in `summary.json`; per-claim reasons and per-citation flags are in `support-review.json`.
+
+
+Across both methods, all 8 expected missing/wrong-scope cases are refused per variant: six capability-policy decisions and two publication-period decisions. This is **not** a claim that Qwen learned to abstain. All 3 synthetic conflict cases fail per variant: the model repeats the original revenue without acknowledging the conflicting supplied record. The injection marker is absent in all 3 injection cases per variant; this narrow check is weaker than general injection resistance.
+
+There are 64 research cases using the actual model, with 71 total model calls including bounded structural repair, and 6,822 measured output tokens. Four model cases are rejected after structure/citation validation (1 lexical, 3 hybrid). All 60 displayed answer claims have existing citation IDs, but only 49/60 were assessed as fully supported by the union of their cited sources (24/31 lexical, 25/29 hybrid). This source assessment is not independent human validation.
+
+## Failures that remain
+
+- **Operating-margin direction (q16):** the model says Apple's margin decreased. The verified financial engine correctly computes an increase from 29.82% to 31.51%, or about 1.69 percentage points. Generated prose can contradict the deterministic panel.
+- **Gross versus net capex (q18):** the requested Dell CFO-minus-gross-capex proxy is 5,920 USD million. The hybrid response gives 5,923, a different net-capex/company free-cash-flow definition. Some citations point to a cash-flow summary that does not contain the required capex input.
+- **Correct number, inadequate citation (hybrid q17):** the Apple cash-flow proxy is correct, but the cited financing-activities passage does not establish capex. Citation existence therefore passes while support fails.
+- **Wrong passage for a true statement (q25):** Dell's debt risk exists elsewhere, but the selected generic risk introduction does not establish it.
+- **Structure failures:** HP printing-risk and certain other responses fail validation even after the single repair attempt; the app exposes rejection instead of substituting authored content.
+- **Weak or generic synthesis:** some responses omit the explanation requested, mix unrelated market/portfolio context into supply-chain risks, or do not explicitly resolve the fiscal-week question.
+- **Strict-scorer limitations:** “decreased by 13.56%” is financially correct for Dell but fails a signed-number check expecting -13.56. A correct amount in billions can fail the requested-millions format. These cases are retained as automatic failures, with separate source-review explanations. No score was silently increased.
+
+Hybrid retrieval is retained because its measured mean recall improves on this set, not because it guarantees correctness. Retrieval recall remains low, especially before fact augmentation. No significance claim or generalization beyond this small repeated corpus is warranted. Wall-clock timings were measured on a working laptop during development; they are descriptive, not a controlled performance benchmark.

@@ -109,4 +109,24 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
       "88,425",
     );
   }
+  await page
+    .getByLabel("Covered company", { exact: true })
+    .selectOption("AAPL");
+  await page.getByLabel("Analysis date", { exact: true }).fill("2024-10-31");
+  await expect(page.locator(".metric strong").first()).toContainText(
+    live ? "383,285" : "Unavailable",
+  );
+  await page.route("**/api/financials?as_of=2024-01-01", (r) =>
+    r.fulfill({
+      status: 503,
+      json: { detail: "Explicit test of a data-service failure" },
+    }),
+  );
+  await page.getByLabel("Analysis date", { exact: true }).fill("2024-01-01");
+  await expect(page.getByRole("alert")).toContainText(
+    "Data service unavailable",
+  );
+  await expect(page.locator(".metric strong").first()).toContainText(
+    "Unavailable",
+  );
 });

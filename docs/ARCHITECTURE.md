@@ -32,3 +32,5 @@ Document content and questions are untrusted data in a user message, subordinate
 Migrations use Alembic; the initial revision defines the PostgreSQL schema and its GIN text index. Embeddings are JSONB arrays to keep storage transparent. Model snapshots and normalized text live in ignored `data/`; runtime metadata paths are machine-specific. No uploaded source, account system or external model vendor is exposed.
 
 Tradeoffs: only annual, consolidated USD data; editorial risk paragraph in the note; small-model citation support is not validated at runtime; no robust public multi-user service; corpus-size scaling, restatement views, lease adjustments and equity bridges are outside V1.
+
+The MLX adapter owns a persistent single-thread executor. MLX imports, model loading, stream generation and cache cleanup all run on that thread; FastAPI workers only submit bounded generation requests. A mutex rejects overlapping generation. This addresses the pinned runtime's thread-affine GPU streams, rather than relying on request-pool thread reuse. The local HTTP adapter remains separate.

@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-10-30T20:59:20.462292+00:00",
-  "commit": "1e0685cee59fda54bfb34d086944f457e535a462",
+  "started_at": "2026-10-30T21:06:44.601040+00:00",
+  "commit": "e39bf9ae118b4b031a2408cfa4e56260cd81742c",
   "records": [
     {
       "id": "q01",
@@ -47,7 +47,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.675764290848747,
+      "elapsed_seconds": 5.545911957975477,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -56,7 +56,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.639965458074585,
+        "elapsed_seconds": 5.511855999939144,
         "prompt_tokens": 2348,
         "generation_tokens": 75,
         "attempts": 1
@@ -107,7 +107,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.180132707813755,
+      "elapsed_seconds": 6.651517959078774,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -116,7 +116,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.144381541991606,
+        "elapsed_seconds": 6.617894249968231,
         "prompt_tokens": 3215,
         "generation_tokens": 77,
         "attempts": 1
@@ -167,7 +167,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.994164584204555,
+      "elapsed_seconds": 5.062922584125772,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -176,7 +176,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.967953874962404,
+        "elapsed_seconds": 5.043318832991645,
         "prompt_tokens": 2308,
         "generation_tokens": 75,
         "attempts": 1
@@ -227,7 +227,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.784252292010933,
+      "elapsed_seconds": 6.24322724994272,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -236,7 +236,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.667784416815266,
+        "elapsed_seconds": 6.208628541091457,
         "prompt_tokens": 2949,
         "generation_tokens": 77,
         "attempts": 1
@@ -287,7 +287,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.273567666998133,
+      "elapsed_seconds": 5.100793374935165,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -296,7 +296,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.2178407500032336,
+        "elapsed_seconds": 5.061119915917516,
         "prompt_tokens": 2299,
         "generation_tokens": 77,
         "attempts": 1
@@ -347,7 +347,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.245395791018382,
+      "elapsed_seconds": 5.638955499976873,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -356,7 +356,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.165168209001422,
+        "elapsed_seconds": 5.5558020828757435,
         "prompt_tokens": 2258,
         "generation_tokens": 77,
         "attempts": 1
@@ -407,7 +407,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.583553832955658,
+      "elapsed_seconds": 5.575325582874939,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -416,7 +416,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.544290375197306,
+        "elapsed_seconds": 5.53753750002943,
         "prompt_tokens": 2503,
         "generation_tokens": 76,
         "attempts": 1
@@ -467,7 +467,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.621103375218809,
+      "elapsed_seconds": 5.32582545792684,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -476,7 +476,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.539001542143524,
+        "elapsed_seconds": 5.226004667114466,
         "prompt_tokens": 2309,
         "generation_tokens": 75,
         "attempts": 1
@@ -527,7 +527,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.369110875064507,
+      "elapsed_seconds": 5.141227457905188,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -536,7 +536,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.337071292102337,
+        "elapsed_seconds": 5.110523417126387,
         "prompt_tokens": 2368,
         "generation_tokens": 75,
         "attempts": 1
@@ -587,7 +587,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.231808209093288,
+      "elapsed_seconds": 5.006096250144765,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -596,7 +596,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.169052875135094,
+        "elapsed_seconds": 4.941142500145361,
         "prompt_tokens": 2253,
         "generation_tokens": 76,
         "attempts": 1
@@ -647,7 +647,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.3616440407931805,
+      "elapsed_seconds": 5.237286083167419,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -656,7 +656,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.330084207933396,
+        "elapsed_seconds": 5.209768333937973,
         "prompt_tokens": 2403,
         "generation_tokens": 75,
         "attempts": 1
@@ -707,7 +707,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.462733500171453,
+      "elapsed_seconds": 5.506076749879867,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -716,7 +716,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.402073291828856,
+        "elapsed_seconds": 5.446904125157744,
         "prompt_tokens": 2497,
         "generation_tokens": 76,
         "attempts": 1
@@ -769,7 +769,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.498730666004121,
+      "elapsed_seconds": 6.593617541948333,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -778,7 +778,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.473056124988943,
+        "elapsed_seconds": 6.570631416980177,
         "prompt_tokens": 2955,
         "generation_tokens": 87,
         "attempts": 1
@@ -831,7 +831,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.996784582966939,
+      "elapsed_seconds": 6.050920333014801,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -840,7 +840,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.961179374950007,
+        "elapsed_seconds": 6.017031082883477,
         "prompt_tokens": 2563,
         "generation_tokens": 89,
         "attempts": 1
@@ -893,7 +893,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.814788250019774,
+      "elapsed_seconds": 10.721853707917035,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -902,7 +902,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.779214832931757,
+        "elapsed_seconds": 10.683566624997184,
         "prompt_tokens": 3326,
         "generation_tokens": 234,
         "attempts": 1
@@ -956,7 +956,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.0810253750532866,
+      "elapsed_seconds": 7.595153958071023,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -965,7 +965,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.038226707838476,
+        "elapsed_seconds": 7.536837666993961,
         "prompt_tokens": 3157,
         "generation_tokens": 87,
         "attempts": 1
@@ -1018,7 +1018,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.57436191686429,
+      "elapsed_seconds": 8.821666207863018,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1027,7 +1027,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 8.543799416860566,
+        "elapsed_seconds": 8.778633708134294,
         "prompt_tokens": 3954,
         "generation_tokens": 95,
         "attempts": 1
@@ -1080,7 +1080,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.725420332979411,
+      "elapsed_seconds": 6.654299708083272,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1089,7 +1089,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.6910837918985635,
+        "elapsed_seconds": 6.611548207933083,
         "prompt_tokens": 2912,
         "generation_tokens": 92,
         "attempts": 1
@@ -1144,7 +1144,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.103398083010688,
+      "elapsed_seconds": 9.765980459051207,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1153,7 +1153,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.072028334019706,
+        "elapsed_seconds": 9.738525625085458,
         "prompt_tokens": 3427,
         "generation_tokens": 236,
         "attempts": 2
@@ -1205,7 +1205,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.250042708124965,
+      "elapsed_seconds": 4.208388791885227,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1214,7 +1214,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.233508124947548,
+        "elapsed_seconds": 4.192464417079464,
         "prompt_tokens": 1440,
         "generation_tokens": 105,
         "attempts": 1
@@ -1270,7 +1270,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.660007833968848,
+      "elapsed_seconds": 11.363482208922505,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1279,7 +1279,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.644120790995657,
+        "elapsed_seconds": 11.345558875007555,
         "prompt_tokens": 3579,
         "generation_tokens": 264,
         "attempts": 2
@@ -1329,7 +1329,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.982512000016868,
+      "elapsed_seconds": 3.990005875006318,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1338,7 +1338,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 3.9652663748711348,
+        "elapsed_seconds": 3.967473041964695,
         "prompt_tokens": 1548,
         "generation_tokens": 81,
         "attempts": 1
@@ -1377,7 +1377,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.849222416058183,
+      "elapsed_seconds": 11.006746541941538,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1386,7 +1386,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.829698249930516,
+        "elapsed_seconds": 10.986351292114705,
         "prompt_tokens": 3731,
         "generation_tokens": 254,
         "attempts": 2
@@ -1436,7 +1436,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.588151499861851,
+      "elapsed_seconds": 4.671447792090476,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1445,7 +1445,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.5705227081198245,
+        "elapsed_seconds": 4.651718541048467,
         "prompt_tokens": 1897,
         "generation_tokens": 79,
         "attempts": 1
@@ -1495,7 +1495,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.338737917132676,
+      "elapsed_seconds": 4.887326208874583,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1504,7 +1504,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.305937208002433,
+        "elapsed_seconds": 4.778361416887492,
         "prompt_tokens": 1845,
         "generation_tokens": 73,
         "attempts": 1
@@ -1554,7 +1554,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.419329542201012,
+      "elapsed_seconds": 7.03875970793888,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1563,7 +1563,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.411950707901269,
+        "elapsed_seconds": 6.987588667077944,
         "prompt_tokens": 1965,
         "generation_tokens": 119,
         "attempts": 1
@@ -1602,7 +1602,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0009184170048683882,
+      "elapsed_seconds": 0.0006496661808341742,
       "model": null
     },
     {
@@ -1638,7 +1638,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.154109723865986e-05,
+      "elapsed_seconds": 0.0026025420520454645,
       "model": null
     },
     {
@@ -1674,7 +1674,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.287498839199543e-05,
+      "elapsed_seconds": 4.433305002748966e-05,
       "model": null
     },
     {
@@ -1710,7 +1710,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0004609581083059311,
+      "elapsed_seconds": 0.0011581669095903635,
       "model": null
     },
     {
@@ -1746,7 +1746,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.8166919946670532e-05,
+      "elapsed_seconds": 2.6958994567394257e-05,
       "model": null
     },
     {
@@ -1782,7 +1782,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.916940376162529e-06,
+      "elapsed_seconds": 8.499948307871819e-06,
       "model": null
     },
     {
@@ -1812,7 +1812,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0018669578712433577,
+      "elapsed_seconds": 0.004994249902665615,
       "model": null
     },
     {
@@ -1842,7 +1842,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0005083750002086163,
+      "elapsed_seconds": 0.0005017919465899467,
       "model": null
     },
     {
@@ -1850,14 +1850,19 @@
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -1867,33 +1872,57 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0056",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0180",
+        "AAPL-2024-p0183",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 0.0012915420811623335,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 4.89489158289507,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 4.872013833140954,
+        "prompt_tokens": 1886,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q36",
       "split": "final",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -1903,33 +1932,57 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0056",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0180",
+        "AAPL-2024-p0183",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 1.6417121514678e-05,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 5.017969249980524,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 4.992200375068933,
+        "prompt_tokens": 1886,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q37",
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -1939,19 +1992,38 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0056",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0180",
+        "AAPL-2024-p0183",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 0.0011619580909609795,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 4.670372749911621,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 4.648540791822597,
+        "prompt_tokens": 1886,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q38",
@@ -2000,7 +2072,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.0859003339428455,
+      "elapsed_seconds": 5.016703249886632,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2009,7 +2081,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.072383791906759,
+        "elapsed_seconds": 5.000740541843697,
         "prompt_tokens": 1613,
         "generation_tokens": 120,
         "attempts": 1
@@ -2064,7 +2136,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.283969749929383,
+      "elapsed_seconds": 10.098080083960667,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2073,7 +2145,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.266975833801553,
+        "elapsed_seconds": 10.078855708008632,
         "prompt_tokens": 3492,
         "generation_tokens": 238,
         "attempts": 2
@@ -2126,7 +2198,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.7314728340134025,
+      "elapsed_seconds": 4.6571057920809835,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2135,7 +2207,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.713462583022192,
+        "elapsed_seconds": 4.641236334107816,
         "prompt_tokens": 1622,
         "generation_tokens": 113,
         "attempts": 1
@@ -2185,7 +2257,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.530218874802813,
+      "elapsed_seconds": 5.751913875108585,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2194,7 +2266,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.47153374995105,
+        "elapsed_seconds": 5.697213749866933,
         "prompt_tokens": 2522,
         "generation_tokens": 75,
         "attempts": 1
@@ -2245,7 +2317,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.21255287504755,
+      "elapsed_seconds": 7.637235000031069,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2254,7 +2326,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.135754708899185,
+        "elapsed_seconds": 7.555249999975786,
         "prompt_tokens": 3461,
         "generation_tokens": 77,
         "attempts": 1
@@ -2305,7 +2377,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.368252750020474,
+      "elapsed_seconds": 6.027065791189671,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2314,7 +2386,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.306026167003438,
+        "elapsed_seconds": 5.971171542070806,
         "prompt_tokens": 2828,
         "generation_tokens": 75,
         "attempts": 1
@@ -2365,7 +2437,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.213194292038679,
+      "elapsed_seconds": 6.950533957919106,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2374,7 +2446,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.1386688749771565,
+        "elapsed_seconds": 6.87526745791547,
         "prompt_tokens": 3221,
         "generation_tokens": 77,
         "attempts": 1
@@ -2425,7 +2497,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.470803291071206,
+      "elapsed_seconds": 5.900244165910408,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2434,7 +2506,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.287977792089805,
+        "elapsed_seconds": 5.758245749864727,
         "prompt_tokens": 2604,
         "generation_tokens": 77,
         "attempts": 1
@@ -2485,7 +2557,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.907389499945566,
+      "elapsed_seconds": 6.28436474991031,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2494,7 +2566,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.719694624887779,
+        "elapsed_seconds": 6.099350292002782,
         "prompt_tokens": 2723,
         "generation_tokens": 81,
         "attempts": 1
@@ -2545,7 +2617,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.237754125148058,
+      "elapsed_seconds": 6.454702500021085,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2554,7 +2626,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.691661624936387,
+        "elapsed_seconds": 5.933996500214562,
         "prompt_tokens": 2740,
         "generation_tokens": 76,
         "attempts": 1
@@ -2605,7 +2677,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.0651070000603795,
+      "elapsed_seconds": 6.018290541833267,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2614,7 +2686,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.882334416965023,
+        "elapsed_seconds": 5.729134416906163,
         "prompt_tokens": 2618,
         "generation_tokens": 81,
         "attempts": 1
@@ -2665,7 +2737,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.660053541185334,
+      "elapsed_seconds": 5.4630653341300786,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2674,7 +2746,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.535172250121832,
+        "elapsed_seconds": 5.358540832996368,
         "prompt_tokens": 2440,
         "generation_tokens": 75,
         "attempts": 1
@@ -2725,7 +2797,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.939504709094763,
+      "elapsed_seconds": 5.876314667053521,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2734,7 +2806,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.7914928330574185,
+        "elapsed_seconds": 5.7393912088591605,
         "prompt_tokens": 2669,
         "generation_tokens": 81,
         "attempts": 1
@@ -2774,7 +2846,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.905109457904473,
+      "elapsed_seconds": 11.819629458943382,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2783,7 +2855,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.802172666881233,
+        "elapsed_seconds": 11.711146625922993,
         "prompt_tokens": 5935,
         "generation_tokens": 118,
         "attempts": 2
@@ -2834,7 +2906,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.944507834035903,
+      "elapsed_seconds": 6.275023624999449,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2843,7 +2915,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.713337166933343,
+        "elapsed_seconds": 6.134549041977152,
         "prompt_tokens": 2477,
         "generation_tokens": 81,
         "attempts": 1
@@ -2896,7 +2968,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.592531374888495,
+      "elapsed_seconds": 6.805832709185779,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2905,7 +2977,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.4361343330238014,
+        "elapsed_seconds": 6.6934531659353524,
         "prompt_tokens": 3044,
         "generation_tokens": 87,
         "attempts": 1
@@ -2958,7 +3030,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.367286917055026,
+      "elapsed_seconds": 5.9676450421102345,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2967,7 +3039,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.119685125071555,
+        "elapsed_seconds": 5.749443958047777,
         "prompt_tokens": 2593,
         "generation_tokens": 89,
         "attempts": 1
@@ -3020,7 +3092,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.398168291896582,
+      "elapsed_seconds": 6.576641541905701,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3029,7 +3101,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.164383416995406,
+        "elapsed_seconds": 6.382212500087917,
         "prompt_tokens": 2744,
         "generation_tokens": 103,
         "attempts": 1
@@ -3083,7 +3155,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.092473041964695,
+      "elapsed_seconds": 6.722604417009279,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3092,7 +3164,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.9685801670420915,
+        "elapsed_seconds": 6.621288707945496,
         "prompt_tokens": 3157,
         "generation_tokens": 83,
         "attempts": 1
@@ -3145,7 +3217,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.470877083018422,
+      "elapsed_seconds": 8.358655290910974,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3154,7 +3226,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 8.411256625084206,
+        "elapsed_seconds": 8.301275416044518,
         "prompt_tokens": 3942,
         "generation_tokens": 95,
         "attempts": 1
@@ -3207,7 +3279,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.348427792079747,
+      "elapsed_seconds": 6.492640707874671,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3216,7 +3288,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.219591333065182,
+        "elapsed_seconds": 6.364347249967977,
         "prompt_tokens": 2767,
         "generation_tokens": 92,
         "attempts": 1
@@ -3270,7 +3342,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.0730247921310365,
+      "elapsed_seconds": 5.3818007910158485,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3279,7 +3351,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.018716708058491,
+        "elapsed_seconds": 5.250398457981646,
         "prompt_tokens": 1544,
         "generation_tokens": 136,
         "attempts": 1
@@ -3332,7 +3404,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.547561292070895,
+      "elapsed_seconds": 4.619495416991413,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3341,7 +3413,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.495232625165954,
+        "elapsed_seconds": 4.567139999940991,
         "prompt_tokens": 1439,
         "generation_tokens": 119,
         "attempts": 1
@@ -3380,7 +3452,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 9.72958808299154,
+      "elapsed_seconds": 10.041733665857464,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3389,7 +3461,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.656108042225242,
+        "elapsed_seconds": 9.970328624127433,
         "prompt_tokens": 3033,
         "generation_tokens": 258,
         "attempts": 2
@@ -3443,7 +3515,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.885125916916877,
+      "elapsed_seconds": 5.082496042130515,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3452,7 +3524,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.829941374948248,
+        "elapsed_seconds": 4.995472416980192,
         "prompt_tokens": 1402,
         "generation_tokens": 144,
         "attempts": 1
@@ -3491,7 +3563,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.74419975001365,
+      "elapsed_seconds": 11.508380540879443,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3500,7 +3572,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.65642529190518,
+        "elapsed_seconds": 11.402722375001758,
         "prompt_tokens": 3641,
         "generation_tokens": 250,
         "attempts": 2
@@ -3550,7 +3622,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.605926292017102,
+      "elapsed_seconds": 5.983547291951254,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3559,7 +3631,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.486679499968886,
+        "elapsed_seconds": 5.847546583041549,
         "prompt_tokens": 1862,
         "generation_tokens": 79,
         "attempts": 1
@@ -3609,7 +3681,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.380298875039443,
+      "elapsed_seconds": 4.677182083949447,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3618,7 +3690,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.25245266687125,
+        "elapsed_seconds": 4.48268104204908,
         "prompt_tokens": 1661,
         "generation_tokens": 73,
         "attempts": 1
@@ -3668,7 +3740,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.997695249971002,
+      "elapsed_seconds": 5.0590465411078185,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3677,7 +3749,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.937099166912958,
+        "elapsed_seconds": 4.985300624975935,
         "prompt_tokens": 1777,
         "generation_tokens": 101,
         "attempts": 1
@@ -3716,7 +3788,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0006396248936653137,
+      "elapsed_seconds": 0.001491541974246502,
       "model": null
     },
     {
@@ -3752,7 +3824,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.7209054678678513e-05,
+      "elapsed_seconds": 3.595813177525997e-05,
       "model": null
     },
     {
@@ -3788,7 +3860,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.4416949599981308e-05,
+      "elapsed_seconds": 2.737506292760372e-05,
       "model": null
     },
     {
@@ -3824,7 +3896,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.033286727964878e-05,
+      "elapsed_seconds": 2.2665830329060555e-05,
       "model": null
     },
     {
@@ -3860,7 +3932,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.929195761680603e-05,
+      "elapsed_seconds": 2.933293581008911e-05,
       "model": null
     },
     {
@@ -3896,7 +3968,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 1.4166813343763351e-05,
+      "elapsed_seconds": 1.4790799468755722e-05,
       "model": null
     },
     {
@@ -3926,7 +3998,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.000631249975413084,
+      "elapsed_seconds": 0.0016047090757638216,
       "model": null
     },
     {
@@ -3956,7 +4028,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.00046074995771050453,
+      "elapsed_seconds": 0.0005072921048849821,
       "model": null
     },
     {
@@ -3964,14 +4036,19 @@
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "hybrid",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -3981,33 +4058,57 @@
         "AAPL-2024-p0248",
         "AAPL-2024-p0072"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 1.695798709988594e-05,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 5.803977999836206,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.721756750019267,
+        "prompt_tokens": 2038,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q36",
       "split": "final",
       "category": "synthetic_conflict",
       "method": "hybrid",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -4017,33 +4118,57 @@
         "AAPL-2024-p0248",
         "AAPL-2024-p0072"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 1.691700890660286e-05,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 4.738617958966643,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 4.659958208911121,
+        "prompt_tokens": 2038,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q37",
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "hybrid",
-      "status": "abstained",
-      "origin": "deterministic capability policy; no inference",
+      "status": "answered",
+      "origin": "live local inference",
       "answer": {
-        "abstain": true,
-        "claims": [],
-        "limitations": [
-          "The question names a different or unsupported company. Select a covered company and ask about its filings."
-        ]
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": []
       },
       "error": null,
       "retrieved_ids": [
@@ -4053,19 +4178,38 @@
         "AAPL-2024-p0248",
         "AAPL-2024-p0072"
       ],
-      "generation_evidence_ids": [],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-revenue"
+      ],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": null,
-      "citation_count": 0,
-      "claim_count": 0,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": true,
-      "elapsed_seconds": 1.7167069017887115e-05,
-      "model": null
+      "conflict_acknowledged": false,
+      "elapsed_seconds": 4.816854167031124,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 4.7612534170039,
+        "prompt_tokens": 2038,
+        "generation_tokens": 76,
+        "attempts": 1
+      }
     },
     {
       "id": "q38",
@@ -4115,7 +4259,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.4771068750415,
+      "elapsed_seconds": 5.33590554096736,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4124,7 +4268,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.421619875123724,
+        "elapsed_seconds": 5.276470124954358,
         "prompt_tokens": 1570,
         "generation_tokens": 136,
         "attempts": 1
@@ -4178,7 +4322,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.361117708031088,
+      "elapsed_seconds": 5.131916208192706,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4187,7 +4331,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.310450042132288,
+        "elapsed_seconds": 5.077620625030249,
         "prompt_tokens": 1576,
         "generation_tokens": 135,
         "attempts": 1
@@ -4241,7 +4385,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.174708333099261,
+      "elapsed_seconds": 6.819539749994874,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4250,7 +4394,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.124500749865547,
+        "elapsed_seconds": 6.649877541931346,
         "prompt_tokens": 1579,
         "generation_tokens": 135,
         "attempts": 1

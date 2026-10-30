@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-30T23:20:51.325910+00:00",
+  "engine": "PostgreSQL 17.0 native, isolated ResearchDesk cluster",
+  "before": {
+    "documents": 6,
+    "passages": 2851,
+    "facts": 48,
+    "fact_digest_sha256": "ae63f8f96f17ee9fe6b382c6f72048eab32ce1c8ecc11f986a871dd2e8003410"
+  },
+  "after": {
+    "documents": 6,
+    "passages": 2851,
+    "facts": 48,
+    "fact_digest_sha256": "ae63f8f96f17ee9fe6b382c6f72048eab32ce1c8ecc11f986a871dd2e8003410"
+  },
+  "equal": true,
+  "migration_reapply": "alembic upgrade head succeeded; no data reset"
+}

@@ -1,4 +1,5 @@
 import json
+import logging
 import threading
 from datetime import date
 from typing import Annotated, Literal
@@ -17,6 +18,7 @@ from .research import AskInput, research
 from .search import serialize
 
 app = FastAPI(title="ResearchDesk", version="1.0.0")
+logger = logging.getLogger("researchdesk")
 DB = Annotated[Session, Depends(session_dependency)]
 inference_gate = threading.BoundedSemaphore(1)
 export_gate = threading.BoundedSemaphore(2)
@@ -89,6 +91,7 @@ def ask(args: AskInput, session: DB):
     except TimeoutError as error:
         raise HTTPException(504, str(error)) from error
     except (RuntimeError, FileNotFoundError, ImportError, OSError) as error:
+        logger.warning("Local inference unavailable (%s)", type(error).__name__, exc_info=True)
         raise HTTPException(
             503, "Local AI unavailable. Check model setup and server logs."
         ) from error

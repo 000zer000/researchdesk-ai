@@ -1,0 +1,1414 @@
+[
+  {
+    "method": "lexical",
+    "id": "q01",
+    "reviewed_at": "2026-10-30T23:20:06.812884+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "d2bdfb29414de0150116ca61cb916fd61d9c4ffbfffab1b9d8e13e4a34560297",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q02",
+    "reviewed_at": "2026-10-30T23:20:06.814690+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7399ef17441965a9fc8f66ded777f175097b7310f60929f12dc17018bd54baff",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q03",
+    "reviewed_at": "2026-10-30T23:20:06.814705+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "d0da1a8a81526cd39972917ac44425ceb5cc19f956058a7a18d739ce26a09d2e",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q04",
+    "reviewed_at": "2026-10-30T23:20:06.814712+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "13b29eea1c9be839a36a16588cb9be69ab07d492d78a096ee0a5aaa20d0554af",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q05",
+    "reviewed_at": "2026-10-30T23:20:06.814718+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "48530712d74ec77cc20a8943621bd7258daa77c92f401a1ad76804b1ed59099c",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q06",
+    "reviewed_at": "2026-10-30T23:20:06.814724+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "914d3d318f0f25f8c99926d3b72fc933fd09bdc2d0ccd5ec7385cd88a0dac137",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original USD5,771 million is correctly expressed as USD5.771 billion, but the requested millions format is not followed.",
+        "citations": [
+          {
+            "id": "DELL-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q07",
+    "reviewed_at": "2026-10-30T23:20:06.814729+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1eea72eab1bbf6fb8edd1498f0364a6d8d23cbeae0a8e1148cd9c8a7bfef8bcd",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q08",
+    "reviewed_at": "2026-10-30T23:20:06.814735+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "effc752e566a11b4f98c763164cfff4f484bf68b4bc37a5eb88bc53cadad7e05",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "USD5.2 billion rounds the original USD5.211 billion to the stated precision; requested USD-million format and tolerance are not met.",
+        "citations": [
+          {
+            "id": "DELL-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q09",
+    "reviewed_at": "2026-10-30T23:20:06.814740+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "4b4ac4ea6602378febf46c846bfc741cc5617aa145cbc0bcdfcf4820977a551d",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q10",
+    "reviewed_at": "2026-10-30T23:20:06.814745+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "a095d44e2ee3641e5dcb0021c6f9be1fac486049aadb3cf785609614a288df78",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q11",
+    "reviewed_at": "2026-10-30T23:20:06.814750+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "0182c324a150f0fd460949c259f23e596255061e37f3594cd8b8ca1ab75f5050",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q12",
+    "reviewed_at": "2026-10-30T23:20:06.814755+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "db7cbdfe7c51dbf457803e8ae007922cebd8b1d1ec78d0cf9661ef294520490d",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q13",
+    "reviewed_at": "2026-10-30T23:20:06.814763+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1a3beeed89be4087b8d8b0bcb5e8bd858d41f92664551d272a7d57be9d03ea03",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "AAPL-2023-revenue",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q14",
+    "reviewed_at": "2026-10-30T23:20:06.814769+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "2cb2331ab00e837997a6717ddc12515445adc321825cb556f122e8149f9d499d",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "DELL-2023-revenue",
+            "relevant": true
+          },
+          {
+            "id": "DELL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q15",
+    "reviewed_at": "2026-10-30T23:20:06.814774+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "d96cab9148b086d3a5c7d28fa0e4eb5d6213bea707adf3473d6a6def4ee08eaf",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "HPQ-2024-revenue",
+            "relevant": true
+          },
+          {
+            "id": "HPQ-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q16",
+    "reviewed_at": "2026-10-30T23:20:06.814780+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "6ece9a77569fc0bea9a460787af2bb02d37e4abbfb296afdf52525f1d5011345",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "False direction: operating margin increased from 29.82% to 31.51%. The cited passages concern gross margin/product sales and do not support a decrease in operating margin.",
+        "citations": [
+          {
+            "id": "AAPL-2023-p0150",
+            "relevant": false
+          },
+          {
+            "id": "AAPL-2024-p0151",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q17",
+    "reviewed_at": "2026-10-30T23:20:06.814786+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "c8844d455ea2b2a515b9592643b4bcee614c79f04aa60fedf5cb549fc1b79761",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "AAPL-2024-cfo",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0174",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q18",
+    "reviewed_at": "2026-10-30T23:20:06.814792+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "381682adf3408edd7ef9ed00f8e45c1e336454d17e026422e68881ad0c87e286",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "The number 5,920 matches CFO less gross cash capex, but the cited prose presents company-defined net capex/free cash flow of 5,923. The required gross capex input 2,756 is not in the cited evidence.",
+        "citations": [
+          {
+            "id": "DELL-2024-cfo",
+            "relevant": true
+          },
+          {
+            "id": "DELL-2024-p0234",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q19",
+    "reviewed_at": "2026-10-30T23:20:06.814797+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "261a0bd7899b07df709347569249d9b4951b28716b338223a72e63af570baf70",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "The response mixes supplier prepayment/credit/cyber risks with investment-portfolio liquidity and market-risk context. Not every material supply-chain attribution is established by these citations.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0125",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0134",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0164",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q20",
+    "reviewed_at": "2026-10-30T23:20:06.814804+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1914fa39e01141f3f8129d05b25fb2e92488ea4f9f1deb1c3502d66a8a2b69ff",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited single/limited-source disclosures support the generic risk statement, but it does not explain why the risk matters as requested.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0039",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0214",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q21",
+    "reviewed_at": "2026-10-30T23:20:06.814810+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "50063f0cb749c2f9a1f5b8fb17e214975f3ab8841fa1562ff9aeb37ad52f96ba",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "Business disruption from industrial accidents is supported, but the statement causally attributing price fluctuations to those accidents is not established; FX and trade-restriction passages do not establish that link.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0060",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0123",
+            "relevant": false
+          },
+          {
+            "id": "AAPL-2024-p0057",
+            "relevant": false
+          },
+          {
+            "id": "AAPL-2024-p0058",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q22",
+    "reviewed_at": "2026-10-30T23:20:06.814817+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "c28dc1a4ff1d3544dd8cd249eeb5f1b23e6afa6813c0fbe825c814da41da1c7b",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited confidentiality/security disclosures support reputational, financial, legal and operational consequences.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0094",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q24",
+    "reviewed_at": "2026-10-30T23:20:06.814823+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "f887c3bda539cda95685effd667203aa076c0150fd8889d44199b59022055a4a",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The acquisition-financing paragraph explicitly describes restrictive covenants limiting capital raising and operating flexibility.",
+        "citations": [
+          {
+            "id": "DELL-2024-p0122",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q25",
+    "reviewed_at": "2026-10-30T23:20:06.814828+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "56ac76c3507b7b2fa0b7893c34f7096bd2bb63a4b078e42c08599abb19d1ba6b",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "The claim is true elsewhere in the filing, but this citation is only the generic risk-factor introduction and contains no outstanding-debt disclosure.",
+        "citations": [
+          {
+            "id": "DELL-2024-p0094",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q26",
+    "reviewed_at": "2026-10-30T23:20:06.814833+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "369d09964fadbc107a406d1c03e6fd33d11d7d62f186f6ab03345d61f461bfee",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited passage supports the fiscal-calendar description. The answer does not explicitly resolve the requested 52-versus-53-week question.",
+        "citations": [
+          {
+            "id": "AAPL-2023-p0172",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q35",
+    "reviewed_at": "2026-10-30T23:20:06.814839+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q36",
+    "reviewed_at": "2026-10-30T23:20:06.814844+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q37",
+    "reviewed_at": "2026-10-30T23:20:06.814849+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q38",
+    "reviewed_at": "2026-10-30T23:20:06.814855+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "910a01167b8d6fdf49a75dfa29877bcbed8b6a6346d89dcf000b4a8179edad01",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "Supplier disruptions are grounded, but portfolio-liquidity/financial-results wording is generalized into supplier risks without the required source connection.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0125",
+            "relevant": false
+          },
+          {
+            "id": "AAPL-2024-p0134",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0164",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q39",
+    "reviewed_at": "2026-10-30T23:20:06.814862+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "361c179ccc5bb0eacad33dfd89861884f716bc1dbff003f44416b5a9ef4fc959",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "Supplier disruption and cybersecurity are grounded; investment-portfolio liquidity is not established as a supplier/supply-chain risk by the cited text.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0125",
+            "relevant": false
+          },
+          {
+            "id": "AAPL-2024-p0134",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0164",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "lexical",
+    "id": "q40",
+    "reviewed_at": "2026-10-30T23:20:06.814869+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "6b585b09ccdafa2b762bee37c7489373afe723c0a1db97561fe15fdc794f03c9",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "A supplier-disruption passage supports the generic existence of supply-chain risk, but the response does not identify the risks requested.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0125",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0134",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0164",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q01",
+    "reviewed_at": "2026-10-30T23:20:06.814874+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "d2bdfb29414de0150116ca61cb916fd61d9c4ffbfffab1b9d8e13e4a34560297",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q02",
+    "reviewed_at": "2026-10-30T23:20:06.814878+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7399ef17441965a9fc8f66ded777f175097b7310f60929f12dc17018bd54baff",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q03",
+    "reviewed_at": "2026-10-30T23:20:06.814883+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "d0da1a8a81526cd39972917ac44425ceb5cc19f956058a7a18d739ce26a09d2e",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q04",
+    "reviewed_at": "2026-10-30T23:20:06.814888+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "13b29eea1c9be839a36a16588cb9be69ab07d492d78a096ee0a5aaa20d0554af",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "AAPL-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q05",
+    "reviewed_at": "2026-10-30T23:20:06.814892+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "48530712d74ec77cc20a8943621bd7258daa77c92f401a1ad76804b1ed59099c",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q06",
+    "reviewed_at": "2026-10-30T23:20:06.814897+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "cf9212d14e2d0ef0645bdaa307f3f7f5054549e92f2e3df07b75c25ad8a52d4f",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q07",
+    "reviewed_at": "2026-10-30T23:20:06.814902+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1eea72eab1bbf6fb8edd1498f0364a6d8d23cbeae0a8e1148cd9c8a7bfef8bcd",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q08",
+    "reviewed_at": "2026-10-30T23:20:06.814906+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1c2bdafaf993dfba2cca49eb0b2406d3316acc357abe50a993600668da8f1d17",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "DELL-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q09",
+    "reviewed_at": "2026-10-30T23:20:06.814911+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "4b4ac4ea6602378febf46c846bfc741cc5617aa145cbc0bcdfcf4820977a551d",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2023-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q10",
+    "reviewed_at": "2026-10-30T23:20:06.814916+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "ee13f2ce08eb9b85e3bee2e08b108bef9e10a3f4d26081901d56c4f3cfe349fc",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2023-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q12",
+    "reviewed_at": "2026-10-30T23:20:06.814921+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "add02cef3e25b231864e7aa8105edd65dd32dd4697b689986cf178febb1918d7",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original inline-XBRL-checked annual consolidated value, company and period support this statement at its expressed precision.",
+        "citations": [
+          {
+            "id": "HPQ-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q13",
+    "reviewed_at": "2026-10-30T23:20:06.814926+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "1a3beeed89be4087b8d8b0bcb5e8bd858d41f92664551d272a7d57be9d03ea03",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "AAPL-2023-revenue",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q14",
+    "reviewed_at": "2026-10-30T23:20:06.814931+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "2cb2331ab00e837997a6717ddc12515445adc321825cb556f122e8149f9d499d",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "DELL-2023-revenue",
+            "relevant": true
+          },
+          {
+            "id": "DELL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q15",
+    "reviewed_at": "2026-10-30T23:20:06.814936+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "b9d50114af7530014ddd31a0205445bbbaf92938c938b7185c30fa3dd0eb00ad",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "Recomputed from the original annual facts and checked against the cited inputs. Direction and magnitude are supported; the strict automated scorer can reject a direction word instead of a signed number.",
+        "citations": [
+          {
+            "id": "HPQ-2023-revenue",
+            "relevant": true
+          },
+          {
+            "id": "HPQ-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q16",
+    "reviewed_at": "2026-10-30T23:20:06.814941+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "9731619b717146c67420fe0049fc47134584a3cc16a4f9cdd67420c34227009c",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "False direction: the cited operating-income figures and the original revenue facts imply an increase in operating margin, not a decrease.",
+        "citations": [
+          {
+            "id": "AAPL-2023-operating_income",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-operating_income",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q17",
+    "reviewed_at": "2026-10-30T23:20:06.814946+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "378b2fc95e5b9d3ce0fca69332c800deedcf7e09c3229ade7fc9b14b52e61333",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "The number 108,807 is correct, but the cited financing-activities passage does not supply capex 9,447. The union of cited passages is insufficient to derive the number.",
+        "citations": [
+          {
+            "id": "AAPL-2024-cfo",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0175",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q18",
+    "reviewed_at": "2026-10-30T23:20:06.814951+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "bfe649a0858232ad666af355930cb3bfb0510cbe528bfa920af50ffad2684616",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "5,923 is a different company-defined net-capex free-cash-flow measure; the requested gross cash-capex proxy is 8,676 minus 2,756 = 5,920. The cited cash-flow summary does not establish capex.",
+        "citations": [
+          {
+            "id": "DELL-2024-cfo",
+            "relevant": true
+          },
+          {
+            "id": "DELL-2024-p0278",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q19",
+    "reviewed_at": "2026-10-30T23:20:06.814957+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "6b200764accbd3c77e1e60d1b13d6340082cda8a3619480fd4c4610ccbdf02f8",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The union of cited supplier-concentration, vendor-credit and natural-disaster passages supports every risk named. Individual extra citations can still be irrelevant.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0127",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0058",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0060",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q20",
+    "reviewed_at": "2026-10-30T23:20:06.814963+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "607c51ec1c49b7f2591e7cc56c18f2257e38a4c06357bede191d859cd7e6a055",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited single/limited-source disclosures support the generic risk statement, but it does not explain why the risk matters as requested.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0040",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0075",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0214",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q22",
+    "reviewed_at": "2026-10-30T23:20:06.814969+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "68d161490e2ef683f8e2fcac93ddc0f1d214022fb92c34153964bb9fd2d92521",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited confidentiality/security disclosures support reputational, financial, legal and operational consequences.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0094",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0098",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0097",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0095",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0118",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q24",
+    "reviewed_at": "2026-10-30T23:20:06.814975+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "f887c3bda539cda95685effd667203aa076c0150fd8889d44199b59022055a4a",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The acquisition-financing paragraph explicitly describes restrictive covenants limiting capital raising and operating flexibility.",
+        "citations": [
+          {
+            "id": "DELL-2024-p0122",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q25",
+    "reviewed_at": "2026-10-30T23:20:06.814980+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "56ac76c3507b7b2fa0b7893c34f7096bd2bb63a4b078e42c08599abb19d1ba6b",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": false,
+        "reason": "The claim is true elsewhere in the filing, but the cited generic risk introduction does not support the specific debt assertion.",
+        "citations": [
+          {
+            "id": "DELL-2024-p0094",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q26",
+    "reviewed_at": "2026-10-30T23:20:06.814985+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "306bf29be7a9f3491b18941801a6430c03c88376a2698b0a0ffd1d1e92535604",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The cited passage supports the fiscal-calendar description. The answer does not explicitly resolve the requested 52-versus-53-week question.",
+        "citations": [
+          {
+            "id": "AAPL-2023-p0144",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q35",
+    "reviewed_at": "2026-10-30T23:20:06.814991+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q36",
+    "reviewed_at": "2026-10-30T23:20:06.814996+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q37",
+    "reviewed_at": "2026-10-30T23:20:06.815001+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "7d23eaadec75fd92daf86b007f3ae71f66515ce77cc37d66ae0277a24c684146",
+    "answers_question": false,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The original published revenue is supported, but the response fails to acknowledge the synthetic conflicting record. Support does not imply successful conflict handling.",
+        "citations": [
+          {
+            "id": "AAPL-2024-revenue",
+            "relevant": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q38",
+    "reviewed_at": "2026-10-30T23:20:06.815006+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "6b200764accbd3c77e1e60d1b13d6340082cda8a3619480fd4c4610ccbdf02f8",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The union of cited supplier-concentration, vendor-credit and natural-disaster passages supports every risk named. Individual extra citations can still be irrelevant.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0127",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0058",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0060",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q39",
+    "reviewed_at": "2026-10-30T23:20:06.815014+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "3030be8252c1173157c105a6eba500b82969d75990fc8ae12cfa4cfc8817c496",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The union of cited supplier-concentration, vendor-credit and natural-disaster passages supports every risk named. Individual extra citations can still be irrelevant.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0127",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0058",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0060",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "method": "hybrid",
+    "id": "q40",
+    "reviewed_at": "2026-10-30T23:20:06.815020+00:00",
+    "reviewer": "Codex coding-agent source assessment; not independent human review",
+    "answer_sha256": "3030be8252c1173157c105a6eba500b82969d75990fc8ae12cfa4cfc8817c496",
+    "answers_question": true,
+    "claims": [
+      {
+        "supported": true,
+        "reason": "The union of cited supplier-concentration, vendor-credit and natural-disaster passages supports every risk named. Individual extra citations can still be irrelevant.",
+        "citations": [
+          {
+            "id": "AAPL-2024-p0072",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0127",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0073",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0058",
+            "relevant": true
+          },
+          {
+            "id": "AAPL-2024-p0060",
+            "relevant": false
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -6,6 +6,12 @@ Apple is the primary company; Dell and HP are operating peers. Coverage is delib
 
 This repository contains an implemented FastAPI/PostgreSQL/React application, source acquisition and parsing, local MiniLM retrieval, an executed Qwen model adapter, financial calculations, a three-page PDF note, tests and evaluation commands. See [verification status](docs/VERIFICATION.md) and [evaluation methodology](docs/EVALUATION.md) for measured results and limitations. CI uses explicit test doubles; it does not prove model quality.
 
+The final 40-case comparison produced 80 pipeline results: 64 real-model research cases and 16 deterministic refusals. Hybrid retrieval improved mean recall@5 from 15.1% to 31.0% on this small replay set; both variants scored 14/18 on strict numeric narrative checks. **The model still gets some financial interpretations wrong and fails all three synthetic conflict cases.** Deterministic tables/DCF are separately verified. Inspect the evidence rather than treating generated prose as a verified financial conclusion.
+
+![Real local-model research screen](docs/demo/research-desktop.png)
+
+Watch the actual browser recording in the [v1.0.0 release](https://github.com/000zer000/researchdesk-ai/releases/tag/v1.0.0); its [metadata](docs/demo/recording.json) records the actual local model call. No interactive AI service is hosted publicly.
+
 ## Run locally
 
 Verified inference target: Apple M1, 8 GB RAM, macOS, Python 3.12. The selected Qwen 1.5B 4-bit model is small enough for this machine. Downloads are free; no card, paid endpoint or API key is used. First setup requires internet access to public sources and model repositories; ordinary research uses only the cache and local model.
@@ -55,11 +61,14 @@ E2E_MODE=live npm run e2e # running real-data app + local model required
 cd ..
 uv run python scripts/verify_inline_facts.py
 uv run researchdesk evaluate # real local inference, outside deterministic CI
+uv run python scripts/summarize_review.py --validate-only # validates the shipped annotations/fingerprints
 ```
 
 The required CI job runs PostgreSQL integration tests without skips, Chromium's end-to-end journey, and a separate clean Docker Compose migration/import/restart-persistence check. Compose CI uses an **original synthetic fixture**, not redistributed SEC content. Real-source import and real inference are checked locally and reported separately.
 
 `researchdesk evaluate` uses frozen `evaluation/cases.json`. It records the current code commit, model revision, elapsed time and accessible token counts. It never sends expected answers to the generation prompt. It overwrites result files, so commit or copy a prior run first. Reference creation and source-support review are separate from inference.
+
+Source-review labels are bound to answer hashes. After a new model run, existing annotations may become stale and must be reviewed again; the validator will reject stale labels. `scripts/summarize_review.py` without `--validate-only` regenerates the summary only after checking those annotations. Coding-agent source assessment is not independent human review.
 
 ## Containers
 

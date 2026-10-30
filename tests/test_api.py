@@ -54,3 +54,19 @@ def test_pdf_uses_same_scenario_and_updates(populated):
     assert "not a live model response" in " ".join(a.pages[0].extract_text().split())
     with pytest.raises(ValueError, match="Base revenue"):
         make_report(populated, date(2024, 12, 31), DCFInput(base_revenue=999))
+
+
+@pytest.mark.integration
+def test_unavailable_ai_is_logged_and_reported_without_inventing_an_answer(
+    client, monkeypatch, caplog
+):
+    import researchdesk.api as api
+
+    def unavailable(*args, **kwargs):
+        raise RuntimeError("Explicit simulated backend failure")
+
+    monkeypatch.setattr(api, "research", unavailable)
+    response = client.post("/api/research", json={"question": "annual revenue"})
+    assert response.status_code == 503
+    assert response.json()["detail"] == "Local AI unavailable. Check model setup and server logs."
+    assert "Local inference unavailable (RuntimeError)" in caplog.text

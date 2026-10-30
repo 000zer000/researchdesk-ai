@@ -3,6 +3,7 @@
 import json
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 from urllib.parse import urlparse
 
@@ -39,34 +40,51 @@ def download_llm() -> str:
 
 class MLXProvider:
     def __init__(self):
-        # Import/load only on first inference. The health endpoint never loads a model.
+        self.metadata = json.loads((settings.data_dir / "runtime" / "llm.json").read_text())
+        self.lock = threading.Lock()
+        # MLX streams belong to the thread that creates them. FastAPI can use a
+        # different worker on the next request, so imports, loading and generation
+        # all stay on one persistent owner thread (also in the evaluation CLI).
+        self.executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix="researchdesk-mlx")
+        try:
+            self.executor.submit(self._load).result()
+        except BaseException:
+            self.executor.shutdown(wait=True)
+            raise
+
+    def _load(self):
         from mlx_lm import load
 
-        self.metadata = json.loads((settings.data_dir / "runtime" / "llm.json").read_text())
         self.model, self.tokenizer = load(self.metadata["path"])
-        self.lock = threading.Lock()
 
     def generate(
         self, messages: list[dict], timeout_seconds: float | None = None
     ) -> tuple[str, dict]:
-        from mlx_lm import stream_generate
-        from mlx_lm.sample_utils import make_sampler
-
         if not self.lock.acquire(blocking=False):
             raise RuntimeError("Local model is busy; retry after the current request")
         try:
-            prompt = self.tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
-            start = time.monotonic()
-            chunks, last = [], None
-            for part in stream_generate(
-                self.model,
-                self.tokenizer,
-                prompt=prompt,
-                max_tokens=settings.llm_max_tokens,
-                sampler=make_sampler(temp=0),
-            ):
+            return self.executor.submit(self._generate, messages, timeout_seconds).result()
+        finally:
+            self.lock.release()
+
+    def _generate(self, messages: list[dict], timeout_seconds: float | None):
+        from mlx_lm import stream_generate
+        from mlx_lm.sample_utils import make_sampler
+
+        prompt = self.tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        start = time.monotonic()
+        chunks, last = [], None
+        stream = stream_generate(
+            self.model,
+            self.tokenizer,
+            prompt=prompt,
+            max_tokens=settings.llm_max_tokens,
+            sampler=make_sampler(temp=0),
+        )
+        try:
+            for part in stream:
                 if time.monotonic() - start > (timeout_seconds or settings.llm_timeout):
                     raise TimeoutError("Local model exceeded the inference time budget")
                 chunks.append(part.text)
@@ -81,7 +99,8 @@ class MLXProvider:
                 "generation_tokens": last.generation_tokens if last else 0,
             }
         finally:
-            self.lock.release()
+            # Unwind the stream-affine cache on the owner thread, even on timeout.
+            stream.close()
 
 
 class LocalHTTPProvider:

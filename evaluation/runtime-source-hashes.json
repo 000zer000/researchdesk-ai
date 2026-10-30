@@ -1,12 +1,12 @@
 {
-  "evaluated_commit": "1e0685cee59fda54bfb34d086944f457e535a462",
+  "evaluated_commit": "e39bf9ae118b4b031a2408cfa4e56260cd81742c",
   "sha256": {
     "src/researchdesk/config.py": "b2a0def8597a127aec8374f5bf125c65a503f115af06d33097f1b68381a75424",
     "src/researchdesk/db.py": "857f1f6c7d86ff17733cd5309baae085ca0881fa1bb8610ef92e77c28b7a2766",
     "src/researchdesk/ingestion.py": "b5c265bd72e21e4c1abacfa2119787cb46b21c19df613c35c70a55890d368589",
     "src/researchdesk/embeddings.py": "b9b248bc4ab7307373eb4f1039a8e1a0c6b8ac4f4258047422ee248316795406",
     "src/researchdesk/search.py": "1ccfcf71f8a9de7a02c5aec95d3e9ac1ab8c946bafadfdff1780c369446a8e9d",
-    "src/researchdesk/scope.py": "a032f694899572426dbf93a72d0b15d1996000425475bbd06f7f957405ee9712",
+    "src/researchdesk/scope.py": "43895dc03b67079d8720a7df165f16e93ea53d62398e0f541ba2a4fd274252d2",
     "src/researchdesk/provider.py": "3227277fac928cd7693f3b95e05895ea7be6db26c61593eef633064c2baa1b09",
     "src/researchdesk/research.py": "7e16b842cf6d110bb39dc61b91c5805c034100bdacbb94ef783fd7ad766db909",
     "src/researchdesk/finance.py": "98343e80495f448063a7dcd1b2fb3528ef662a2322c4d83153e311a0d496985c",

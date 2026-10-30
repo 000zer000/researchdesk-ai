@@ -5,7 +5,7 @@ These materials describe executed implementation and explicitly measured scope. 
 ## CV bullets (English)
 
 - Built ResearchDesk, a local AI financial-research application using FastAPI, PostgreSQL and React, combining source-linked retrieval over six official SEC filings with 48 financial facts cross-checked against original inline XBRL.
-- Implemented a deterministic five-year FCFF/DCF engine, scenario sensitivities and reproducible PDF notes; developed PostgreSQL integration and Chromium end-to-end checks plus a 40-question real-model evaluation separating numeric accuracy, citation validity, citation support and abstention.
+- Implemented a deterministic five-year FCFF/DCF engine, scenario sensitivities and PDF notes; verified 52 tests on PostgreSQL and real-model Chromium journeys, and evaluated 40 cases with lexical/hybrid retrieval while separating numeric accuracy, citation validity, source support and deterministic abstention.
 
 Use the second bullet's validation claims only together with the final verification ledger and linked CI results. No accuracy percentage is stated because retrieval success and generated-claim support are different measurements.
 

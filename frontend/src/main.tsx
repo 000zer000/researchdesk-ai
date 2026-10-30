@@ -153,6 +153,7 @@ function App() {
     model: string;
   } | null>(null);
   const [loadError, setLoadError] = useState("");
+  const [dataLoading, setDataLoading] = useState(true);
   const [question, setQuestion] = useState(
     "Which supply-chain risks does Apple disclose in its 2024 annual report?",
   );
@@ -177,6 +178,11 @@ function App() {
   useEffect(() => {
     const c = new AbortController();
     setLoadError("");
+    setDataLoading(true);
+    setFinancials({});
+    setSources([]);
+    setValuation(null);
+    setAssumptions((a) => ({ ...a, base_revenue: 0 }));
     Promise.all([
       request<Financials>(`/api/financials?as_of=${asOf}`, {
         signal: c.signal,
@@ -193,6 +199,9 @@ function App() {
       })
       .catch((e) => {
         if (e.name !== "AbortError") setLoadError(e.message);
+      })
+      .finally(() => {
+        if (!c.signal.aborted) setDataLoading(false);
       });
     return () => c.abort();
   }, [asOf]);
@@ -486,9 +495,11 @@ function App() {
               </span>
             </div>
             <span className="coverage-pill">
-              {years.length
-                ? `${years.length} annual periods`
-                : "No published periods"}
+              {dataLoading
+                ? "Loading annual data…"
+                : years.length
+                  ? `${years.length} annual periods`
+                  : "No published periods"}
             </span>
             <label className="date-label">
               Analysis date
@@ -577,7 +588,7 @@ function App() {
                       ) : (
                         <button
                           className="button primary"
-                          disabled={!question.trim()}
+                          disabled={!question.trim() || dataLoading}
                           type="submit"
                         >
                           Research question <ArrowUpRight size={17} />
@@ -1169,7 +1180,9 @@ function App() {
                   ))
                 ) : (
                   <div className="empty-state">
-                    No source was published by the selected date.
+                    {dataLoading
+                      ? "Loading official sources…"
+                      : "No source was published by the selected date."}
                   </div>
                 )}
               </section>
