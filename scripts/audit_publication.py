@@ -25,7 +25,7 @@ for name in filter(None, files):
         content = path.read_text(errors="replace")
         if any(re.search(pattern, content) for pattern in patterns):
             errors.append((name, "possible credential; value suppressed"))
-        if "/Users/mac/" in content:
+        if "/Users/" + "mac/" in content:
             errors.append((name, "host-specific absolute path"))
 assert not errors, errors
 print(

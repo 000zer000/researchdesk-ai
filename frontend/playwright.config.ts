@@ -1,4 +1,27 @@
-import {defineConfig,devices} from '@playwright/test';
-const live = process.env.E2E_MODE === 'live';
-const testDB = process.env.TEST_DATABASE_URL || 'postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:55432/researchdesk_test';
-export default defineConfig({testDir:'./e2e',timeout:120000,workers:1,reporter:[['list'],['html',{open:'never'}]],use:{baseURL:process.env.BASE_URL||(live?'http://127.0.0.1:8000':'http://127.0.0.1:8001'),...devices['Desktop Chrome'],trace:'retain-on-failure'},webServer:live?undefined:{command:'../.venv/bin/alembic -c ../alembic.ini upgrade head && ../.venv/bin/python -m researchdesk.ci_fixture && ../.venv/bin/uvicorn researchdesk.api:app --app-dir ../src --host 127.0.0.1 --port 8001',url:'http://127.0.0.1:8001',env:{DATABASE_URL:testDB},reuseExistingServer:false}});
+import { defineConfig, devices } from "@playwright/test";
+const live = process.env.E2E_MODE === "live";
+const testDB =
+  process.env.TEST_DATABASE_URL ||
+  "postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:55432/researchdesk_test";
+export default defineConfig({
+  testDir: "./e2e",
+  timeout: 120000,
+  workers: 1,
+  reporter: [["list"], ["html", { open: "never" }]],
+  use: {
+    baseURL:
+      process.env.BASE_URL ||
+      (live ? "http://127.0.0.1:8000" : "http://127.0.0.1:8001"),
+    ...devices["Desktop Chrome"],
+    trace: "retain-on-failure",
+  },
+  webServer: live
+    ? undefined
+    : {
+        command:
+          "../.venv/bin/alembic -c ../alembic.ini upgrade head && ../.venv/bin/python -m researchdesk.ci_fixture && ../.venv/bin/uvicorn researchdesk.api:app --app-dir ../src --host 127.0.0.1 --port 8001",
+        url: "http://127.0.0.1:8001",
+        env: { DATABASE_URL: testDB },
+        reuseExistingServer: false,
+      },
+});
