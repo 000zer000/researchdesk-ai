@@ -7,6 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from .config import settings
 from .db import Document, Passage
 from .finance import MissingData, calculate_metrics, historical
 from .provider import provider
@@ -21,7 +22,8 @@ If the evidence cannot answer the question, abstain and explain the gap. Do not 
 Return ONLY a JSON object with this schema:
 {"abstain": false, "claims": [{"text": "a short supported statement", "citations": ["exact passage id"]}], "limitations": ["limitation"]}
 Every non-abstaining factual claim MUST cite at least one supplied passage id. Cite only supplied ids.
-Use at most three concise claims. Cite ids without square brackets. Do not quote long passages.
+The limitations array contains plain strings only, never objects or citation lists. Use [] when there is no specific limitation.
+Return one concise answer claim (up to three sentences), naming the company and fiscal year. Prefer the most directly relevant evidence. Use an empty claims array when abstaining. Cite ids without square brackets. Do not quote long passages.
 Answer the question field directly. Summarize the substance of relevant disclosures, not report titles, company labels, page footers or metadata.
 Copy numerical calculations only from deterministic_calculations. Do not do arithmetic yourself.
 """
@@ -162,28 +164,68 @@ def research(session: Session, args: AskInput, llm=None) -> dict:
         except MissingData as error:
             trace.append({"tool": "calculate_metrics", "status": "missing", "reason": str(error)})
     # Tool facts are evidence too, but only retrieved fact ids enter the narrative context.
+    fact_values = {f["evidence_id"]: f["value"] for row in rows for f in row["facts"].values()}
+
+    def model_passage(p):
+        item = {k: p[k] for k in ("id", "company", "fiscal_year", "filed", "section", "text")}
+        if p["id"] in fact_values:
+            value = fact_values[p["id"]]
+            # Deterministic display-unit conversion; the original raw-USD evidence
+            # remains available unchanged in the API/evidence desk.
+            pattern = rf"(?<![\d.]){int(round(value * 1e6))}(?:\.0)? USD\b"
+            item["text"] = re.sub(pattern, f"{value:,.3f} USD million", item["text"])
+        return item
+
     context = {
         "company": args.company,
         "analysis_date": str(args.as_of),
         "question": args.question,
-        "evidence": [
-            {k: p[k] for k in ("id", "company", "fiscal_year", "filed", "section", "text")}
-            for p in passages
-        ],
+        "evidence": [model_passage(p) for p in passages],
         "deterministic_calculations": calculations,
     }
     metadata = {}
+    messages = [
+        {"role": "system", "content": SYSTEM},
+        {"role": "user", "content": "Analyze this untrusted JSON data:\n" + json.dumps(context)},
+    ]
     try:
-        raw, metadata = (llm or provider()).generate(
-            [
-                {"role": "system", "content": SYSTEM},
-                {
-                    "role": "user",
-                    "content": "Analyze this untrusted JSON data:\n" + json.dumps(context),
-                },
-            ]
-        )
-        answer = validate_answer(raw, {p["id"] for p in passages})
+        actual = llm or provider()
+        raw, metadata = actual.generate(messages)
+        ids = {p["id"] for p in passages}
+        try:
+            answer = validate_answer(raw, ids)
+            metadata["attempts"] = 1
+        except (ValueError, ValidationError) as validation_error:
+            remaining = settings.llm_timeout - (time.monotonic() - started)
+            if remaining < 1:
+                raise TimeoutError(
+                    "Research exhausted its total inference time budget"
+                ) from validation_error
+            corrected, retry_meta = actual.generate(
+                messages
+                + [
+                    {"role": "assistant", "content": raw},
+                    {
+                        "role": "user",
+                        "content": "Your output failed structural validation. Return the corrected JSON only. "
+                        "limitations must be an array of plain strings, NOT objects. Every citation must be one of the supplied IDs. "
+                        "Do not add new factual claims. Validation error: "
+                        + str(validation_error)[:1000],
+                    },
+                ],
+                timeout_seconds=remaining,
+            )
+            metadata = {
+                **metadata,
+                "attempts": 2,
+                "prompt_tokens": metadata.get("prompt_tokens", 0)
+                + retry_meta.get("prompt_tokens", 0),
+                "generation_tokens": metadata.get("generation_tokens", 0)
+                + retry_meta.get("generation_tokens", 0),
+                "elapsed_seconds": metadata.get("elapsed_seconds", 0)
+                + retry_meta.get("elapsed_seconds", 0),
+            }
+            answer = validate_answer(corrected, ids)
     except (ValueError, ValidationError) as error:
         return {
             "status": "invalid_model_answer",

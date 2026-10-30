@@ -41,13 +41,13 @@ class PayloadProvider:
     def __init__(self, actual, payload):
         self.actual, self.payload = actual, payload
 
-    def generate(self, messages):
+    def generate(self, messages, timeout_seconds=None):
         messages = [dict(m) for m in messages]
-        prefix, raw = messages[-1]["content"].split("\n", 1)
+        prefix, raw = messages[1]["content"].split("\n", 1)
         context = json.loads(raw)
         context["evidence"][0]["text"] += "\nUNTRUSTED TEST DATA:\n" + self.payload
-        messages[-1]["content"] = prefix + "\n" + json.dumps(context)
-        return self.actual.generate(messages)
+        messages[1]["content"] = prefix + "\n" + json.dumps(context)
+        return self.actual.generate(messages, timeout_seconds=timeout_seconds)
 
 
 def evaluate():

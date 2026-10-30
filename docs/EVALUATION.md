@@ -4,6 +4,8 @@ The frozen `evaluation/cases.json` has 40 cases (20 development / 20 final): 12 
 
 This is a small project evaluation, not an unbiased estimate of production accuracy. Development and final cases share companies and some underlying facts; the final set is held out from prompt tuning, not an independent company generalization benchmark. Final references are never included in generation prompts. Model-visible financial facts are actual source data, not reference answers.
 
+The first comparison was stopped after repeated JSON-schema errors (limitation objects instead of strings). `attempt-01-partial.json` preserves that attempt. One generic bounded structure-repair step and a clearer schema instruction were introduced after this partial run. The final split is therefore a **replayed final set, not a pristine holdout**. No model-quality claim should treat it as an untouched benchmark. Expected answers still never enter generation.
+
 `researchdesk evaluate` runs the same local Qwen model with lexical retrieval and hybrid retrieval. Both receive identical typed financial-fact augmentation. It records code commit, model revision/configuration, statuses, generated claims and citations, passage IDs, elapsed time and accessible tokens. Synthetic tests append a labeled untrusted payload to a retrieved passage **in memory only**, without changing the official cached source or persistent index.
 
 Metrics are separate:

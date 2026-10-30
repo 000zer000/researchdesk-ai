@@ -1,0 +1,840 @@
+{
+  "started_at": "2026-10-30T20:41:48.859098+00:00",
+  "commit": "bd4874949eddc65adfa840bd9dbb529507012e83",
+  "records": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The information...: ['AAPL-2023-revenue']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': \"The fiscal year...s': ['AAPL-2023-p0144']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0144",
+        "AAPL-2023-p0164",
+        "AAPL-2023-p0179",
+        "AAPL-2023-p0242"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2023-p0144",
+        "AAPL-2023-p0164",
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0179",
+        "AAPL-2023-p0242",
+        "AAPL-2023-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 11.661333499941975,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 11.62429316714406,
+        "prompt_tokens": 2298,
+        "generation_tokens": 302
+      }
+    },
+    {
+      "id": "q02",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "1 validation error for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The source prov...2023-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "AAPL-2023-p0214",
+        "AAPL-2023-p0192",
+        "AAPL-2023-p0165",
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0215"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2023-operating_income",
+        "AAPL-2023-p0165",
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0192",
+        "AAPL-2023-p0214",
+        "AAPL-2023-p0215"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 9.699512541061267,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.667387958150357,
+        "prompt_tokens": 3165,
+        "generation_tokens": 222
+      }
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The fiscal year...s': ['AAPL-2024-p0176']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': 'The fiscal year...s': ['AAPL-2024-p0176']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "AAPL-2024-p0176",
+        "AAPL-2024-p0168",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0247",
+        "AAPL-2024-p0148"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0148",
+        "AAPL-2024-p0168",
+        "AAPL-2024-p0176",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0247",
+        "AAPL-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 11.056133332895115,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 11.038586958078668,
+        "prompt_tokens": 2258,
+        "generation_tokens": 313
+      }
+    },
+    {
+      "id": "q04",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "1 validation error for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The source prov...2024-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "AAPL-2024-p0217",
+        "AAPL-2024-p0169",
+        "AAPL-2024-p0176",
+        "AAPL-2024-p0218",
+        "AAPL-2024-p0168"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2024-operating_income",
+        "AAPL-2024-p0168",
+        "AAPL-2024-p0169",
+        "AAPL-2024-p0176",
+        "AAPL-2024-p0217",
+        "AAPL-2024-p0218"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 9.153286000015214,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.12016712501645,
+        "prompt_tokens": 2899,
+        "generation_tokens": 221
+      }
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "1 validation error for ModelAnswer\n  Invalid JSON: expected `,` or `}` at line 14 column 7 [type=json_invalid, input_value='{\\n  \"abstain\": false,\\n...evenue\"]\\n    }\\n  ]\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
+      "retrieved_ids": [
+        "DELL-2023-p0502",
+        "DELL-2023-p0560",
+        "DELL-2023-p0550",
+        "DELL-2023-p0570",
+        "DELL-2023-p0259"
+      ],
+      "generation_evidence_ids": [
+        "DELL-2023-p0259",
+        "DELL-2023-p0502",
+        "DELL-2023-p0550",
+        "DELL-2023-p0560",
+        "DELL-2023-p0570",
+        "DELL-2023-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 8.506283707916737,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 8.440932624973357,
+        "prompt_tokens": 2249,
+        "generation_tokens": 230
+      }
+    },
+    {
+      "id": "q06",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': \"The exact amoun...2023-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': 'The source of t...2023-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "DELL-2023-p0357",
+        "DELL-2023-p0472",
+        "DELL-2023-p0255",
+        "DELL-2023-p0269",
+        "DELL-2023-p0435"
+      ],
+      "generation_evidence_ids": [
+        "DELL-2023-operating_income",
+        "DELL-2023-p0255",
+        "DELL-2023-p0269",
+        "DELL-2023-p0357",
+        "DELL-2023-p0435",
+        "DELL-2023-p0472"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 11.703246499877423,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 11.610440875170752,
+        "prompt_tokens": 2208,
+        "generation_tokens": 284
+      }
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "1 validation error for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The revenue fig...: ['DELL-2024-revenue']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "DELL-2024-p0478",
+        "DELL-2024-p0261",
+        "DELL-2024-p0296",
+        "DELL-2024-p0534",
+        "DELL-2024-p0434"
+      ],
+      "generation_evidence_ids": [
+        "DELL-2024-p0261",
+        "DELL-2024-p0296",
+        "DELL-2024-p0434",
+        "DELL-2024-p0478",
+        "DELL-2024-p0534",
+        "DELL-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 7.025964959058911,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 6.985067167086527,
+        "prompt_tokens": 2453,
+        "generation_tokens": 125
+      }
+    },
+    {
+      "id": "q08",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The source prov...2024-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': 'The source does...2024-operating_income']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "DELL-2024-p0260",
+        "DELL-2024-p0240",
+        "DELL-2024-p0253",
+        "DELL-2024-p0412",
+        "DELL-2024-p0337"
+      ],
+      "generation_evidence_ids": [
+        "DELL-2024-operating_income",
+        "DELL-2024-p0240",
+        "DELL-2024-p0253",
+        "DELL-2024-p0260",
+        "DELL-2024-p0337",
+        "DELL-2024-p0412"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 9.696389083052054,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.613815332995728,
+        "prompt_tokens": 2259,
+        "generation_tokens": 263
+      }
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "answered",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "HPQ's consolidated annual revenue in fiscal 2023 was $537,180,000,000.",
+            "citations": [
+              "HPQ-2023-revenue"
+            ]
+          },
+          {
+            "text": "HPQ recorded $1.1 billion of net income tax benefits in fiscal 2023.",
+            "citations": [
+              "HPQ-2023-p0388"
+            ]
+          },
+          {
+            "text": "HPQ's operating expenses as a percentage of revenue increased in fiscal 2023.",
+            "citations": [
+              "HPQ-2023-p0350"
+            ]
+          }
+        ],
+        "limitations": [
+          "The evidence provided does not include the fiscal year of HPQ."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "HPQ-2023-p0388",
+        "HPQ-2023-p0254",
+        "HPQ-2023-p0350",
+        "HPQ-2023-p0256",
+        "HPQ-2023-p0376"
+      ],
+      "generation_evidence_ids": [
+        "HPQ-2023-p0254",
+        "HPQ-2023-p0256",
+        "HPQ-2023-p0350",
+        "HPQ-2023-p0376",
+        "HPQ-2023-p0388",
+        "HPQ-2023-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 3,
+      "claim_count": 3,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 9.711092832963914,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.669760041870177,
+        "prompt_tokens": 2318,
+        "generation_tokens": 196
+      }
+    },
+    {
+      "id": "q10",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "answered",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "In fiscal year 2023, HP recorded $1.1 billion of net income tax benefits related to discrete items in the provision for taxes.",
+            "citations": [
+              "HPQ-2023-p0388"
+            ]
+          },
+          {
+            "text": "In fiscal year 2023, HP recorded $1.1 billion of net income tax benefits related to discrete items in the provision for taxes.",
+            "citations": [
+              "HPQ-2023-p0386"
+            ]
+          },
+          {
+            "text": "In fiscal year 2023, HP recorded $1.1 billion of net income tax benefits related to discrete items in the provision for taxes.",
+            "citations": [
+              "HPQ-2023-p0390"
+            ]
+          }
+        ],
+        "limitations": [
+          "The evidence provided does not explicitly state the source of the $1.1 billion figure, which could be a rounding error or a rounding difference."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "HPQ-2023-p0388",
+        "HPQ-2023-p0390",
+        "HPQ-2023-p0251",
+        "HPQ-2023-p0386",
+        "HPQ-2023-p0376"
+      ],
+      "generation_evidence_ids": [
+        "HPQ-2023-operating_income",
+        "HPQ-2023-p0251",
+        "HPQ-2023-p0376",
+        "HPQ-2023-p0386",
+        "HPQ-2023-p0388",
+        "HPQ-2023-p0390"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 3,
+      "claim_count": 3,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 9.396119458135217,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.22158454102464,
+        "prompt_tokens": 2203,
+        "generation_tokens": 233
+      }
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "category": "fact",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': \"The data provid...ns': ['HPQ-2024-p0231']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': 'The data does n...ns': ['HPQ-2024-p0238']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "HPQ-2024-p0331",
+        "HPQ-2024-p0232",
+        "HPQ-2024-p0241",
+        "HPQ-2024-p0367",
+        "HPQ-2024-p0238"
+      ],
+      "generation_evidence_ids": [
+        "HPQ-2024-p0232",
+        "HPQ-2024-p0238",
+        "HPQ-2024-p0241",
+        "HPQ-2024-p0331",
+        "HPQ-2024-p0367",
+        "HPQ-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 11.775136000011116,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 11.652279624948278,
+        "prompt_tokens": 2353,
+        "generation_tokens": 260
+      }
+    },
+    {
+      "id": "q12",
+      "split": "final",
+      "category": "fact",
+      "method": "lexical",
+      "status": "answered",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "HPQ's consolidated annual operating income in fiscal 2024 was $381,800,000.",
+            "citations": [
+              "HPQ-2024-operating_income"
+            ]
+          }
+        ],
+        "limitations": [
+          "The evidence provided does not contain the specific fiscal year 2024 information needed to calculate the exact amount."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "HPQ-2024-p0367",
+        "HPQ-2024-p0364",
+        "HPQ-2024-p0366",
+        "HPQ-2024-p0378",
+        "HPQ-2024-p0331"
+      ],
+      "generation_evidence_ids": [
+        "HPQ-2024-operating_income",
+        "HPQ-2024-p0331",
+        "HPQ-2024-p0364",
+        "HPQ-2024-p0366",
+        "HPQ-2024-p0367",
+        "HPQ-2024-p0378"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 1,
+      "claim_count": 1,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 6.3714442499913275,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 6.274723167065531,
+        "prompt_tokens": 2447,
+        "generation_tokens": 104
+      }
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "category": "calculation",
+      "method": "lexical",
+      "status": "answered",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple's revenue growth from 2023 to 2024 was 2.02%.",
+            "citations": [
+              "AAPL-2023-revenue",
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": [
+          "The provided data does not include the exact revenue figures for 2023 and 2024, which are necessary to calculate the growth percentage."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2023-p0179",
+        "AAPL-2024-p0183",
+        "AAPL-2023-p0002",
+        "AAPL-2023-p0150",
+        "AAPL-2024-p0002"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2023-p0002",
+        "AAPL-2023-p0150",
+        "AAPL-2023-p0179",
+        "AAPL-2023-revenue",
+        "AAPL-2024-p0002",
+        "AAPL-2024-p0183",
+        "AAPL-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": true,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 2,
+      "claim_count": 1,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 7.4285927910823375,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 7.407211750047281,
+        "prompt_tokens": 2905,
+        "generation_tokens": 119
+      }
+    },
+    {
+      "id": "q14",
+      "split": "final",
+      "category": "calculation",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "2 validation errors for ModelAnswer\nlimitations.0\n  Input should be a valid string [type=string_type, input_value={'text': 'The revenue gro...ministic_calculations']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type\nlimitations.1\n  Input should be a valid string [type=string_type, input_value={'text': 'The operating m...ministic_calculations']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/string_type",
+      "retrieved_ids": [
+        "DELL-2023-p0259",
+        "DELL-2024-p0244",
+        "DELL-2024-p0262",
+        "DELL-2023-p0256",
+        "DELL-2023-p0270"
+      ],
+      "generation_evidence_ids": [
+        "DELL-2023-p0256",
+        "DELL-2023-p0259",
+        "DELL-2023-p0270",
+        "DELL-2023-revenue",
+        "DELL-2024-p0244",
+        "DELL-2024-p0262",
+        "DELL-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 10.017140834126621,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.97748341714032,
+        "prompt_tokens": 2513,
+        "generation_tokens": 289
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "category": "calculation",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "The local model cited evidence outside the retrieved set",
+      "retrieved_ids": [
+        "HPQ-2023-p0256",
+        "HPQ-2024-p0231",
+        "HPQ-2023-p0254",
+        "HPQ-2024-p0241",
+        "HPQ-2024-p0230"
+      ],
+      "generation_evidence_ids": [
+        "HPQ-2023-p0254",
+        "HPQ-2023-p0256",
+        "HPQ-2023-revenue",
+        "HPQ-2024-p0230",
+        "HPQ-2024-p0231",
+        "HPQ-2024-p0241",
+        "HPQ-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 10.003904041834176,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 9.95524216699414,
+        "prompt_tokens": 3276,
+        "generation_tokens": 185
+      }
+    },
+    {
+      "id": "q16",
+      "split": "final",
+      "category": "calculation",
+      "method": "lexical",
+      "status": "invalid_model_answer",
+      "answer": null,
+      "error": "The local model cited evidence outside the retrieved set",
+      "retrieved_ids": [
+        "AAPL-2024-p0152",
+        "AAPL-2023-p0150",
+        "AAPL-2023-p0151",
+        "AAPL-2024-p0151",
+        "AAPL-2023-p0214"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2023-operating_income",
+        "AAPL-2023-p0150",
+        "AAPL-2023-p0151",
+        "AAPL-2023-revenue",
+        "AAPL-2024-operating_income",
+        "AAPL-2024-p0151",
+        "AAPL-2024-p0152",
+        "AAPL-2024-revenue"
+      ],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": false,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 10.688124333042651,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 10.624804832972586,
+        "prompt_tokens": 3107,
+        "generation_tokens": 194
+      }
+    }
+  ]
+}

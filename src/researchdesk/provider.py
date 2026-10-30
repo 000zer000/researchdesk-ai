@@ -46,7 +46,9 @@ class MLXProvider:
         self.model, self.tokenizer = load(self.metadata["path"])
         self.lock = threading.Lock()
 
-    def generate(self, messages: list[dict]) -> tuple[str, dict]:
+    def generate(
+        self, messages: list[dict], timeout_seconds: float | None = None
+    ) -> tuple[str, dict]:
         from mlx_lm import stream_generate
         from mlx_lm.sample_utils import make_sampler
 
@@ -65,7 +67,7 @@ class MLXProvider:
                 max_tokens=settings.llm_max_tokens,
                 sampler=make_sampler(temp=0),
             ):
-                if time.monotonic() - start > settings.llm_timeout:
+                if time.monotonic() - start > (timeout_seconds or settings.llm_timeout):
                     raise TimeoutError("Local model exceeded the inference time budget")
                 chunks.append(part.text)
                 last = part
@@ -83,7 +85,7 @@ class MLXProvider:
 
 
 class LocalHTTPProvider:
-    def generate(self, messages):
+    def generate(self, messages, timeout_seconds=None):
         parsed = urlparse(settings.local_llm_url)
         if parsed.hostname not in ("127.0.0.1", "localhost", "::1", "host.docker.internal"):
             raise ValueError("Hosted providers require separate authorization and are disabled")
@@ -96,7 +98,7 @@ class LocalHTTPProvider:
                 "temperature": 0,
                 "max_tokens": settings.llm_max_tokens,
             },
-            timeout=settings.llm_timeout,
+            timeout=timeout_seconds or settings.llm_timeout,
         )
         response.raise_for_status()
         payload = response.json()

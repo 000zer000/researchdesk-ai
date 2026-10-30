@@ -17,3 +17,5 @@ Implemented original-accession financial facts, deterministic ratios, Decimal fi
 ## Evaluation and delivery
 
 Frozen 40 cases with 20 development / 20 final questions before the full real-model run. Conflict and injection cases are explicitly synthetic perturbations of real retrieved context. Final results, independent inline-XBRL checks, browser evidence, CI runs and release are recorded in the evaluation and verification documents after execution. No model-quality threshold is assumed in advance.
+
+The first comparison revealed repeated structured-output failures (objects in the `limitations` string array). Stopped the partial attempt and retained its results. Added one bounded model-generated structure repair, with both attempts' tokens recorded and a shared remaining time budget. This affects the interpretation of the final split: it is now a replay set, not an untouched holdout. Added a dedicated simulated test of repair bounds and token aggregation. A browser assertion also needed to account for the unit being rendered inside the same metric element as the number.

@@ -45,9 +45,7 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
     );
   }
   await page.goto("/");
-  await expect(
-    page.getByText(live ? "391,035" : "100", { exact: true }).first(),
-  ).toBeVisible();
+  await expect(page.locator('.metric strong').first()).toContainText(live ? "391,035" : "100");
   await page
     .getByLabel("Research question", { exact: true })
     .fill(
