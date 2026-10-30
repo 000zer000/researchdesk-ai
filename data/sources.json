@@ -1,0 +1,56 @@
+[
+  {
+    "company": "AAPL",
+    "cik": "0000320193",
+    "fiscal_year": 2023,
+    "end": "2023-09-30",
+    "filed": "2023-11-03",
+    "accession": "0000320193-23-000106",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm"
+  },
+  {
+    "company": "AAPL",
+    "cik": "0000320193",
+    "fiscal_year": 2024,
+    "end": "2024-09-28",
+    "filed": "2024-11-01",
+    "accession": "0000320193-24-000123",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm"
+  },
+  {
+    "company": "DELL",
+    "cik": "0001571996",
+    "fiscal_year": 2023,
+    "end": "2023-02-03",
+    "filed": "2023-03-30",
+    "accession": "0001571996-23-000007",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm"
+  },
+  {
+    "company": "DELL",
+    "cik": "0001571996",
+    "fiscal_year": 2024,
+    "end": "2024-02-02",
+    "filed": "2024-03-25",
+    "accession": "0001571996-24-000036",
+    "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm"
+  },
+  {
+    "company": "HPQ",
+    "cik": "0000047217",
+    "fiscal_year": 2023,
+    "end": "2023-10-31",
+    "filed": "2023-12-18",
+    "accession": "0000047217-23-000100",
+    "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm"
+  },
+  {
+    "company": "HPQ",
+    "cik": "0000047217",
+    "fiscal_year": 2024,
+    "end": "2024-10-31",
+    "filed": "2024-12-13",
+    "accession": "0000047217-24-000080",
+    "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm"
+  }
+]

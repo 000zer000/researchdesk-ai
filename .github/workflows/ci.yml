@@ -1,0 +1,65 @@
+name: verified-build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  postgres-and-browser:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17.6-alpine
+        env:
+          POSTGRES_USER: researchdesk
+          POSTGRES_PASSWORD: researchdesk
+          POSTGRES_DB: researchdesk_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U researchdesk -d researchdesk_test"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:5432/researchdesk_test
+      TEST_DATABASE_URL: postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:5432/researchdesk_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {version: "0.9.6", python-version: "3.12"}
+      - run: uv sync --frozen --extra dev
+      - run: uv run ruff check . && uv run ruff format --check .
+      - run: uv run alembic upgrade head
+      - run: mkdir -p work && uv run pytest --junitxml=work/pytest.xml
+      - run: uv run python scripts/ci_checks.py work/pytest.xml
+      - uses: actions/setup-node@v4
+        with: {node-version: "22", cache: npm, cache-dependency-path: frontend/package-lock.json}
+      - run: npm ci && npm run build && npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: npm run e2e
+        working-directory: frontend
+        env: {E2E_MODE: mock}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deterministic-test-evidence
+          path: |
+            work/pytest.xml
+            frontend/test-results
+            frontend/playwright-report
+  clean-compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose up --build -d
+      - name: Migrations, original fixtures, persistence after restart
+        run: |
+          for i in $(seq 1 60); do curl -fsS http://localhost:8000/api/health && break || sleep 2; done
+          docker compose exec -T app python -m researchdesk.ci_fixture
+          curl -fsS http://localhost:8000/api/financials > before.json
+          docker compose restart
+          for i in $(seq 1 40); do curl -fsS http://localhost:8000/api/health && break || sleep 2; done
+          curl -fsS http://localhost:8000/api/financials > after.json
+          diff before.json after.json
+          docker compose exec -T app python -c "from researchdesk.db import Session,Document; s=Session(); assert s.query(Document).count()==1"
+      - name: Logs
+        if: always()
+        run: docker compose logs --no-color
+      - if: always()
+        run: docker compose down -v

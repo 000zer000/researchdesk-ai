@@ -1,0 +1,87 @@
+# ResearchDesk
+
+**Evidence before opinion.** Local AI research on official annual filings, source-traceable financial facts, and a deterministic five-year DCF.
+
+Apple is the primary company; Dell and HP are operating peers. Coverage is deliberately limited to their original FY2023 and FY2024 annual filings. The analysis date filters publication availability. All financial displays use USD millions.
+
+This repository contains an implemented FastAPI/PostgreSQL/React application, source acquisition and parsing, local MiniLM retrieval, an executed Qwen model adapter, financial calculations, a three-page PDF note, tests and evaluation commands. See [verification status](docs/VERIFICATION.md) and [evaluation methodology](docs/EVALUATION.md) for measured results and limitations. CI uses explicit test doubles; it does not prove model quality.
+
+## Run locally
+
+Verified inference target: Apple M1, 8 GB RAM, macOS, Python 3.12. The selected Qwen 1.5B 4-bit model is small enough for this machine. Downloads are free; no card, paid endpoint or API key is used. First setup requires internet access to public sources and model repositories; ordinary research uses only the cache and local model.
+
+```bash
+git clone https://github.com/000zer000/researchdesk-ai.git
+cd researchdesk-ai
+cp .env.example .env
+# Edit SEC_USER_AGENT: real name and contact; keep .env private.
+uv sync --frozen --all-extras
+docker compose up -d db
+uv run alembic upgrade head
+uv run researchdesk models
+uv run researchdesk ingest
+cd frontend && npm ci && npm run build && cd ..
+uv run uvicorn researchdesk.api:app --host 127.0.0.1 --port 8000
+# Open http://127.0.0.1:8000
+```
+
+PostgreSQL 17 installed natively is equally supported. Create a dedicated `researchdesk` database and set `DATABASE_URL`; do not reuse another project's database. `researchdesk ingest` is idempotent and rejects changed pinned documents. Acquisition is sequential, identified, cached, rate limited and bounded; 401/403 responses stop it without bypassing access controls. No full reports or weights are included in Git.
+
+Linux/Windows do not run MLX. For the same application use a separately installed **local** OpenAI-compatible model server and set `LLM_BACKEND=local-http`, `LOCAL_LLM_URL` and `LLM_MODEL`. Nonlocal HTTP hosts are rejected. This alternative has a different runtime and must be evaluated separately; the published real-model results are from MLX on the Mac.
+
+## Explore
+
+1. **Research:** ask “Which supply-chain risks does Apple disclose in its 2024 annual report?” Open a citation and inspect its context. Answers are generated locally; invalid structured outputs fail closed.
+2. **Financials & Valuation:** open original XBRL facts, compare operating metrics, change forecast growth/margins/cash-flow assumptions, inspect sensitivity, and export the current Apple scenario.
+3. **Sources & Evaluation:** inspect filing dates, accession numbers, SHA-256 hashes and actual recorded evaluation results.
+
+Cancellation stops the browser waiting; a running local generation can finish within its server time/token budget. The service admits one inference at a time and two simultaneous PDF exports. Run on loopback. There are no accounts, uploads, administrative HTTP endpoints, market prices or trading actions.
+
+## Verify
+
+```bash
+# Create a separate native PostgreSQL database first:
+createdb researchdesk_test
+export TEST_DATABASE_URL=postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:55432/researchdesk_test
+uv run ruff check .
+uv run ruff format --check .
+uv run pytest --junitxml=work/pytest.xml
+uv run python scripts/ci_checks.py work/pytest.xml
+cd frontend
+npm run typecheck
+npm exec playwright install chromium
+E2E_MODE=mock npm run e2e # explicit simulated model, real API finance and PDF
+E2E_MODE=live npm run e2e # running real-data app + local model required
+cd ..
+uv run python scripts/verify_inline_facts.py
+uv run researchdesk evaluate # real local inference, outside deterministic CI
+```
+
+The required CI job runs PostgreSQL integration tests without skips, Chromium's end-to-end journey, and a separate clean Docker Compose migration/import/restart-persistence check. Compose CI uses an **original synthetic fixture**, not redistributed SEC content. Real-source import and real inference are checked locally and reported separately.
+
+`researchdesk evaluate` uses frozen `evaluation/cases.json`. It records the current code commit, model revision, elapsed time and accessible token counts. It never sends expected answers to the generation prompt. It overwrites result files, so commit or copy a prior run first. Reference creation and source-support review are separate from inference.
+
+## Containers
+
+`docker compose up --build` serves the built UI and API on loopback and persists PostgreSQL in a named volume. The container contains **no model and no official corpus**. For real research, download embeddings and ingest inside the container, and run a local host model server on port 8081. Set `LLM_MODEL` consistently with that server. Model setup creates machine-specific ignored paths; do not copy a Mac runtime metadata file into a Linux container. MLX execution itself stays on macOS.
+
+```bash
+docker compose run --rm app python -c 'from researchdesk.embeddings import download_embeddings; download_embeddings()'
+docker compose run --rm app researchdesk ingest
+# Run your authorized local model server on the host, then ask through the app.
+```
+
+Do not use `docker compose down -v` on a demo you want to preserve. It deletes this Compose project's named database volume. CI uses only its own temporary environment.
+
+## Understand the project
+
+- [Architecture and trust boundaries](docs/ARCHITECTURE.md)
+- [Financial methodology and definitions](docs/FINANCIAL_METHOD.md)
+- [Source rights and model licenses](docs/SOURCES_AND_LICENSES.md)
+- [Evaluation and failures](docs/EVALUATION.md)
+- [Verification ledger](docs/VERIFICATION.md)
+- [Interview guide and guided exercise](docs/INTERVIEW.md)
+- [Progress journal](docs/PROGRESS.md)
+- [CV and unsent LinkedIn draft](docs/CAREER.md)
+
+No interactive model is hosted publicly. The documented local run and recorded real-browser demonstration are the honest demo. This is an educational research tool. Small-model narrative accuracy is limited, citations require inspection, and DCF forecasts are assumptions, not company guidance or investment advice.

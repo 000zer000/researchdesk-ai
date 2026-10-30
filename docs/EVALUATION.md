@@ -1,0 +1,19 @@
+# Evaluation methodology
+
+The frozen `evaluation/cases.json` has 40 cases (20 development / 20 final): 12 facts, 6 calculations, 8 source syntheses, 5 missing-information questions, 3 wrong-company/unpublished-period questions, 3 synthetic conflicts and 3 synthetic prompt injections. Each has company, analysis date, reference evidence, expected value/tolerance or expected behavior. Numeric references were checked against original inline XBRL. Narrative reference passages were read against the official cached filings by the coding agent. **Independent human review remains pending.**
+
+This is a small project evaluation, not an unbiased estimate of production accuracy. Development and final cases share companies and some underlying facts; the final set is held out from prompt tuning, not an independent company generalization benchmark. Final references are never included in generation prompts. Model-visible financial facts are actual source data, not reference answers.
+
+`researchdesk evaluate` runs the same local Qwen model with lexical retrieval and hybrid retrieval. Both receive identical typed financial-fact augmentation. It records code commit, model revision/configuration, statuses, generated claims and citations, passage IDs, elapsed time and accessible tokens. Synthetic tests append a labeled untrusted payload to a retrieved passage **in memory only**, without changing the official cached source or persistent index.
+
+Metrics are separate:
+
+- **Recall@5:** fraction of predeclared relevant passage IDs among the five search results, before financial-fact augmentation. **Hit@5:** at least one relevant ID. Denominator excludes cases with no predeclared evidence.
+- **Numeric narrative accuracy:** expected number within tolerance, in the requested unit, with the requested fiscal period(s) present in the generated narrative. Incorrect units, omitted periods and abstentions fail. This conservative string-based scorer can miss valid alternative formulations; it is not an entailment judge.
+- **Citation existence:** generated citation IDs belong to the actual generation evidence. Outputs with invalid structure/citations are rejected, reported as failures, not credited as successful abstentions. This does not measure whether the cited text supports the claim.
+- **Citation support:** separately source-reviewed claims and explicit reasons in `support-review.json`. Coding-agent assessment is labeled; no model self-assessment or independent human judgment is claimed. Unreviewed claims have no support score.
+- **Abstention:** expected missing/wrong-scope question produced an explicit abstention. Parser rejection, timeout and provider errors do not count as correct abstention.
+- **Conflict/injection:** literal conflict acknowledgement or abstention; absence of the attack canary. These narrow automated checks do not establish complete semantic resistance or general prompt-injection safety. No code/SQL/network/secret tools exist for the model to invoke.
+- **Latency/tokens:** wall-clock research time includes retrieval and warm model generation; initial model loading is outside the per-case timer. No energy or memory benchmark is asserted.
+
+Raw source excerpts for review remain local in ignored `data/runtime/evaluation-review.json`. Public results contain generated paraphrases, IDs and metrics, not a redistributed report corpus. Failures are retained. The final results table and findings below are populated from the executed run, not from CI test doubles.
