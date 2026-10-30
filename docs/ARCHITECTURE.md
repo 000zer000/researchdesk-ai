@@ -17,7 +17,9 @@ flowchart LR
   F --> PDF[ReportLab PDF]
 ```
 
-`ingestion.py` handles source access, normalized HTML and annual fact selection; `db.py` stores provenance. `search.py` compares PostgreSQL English full-text retrieval with MiniLM cosine similarity plus reciprocal-rank fusion (constant 60). With 2,849 passages, cosine calculation in NumPy is simpler than introducing pgvector. It loads only the chosen company's date-filtered corpus. There is no reranker because no measured case justifies one.
+`ingestion.py` handles source access, normalized HTML and annual fact selection; `db.py` stores provenance. `search.py` compares PostgreSQL English full-text retrieval with MiniLM cosine similarity plus reciprocal-rank fusion (constant 60). With 2,851 passages, cosine calculation in NumPy is simpler than introducing pgvector. It loads only the chosen company's date-filtered corpus. There is no reranker because no measured case justifies one.
+
+`scope.py` conservatively gates unsupported capabilities (market prices, forecasts, monthly data, private topics) and explicit mismatched question subjects before inference. This is a heuristic capability gate, not a general entity recognizer or a guarantee of semantic safety.
 
 `research.py` is a fixed bounded workflow, not an agent framework. Typed `search_documents`, `get_financial_facts` selection and `calculate_metrics` feed the model. Recognized financial questions augment both retrieval variants with the same exact source-linked fact records. `run_dcf_scenario` is a typed deterministic API operation. The LLM cannot execute code, SQL, shell commands, arbitrary URLs or tools. JSON output and citation membership are validated; that does not establish entailment.
 

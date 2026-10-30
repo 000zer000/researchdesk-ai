@@ -94,3 +94,25 @@ def test_absent_year_never_calls_model(populated):
         populated, AskInput(question="What was revenue in 2025?", method="lexical"), Never()
     )
     assert result["status"] == "abstained"
+
+
+@pytest.mark.integration
+def test_hybrid_empty_publication_window_is_not_missing_model_error(populated):
+    assert (
+        search_documents(
+            populated,
+            SearchInput(question="supply-chain risk", method="hybrid", as_of=date(2000, 1, 1)),
+        )
+        == []
+    )
+
+
+@pytest.mark.integration
+def test_scope_decline_is_deterministic_and_does_not_call_model(populated):
+    class Never:
+        def generate(self, _):
+            pytest.fail("Unsupported market data must not call the model")
+
+    result = research(populated, AskInput(question="What was the closing share price?"), Never())
+    assert result["status"] == "abstained"
+    assert "no inference" in result["origin"]

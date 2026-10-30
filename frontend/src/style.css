@@ -11,6 +11,33 @@
   font-weight: 400;
   font-size: 14px;
 }
+.mobile-company {
+  display: none;
+}
+.bar.negative {
+  background: #b76551;
+}
+.chart-footnote {
+  margin: 10px 25px;
+  font-size: 8px;
+  line-height: 1.6;
+  color: #879eaa;
+}
+@media (max-width: 640px) {
+  .mobile-company {
+    display: block;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    max-width: 220px;
+    color: #1d3545;
+  }
+  .coverage-bar .coverage-name > strong {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
 }

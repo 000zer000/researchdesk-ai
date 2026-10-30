@@ -68,6 +68,8 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
     # RRF is transparent and needs no learned reranker. Corpus is intentionally small.
     candidates = session.execute(base.where(Passage.embedding.is_not(None))).all()
     if not candidates:
+        if session.execute(base.limit(1)).first() is None:
+            return []
         raise RuntimeError("Semantic index unavailable; run ingestion with local embeddings")
     q = np.array(embedder().encode([cleaned])[0])
     vectors = np.array([p.embedding for p, _ in candidates])

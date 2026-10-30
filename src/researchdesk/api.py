@@ -16,7 +16,7 @@ from .report import make_report
 from .research import AskInput, research
 from .search import serialize
 
-app = FastAPI(title="ResearchDesk", version="0.1.0")
+app = FastAPI(title="ResearchDesk", version="1.0.0")
 DB = Annotated[Session, Depends(session_dependency)]
 inference_gate = threading.BoundedSemaphore(1)
 export_gate = threading.BoundedSemaphore(2)

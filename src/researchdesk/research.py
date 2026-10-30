@@ -11,6 +11,7 @@ from .config import settings
 from .db import Document, Passage
 from .finance import MissingData, calculate_metrics, historical
 from .provider import provider
+from .scope import capability_gap
 from .search import SearchInput, search_documents, serialize
 
 SYSTEM = """You are ResearchDesk, a cautious financial document analyst. Reply in English.
@@ -65,6 +66,17 @@ def validate_answer(raw: str, ids: set[str]) -> ModelAnswer:
 def research(session: Session, args: AskInput, llm=None) -> dict:
     started = time.monotonic()
     trace = []
+    gap = capability_gap(args.question, args.company)
+    if gap:
+        return {
+            "status": "abstained",
+            "origin": "deterministic capability policy; no inference",
+            "answer": {"abstain": True, "claims": [], "limitations": [gap]},
+            "evidence": [],
+            "trace": [{"policy": "bounded capabilities", "decision": "abstain"}],
+            "calculations": None,
+            "elapsed_seconds": time.monotonic() - started,
+        }
     rows = historical(session, args.company, args.as_of)
     trace.append({"tool": "get_financial_facts", "status": "ok", "annual_periods": len(rows)})
     years = set(re.findall(r"\b20\d{2}\b", args.question))

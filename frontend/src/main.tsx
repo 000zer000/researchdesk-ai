@@ -383,6 +383,7 @@ function App() {
             <button
               key={label}
               className={tab === label ? "nav-item selected" : "nav-item"}
+              aria-current={tab === label ? "page" : undefined}
               onClick={() => setTab(label)}
             >
               <Icon size={18} />
@@ -467,6 +468,18 @@ function App() {
             <div className="company-badge">{company[0]}</div>
             <div className="coverage-name">
               <strong>{names[company]}</strong>
+              <select
+                className="mobile-company"
+                aria-label="Covered company"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              >
+                {Object.entries(names).map(([ticker, name]) => (
+                  <option key={ticker} value={ticker}>
+                    {name}
+                  </option>
+                ))}
+              </select>
               <span>
                 {company} <span className="separator">/</span> SEC annual
                 filings
@@ -1010,15 +1023,19 @@ function App() {
                             <div className="bar-column" key={y.year}>
                               <span>{money(y.fcff)}</span>
                               <div
-                                className="bar"
+                                className={y.fcff < 0 ? "bar negative" : "bar"}
                                 style={{
-                                  height: `${Math.max(3, (Math.abs(y.fcff) / Math.max(...valuation.years.map((x) => Math.abs(x.fcff)))) * 95)}px`,
+                                  height: `${Math.max(3, (Math.abs(y.fcff) / Math.max(1, ...valuation.years.map((x) => Math.abs(x.fcff)))) * 95)}px`,
                                 }}
                               />
                               <small>Year {y.year}</small>
                             </div>
                           ))}
                         </div>
+                        <p className="chart-footnote">
+                          Bar height shows magnitude. Negative cash flows are
+                          red and labeled with a minus sign.
+                        </p>
                         <p className="formula">
                           FCFF = EBIT − operating tax + D&A − capex − ΔNWC
                         </p>

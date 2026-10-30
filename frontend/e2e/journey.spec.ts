@@ -45,7 +45,9 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
     );
   }
   await page.goto("/");
-  await expect(page.locator('.metric strong').first()).toContainText(live ? "391,035" : "100");
+  await expect(page.locator(".metric strong").first()).toContainText(
+    live ? "391,035" : "100",
+  );
   await page
     .getByLabel("Research question", { exact: true })
     .fill(
@@ -85,7 +87,11 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
   });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.getByRole("button", { name: "Research", exact: true }).click();
-  await expect(page.locator("h1")).toBeVisible();
+  await expect(page.locator("h1")).toHaveText("From filings to findings.");
+  await expect(
+    page.getByLabel("Covered company", { exact: true }),
+  ).toBeVisible();
+  await page.mouse.move(0, 0);
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -95,4 +101,12 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
     path: `test-results/${live ? "real-model" : "simulated"}-mobile.png`,
     fullPage: true,
   });
+  if (live) {
+    await page
+      .getByLabel("Covered company", { exact: true })
+      .selectOption("DELL");
+    await expect(page.locator(".metric strong").first()).toContainText(
+      "88,425",
+    );
+  }
 });

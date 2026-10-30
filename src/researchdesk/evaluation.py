@@ -99,6 +99,7 @@ def evaluate():
                 "category": case["category"],
                 "method": method,
                 "status": result["status"],
+                "origin": result.get("origin"),
                 "answer": answer,
                 "error": result.get("error"),
                 "retrieved_ids": [p["id"] for p in hits],
@@ -188,6 +189,7 @@ def summarize():
                     "questions": len(rows),
                     "categories": dict(Counter(r["category"] for r in rows)),
                     "statuses": dict(Counter(r["status"] for r in rows)),
+                    "origins": dict(Counter(r.get("origin", "unknown") for r in rows)),
                     **{
                         k: metric(k)
                         for k in [

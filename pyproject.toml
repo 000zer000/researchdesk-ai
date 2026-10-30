@@ -1,6 +1,6 @@
 [project]
 name = "researchdesk-ai"
-version = "0.1.0"
+version = "1.0.0"
 description = "Evidence-first local financial research with deterministic valuation"
 requires-python = ">=3.12,<3.13"
 dependencies = [
