@@ -1,0 +1,264 @@
+{
+  "status": "real_model_run",
+  "started_at": "2026-10-30T20:59:20.462292+00:00",
+  "code_commit": "1e0685cee59fda54bfb34d086944f457e535a462",
+  "reference_review": "Source-checked by coding agent; independent human review pending",
+  "retrieval_metric": "Mean recall@5: fraction of predeclared relevant passage IDs found among 5 prose-search hits; before identical fact-tool augmentation. Hit@5 is at least one relevant ID.",
+  "numeric_metric": "Generated narrative contains expected number within tolerance AND requested unit, period included in question. Independent deterministic financial tests are separate.",
+  "citation_support": "Unrated until claim-level source review; citation existence alone is not support.",
+  "synthetic_cases": "Conflict and injection cases append adversarial data to a real retrieved passage in memory; no official source was altered.",
+  "runs": [
+    {
+      "method": "lexical",
+      "split": "dev",
+      "questions": 20,
+      "categories": {
+        "fact": 6,
+        "calculation": 3,
+        "synthesis": 4,
+        "missing": 3,
+        "wrong_scope": 1,
+        "synthetic_conflict": 2,
+        "synthetic_injection": 1
+      },
+      "statuses": {
+        "answered": 13,
+        "invalid_model_answer": 1,
+        "abstained": 6
+      },
+      "origins": {
+        "live local inference": 13,
+        "live local inference rejected": 1,
+        "deterministic capability policy; no inference": 5,
+        "scope validation; no inference": 1
+      },
+      "recall_at_5": {
+        "value": 0.07291666666666666,
+        "n": 16
+      },
+      "hit_at_5": {
+        "value": 0.1875,
+        "n": 16
+      },
+      "numeric_correct_in_requested_units": {
+        "value": 1.0,
+        "n": 9
+      },
+      "abstention_correct": {
+        "value": 1.0,
+        "n": 4
+      },
+      "citation_ids_valid": {
+        "value": 1.0,
+        "n": 13
+      },
+      "injection_marker_absent": {
+        "value": 1.0,
+        "n": 1
+      },
+      "conflict_acknowledged": {
+        "value": 1.0,
+        "n": 2
+      },
+      "source_reviewed_claim_support": {
+        "value": null,
+        "supported": 0,
+        "reviewed_claims": 0,
+        "reviewer": "coding agent; not independent human"
+      },
+      "latency_seconds": {
+        "median": 5.476332354010083,
+        "p95": 10.816509958321694
+      },
+      "measured_generation_tokens": 1934
+    },
+    {
+      "method": "lexical",
+      "split": "final",
+      "questions": 20,
+      "categories": {
+        "fact": 6,
+        "calculation": 3,
+        "synthesis": 4,
+        "missing": 2,
+        "wrong_scope": 2,
+        "synthetic_conflict": 1,
+        "synthetic_injection": 2
+      },
+      "statuses": {
+        "answered": 15,
+        "abstained": 5
+      },
+      "origins": {
+        "live local inference": 15,
+        "deterministic capability policy; no inference": 4,
+        "scope validation; no inference": 1
+      },
+      "recall_at_5": {
+        "value": 0.22916666666666666,
+        "n": 16
+      },
+      "hit_at_5": {
+        "value": 0.375,
+        "n": 16
+      },
+      "numeric_correct_in_requested_units": {
+        "value": 0.5555555555555556,
+        "n": 9
+      },
+      "abstention_correct": {
+        "value": 1.0,
+        "n": 4
+      },
+      "citation_ids_valid": {
+        "value": 1.0,
+        "n": 15
+      },
+      "injection_marker_absent": {
+        "value": 1.0,
+        "n": 2
+      },
+      "conflict_acknowledged": {
+        "value": 1.0,
+        "n": 1
+      },
+      "source_reviewed_claim_support": {
+        "value": null,
+        "supported": 0,
+        "reviewed_claims": 0,
+        "reviewer": "coding agent; not independent human"
+      },
+      "latency_seconds": {
+        "median": 5.1588542715180665,
+        "p95": 7.08598074169131
+      },
+      "measured_generation_tokens": 1343
+    },
+    {
+      "method": "hybrid",
+      "split": "dev",
+      "questions": 20,
+      "categories": {
+        "fact": 6,
+        "calculation": 3,
+        "synthesis": 4,
+        "missing": 3,
+        "wrong_scope": 1,
+        "synthetic_conflict": 2,
+        "synthetic_injection": 1
+      },
+      "statuses": {
+        "answered": 11,
+        "invalid_model_answer": 3,
+        "abstained": 6
+      },
+      "origins": {
+        "live local inference": 11,
+        "live local inference rejected": 3,
+        "deterministic capability policy; no inference": 5,
+        "scope validation; no inference": 1
+      },
+      "recall_at_5": {
+        "value": 0.27604166666666663,
+        "n": 16
+      },
+      "hit_at_5": {
+        "value": 0.375,
+        "n": 16
+      },
+      "numeric_correct_in_requested_units": {
+        "value": 0.8888888888888888,
+        "n": 9
+      },
+      "abstention_correct": {
+        "value": 1.0,
+        "n": 4
+      },
+      "citation_ids_valid": {
+        "value": 1.0,
+        "n": 11
+      },
+      "injection_marker_absent": {
+        "value": 1.0,
+        "n": 1
+      },
+      "conflict_acknowledged": {
+        "value": 1.0,
+        "n": 2
+      },
+      "source_reviewed_claim_support": {
+        "value": null,
+        "supported": 0,
+        "reviewed_claims": 0,
+        "reviewer": "coding agent; not independent human"
+      },
+      "latency_seconds": {
+        "median": 5.595136207994074,
+        "p95": 10.802245235408192
+      },
+      "measured_generation_tokens": 1633
+    },
+    {
+      "method": "hybrid",
+      "split": "final",
+      "questions": 20,
+      "categories": {
+        "fact": 6,
+        "calculation": 3,
+        "synthesis": 4,
+        "missing": 2,
+        "wrong_scope": 2,
+        "synthetic_conflict": 1,
+        "synthetic_injection": 2
+      },
+      "statuses": {
+        "answered": 15,
+        "abstained": 5
+      },
+      "origins": {
+        "live local inference": 15,
+        "deterministic capability policy; no inference": 4,
+        "scope validation; no inference": 1
+      },
+      "recall_at_5": {
+        "value": 0.34375,
+        "n": 16
+      },
+      "hit_at_5": {
+        "value": 0.375,
+        "n": 16
+      },
+      "numeric_correct_in_requested_units": {
+        "value": 0.6666666666666666,
+        "n": 9
+      },
+      "abstention_correct": {
+        "value": 1.0,
+        "n": 4
+      },
+      "citation_ids_valid": {
+        "value": 1.0,
+        "n": 15
+      },
+      "injection_marker_absent": {
+        "value": 1.0,
+        "n": 2
+      },
+      "conflict_acknowledged": {
+        "value": 1.0,
+        "n": 1
+      },
+      "source_reviewed_claim_support": {
+        "value": null,
+        "supported": 0,
+        "reviewed_claims": 0,
+        "reviewer": "coding agent; not independent human"
+      },
+      "latency_seconds": {
+        "median": 5.32590760407038,
+        "p95": 7.212584945897106
+      },
+      "measured_generation_tokens": 1456
+    }
+  ]
+}

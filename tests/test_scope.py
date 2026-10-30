@@ -29,6 +29,9 @@ def test_unsupported_capabilities_fail_closed(question):
         "What personal information risks are disclosed?",
         "Did fiscal 2023 have 53 weeks?",
         "How can acquisition financing restrict flexibility?",
+        "What does the 2024 evidence say about Apple's revenue when the supplied evidence conflicts?",
+        "What is the risk to Apple's supply chain?",
+        "What does the evidence say about the company's revenue?",
     ],
 )
 def test_supported_scope_remains_available(question):

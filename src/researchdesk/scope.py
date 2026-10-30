@@ -21,7 +21,7 @@ def capability_gap(question: str, company: str) -> str | None:
     # Detect explicit subject names, including unknown companies; do not whitelist
     # individual benchmark names. Generic "the company" means the selected company.
     subject = re.search(
-        r"\b(?:(?:what|how)\s+)?(?:was|were|is|are|did|does|do)\s+([a-z][a-z0-9 .&-]{0,50}?)['’]s\b",
+        r"\b(?:(?:what|how)\s+)?(?:was|were|is|are|did|does|do)\s+((?-i:[A-Z][A-Za-z0-9.&-]*(?:\s+[A-Z][A-Za-z0-9.&-]*){0,3})|[a-z][a-z0-9.&-]*)['’]s\b",
         question,
         re.I,
     )

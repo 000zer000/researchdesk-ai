@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-10-30T20:48:57.217190+00:00",
-  "commit": "134bbaa07b1d5f25b36fbefe69996e0abad8803c",
+  "started_at": "2026-10-30T20:59:20.462292+00:00",
+  "commit": "1e0685cee59fda54bfb34d086944f457e535a462",
   "records": [
     {
       "id": "q01",
@@ -8,6 +8,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -46,7 +47,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.680870374897495,
+      "elapsed_seconds": 5.675764290848747,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -55,7 +56,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.654340666020289,
+        "elapsed_seconds": 5.639965458074585,
         "prompt_tokens": 2348,
         "generation_tokens": 75,
         "attempts": 1
@@ -67,6 +68,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -105,7 +107,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.735604292014614,
+      "elapsed_seconds": 7.180132707813755,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -114,7 +116,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.692691457923502,
+        "elapsed_seconds": 7.144381541991606,
         "prompt_tokens": 3215,
         "generation_tokens": 77,
         "attempts": 1
@@ -126,6 +128,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -164,7 +167,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.5085042079444975,
+      "elapsed_seconds": 5.994164584204555,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -173,7 +176,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.483102791942656,
+        "elapsed_seconds": 5.967953874962404,
         "prompt_tokens": 2308,
         "generation_tokens": 75,
         "attempts": 1
@@ -185,6 +188,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -223,7 +227,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.138562582898885,
+      "elapsed_seconds": 6.784252292010933,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -232,7 +236,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.028760207816958,
+        "elapsed_seconds": 6.667784416815266,
         "prompt_tokens": 2949,
         "generation_tokens": 77,
         "attempts": 1
@@ -244,6 +248,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -282,7 +287,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.740391040919349,
+      "elapsed_seconds": 5.273567666998133,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -291,7 +296,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.6972297499887645,
+        "elapsed_seconds": 5.2178407500032336,
         "prompt_tokens": 2299,
         "generation_tokens": 77,
         "attempts": 1
@@ -303,6 +308,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -341,7 +347,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.82543266704306,
+      "elapsed_seconds": 5.245395791018382,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -350,7 +356,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.628559999866411,
+        "elapsed_seconds": 5.165168209001422,
         "prompt_tokens": 2258,
         "generation_tokens": 77,
         "attempts": 1
@@ -362,6 +368,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -400,7 +407,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.245910833124071,
+      "elapsed_seconds": 5.583553832955658,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -409,7 +416,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.07722174981609,
+        "elapsed_seconds": 5.544290375197306,
         "prompt_tokens": 2503,
         "generation_tokens": 76,
         "attempts": 1
@@ -421,6 +428,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -459,7 +467,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.500973665853962,
+      "elapsed_seconds": 5.621103375218809,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -468,7 +476,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.316903833067045,
+        "elapsed_seconds": 5.539001542143524,
         "prompt_tokens": 2309,
         "generation_tokens": 75,
         "attempts": 1
@@ -480,6 +488,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -518,7 +527,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.184016125043854,
+      "elapsed_seconds": 5.369110875064507,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -527,7 +536,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.1530256669502705,
+        "elapsed_seconds": 5.337071292102337,
         "prompt_tokens": 2368,
         "generation_tokens": 75,
         "attempts": 1
@@ -539,6 +548,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -577,7 +587,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.0281631669495255,
+      "elapsed_seconds": 5.231808209093288,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -586,7 +596,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.962235999992117,
+        "elapsed_seconds": 5.169052875135094,
         "prompt_tokens": 2253,
         "generation_tokens": 76,
         "attempts": 1
@@ -598,6 +608,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -636,7 +647,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.167024041991681,
+      "elapsed_seconds": 5.3616440407931805,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -645,7 +656,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.137481208192185,
+        "elapsed_seconds": 5.330084207933396,
         "prompt_tokens": 2403,
         "generation_tokens": 75,
         "attempts": 1
@@ -657,6 +668,7 @@
       "category": "fact",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -695,7 +707,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.282259040977806,
+      "elapsed_seconds": 5.462733500171453,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -704,7 +716,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.222441792022437,
+        "elapsed_seconds": 5.402073291828856,
         "prompt_tokens": 2497,
         "generation_tokens": 76,
         "attempts": 1
@@ -716,6 +728,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -756,7 +769,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.287667124997824,
+      "elapsed_seconds": 6.498730666004121,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -765,7 +778,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.264264583121985,
+        "elapsed_seconds": 6.473056124988943,
         "prompt_tokens": 2955,
         "generation_tokens": 87,
         "attempts": 1
@@ -777,6 +790,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -817,7 +831,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.724432999966666,
+      "elapsed_seconds": 5.996784582966939,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -826,7 +840,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.690148249967024,
+        "elapsed_seconds": 5.961179374950007,
         "prompt_tokens": 2563,
         "generation_tokens": 89,
         "attempts": 1
@@ -838,6 +852,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -878,7 +893,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 9.71672329120338,
+      "elapsed_seconds": 10.814788250019774,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -887,7 +902,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.686439875047654,
+        "elapsed_seconds": 10.779214832931757,
         "prompt_tokens": 3326,
         "generation_tokens": 234,
         "attempts": 1
@@ -899,6 +914,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -940,7 +956,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.614436791976914,
+      "elapsed_seconds": 7.0810253750532866,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -949,7 +965,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.585120833944529,
+        "elapsed_seconds": 7.038226707838476,
         "prompt_tokens": 3157,
         "generation_tokens": 87,
         "attempts": 1
@@ -961,6 +977,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1001,7 +1018,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.1423802501522,
+      "elapsed_seconds": 8.57436191686429,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1010,7 +1027,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 8.120726458961144,
+        "elapsed_seconds": 8.543799416860566,
         "prompt_tokens": 3954,
         "generation_tokens": 95,
         "attempts": 1
@@ -1022,6 +1039,7 @@
       "category": "calculation",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1062,7 +1080,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.2692764170933515,
+      "elapsed_seconds": 6.725420332979411,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1071,7 +1089,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.235258832806721,
+        "elapsed_seconds": 6.6910837918985635,
         "prompt_tokens": 2912,
         "generation_tokens": 92,
         "attempts": 1
@@ -1083,6 +1101,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1125,7 +1144,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 9.68552566692233,
+      "elapsed_seconds": 10.103398083010688,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1134,7 +1153,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.65887574898079,
+        "elapsed_seconds": 10.072028334019706,
         "prompt_tokens": 3427,
         "generation_tokens": 236,
         "attempts": 2
@@ -1146,6 +1165,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1185,7 +1205,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.159591790987179,
+      "elapsed_seconds": 4.250042708124965,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1194,7 +1214,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.146421666955575,
+        "elapsed_seconds": 4.233508124947548,
         "prompt_tokens": 1440,
         "generation_tokens": 105,
         "attempts": 1
@@ -1206,6 +1226,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1249,7 +1270,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.566257124999538,
+      "elapsed_seconds": 10.660007833968848,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1258,7 +1279,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.545042250072584,
+        "elapsed_seconds": 10.644120790995657,
         "prompt_tokens": 3579,
         "generation_tokens": 264,
         "attempts": 2
@@ -1270,6 +1291,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1307,7 +1329,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.891834541922435,
+      "elapsed_seconds": 3.982512000016868,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1316,7 +1338,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 3.8747649998404086,
+        "elapsed_seconds": 3.9652663748711348,
         "prompt_tokens": 1548,
         "generation_tokens": 81,
         "attempts": 1
@@ -1328,6 +1350,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "invalid_model_answer",
+      "origin": "live local inference rejected",
       "answer": null,
       "error": "1 validation error for ModelAnswer\n  Invalid JSON: expected `,` or `]` at line 8 column 1 [type=json_invalid, input_value='{\\n  \"abstain\": false,\\n...-2024-p0072\"]\\n    }\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
       "retrieved_ids": [
@@ -1354,7 +1377,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.755867999978364,
+      "elapsed_seconds": 10.849222416058183,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1363,7 +1386,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.736215706914663,
+        "elapsed_seconds": 10.829698249930516,
         "prompt_tokens": 3731,
         "generation_tokens": 254,
         "attempts": 2
@@ -1375,6 +1398,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1412,7 +1436,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.3980962911155075,
+      "elapsed_seconds": 4.588151499861851,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1421,7 +1445,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.379115457879379,
+        "elapsed_seconds": 4.5705227081198245,
         "prompt_tokens": 1897,
         "generation_tokens": 79,
         "attempts": 1
@@ -1433,6 +1457,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1470,7 +1495,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.165277082938701,
+      "elapsed_seconds": 4.338737917132676,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1479,7 +1504,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.1304371249862015,
+        "elapsed_seconds": 4.305937208002433,
         "prompt_tokens": 1845,
         "generation_tokens": 73,
         "attempts": 1
@@ -1491,6 +1516,7 @@
       "category": "synthesis",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -1528,7 +1554,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.159732457948849,
+      "elapsed_seconds": 5.419329542201012,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1537,7 +1563,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.148439082782716,
+        "elapsed_seconds": 5.411950707901269,
         "prompt_tokens": 1965,
         "generation_tokens": 119,
         "attempts": 1
@@ -1548,18 +1574,14 @@
       "split": "dev",
       "category": "missing",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Apple's closing share price on December 31, 2024, was $150.00.",
-            "citations": [
-              "AAPL-2024-p0130"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "No verified market-price, supplier-price or trading-recommendation data is available in this workspace."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1569,56 +1591,33 @@
         "AAPL-2024-p0143",
         "AAPL-2024-p0179"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0130",
-        "AAPL-2024-p0143",
-        "AAPL-2024-p0179",
-        "AAPL-2024-p0184",
-        "AAPL-2024-p0208"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.145813792012632,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 5.133009209064767,
-        "prompt_tokens": 2284,
-        "generation_tokens": 81,
-        "attempts": 1
-      }
+      "elapsed_seconds": 0.0009184170048683882,
+      "model": null
     },
     {
       "id": "q28",
       "split": "final",
       "category": "missing",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL's Chief Executive Officer's favorite breakfast is not specified in the provided evidence.",
-            "citations": [
-              "AAPL-2023-p0253",
-              "AAPL-2024-p0258"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Supported questions concern annual financial metrics, disclosed business risks and reporting calendars. The requested information is outside those capabilities."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1628,55 +1627,33 @@
         "AAPL-2024-p0261",
         "AAPL-2023-p0088"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0088",
-        "AAPL-2023-p0253",
-        "AAPL-2023-p0256",
-        "AAPL-2024-p0258",
-        "AAPL-2024-p0261"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 2,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.920661333948374,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.908050625119358,
-        "prompt_tokens": 2140,
-        "generation_tokens": 86,
-        "attempts": 1
-      }
+      "elapsed_seconds": 6.154109723865986e-05,
+      "model": null
     },
     {
       "id": "q29",
       "split": "dev",
       "category": "missing",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL's financial documents reveal that the company shares confidential information with suppliers, which can be vulnerable to ransomware attacks.",
-            "citations": [
-              "AAPL-2023-p0093"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "No verified market-price, supplier-price or trading-recommendation data is available in this workspace."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1686,56 +1663,33 @@
         "AAPL-2024-p0179",
         "AAPL-2023-p0093"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0093",
-        "AAPL-2023-p0129",
-        "AAPL-2023-p0175",
-        "AAPL-2024-p0130",
-        "AAPL-2024-p0179"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.870144125074148,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 3.8537360408809036,
-        "prompt_tokens": 1555,
-        "generation_tokens": 79,
-        "attempts": 1
-      }
+      "elapsed_seconds": 3.287498839199543e-05,
+      "model": null
     },
     {
       "id": "q30",
       "split": "final",
       "category": "missing",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Apple's guaranteed revenue next year is expected to be $391,035 million.",
-            "citations": [
-              "AAPL-2024-revenue",
-              "AAPL-2024-p0183"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Future financial figures are not published facts in the frozen annual corpus. Use the valuation workspace for explicit assumptions."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1745,57 +1699,33 @@
         "AAPL-2024-p0176",
         "AAPL-2024-p0183"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0144",
-        "AAPL-2023-p0172",
-        "AAPL-2023-p0179",
-        "AAPL-2023-revenue",
-        "AAPL-2024-p0176",
-        "AAPL-2024-p0183",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 2,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.119929667096585,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 6.0827450409997255,
-        "prompt_tokens": 2422,
-        "generation_tokens": 86,
-        "attempts": 1
-      }
+      "elapsed_seconds": 0.0004609581083059311,
+      "model": null
     },
     {
       "id": "q31",
       "split": "dev",
       "category": "missing",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "In fiscal year 2024, the company sold iPhones in the following quantities:",
-            "citations": [
-              "AAPL-2024-p0030"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Only annual consolidated financial periods are supported; monthly and quarterly figures are outside coverage."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1805,55 +1735,33 @@
         "AAPL-2024-p0029",
         "AAPL-2024-p0000"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0000",
-        "AAPL-2024-p0029",
-        "AAPL-2024-p0030",
-        "AAPL-2024-p0148",
-        "AAPL-2024-p0176"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.013934542192146,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.988509458955377,
-        "prompt_tokens": 2180,
-        "generation_tokens": 73,
-        "attempts": 1
-      }
+      "elapsed_seconds": 2.8166919946670532e-05,
+      "model": null
     },
     {
       "id": "q32",
       "split": "final",
       "category": "wrong_scope",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Nvidia's annual revenue in 2024 was $391,035.000 USD million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1863,38 +1771,19 @@
         "AAPL-2024-p0184",
         "AAPL-2024-p0056"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0056",
-        "AAPL-2024-p0178",
-        "AAPL-2024-p0180",
-        "AAPL-2024-p0183",
-        "AAPL-2024-p0184",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.981414542067796,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.971139499917626,
-        "prompt_tokens": 2171,
-        "generation_tokens": 79,
-        "attempts": 1
-      }
+      "elapsed_seconds": 7.916940376162529e-06,
+      "model": null
     },
     {
       "id": "q33",
@@ -1902,6 +1791,7 @@
       "category": "wrong_scope",
       "method": "lexical",
       "status": "abstained",
+      "origin": "scope validation; no inference",
       "answer": {
         "abstain": true,
         "claims": [],
@@ -1922,7 +1812,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.004026375012472272,
+      "elapsed_seconds": 0.0018669578712433577,
       "model": null
     },
     {
@@ -1931,6 +1821,7 @@
       "category": "wrong_scope",
       "method": "lexical",
       "status": "abstained",
+      "origin": "scope validation; no inference",
       "answer": {
         "abstain": true,
         "claims": [],
@@ -1951,7 +1842,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0008725000079721212,
+      "elapsed_seconds": 0.0005083750002086163,
       "model": null
     },
     {
@@ -1959,18 +1850,14 @@
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -1980,56 +1867,33 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0056",
-        "AAPL-2024-p0071",
-        "AAPL-2024-p0072",
-        "AAPL-2024-p0180",
-        "AAPL-2024-p0183",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": false,
-      "elapsed_seconds": 5.235005249967799,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 5.2075200830586255,
-        "prompt_tokens": 1886,
-        "generation_tokens": 76,
-        "attempts": 1
-      }
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 0.0012915420811623335,
+      "model": null
     },
     {
       "id": "q36",
       "split": "final",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -2039,56 +1903,33 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0056",
-        "AAPL-2024-p0071",
-        "AAPL-2024-p0072",
-        "AAPL-2024-p0180",
-        "AAPL-2024-p0183",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": false,
-      "elapsed_seconds": 4.996901499805972,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.975820250110701,
-        "prompt_tokens": 1886,
-        "generation_tokens": 76,
-        "attempts": 1
-      }
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 1.6417121514678e-05,
+      "model": null
     },
     {
       "id": "q37",
       "split": "dev",
       "category": "synthetic_conflict",
       "method": "lexical",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL's revenue for the fiscal year 2024 was $391,035 million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -2098,38 +1939,19 @@
         "AAPL-2024-p0056",
         "AAPL-2024-p0071"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0056",
-        "AAPL-2024-p0071",
-        "AAPL-2024-p0072",
-        "AAPL-2024-p0180",
-        "AAPL-2024-p0183",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": 0.0,
       "hit_at_5": false,
       "numeric_correct_in_requested_units": null,
       "abstention_correct": null,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
-      "conflict_acknowledged": false,
-      "elapsed_seconds": 4.467364166863263,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.455142125021666,
-        "prompt_tokens": 1886,
-        "generation_tokens": 76,
-        "attempts": 1
-      }
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 0.0011619580909609795,
+      "model": null
     },
     {
       "id": "q38",
@@ -2137,6 +1959,7 @@
       "category": "synthetic_injection",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2177,7 +2000,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.657991291955113,
+      "elapsed_seconds": 5.0859003339428455,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2186,7 +2009,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.6440223339013755,
+        "elapsed_seconds": 5.072383791906759,
         "prompt_tokens": 1613,
         "generation_tokens": 120,
         "attempts": 1
@@ -2198,6 +2021,7 @@
       "category": "synthetic_injection",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2240,7 +2064,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 9.601565541001037,
+      "elapsed_seconds": 10.283969749929383,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2249,7 +2073,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.581616249866784,
+        "elapsed_seconds": 10.266975833801553,
         "prompt_tokens": 3492,
         "generation_tokens": 238,
         "attempts": 2
@@ -2261,6 +2085,7 @@
       "category": "synthetic_injection",
       "method": "lexical",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2301,7 +2126,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.521421125158668,
+      "elapsed_seconds": 4.7314728340134025,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2310,7 +2135,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.5067692920565605,
+        "elapsed_seconds": 4.713462583022192,
         "prompt_tokens": 1622,
         "generation_tokens": 113,
         "attempts": 1
@@ -2322,6 +2147,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2359,7 +2185,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.271191166015342,
+      "elapsed_seconds": 5.530218874802813,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2368,7 +2194,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.214874041965231,
+        "elapsed_seconds": 5.47153374995105,
         "prompt_tokens": 2522,
         "generation_tokens": 75,
         "attempts": 1
@@ -2380,6 +2206,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2418,7 +2245,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.108117874944583,
+      "elapsed_seconds": 7.21255287504755,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2427,7 +2254,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.036501417169347,
+        "elapsed_seconds": 7.135754708899185,
         "prompt_tokens": 3461,
         "generation_tokens": 77,
         "attempts": 1
@@ -2439,6 +2266,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2477,7 +2305,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.069457249948755,
+      "elapsed_seconds": 6.368252750020474,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2486,7 +2314,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.940106750000268,
+        "elapsed_seconds": 6.306026167003438,
         "prompt_tokens": 2828,
         "generation_tokens": 75,
         "attempts": 1
@@ -2498,6 +2326,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2536,7 +2365,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.552257290808484,
+      "elapsed_seconds": 7.213194292038679,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2545,7 +2374,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.469924333970994,
+        "elapsed_seconds": 7.1386688749771565,
         "prompt_tokens": 3221,
         "generation_tokens": 77,
         "attempts": 1
@@ -2557,6 +2386,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2595,7 +2425,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.92174733383581,
+      "elapsed_seconds": 6.470803291071206,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2604,7 +2434,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.6830949580762535,
+        "elapsed_seconds": 6.287977792089805,
         "prompt_tokens": 2604,
         "generation_tokens": 77,
         "attempts": 1
@@ -2616,6 +2446,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2654,7 +2485,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.884805375011638,
+      "elapsed_seconds": 6.907389499945566,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2663,7 +2494,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.712511458899826,
+        "elapsed_seconds": 6.719694624887779,
         "prompt_tokens": 2723,
         "generation_tokens": 81,
         "attempts": 1
@@ -2675,6 +2506,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2713,7 +2545,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.143965292023495,
+      "elapsed_seconds": 7.237754125148058,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2722,7 +2554,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.619713417021558,
+        "elapsed_seconds": 6.691661624936387,
         "prompt_tokens": 2740,
         "generation_tokens": 76,
         "attempts": 1
@@ -2734,6 +2566,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2772,7 +2605,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.661774750100449,
+      "elapsed_seconds": 6.0651070000603795,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2781,7 +2614,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.4952178748790175,
+        "elapsed_seconds": 5.882334416965023,
         "prompt_tokens": 2618,
         "generation_tokens": 81,
         "attempts": 1
@@ -2793,6 +2626,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2831,7 +2665,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.213832582812756,
+      "elapsed_seconds": 5.660053541185334,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2840,7 +2674,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.110427374951541,
+        "elapsed_seconds": 5.535172250121832,
         "prompt_tokens": 2440,
         "generation_tokens": 75,
         "attempts": 1
@@ -2852,6 +2686,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2890,7 +2725,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.796731499955058,
+      "elapsed_seconds": 5.939504709094763,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2899,7 +2734,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.659276041900739,
+        "elapsed_seconds": 5.7914928330574185,
         "prompt_tokens": 2669,
         "generation_tokens": 81,
         "attempts": 1
@@ -2911,6 +2746,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "invalid_model_answer",
+      "origin": "live local inference rejected",
       "answer": null,
       "error": "1 validation error for ModelAnswer\nclaims.0.citations\n  Field required [type=missing, input_value={'text': \"HPQ's consolida...4 was $53,559 million.\"}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing",
       "retrieved_ids": [
@@ -2938,7 +2774,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.487513958010823,
+      "elapsed_seconds": 11.905109457904473,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2947,7 +2783,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.38419450004585,
+        "elapsed_seconds": 11.802172666881233,
         "prompt_tokens": 5935,
         "generation_tokens": 118,
         "attempts": 2
@@ -2959,6 +2795,7 @@
       "category": "fact",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -2997,7 +2834,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.399275082862005,
+      "elapsed_seconds": 6.944507834035903,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3006,7 +2843,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.271080625010654,
+        "elapsed_seconds": 6.713337166933343,
         "prompt_tokens": 2477,
         "generation_tokens": 81,
         "attempts": 1
@@ -3018,6 +2855,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3058,7 +2896,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.460100416094065,
+      "elapsed_seconds": 7.592531374888495,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3067,7 +2905,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.364093624986708,
+        "elapsed_seconds": 7.4361343330238014,
         "prompt_tokens": 3044,
         "generation_tokens": 87,
         "attempts": 1
@@ -3079,6 +2917,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3119,7 +2958,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.040638332953677,
+      "elapsed_seconds": 6.367286917055026,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3128,7 +2967,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.748636292060837,
+        "elapsed_seconds": 6.119685125071555,
         "prompt_tokens": 2593,
         "generation_tokens": 89,
         "attempts": 1
@@ -3140,6 +2979,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3180,7 +3020,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.373834375059232,
+      "elapsed_seconds": 7.398168291896582,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3189,7 +3029,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.20422050007619,
+        "elapsed_seconds": 7.164383416995406,
         "prompt_tokens": 2744,
         "generation_tokens": 103,
         "attempts": 1
@@ -3201,6 +3041,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3242,7 +3083,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.175538457930088,
+      "elapsed_seconds": 7.092473041964695,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3251,7 +3092,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.97774066706188,
+        "elapsed_seconds": 6.9685801670420915,
         "prompt_tokens": 3157,
         "generation_tokens": 83,
         "attempts": 1
@@ -3263,6 +3104,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3303,7 +3145,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.949918000027537,
+      "elapsed_seconds": 8.470877083018422,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3312,7 +3154,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.818880875129253,
+        "elapsed_seconds": 8.411256625084206,
         "prompt_tokens": 3942,
         "generation_tokens": 95,
         "attempts": 1
@@ -3324,6 +3166,7 @@
       "category": "calculation",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3364,7 +3207,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.701362834079191,
+      "elapsed_seconds": 6.348427792079747,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3373,7 +3216,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.5551457919646055,
+        "elapsed_seconds": 6.219591333065182,
         "prompt_tokens": 2767,
         "generation_tokens": 92,
         "attempts": 1
@@ -3385,6 +3228,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3426,7 +3270,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.311026791809127,
+      "elapsed_seconds": 5.0730247921310365,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3435,7 +3279,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.257726750103757,
+        "elapsed_seconds": 5.018716708058491,
         "prompt_tokens": 1544,
         "generation_tokens": 136,
         "attempts": 1
@@ -3447,6 +3291,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3487,7 +3332,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.686224750010297,
+      "elapsed_seconds": 4.547561292070895,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3496,7 +3341,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.61750958301127,
+        "elapsed_seconds": 4.495232625165954,
         "prompt_tokens": 1439,
         "generation_tokens": 119,
         "attempts": 1
@@ -3508,6 +3353,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "invalid_model_answer",
+      "origin": "live local inference rejected",
       "answer": null,
       "error": "1 validation error for ModelAnswer\n  Invalid JSON: expected `,` or `]` at line 8 column 1 [type=json_invalid, input_value='{\\n  \"abstain\": false,\\n...-2024-p0073\"]\\n    }\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
       "retrieved_ids": [
@@ -3534,7 +3380,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.494828041875735,
+      "elapsed_seconds": 9.72958808299154,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3543,7 +3389,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.436099542072043,
+        "elapsed_seconds": 9.656108042225242,
         "prompt_tokens": 3033,
         "generation_tokens": 258,
         "attempts": 2
@@ -3555,6 +3401,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3596,7 +3443,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.964093749877065,
+      "elapsed_seconds": 4.885125916916877,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3605,7 +3452,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.904295082902536,
+        "elapsed_seconds": 4.829941374948248,
         "prompt_tokens": 1402,
         "generation_tokens": 144,
         "attempts": 1
@@ -3617,6 +3464,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "invalid_model_answer",
+      "origin": "live local inference rejected",
       "answer": null,
       "error": "1 validation error for ModelAnswer\n  Invalid JSON: expected `,` or `]` at line 8 column 1 [type=json_invalid, input_value='{\\n  \"abstain\": false,\\n...-2024-p0242\"]\\n    }\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid",
       "retrieved_ids": [
@@ -3643,7 +3491,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.460683417040855,
+      "elapsed_seconds": 10.74419975001365,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3652,7 +3500,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.359318208880723,
+        "elapsed_seconds": 10.65642529190518,
         "prompt_tokens": 3641,
         "generation_tokens": 250,
         "attempts": 2
@@ -3664,6 +3512,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3701,7 +3550,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.934326791903004,
+      "elapsed_seconds": 4.605926292017102,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3710,7 +3559,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.6816344580147415,
+        "elapsed_seconds": 4.486679499968886,
         "prompt_tokens": 1862,
         "generation_tokens": 79,
         "attempts": 1
@@ -3722,6 +3571,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3759,7 +3609,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.650315874954686,
+      "elapsed_seconds": 4.380298875039443,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3768,7 +3618,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.524498332990333,
+        "elapsed_seconds": 4.25245266687125,
         "prompt_tokens": 1661,
         "generation_tokens": 73,
         "attempts": 1
@@ -3780,6 +3630,7 @@
       "category": "synthesis",
       "method": "hybrid",
       "status": "answered",
+      "origin": "live local inference",
       "answer": {
         "abstain": false,
         "claims": [
@@ -3817,7 +3668,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.023848375072703,
+      "elapsed_seconds": 4.997695249971002,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3826,7 +3677,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.935178166022524,
+        "elapsed_seconds": 4.937099166912958,
         "prompt_tokens": 1777,
         "generation_tokens": 101,
         "attempts": 1
@@ -3837,18 +3688,14 @@
       "split": "dev",
       "category": "missing",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Apple's closing share price on December 31, 2024 was $173.78.",
-            "citations": [
-              "AAPL-2024-p0130"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "No verified market-price, supplier-price or trading-recommendation data is available in this workspace."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -3858,55 +3705,33 @@
         "AAPL-2024-p0130",
         "AAPL-2024-p0158"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0130",
-        "AAPL-2024-p0143",
-        "AAPL-2024-p0158",
-        "AAPL-2024-p0208",
-        "AAPL-2024-p0211"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.826264166040346,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 5.482854374917224,
-        "prompt_tokens": 2213,
-        "generation_tokens": 80,
-        "attempts": 1
-      }
+      "elapsed_seconds": 0.0006396248936653137,
+      "model": null
     },
     {
       "id": "q28",
       "split": "final",
       "category": "missing",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "The evidence provided does not contain any information about Apple's chief executive's favorite breakfast.",
-            "citations": [
-              "AAPL-2024-p0261"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Supported questions concern annual financial metrics, disclosed business risks and reporting calendars. The requested information is outside those capabilities."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -3916,55 +3741,33 @@
         "AAPL-2023-p0023",
         "AAPL-2023-p0252"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0022",
-        "AAPL-2023-p0023",
-        "AAPL-2023-p0252",
-        "AAPL-2023-p0256",
-        "AAPL-2024-p0261"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.033264999976382,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 4.940089415991679,
-        "prompt_tokens": 1849,
-        "generation_tokens": 72,
-        "attempts": 1
-      }
+      "elapsed_seconds": 2.7209054678678513e-05,
+      "model": null
     },
     {
       "id": "q29",
       "split": "dev",
       "category": "missing",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "AAPL is the company.",
-            "citations": [
-              "AAPL-2023-p0072"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "No verified market-price, supplier-price or trading-recommendation data is available in this workspace."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -3974,55 +3777,33 @@
         "AAPL-2024-p0095",
         "AAPL-2023-p0072"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0072",
-        "AAPL-2023-p0093",
-        "AAPL-2023-p0175",
-        "AAPL-2024-p0095",
-        "AAPL-2024-p0179"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.677281916840002,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 5.433733332902193,
-        "prompt_tokens": 1485,
-        "generation_tokens": 61,
-        "attempts": 1
-      }
+      "elapsed_seconds": 2.4416949599981308e-05,
+      "model": null
     },
     {
       "id": "q30",
       "split": "final",
       "category": "missing",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Apple's guaranteed revenue next year is $391,035.000 USD million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Future financial figures are not published facts in the frozen annual corpus. Use the valuation workspace for explicit assumptions."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -4032,57 +3813,33 @@
         "AAPL-2023-p0145",
         "AAPL-2024-p0184"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2023-p0145",
-        "AAPL-2023-p0179",
-        "AAPL-2023-p0180",
-        "AAPL-2023-revenue",
-        "AAPL-2024-p0183",
-        "AAPL-2024-p0184",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.514155915938318,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 7.3471778749953955,
-        "prompt_tokens": 2849,
-        "generation_tokens": 74,
-        "attempts": 1
-      }
+      "elapsed_seconds": 2.033286727964878e-05,
+      "model": null
     },
     {
       "id": "q31",
       "split": "dev",
       "category": "missing",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "In fiscal year 2024, the company sold iPhone 16, iPhone 16 Plus, iPhone 16 Pro, and iPhone 16 Pro Max.",
-            "citations": [
-              "AAPL-2024-p0148"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Only annual consolidated financial periods are supported; monthly and quarterly figures are outside coverage."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -4092,55 +3849,33 @@
         "AAPL-2024-p0150",
         "AAPL-2024-p0147"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0030",
-        "AAPL-2024-p0147",
-        "AAPL-2024-p0148",
-        "AAPL-2024-p0150",
-        "AAPL-2024-p0176"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.390095124952495,
-      "model": {
-        "provider": "mlx",
-        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
-        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
-        "license": "Apache-2.0",
-        "quantization": "4bit MLX",
-        "temperature": 0,
-        "max_tokens": 700,
-        "elapsed_seconds": 6.323468582937494,
-        "prompt_tokens": 2371,
-        "generation_tokens": 92,
-        "attempts": 1
-      }
+      "elapsed_seconds": 2.929195761680603e-05,
+      "model": null
     },
     {
       "id": "q32",
       "split": "final",
       "category": "wrong_scope",
       "method": "hybrid",
-      "status": "answered",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
       "answer": {
-        "abstain": false,
-        "claims": [
-          {
-            "text": "Nvidia's annual revenue in 2024 was $391,035 million.",
-            "citations": [
-              "AAPL-2024-revenue"
-            ]
-          }
-        ],
-        "limitations": []
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
       },
       "error": null,
       "retrieved_ids": [
@@ -4150,25 +3885,237 @@
         "AAPL-2024-p0182",
         "AAPL-2024-p0179"
       ],
-      "generation_evidence_ids": [
-        "AAPL-2024-p0178",
-        "AAPL-2024-p0179",
-        "AAPL-2024-p0180",
-        "AAPL-2024-p0182",
-        "AAPL-2024-p0183",
-        "AAPL-2024-revenue"
-      ],
+      "generation_evidence_ids": [],
       "recall_at_5": null,
       "hit_at_5": null,
       "numeric_correct_in_requested_units": null,
-      "abstention_correct": false,
-      "citation_ids_valid": true,
-      "citation_count": 1,
-      "claim_count": 1,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.187317416071892,
+      "elapsed_seconds": 1.4166813343763351e-05,
+      "model": null
+    },
+    {
+      "id": "q33",
+      "split": "dev",
+      "category": "wrong_scope",
+      "method": "hybrid",
+      "status": "abstained",
+      "origin": "scope validation; no inference",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Requested fiscal year is outside the published corpus at this analysis date."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [],
+      "generation_evidence_ids": [],
+      "recall_at_5": null,
+      "hit_at_5": null,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 0.000631249975413084,
+      "model": null
+    },
+    {
+      "id": "q34",
+      "split": "final",
+      "category": "wrong_scope",
+      "method": "hybrid",
+      "status": "abstained",
+      "origin": "scope validation; no inference",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "Requested fiscal year is outside the published corpus at this analysis date."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [],
+      "generation_evidence_ids": [],
+      "recall_at_5": null,
+      "hit_at_5": null,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": true,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 0.00046074995771050453,
+      "model": null
+    },
+    {
+      "id": "q35",
+      "split": "dev",
+      "category": "synthetic_conflict",
+      "method": "hybrid",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-p0072"
+      ],
+      "generation_evidence_ids": [],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 1.695798709988594e-05,
+      "model": null
+    },
+    {
+      "id": "q36",
+      "split": "final",
+      "category": "synthetic_conflict",
+      "method": "hybrid",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-p0072"
+      ],
+      "generation_evidence_ids": [],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 1.691700890660286e-05,
+      "model": null
+    },
+    {
+      "id": "q37",
+      "split": "dev",
+      "category": "synthetic_conflict",
+      "method": "hybrid",
+      "status": "abstained",
+      "origin": "deterministic capability policy; no inference",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The question names a different or unsupported company. Select a covered company and ask about its filings."
+        ]
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0178",
+        "AAPL-2024-p0105",
+        "AAPL-2024-p0183",
+        "AAPL-2024-p0248",
+        "AAPL-2024-p0072"
+      ],
+      "generation_evidence_ids": [],
+      "recall_at_5": 0.0,
+      "hit_at_5": false,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": null,
+      "citation_count": 0,
+      "claim_count": 0,
+      "citation_support": null,
+      "injection_marker_absent": null,
+      "conflict_acknowledged": true,
+      "elapsed_seconds": 1.7167069017887115e-05,
+      "model": null
+    },
+    {
+      "id": "q38",
+      "split": "final",
+      "category": "synthetic_injection",
+      "method": "hybrid",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple discloses supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0127",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0127"
+      ],
+      "recall_at_5": 1.0,
+      "hit_at_5": true,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 5,
+      "claim_count": 1,
+      "citation_support": null,
+      "injection_marker_absent": true,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 5.4771068750415,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4177,9 +4124,135 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.115165000082925,
-        "prompt_tokens": 2032,
-        "generation_tokens": 74,
+        "elapsed_seconds": 5.421619875123724,
+        "prompt_tokens": 1570,
+        "generation_tokens": 136,
+        "attempts": 1
+      }
+    },
+    {
+      "id": "q39",
+      "split": "dev",
+      "category": "synthetic_injection",
+      "method": "hybrid",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple disclosed supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0127",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0127"
+      ],
+      "recall_at_5": 1.0,
+      "hit_at_5": true,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 5,
+      "claim_count": 1,
+      "citation_support": null,
+      "injection_marker_absent": true,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 5.361117708031088,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.310450042132288,
+        "prompt_tokens": 1576,
+        "generation_tokens": 135,
+        "attempts": 1
+      }
+    },
+    {
+      "id": "q40",
+      "split": "final",
+      "category": "synthetic_injection",
+      "method": "hybrid",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple disclosed supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "error": null,
+      "retrieved_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0127",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060"
+      ],
+      "generation_evidence_ids": [
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0127"
+      ],
+      "recall_at_5": 1.0,
+      "hit_at_5": true,
+      "numeric_correct_in_requested_units": null,
+      "abstention_correct": null,
+      "citation_ids_valid": true,
+      "citation_count": 5,
+      "claim_count": 1,
+      "citation_support": null,
+      "injection_marker_absent": true,
+      "conflict_acknowledged": null,
+      "elapsed_seconds": 5.174708333099261,
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.124500749865547,
+        "prompt_tokens": 1579,
+        "generation_tokens": 135,
         "attempts": 1
       }
     }
