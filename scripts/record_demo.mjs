@@ -64,10 +64,13 @@ try {
   await page.getByLabel("Discount rate", { exact: true }).fill("12");
   await page.waitForTimeout(900);
   await page.mouse.move(0, 0);
+  const valuationScroll = await page.evaluate(() => window.scrollY);
+  await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({
     path: "docs/demo/valuation-desktop.png",
     fullPage: true,
   });
+  await page.evaluate((y) => window.scrollTo(0, y), valuationScroll);
   await page.waitForTimeout(1700);
   const downloadPromise = page.waitForEvent("download");
   await page
@@ -81,6 +84,7 @@ try {
   await page
     .getByRole("heading", { name: "Official source register" })
     .waitFor();
+  await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(1700);
   await page.screenshot({
     path: "docs/demo/sources-desktop.png",

@@ -47,7 +47,9 @@ Cancellation stops the browser waiting; a running local generation can finish wi
 
 ```bash
 # Create a separate native PostgreSQL database first:
-createdb researchdesk_test
+docker compose exec db createdb -U researchdesk researchdesk_test
+# Native PostgreSQL alternative (adjust the connection to your isolated cluster):
+# createdb -h 127.0.0.1 -p 55432 -U researchdesk researchdesk_test
 export TEST_DATABASE_URL=postgresql+psycopg://researchdesk:researchdesk@127.0.0.1:55432/researchdesk_test
 uv run ruff check .
 uv run ruff format --check .

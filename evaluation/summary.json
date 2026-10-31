@@ -1,7 +1,7 @@
 {
   "status": "real_model_run",
-  "started_at": "2026-10-30T21:06:44.601040+00:00",
-  "code_commit": "e39bf9ae118b4b031a2408cfa4e56260cd81742c",
+  "started_at": "2026-10-30T23:44:41.583394+00:00",
+  "code_commit": "818819450e06ca59340d32138df79b87231d3e45",
   "reference_review": "Source-checked by coding agent; independent human review pending",
   "retrieval_metric": "Mean recall@5: fraction of predeclared relevant passage IDs found among 5 prose-search hits; before identical fact-tool augmentation. Hit@5 is at least one relevant ID.",
   "numeric_metric": "Generated narrative contains expected number within tolerance AND requested unit, period included in question. Independent deterministic financial tests are separate.",
@@ -67,8 +67,8 @@
         "reviewer": "coding agent; not independent human"
       },
       "latency_seconds": {
-        "median": 5.1892567705363035,
-        "p95": 11.024583325290587
+        "median": 5.430384687613696,
+        "p95": 10.701576004212257
       },
       "measured_generation_tokens": 2086,
       "source_reviewed_citation_relevance": {
@@ -139,8 +139,8 @@
         "reviewer": "coding agent; not independent human"
       },
       "latency_seconds": {
-        "median": 5.017336249933578,
-        "p95": 7.066579420445487
+        "median": 5.015584729495458,
+        "p95": 6.75529130602954
       },
       "measured_generation_tokens": 1419,
       "source_reviewed_citation_relevance": {
@@ -213,8 +213,8 @@
         "reviewer": "coding agent; not independent human"
       },
       "latency_seconds": {
-        "median": 5.777945937472396,
-        "p95": 11.523942986782641
+        "median": 5.805657416465692,
+        "p95": 10.80184319166001
       },
       "measured_generation_tokens": 1785,
       "source_reviewed_citation_relevance": {
@@ -285,8 +285,8 @@
         "reviewer": "coding agent; not independent human"
       },
       "latency_seconds": {
-        "median": 5.921979854581878,
-        "p95": 6.984869010024704
+        "median": 5.075264604063705,
+        "p95": 7.704294287529775
       },
       "measured_generation_tokens": 1532,
       "source_reviewed_citation_relevance": {

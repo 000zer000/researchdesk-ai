@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-10-30T21:06:44.601040+00:00",
-  "commit": "e39bf9ae118b4b031a2408cfa4e56260cd81742c",
+  "started_at": "2026-10-30T23:44:41.583394+00:00",
+  "commit": "818819450e06ca59340d32138df79b87231d3e45",
   "records": [
     {
       "id": "q01",
@@ -47,7 +47,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.545911957975477,
+      "elapsed_seconds": 5.740216834004968,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -56,7 +56,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.511855999939144,
+        "elapsed_seconds": 5.704255708958954,
         "prompt_tokens": 2348,
         "generation_tokens": 75,
         "attempts": 1
@@ -107,7 +107,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.651517959078774,
+      "elapsed_seconds": 7.08930049999617,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -116,7 +116,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.617894249968231,
+        "elapsed_seconds": 7.020740124862641,
         "prompt_tokens": 3215,
         "generation_tokens": 77,
         "attempts": 1
@@ -167,7 +167,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.062922584125772,
+      "elapsed_seconds": 5.551909541944042,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -176,7 +176,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.043318832991645,
+        "elapsed_seconds": 5.520262874895707,
         "prompt_tokens": 2308,
         "generation_tokens": 75,
         "attempts": 1
@@ -227,7 +227,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.24322724994272,
+      "elapsed_seconds": 6.401860874844715,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -236,7 +236,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.208628541091457,
+        "elapsed_seconds": 6.3484392911195755,
         "prompt_tokens": 2949,
         "generation_tokens": 77,
         "attempts": 1
@@ -287,7 +287,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.100793374935165,
+      "elapsed_seconds": 5.369253000011668,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -296,7 +296,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.061119915917516,
+        "elapsed_seconds": 5.327702957903966,
         "prompt_tokens": 2299,
         "generation_tokens": 77,
         "attempts": 1
@@ -347,7 +347,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.638955499976873,
+      "elapsed_seconds": 5.1286874590441585,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -356,7 +356,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.5558020828757435,
+        "elapsed_seconds": 5.049341750098392,
         "prompt_tokens": 2258,
         "generation_tokens": 77,
         "attempts": 1
@@ -407,7 +407,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.575325582874939,
+      "elapsed_seconds": 5.491516375215724,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -416,7 +416,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.53753750002943,
+        "elapsed_seconds": 5.451544041978195,
         "prompt_tokens": 2503,
         "generation_tokens": 76,
         "attempts": 1
@@ -467,7 +467,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.32582545792684,
+      "elapsed_seconds": 5.121338458033279,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -476,7 +476,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.226004667114466,
+        "elapsed_seconds": 5.039464416913688,
         "prompt_tokens": 2309,
         "generation_tokens": 75,
         "attempts": 1
@@ -527,7 +527,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.141227457905188,
+      "elapsed_seconds": 5.212365499930456,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -536,7 +536,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.110523417126387,
+        "elapsed_seconds": 5.178590041119605,
         "prompt_tokens": 2368,
         "generation_tokens": 75,
         "attempts": 1
@@ -587,7 +587,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.006096250144765,
+      "elapsed_seconds": 5.026565459091216,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -596,7 +596,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.941142500145361,
+        "elapsed_seconds": 4.963980832835659,
         "prompt_tokens": 2253,
         "generation_tokens": 76,
         "attempts": 1
@@ -647,7 +647,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.237286083167419,
+      "elapsed_seconds": 5.228140417020768,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -656,7 +656,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.209768333937973,
+        "elapsed_seconds": 5.201240374939516,
         "prompt_tokens": 2403,
         "generation_tokens": 75,
         "attempts": 1
@@ -707,7 +707,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.506076749879867,
+      "elapsed_seconds": 5.418562000151724,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -716,7 +716,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.446904125157744,
+        "elapsed_seconds": 5.355378832900897,
         "prompt_tokens": 2497,
         "generation_tokens": 76,
         "attempts": 1
@@ -769,7 +769,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.593617541948333,
+      "elapsed_seconds": 6.350641000084579,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -778,7 +778,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.570631416980177,
+        "elapsed_seconds": 6.330236708046868,
         "prompt_tokens": 2955,
         "generation_tokens": 87,
         "attempts": 1
@@ -831,7 +831,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.050920333014801,
+      "elapsed_seconds": 5.8735156250186265,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -840,7 +840,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.017031082883477,
+        "elapsed_seconds": 5.838835084112361,
         "prompt_tokens": 2563,
         "generation_tokens": 89,
         "attempts": 1
@@ -893,7 +893,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.721853707917035,
+      "elapsed_seconds": 10.267916374839842,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -902,7 +902,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.683566624997184,
+        "elapsed_seconds": 10.241118832957,
         "prompt_tokens": 3326,
         "generation_tokens": 234,
         "attempts": 1
@@ -956,7 +956,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.595153958071023,
+      "elapsed_seconds": 6.737711874768138,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -965,7 +965,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.536837666993961,
+        "elapsed_seconds": 6.708758332999423,
         "prompt_tokens": 3157,
         "generation_tokens": 87,
         "attempts": 1
@@ -1018,7 +1018,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.821666207863018,
+      "elapsed_seconds": 8.308764207875356,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1027,7 +1027,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 8.778633708134294,
+        "elapsed_seconds": 8.285933292005211,
         "prompt_tokens": 3954,
         "generation_tokens": 95,
         "attempts": 1
@@ -1080,7 +1080,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.654299708083272,
+      "elapsed_seconds": 6.496877374825999,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1089,7 +1089,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.611548207933083,
+        "elapsed_seconds": 6.461717708967626,
         "prompt_tokens": 2912,
         "generation_tokens": 92,
         "attempts": 1
@@ -1144,7 +1144,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 9.765980459051207,
+      "elapsed_seconds": 9.911213249899447,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1153,7 +1153,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.738525625085458,
+        "elapsed_seconds": 9.885274125961587,
         "prompt_tokens": 3427,
         "generation_tokens": 236,
         "attempts": 2
@@ -1205,7 +1205,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.208388791885227,
+      "elapsed_seconds": 4.15483708307147,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1214,7 +1214,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.192464417079464,
+        "elapsed_seconds": 4.139174416894093,
         "prompt_tokens": 1440,
         "generation_tokens": 105,
         "attempts": 1
@@ -1270,7 +1270,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.363482208922505,
+      "elapsed_seconds": 10.699434750014916,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1279,7 +1279,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.345558875007555,
+        "elapsed_seconds": 10.685142915928736,
         "prompt_tokens": 3579,
         "generation_tokens": 264,
         "attempts": 2
@@ -1329,7 +1329,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.990005875006318,
+      "elapsed_seconds": 4.047973167151213,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1338,7 +1338,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 3.967473041964695,
+        "elapsed_seconds": 4.026910332962871,
         "prompt_tokens": 1548,
         "generation_tokens": 81,
         "attempts": 1
@@ -1377,7 +1377,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.006746541941538,
+      "elapsed_seconds": 10.742259833961725,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1386,7 +1386,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.986351292114705,
+        "elapsed_seconds": 10.719462750013918,
         "prompt_tokens": 3731,
         "generation_tokens": 254,
         "attempts": 2
@@ -1436,7 +1436,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.671447792090476,
+      "elapsed_seconds": 4.493999707978219,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1445,7 +1445,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.651718541048467,
+        "elapsed_seconds": 4.474037125008181,
         "prompt_tokens": 1897,
         "generation_tokens": 79,
         "attempts": 1
@@ -1495,7 +1495,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.887326208874583,
+      "elapsed_seconds": 4.3744134998414665,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1504,7 +1504,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.778361416887492,
+        "elapsed_seconds": 4.340580000076443,
         "prompt_tokens": 1845,
         "generation_tokens": 73,
         "attempts": 1
@@ -1554,7 +1554,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.03875970793888,
+      "elapsed_seconds": 5.369561041938141,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1563,7 +1563,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.987588667077944,
+        "elapsed_seconds": 5.359332750085741,
         "prompt_tokens": 1965,
         "generation_tokens": 119,
         "attempts": 1
@@ -1602,7 +1602,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0006496661808341742,
+      "elapsed_seconds": 0.00038116704672574997,
       "model": null
     },
     {
@@ -1638,7 +1638,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0026025420520454645,
+      "elapsed_seconds": 5.108281038701534e-05,
       "model": null
     },
     {
@@ -1674,7 +1674,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.433305002748966e-05,
+      "elapsed_seconds": 1.595797948539257e-05,
       "model": null
     },
     {
@@ -1710,7 +1710,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0011581669095903635,
+      "elapsed_seconds": 0.0003489579539746046,
       "model": null
     },
     {
@@ -1746,7 +1746,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.6958994567394257e-05,
+      "elapsed_seconds": 2.0792009308934212e-05,
       "model": null
     },
     {
@@ -1782,7 +1782,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.499948307871819e-06,
+      "elapsed_seconds": 7.542083039879799e-06,
       "model": null
     },
     {
@@ -1812,7 +1812,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.004994249902665615,
+      "elapsed_seconds": 0.0012812500353902578,
       "model": null
     },
     {
@@ -1842,7 +1842,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0005017919465899467,
+      "elapsed_seconds": 0.0004768751095980406,
       "model": null
     },
     {
@@ -1890,7 +1890,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 4.89489158289507,
+      "elapsed_seconds": 4.614703124854714,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1899,7 +1899,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.872013833140954,
+        "elapsed_seconds": 4.602195417042822,
         "prompt_tokens": 1886,
         "generation_tokens": 76,
         "attempts": 1
@@ -1950,7 +1950,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 5.017969249980524,
+      "elapsed_seconds": 4.443192541832104,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -1959,7 +1959,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.992200375068933,
+        "elapsed_seconds": 4.428830666001886,
         "prompt_tokens": 1886,
         "generation_tokens": 76,
         "attempts": 1
@@ -2010,7 +2010,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 4.670372749911621,
+      "elapsed_seconds": 4.507844500010833,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2019,7 +2019,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.648540791822597,
+        "elapsed_seconds": 4.4906632921192795,
         "prompt_tokens": 1886,
         "generation_tokens": 76,
         "attempts": 1
@@ -2072,7 +2072,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.016703249886632,
+      "elapsed_seconds": 4.9475204579066485,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2081,7 +2081,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.000740541843697,
+        "elapsed_seconds": 4.931332416133955,
         "prompt_tokens": 1613,
         "generation_tokens": 120,
         "attempts": 1
@@ -2136,7 +2136,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.098080083960667,
+      "elapsed_seconds": 10.410227207932621,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2145,7 +2145,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 10.078855708008632,
+        "elapsed_seconds": 10.386869208654389,
         "prompt_tokens": 3492,
         "generation_tokens": 238,
         "attempts": 2
@@ -2198,7 +2198,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.6571057920809835,
+      "elapsed_seconds": 5.0046039998997,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2207,7 +2207,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.641236334107816,
+        "elapsed_seconds": 4.991892624879256,
         "prompt_tokens": 1622,
         "generation_tokens": 113,
         "attempts": 1
@@ -2257,7 +2257,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.751913875108585,
+      "elapsed_seconds": 6.344927582889795,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2266,7 +2266,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.697213749866933,
+        "elapsed_seconds": 6.177449041977525,
         "prompt_tokens": 2522,
         "generation_tokens": 75,
         "attempts": 1
@@ -2317,7 +2317,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 7.637235000031069,
+      "elapsed_seconds": 9.324382249964401,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2326,7 +2326,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 7.555249999975786,
+        "elapsed_seconds": 8.952511999988928,
         "prompt_tokens": 3461,
         "generation_tokens": 77,
         "attempts": 1
@@ -2377,7 +2377,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.027065791189671,
+      "elapsed_seconds": 7.47543654195033,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2386,7 +2386,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.971171542070806,
+        "elapsed_seconds": 7.374067292083055,
         "prompt_tokens": 2828,
         "generation_tokens": 75,
         "attempts": 1
@@ -2437,7 +2437,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.950533957919106,
+      "elapsed_seconds": 7.505555290961638,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2446,7 +2446,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.87526745791547,
+        "elapsed_seconds": 7.387093916069716,
         "prompt_tokens": 3221,
         "generation_tokens": 77,
         "attempts": 1
@@ -2497,7 +2497,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.900244165910408,
+      "elapsed_seconds": 5.972166041843593,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2506,7 +2506,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.758245749864727,
+        "elapsed_seconds": 5.821872083004564,
         "prompt_tokens": 2604,
         "generation_tokens": 77,
         "attempts": 1
@@ -2557,7 +2557,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.28436474991031,
+      "elapsed_seconds": 6.311806875048205,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2566,7 +2566,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.099350292002782,
+        "elapsed_seconds": 6.131382124964148,
         "prompt_tokens": 2723,
         "generation_tokens": 81,
         "attempts": 1
@@ -2617,7 +2617,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.454702500021085,
+      "elapsed_seconds": 6.615334582980722,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2626,7 +2626,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.933996500214562,
+        "elapsed_seconds": 6.066113916924223,
         "prompt_tokens": 2740,
         "generation_tokens": 76,
         "attempts": 1
@@ -2677,7 +2677,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.018290541833267,
+      "elapsed_seconds": 6.070444250013679,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2686,7 +2686,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.729134416906163,
+        "elapsed_seconds": 5.890848875045776,
         "prompt_tokens": 2618,
         "generation_tokens": 81,
         "attempts": 1
@@ -2737,7 +2737,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.4630653341300786,
+      "elapsed_seconds": 5.639148791087791,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2746,7 +2746,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.358540832996368,
+        "elapsed_seconds": 5.471873082919046,
         "prompt_tokens": 2440,
         "generation_tokens": 75,
         "attempts": 1
@@ -2797,7 +2797,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.876314667053521,
+      "elapsed_seconds": 6.448824041057378,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2806,7 +2806,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.7393912088591605,
+        "elapsed_seconds": 6.297722875140607,
         "prompt_tokens": 2669,
         "generation_tokens": 81,
         "attempts": 1
@@ -2846,7 +2846,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.819629458943382,
+      "elapsed_seconds": 12.157717708032578,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2855,7 +2855,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.711146625922993,
+        "elapsed_seconds": 12.047373540699482,
         "prompt_tokens": 5935,
         "generation_tokens": 118,
         "attempts": 2
@@ -2906,7 +2906,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.275023624999449,
+      "elapsed_seconds": 5.777676541125402,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2915,7 +2915,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.134549041977152,
+        "elapsed_seconds": 5.641356125008315,
         "prompt_tokens": 2477,
         "generation_tokens": 81,
         "attempts": 1
@@ -2968,7 +2968,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.805832709185779,
+      "elapsed_seconds": 6.882667792029679,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -2977,7 +2977,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.6934531659353524,
+        "elapsed_seconds": 6.787465499946848,
         "prompt_tokens": 3044,
         "generation_tokens": 87,
         "attempts": 1
@@ -3030,7 +3030,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.9676450421102345,
+      "elapsed_seconds": 6.2021192498505116,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3039,7 +3039,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.749443958047777,
+        "elapsed_seconds": 5.98478649999015,
         "prompt_tokens": 2593,
         "generation_tokens": 89,
         "attempts": 1
@@ -3092,7 +3092,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.576641541905701,
+      "elapsed_seconds": 7.209649791941047,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3101,7 +3101,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.382212500087917,
+        "elapsed_seconds": 7.00247075012885,
         "prompt_tokens": 2744,
         "generation_tokens": 103,
         "attempts": 1
@@ -3155,7 +3155,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.722604417009279,
+      "elapsed_seconds": 7.619026500033215,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3164,7 +3164,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.621288707945496,
+        "elapsed_seconds": 7.4851664998568594,
         "prompt_tokens": 3157,
         "generation_tokens": 83,
         "attempts": 1
@@ -3217,7 +3217,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 8.358655290910974,
+      "elapsed_seconds": 9.284346209140494,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3226,7 +3226,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 8.301275416044518,
+        "elapsed_seconds": 9.189510500058532,
         "prompt_tokens": 3942,
         "generation_tokens": 95,
         "attempts": 1
@@ -3279,7 +3279,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.492640707874671,
+      "elapsed_seconds": 6.487908832961693,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3288,7 +3288,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.364347249967977,
+        "elapsed_seconds": 6.3617643339093775,
         "prompt_tokens": 2767,
         "generation_tokens": 92,
         "attempts": 1
@@ -3342,7 +3342,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.3818007910158485,
+      "elapsed_seconds": 5.233407665975392,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3351,7 +3351,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.250398457981646,
+        "elapsed_seconds": 5.177193874958903,
         "prompt_tokens": 1544,
         "generation_tokens": 136,
         "attempts": 1
@@ -3404,7 +3404,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.619495416991413,
+      "elapsed_seconds": 4.528788165887818,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3413,7 +3413,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.567139999940991,
+        "elapsed_seconds": 4.4751772079616785,
         "prompt_tokens": 1439,
         "generation_tokens": 119,
         "attempts": 1
@@ -3452,7 +3452,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 10.041733665857464,
+      "elapsed_seconds": 9.65624966705218,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3461,7 +3461,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 9.970328624127433,
+        "elapsed_seconds": 9.597951790783554,
         "prompt_tokens": 3033,
         "generation_tokens": 258,
         "attempts": 2
@@ -3515,7 +3515,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.082496042130515,
+      "elapsed_seconds": 4.964876750018448,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3524,7 +3524,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.995472416980192,
+        "elapsed_seconds": 4.911871375050396,
         "prompt_tokens": 1402,
         "generation_tokens": 144,
         "attempts": 1
@@ -3563,7 +3563,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 11.508380540879443,
+      "elapsed_seconds": 10.730481375008821,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3572,7 +3572,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 11.402722375001758,
+        "elapsed_seconds": 10.635964667191729,
         "prompt_tokens": 3641,
         "generation_tokens": 250,
         "attempts": 2
@@ -3622,7 +3622,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.983547291951254,
+      "elapsed_seconds": 4.474332499783486,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3631,7 +3631,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.847546583041549,
+        "elapsed_seconds": 4.366570125101134,
         "prompt_tokens": 1862,
         "generation_tokens": 79,
         "attempts": 1
@@ -3681,7 +3681,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 4.677182083949447,
+      "elapsed_seconds": 4.075657167006284,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3690,7 +3690,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.48268104204908,
+        "elapsed_seconds": 3.9519904169719666,
         "prompt_tokens": 1661,
         "generation_tokens": 73,
         "attempts": 1
@@ -3740,7 +3740,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.0590465411078185,
+      "elapsed_seconds": 4.6461277501657605,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -3749,7 +3749,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.985300624975935,
+        "elapsed_seconds": 4.596900000004098,
         "prompt_tokens": 1777,
         "generation_tokens": 101,
         "attempts": 1
@@ -3788,7 +3788,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.001491541974246502,
+      "elapsed_seconds": 0.00033458415418863297,
       "model": null
     },
     {
@@ -3824,7 +3824,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 3.595813177525997e-05,
+      "elapsed_seconds": 2.7749920263886452e-05,
       "model": null
     },
     {
@@ -3860,7 +3860,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.737506292760372e-05,
+      "elapsed_seconds": 2.550007775425911e-05,
       "model": null
     },
     {
@@ -3896,7 +3896,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.2665830329060555e-05,
+      "elapsed_seconds": 2.0124949514865875e-05,
       "model": null
     },
     {
@@ -3932,7 +3932,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 2.933293581008911e-05,
+      "elapsed_seconds": 2.9957853257656097e-05,
       "model": null
     },
     {
@@ -3968,7 +3968,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 1.4790799468755722e-05,
+      "elapsed_seconds": 1.74578744918108e-05,
       "model": null
     },
     {
@@ -3998,7 +3998,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0016047090757638216,
+      "elapsed_seconds": 0.0005194579716771841,
       "model": null
     },
     {
@@ -4028,7 +4028,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 0.0005072921048849821,
+      "elapsed_seconds": 0.00046941707842051983,
       "model": null
     },
     {
@@ -4076,7 +4076,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 5.803977999836206,
+      "elapsed_seconds": 4.69628154207021,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4085,7 +4085,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.721756750019267,
+        "elapsed_seconds": 4.641257290961221,
         "prompt_tokens": 2038,
         "generation_tokens": 76,
         "attempts": 1
@@ -4136,7 +4136,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 4.738617958966643,
+      "elapsed_seconds": 4.678259957814589,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4145,7 +4145,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.659958208911121,
+        "elapsed_seconds": 4.623475042171776,
         "prompt_tokens": 2038,
         "generation_tokens": 76,
         "attempts": 1
@@ -4196,7 +4196,7 @@
       "citation_support": null,
       "injection_marker_absent": null,
       "conflict_acknowledged": false,
-      "elapsed_seconds": 4.816854167031124,
+      "elapsed_seconds": 4.654383333167061,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4205,7 +4205,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 4.7612534170039,
+        "elapsed_seconds": 4.603255042107776,
         "prompt_tokens": 2038,
         "generation_tokens": 76,
         "attempts": 1
@@ -4259,7 +4259,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.33590554096736,
+      "elapsed_seconds": 5.000520250061527,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4268,7 +4268,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.276470124954358,
+        "elapsed_seconds": 4.950506791938096,
         "prompt_tokens": 1570,
         "generation_tokens": 136,
         "attempts": 1
@@ -4322,7 +4322,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 5.131916208192706,
+      "elapsed_seconds": 4.986716708168387,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4331,7 +4331,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 5.077620625030249,
+        "elapsed_seconds": 4.937975582899526,
         "prompt_tokens": 1576,
         "generation_tokens": 135,
         "attempts": 1
@@ -4385,7 +4385,7 @@
       "citation_support": null,
       "injection_marker_absent": true,
       "conflict_acknowledged": null,
-      "elapsed_seconds": 6.819539749994874,
+      "elapsed_seconds": 5.150008958065882,
       "model": {
         "provider": "mlx",
         "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
@@ -4394,7 +4394,7 @@
         "quantization": "4bit MLX",
         "temperature": 0,
         "max_tokens": 700,
-        "elapsed_seconds": 6.649877541931346,
+        "elapsed_seconds": 5.099387958180159,
         "prompt_tokens": 1579,
         "generation_tokens": 135,
         "attempts": 1

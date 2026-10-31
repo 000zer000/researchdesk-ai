@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-30T23:55:39.831438+00:00",
+  "runtime_commit": "818819450e06ca59340d32138df79b87231d3e45",
+  "pytest_native_postgresql": {
+    "tests": 52,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pytest_report_sha256": "e8e3681944426f86079498e12a4d8aa049fe2eb83c32226c631794808c7524b2",
+  "ruff": "check and format --check passed",
+  "typescript": "tsc --noEmit and Vite production build passed",
+  "chromium_simulated_model": "passed; real finance/PDF API and synthetic fixture DB; explicitly simulated research response",
+  "chromium_real_model": "passed after three successful real HTTP generations on the same Uvicorn process; evidence, DCF change, PDF, mobile company selection, temporal filter and data-error clearing checked",
+  "source_import_repeat": {
+    "documents": 6,
+    "passages": 2851,
+    "facts": 48
+  },
+  "pdf": "three latest rendered pages visually inspected; real API exports separately exercised",
+  "native_persistence": "native-persistence.json records identical before/after data digest",
+  "hosted_interactive_demo": "not deployed; local run and recording are the delivery path"
+}

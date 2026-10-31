@@ -1,5 +1,5 @@
 {
-  "evaluated_commit": "e39bf9ae118b4b031a2408cfa4e56260cd81742c",
+  "evaluated_commit": "818819450e06ca59340d32138df79b87231d3e45",
   "sha256": {
     "src/researchdesk/config.py": "b2a0def8597a127aec8374f5bf125c65a503f115af06d33097f1b68381a75424",
     "src/researchdesk/db.py": "857f1f6c7d86ff17733cd5309baae085ca0881fa1bb8610ef92e77c28b7a2766",
@@ -7,11 +7,11 @@
     "src/researchdesk/embeddings.py": "b9b248bc4ab7307373eb4f1039a8e1a0c6b8ac4f4258047422ee248316795406",
     "src/researchdesk/search.py": "1ccfcf71f8a9de7a02c5aec95d3e9ac1ab8c946bafadfdff1780c369446a8e9d",
     "src/researchdesk/scope.py": "43895dc03b67079d8720a7df165f16e93ea53d62398e0f541ba2a4fd274252d2",
-    "src/researchdesk/provider.py": "3227277fac928cd7693f3b95e05895ea7be6db26c61593eef633064c2baa1b09",
+    "src/researchdesk/provider.py": "bdd7cd3f1118ab437b35b3b92586251435096ec13ac7c3b27fe6f0a343a21754",
     "src/researchdesk/research.py": "7e16b842cf6d110bb39dc61b91c5805c034100bdacbb94ef783fd7ad766db909",
     "src/researchdesk/finance.py": "98343e80495f448063a7dcd1b2fb3528ef662a2322c4d83153e311a0d496985c",
     "src/researchdesk/report.py": "0018ceaf00e68827e9cc2015679e9e45f557de1a4d7397b788b3f84ddc5b6e96",
-    "src/researchdesk/api.py": "1d66eab7f166b0ffcb549320567489c61c8b587d78a71242aea98674ea41e308",
+    "src/researchdesk/api.py": "f96f96d15ba8cf839e6e9b86d282beaab4a7cc7ba2dbcaed2c9362f9e7b1c9bd",
     "src/researchdesk/evaluation.py": "7d77566aa99648e5a658f7d44df9d53494986e0a9d88198b3f7cb7f75d595676"
   },
   "note": "Final delivery may add evidence/docs; these runtime sources must remain identical to the evaluated version."

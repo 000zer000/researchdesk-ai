@@ -1,0 +1,119 @@
+{
+  "checked_at": "2026-10-30T23:52:53.607140+00:00",
+  "code_commit": "818819450e06ca59340d32138df79b87231d3e45",
+  "real_http_requests": [
+    {
+      "request": 1,
+      "http_status": 200,
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple discloses supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.152449834160507,
+        "prompt_tokens": 1544,
+        "generation_tokens": 136,
+        "attempts": 1
+      },
+      "elapsed_seconds": 7.610213707899675
+    },
+    {
+      "request": 2,
+      "http_status": 200,
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple discloses supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.236312875058502,
+        "prompt_tokens": 1544,
+        "generation_tokens": 136,
+        "attempts": 1
+      },
+      "elapsed_seconds": 5.319108416792005
+    },
+    {
+      "request": 3,
+      "http_status": 200,
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Apple discloses supply-chain risks related to sourcing components from single or limited sources, exposure to credit risk, and natural disasters.",
+            "citations": [
+              "AAPL-2024-p0072",
+              "AAPL-2024-p0127",
+              "AAPL-2024-p0073",
+              "AAPL-2024-p0058",
+              "AAPL-2024-p0060"
+            ]
+          }
+        ],
+        "limitations": []
+      },
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+        "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 700,
+        "elapsed_seconds": 5.4468533750623465,
+        "prompt_tokens": 1544,
+        "generation_tokens": 136,
+        "attempts": 1
+      },
+      "elapsed_seconds": 5.515991625143215
+    }
+  ],
+  "unsupported_market_question": {
+    "status": "abstained",
+    "origin": "deterministic capability policy; no inference"
+  },
+  "note": "Same running Uvicorn process; real MLX model, no mocked responses."
+}

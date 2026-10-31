@@ -26,15 +26,15 @@ Raw source excerpts for review remain local in ignored `data/runtime/evaluation-
 
 ## Executed final replay
 
-Evaluated research runtime commit: `e39bf9ae118b4b031a2408cfa4e56260cd81742c`. Run started 2026-10-30T21:06:44.601040+00:00. The delivery validator checks that the research/finance runtime sources still match this evaluated revision.
+Evaluated research runtime commit: `818819450e06ca59340d32138df79b87231d3e45`. Run started 2026-10-30T23:44:41.583394+00:00. The delivery validator checks that the research/finance runtime sources still match this evaluated revision.
 
 
 | Method | Split | Mean recall@5 | Numeric narrative | Supported displayed claims* | Answered / invalid / abstained | Median / p95 seconds |
 |---|---|---:|---:|---:|---|---|
-| lexical | dev replay | 7.3% (n=16) | 9/9 | 11/15 | 15 / 1 / 4 | 5.19 / 11.02 |
-| lexical | final replay | 22.9% (n=16) | 5/9 | 13/16 | 16 / 0 / 4 | 5.02 / 7.07 |
-| hybrid | dev replay | 27.6% (n=16) | 8/9 | 11/13 | 13 / 3 / 4 | 5.78 / 11.52 |
-| hybrid | final replay | 34.4% (n=16) | 6/9 | 14/16 | 16 / 0 / 4 | 5.92 / 6.98 |
+| lexical | dev replay | 7.3% (n=16) | 9/9 | 11/15 | 15 / 1 / 4 | 5.43 / 10.70 |
+| lexical | final replay | 22.9% (n=16) | 5/9 | 13/16 | 16 / 0 / 4 | 5.02 / 6.76 |
+| hybrid | dev replay | 27.6% (n=16) | 8/9 | 11/13 | 13 / 3 / 4 | 5.81 / 10.80 |
+| hybrid | final replay | 34.4% (n=16) | 6/9 | 14/16 | 16 / 0 / 4 | 5.08 / 7.70 |
 
 *Coding-agent source assessment; independent human review pending. Rejected outputs and refusals are excluded from the displayed-claim support denominator and remain visible in the status counts. Citation relevance is separately recorded in `summary.json`; per-claim reasons and per-citation flags are in `support-review.json`.
 
@@ -54,3 +54,5 @@ There are 64 research cases using the actual model, with 71 total model calls in
 - **Strict-scorer limitations:** “decreased by 13.56%” is financially correct for Dell but fails a signed-number check expecting -13.56. A correct amount in billions can fail the requested-millions format. These cases are retained as automatic failures, with separate source-review explanations. No score was silently increased.
 
 Hybrid retrieval is retained because its measured mean recall improves on this set, not because it guarantees correctness. Retrieval recall remains low, especially before fact augmentation. No significance claim or generalization beyond this small repeated corpus is warranted. Wall-clock timings were measured on a working laptop during development; they are descriptive, not a controlled performance benchmark.
+
+The final full replay after the MLX owner-thread correction uses the same model, prompt and corpus. All 80 answer bodies are byte-equivalent after canonical JSON comparison to the pre-thread-fix run; source annotations remain bound to those answer hashes. The execution change addresses repeated HTTP request reliability, not measured model-quality improvement.
