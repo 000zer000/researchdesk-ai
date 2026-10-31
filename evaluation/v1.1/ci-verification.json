@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-31T18:25:39.283227+00:00",
+  "commit": "84baf69b11cc0ecd57f2ad4b8b0f94b07b1d135b",
+  "run_id": 41229121264,
+  "url": "https://github.com/000zer000/researchdesk-ai/actions/runs/41229121264",
+  "conclusion": "success",
+  "jobs": {
+    "postgres-and-browser": "success",
+    "clean-compose": "success"
+  },
+  "pytest_count_verified_in_log": 106,
+  "note": "Published evaluated runtime passed before this documentation receipt. The release tag also receives its own CI; see release notes for the final immutable run."
+}
