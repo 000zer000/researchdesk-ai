@@ -280,10 +280,16 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     if not financial or re.search(r"\b(risks?|could|drivers?|factors?|reasons?)\b", q):
         return None
     issues = []
-    if re.search(
-        r"\b(net capex|net capital|adjusted|non.gaap|free cash flow|fcf|gross margin|ebitda|net income|net margin)\b",
-        q,
-    ) and not (proxy and re.search(r"\b(gross|cfo.*(?:minus|less|-).*capex)\b", q)):
+    unsupported_definition = bool(
+        re.search(
+            r"\b(net capex|net capital|adjusted|non.gaap|gross margin|ebitda|net income|net margin)\b",
+            q,
+        )
+    )
+    ambiguous_fcf = bool(re.search(r"\b(free cash flow|fcf)\b", q)) and not bool(
+        re.search(r"\bcfo\s*(?:minus|less|-)\s*(?:gross\s+)?capex\b", q)
+    )
+    if unsupported_definition or ambiguous_fcf:
         issues.append(
             "The requested definition is not verified in the structured ledger. Company-reported net-capex free cash flow must not be substituted for CFO less gross PPE capex."
         )

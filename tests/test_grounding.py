@@ -420,3 +420,17 @@ def test_compact_fy_notation_selects_only_requested_period(populated):
     r = research(populated, AskInput(question="FY2023 revenue"), ContractCopyTestDouble())
     assert r["status"] == "answered"
     assert [m["id"] for m in r["verified_financials"]["measures"]] == ["revenue:2023"]
+
+
+@pytest.mark.integration
+@pytest.mark.parametrize(
+    "question",
+    [
+        "2024 free cash flow using net capex rather than gross capex",
+        "2024 adjusted CFO less gross capex",
+        "2024 free cash flow and gross margin",
+    ],
+)
+def test_gross_word_does_not_override_an_unsupported_adjusted_definition(populated, question):
+    r = research(populated, AskInput(question=question), NeverCalled())
+    assert r["status"] == "abstained" and not r["answer"]["claims"]

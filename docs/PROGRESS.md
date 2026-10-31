@@ -44,3 +44,5 @@ New period-provenance checks exposed an old numeric unit fixture missing dates a
 Final pre-freeze review added single-company output scoping, subtraction wording variants and reporting-basis compatibility across derived inputs. No further quality tuning is permitted after the fresh batch begins; any later runtime correction requires preserving the consumed attempt and explicitly labeling replays.
 
 Before writing any new cases, a final period-boundary review found that compact `FY2024` notation was not recognized consistently by the old bare-year regex. Added one shared year parser across scope, retrieval and finance, plus five regressions including unavailable FY2025. This supersedes the first correction commit before any new batch execution; no consumed batch is being called fresh. The final native suite passes 94 tests without skips.
+
+The last pre-batch definition check made unsupported net/adjusted definitions unconditional: an unrelated occurrence of “gross” cannot authorize them. Three additional regression variants pass. The definitive correction suite is 97 tests, zero skipped. New evaluation cases are written only after the following code commit.
