@@ -1,0 +1,149 @@
+{
+  "status": "Replayed known development diagnostics, not fresh evaluation. Passage identity changes do not establish semantic entailment. No generation or score target.",
+  "records": [
+    {
+      "id": "q19",
+      "question": "Which supply-chain risks does Apple disclose in its 2024 annual report?",
+      "v1.0_ids": [
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0127",
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0060"
+      ],
+      "v1.1_ids": [
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0069"
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "Why are single or limited component sources a risk in 2024?",
+      "v1.0_ids": [
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0040",
+        "AAPL-2024-p0075",
+        "AAPL-2024-p0214",
+        "AAPL-2024-p0039"
+      ],
+      "v1.1_ids": [
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0039",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0214",
+        "AAPL-2024-p0072"
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "How can industrial accidents at suppliers affect Apple in 2024?",
+      "v1.0_ids": [
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0055",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0070",
+        "AAPL-2024-p0073"
+      ],
+      "v1.1_ids": [
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0058",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0069",
+        "AAPL-2024-p0060"
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "What risk does Apple disclose about unauthorized access to personal information in 2024?",
+      "v1.0_ids": [
+        "AAPL-2024-p0094",
+        "AAPL-2024-p0098",
+        "AAPL-2024-p0097",
+        "AAPL-2024-p0095",
+        "AAPL-2024-p0118"
+      ],
+      "v1.1_ids": [
+        "AAPL-2024-p0095",
+        "AAPL-2024-p0098",
+        "AAPL-2024-p0096",
+        "AAPL-2024-p0094",
+        "AAPL-2024-p0097"
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "What printing demand and digitization risks does HP describe in 2024?",
+      "v1.0_ids": [
+        "HPQ-2024-p0041",
+        "HPQ-2024-p0210",
+        "HPQ-2024-p0042",
+        "HPQ-2024-p0242",
+        "HPQ-2024-p0074"
+      ],
+      "v1.1_ids": [
+        "HPQ-2024-p0242",
+        "HPQ-2024-p0074",
+        "HPQ-2024-p0214",
+        "HPQ-2024-p0209",
+        "HPQ-2024-p0046"
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "How can acquisition financing restrict Dell's flexibility in 2024?",
+      "v1.0_ids": [
+        "DELL-2024-p0122",
+        "DELL-2024-p0266",
+        "DELL-2024-p0042",
+        "DELL-2024-p0129",
+        "DELL-2024-p0427"
+      ],
+      "v1.1_ids": [
+        "DELL-2024-p0122",
+        "DELL-2024-p0266",
+        "DELL-2024-p0042",
+        "DELL-2024-p0129",
+        "DELL-2024-p0427"
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "Does Dell identify outstanding indebtedness as a financial condition risk in 2024?",
+      "v1.0_ids": [
+        "DELL-2024-p0290",
+        "DELL-2024-p0159",
+        "DELL-2024-p0327",
+        "DELL-2024-p0456",
+        "DELL-2024-p0094"
+      ],
+      "v1.1_ids": [
+        "DELL-2024-p0159",
+        "DELL-2024-p0277",
+        "DELL-2024-p0122",
+        "DELL-2024-p0317",
+        "DELL-2024-p0129"
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "Did Apple's fiscal 2023 contain 52 or 53 weeks? Explain its calendar.",
+      "v1.0_ids": [
+        "AAPL-2023-p0144",
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0004",
+        "AAPL-2023-capex",
+        "AAPL-2023-p0029"
+      ],
+      "v1.1_ids": [
+        "AAPL-2023-p0144",
+        "AAPL-2023-p0172",
+        "AAPL-2023-p0030",
+        "AAPL-2023-p0029",
+        "AAPL-2023-p0145"
+      ]
+    }
+  ]
+}

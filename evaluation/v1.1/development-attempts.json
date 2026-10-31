@@ -1,0 +1,308 @@
+[
+  {
+    "attempt": "v1.1-development.json",
+    "classification": "development only; consumed/replayed questions; not the new frozen batch",
+    "responses": [
+      {
+        "question": "Compare Apple operating margin in 2023 versus 2024.",
+        "status": "financial_conclusion_withheld",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "The model proposal failed the financial contract (value, unit, period, company, scope, definition, direction or complete citations). Its conclusion is withheld. Use the verified data below."
+          ]
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 19.83931245887652,
+          "prompt_tokens": 1708,
+          "generation_tokens": 908,
+          "attempts": 2
+        },
+        "error": null
+      },
+      {
+        "question": "Which supply-chain risks does Apple disclose in its 2024 annual report?",
+        "status": "abstained",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "Evidence gap"
+          ],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 2.8053192920051515,
+          "prompt_tokens": 1562,
+          "generation_tokens": 19,
+          "attempts": 1
+        },
+        "error": null
+      },
+      {
+        "question": "What debt risks does Dell disclose in 2024?",
+        "status": "abstained",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "Evidence gap"
+          ],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 3.0106551251374185,
+          "prompt_tokens": 1673,
+          "generation_tokens": 19,
+          "attempts": 1
+        },
+        "error": null
+      }
+    ]
+  },
+  {
+    "attempt": "v1.1-development-03.json",
+    "classification": "development only; consumed/replayed questions; not the new frozen batch",
+    "responses": [
+      {
+        "question": "Compare Apple operating margin in 2023 versus 2024.",
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: Operating margin: 29.82 percent (level). Definition: operating_income/revenue.",
+              "citations": [
+                "AAPL-2023-operating_income",
+                "AAPL-2023-revenue"
+              ]
+            },
+            {
+              "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: Operating margin: 31.51 percent (level). Definition: operating_income/revenue.",
+              "citations": [
+                "AAPL-2024-operating_income",
+                "AAPL-2024-revenue"
+              ]
+            },
+            {
+              "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Operating margin change: 1.69 percentage points (increased). Definition: delta(operating_income/revenue)*100.",
+              "citations": [
+                "AAPL-2023-operating_income",
+                "AAPL-2023-revenue",
+                "AAPL-2024-operating_income",
+                "AAPL-2024-revenue"
+              ]
+            }
+          ],
+          "limitations": [
+            "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+          ]
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 10.36378933279775,
+          "prompt_tokens": 610,
+          "generation_tokens": 454,
+          "attempts": 1
+        },
+        "error": null
+      },
+      {
+        "question": "Which supply-chain risks does Apple disclose in its 2024 annual report?",
+        "status": "invalid_model_answer",
+        "answer": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 17.892972209025174,
+          "prompt_tokens": 3432,
+          "generation_tokens": 616,
+          "attempts": 2
+        },
+        "error": "A supporting quote is absent from its cited source"
+      },
+      {
+        "question": "What debt risks does Dell disclose in 2024?",
+        "status": "invalid_model_answer",
+        "answer": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 11.476691541960463,
+          "prompt_tokens": 3495,
+          "generation_tokens": 298,
+          "attempts": 2
+        },
+        "error": "A supporting quote is absent from its cited source"
+      }
+    ]
+  },
+  {
+    "attempt": "v1.1-development-04.json",
+    "classification": "development only; consumed/replayed questions; not the new frozen batch",
+    "responses": [
+      {
+        "question": "Which supply-chain risks does Apple disclose in its 2024 annual report?",
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Apple discloses supply-chain risks in its 2024 annual report.",
+              "citations": [
+                "AAPL-2024-p0058",
+                "AAPL-2024-p0069",
+                "AAPL-2024-p0071",
+                "AAPL-2024-p0072",
+                "AAPL-2024-p0073"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0073",
+                  "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "AAPL-2024-p0058",
+                  "quote": "Global climate change is resulting in certain types of natural disasters and extreme weather occurring more frequently or with more intense effects. In addition, the Company\u2019s and its suppliers\u2019 operations and",
+                  "span_id": "s1"
+                },
+                {
+                  "citation": "AAPL-2024-p0072",
+                  "quote": "continued supply can be disrupted or terminated, and the recoverability of manufacturing process equipment or prepayments can be negatively impacted.\nChanges or additions to the Company\u2019s supply chain require",
+                  "span_id": "s2"
+                },
+                {
+                  "citation": "AAPL-2024-p0071",
+                  "quote": "labor, environmental, public health or political issues, trade and other international disputes, geopolitical tensions, or conflict.",
+                  "span_id": "s3"
+                },
+                {
+                  "citation": "AAPL-2024-p0069",
+                  "quote": "for product defect expense reimbursement, the Company generally remains responsible to the consumer for warranty and out-of-warranty service in the event of product defects",
+                  "span_id": "s4"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 6.497974165948108,
+          "prompt_tokens": 1692,
+          "generation_tokens": 187,
+          "attempts": 1
+        },
+        "error": null
+      },
+      {
+        "question": "What debt risks does Dell disclose in 2024?",
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Dell disclosed debt risks in 2024.",
+              "citations": [
+                "DELL-2024-p0122",
+                "DELL-2024-p0129",
+                "DELL-2024-p0159",
+                "DELL-2024-p0277",
+                "DELL-2024-p0317"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "DELL-2024-p0159",
+                  "quote": "As of February 2, 2024, we and our subsidiaries had approximately $26.0 billion aggregate principal amount of indebtedness. As of the same date, we and our subsidiaries also had an additional $6.0 billion available for",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "DELL-2024-p0122",
+                  "quote": "restrictive covenants that might limit our capital-raising activities and operating flexibility. Further, an acquisition may negatively affect our results of operations because it may expose us to unexpected",
+                  "span_id": "s1"
+                },
+                {
+                  "citation": "DELL-2024-p0277",
+                  "quote": "variations in our future interest expense from potential fluctuations in applicable reference rates, or from possible fluctuations in the level of DFS debt required to meet future demand for customer financing.\nAt our",
+                  "span_id": "s2"
+                },
+                {
+                  "citation": "DELL-2024-p0317",
+                  "quote": "is recognized within interest and other, net whereas interest income on the underlying assets is recognized to net revenue over time. The Company uses interest rate swaps to hedge the variability in cash flows related",
+                  "span_id": "s3"
+                },
+                {
+                  "citation": "DELL-2024-p0129",
+                  "quote": "volatility in the securitization markets, changes in financial services regulation, or adverse changes in the economy could lead to reductions in the availability of",
+                  "span_id": "s4"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 7.065913832979277,
+          "prompt_tokens": 1806,
+          "generation_tokens": 208,
+          "attempts": 1
+        },
+        "error": null
+      }
+    ]
+  }
+]

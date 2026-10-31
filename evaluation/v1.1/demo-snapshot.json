@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-31T12:24:22.565421+00:00",
+  "documents": 6,
+  "passages": 2851,
+  "facts": 48,
+  "ledger_sha256": "109a947fe5960808c5bfdf47ac50a0b82bcfdfdd548189978e6c346b81586224",
+  "basis_counts": {
+    "as_reported": 48
+  },
+  "note": "Post-migration real demo snapshot. Synthetic evaluation fixtures are not in this database. A separate original inline-XBRL check verifies values; no new restart test is claimed here."
+}
