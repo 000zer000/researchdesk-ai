@@ -12,7 +12,7 @@ ALIASES = {
     "DELL": {"dell", "dell technologies", "dell technologies inc"},
     "HPQ": {"hp", "hp inc", "hpq", "hewlett packard"},
 }
-FINANCIAL = r"\b(revenue|revenues|sales|operating income|operating profit|operating earnings|ebitda|net income|margin|growth|cash flow|free cash flow|fcf|cfo|capex|capital expenditure|depreciation|amortization|cash balance|cash equivalents|current assets|current liabilities)\b"
+FINANCIAL = r"\b(revenues?|sales|operating (?:income|profits?|earnings)|ebitda|net income|margins?|growth|(?:operating |free )?cash flows?|fcf|cfo|capex|capital (?:expenditures?|spending)|depreciation|amortization|cash balances?|cash equivalents|current assets|current liabilities)\b"
 DOCUMENTARY = r"\b(risks?|supply.chain|suppliers?|outsourc\w*|manufactur\w*|component\w*|indebtedness|debt|acquisition|financing|privacy|personal information|cyber\w*|digitization|printing|calendar|weeks?|fiscal period|seasonality)\b"
 
 

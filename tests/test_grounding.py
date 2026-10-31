@@ -483,3 +483,19 @@ def test_calendar_wrong_unit_or_direction_withholds_conclusion(populated):
 def test_non_week_calendar_does_not_assume_fifty_two_weeks(populated):
     r = research(populated, AskInput(question="How many weeks in fiscal 2024?"), NeverCalled())
     assert r["status"] == "abstained" and "whole-week" in str(r["verified_financials"]["issues"])
+
+
+@pytest.mark.integration
+@pytest.mark.parametrize(
+    "question,measure",
+    [
+        ("Compare operating margins in 2023 and 2024", "operating_margin_change:2023:2024"),
+        ("What were capital expenditures in FY2024?", "capex:2024"),
+        ("Show operating profits in FY2024", "operating_income:2024"),
+        ("Give cash flows from operations for FY2024", "cfo:2024"),
+    ],
+)
+def test_plural_financial_labels_reach_the_same_verified_contract(populated, question, measure):
+    r = research(populated, AskInput(question=question), ContractCopyTestDouble())
+    assert r["status"] == "answered"
+    assert measure in {m["id"] for m in r["verified_financials"]["measures"]}

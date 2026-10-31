@@ -240,11 +240,11 @@ def historical(session: Session, company: str, as_of: date) -> list[dict]:
 
 METRIC_PATTERNS = {
     "revenue": r"\b(revenues?|sales)\b",
-    "operating_income": r"\b(operating (income|profit|earnings))\b",
-    "cfo": r"\b(cfo|operating cash(?: flow)?|cash (?:flow|generated|provided) (?:from|by) (?:operating activities|operations))\b",
+    "operating_income": r"\b(operating (income|profits?|earnings))\b",
+    "cfo": r"\b(cfo|operating cash(?: flows?)?|cash (?:flows?|generated|provided) (?:from|by) (?:operating activities|operations))\b",
     "capex": r"\b(capex|capital (?:expenditure|spending)s?|purchases of (?:property|ppe))\b",
     "da": r"\b(depreciation|amortization|d&a)\b",
-    "cash": r"\b(cash balance|cash (?:and cash )?equivalents)\b",
+    "cash": r"\b(cash balances?|cash (?:and cash )?equivalents)\b",
     "current_assets": r"\bcurrent assets\b",
     "current_liabilities": r"\bcurrent liabilities\b",
 }
@@ -262,7 +262,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     q = question.lower()
     calendar = bool(re.search(r"\b(weeks?|calendar|fiscal period)\b", q))
     metrics = [m for m, pattern in METRIC_PATTERNS.items() if re.search(pattern, q)]
-    margin = bool(re.search(r"\boperating(?: profit| income)? margin\b", q))
+    margin = bool(re.search(r"\boperating(?: profit| income)? margins?\b", q))
     proxy = bool(
         re.search(
             r"\b(free cash flow|fcf|cash.flow proxy|cfo\s*(?:minus|less|-)\s*(?:gross\s+)?capex)\b",
@@ -279,7 +279,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
         or metrics
         or margin
         or proxy
-        or re.search(r"\b(margin|growth|cash flow|net income|ebitda)\b", q)
+        or re.search(r"\b(margins?|growth|cash flows?|net income|ebitda)\b", q)
     )
     # Qualitative risk disclosures retain the prose route, with a numeric-claim gate.
     if not financial or (
@@ -289,7 +289,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     issues = []
     unsupported_definition = bool(
         re.search(
-            r"\b(net capex|net capital|adjusted|non.gaap|gross margin|ebitda|net income|net margin)\b",
+            r"\b(net capex|net capital|adjusted|non.gaap|gross margins?|ebitda|net income|net margins?)\b",
             q,
         )
     )
