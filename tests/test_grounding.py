@@ -434,3 +434,52 @@ def test_compact_fy_notation_selects_only_requested_period(populated):
 def test_gross_word_does_not_override_an_unsupported_adjusted_definition(populated, question):
     r = research(populated, AskInput(question=question), NeverCalled())
     assert r["status"] == "abstained" and not r["answer"]["claims"]
+
+
+@pytest.mark.integration
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Did fiscal 2023 and fiscal 2024 have equal week counts?",
+        "Compare FY2023 and FY2024 fiscal calendar lengths in weeks.",
+        "Was FY2024 shorter than FY2023 in weeks?",
+    ],
+)
+def test_calendar_comparisons_cannot_bypass_financial_contract(populated, question):
+    # Clearly synthetic annual dates: 53 weeks, then 52 weeks.
+    for year, start, end in [
+        (2023, date(2022, 9, 25), date(2023, 9, 30)),
+        (2024, date(2023, 10, 1), date(2024, 9, 28)),
+    ]:
+        f = populated.get(Fact, f"AAPL-{year}-revenue")
+        f.start, f.end = start, end
+    populated.commit()
+    r = research(populated, AskInput(question=question), ContractCopyTestDouble())
+    assert r["status"] == "answered"
+    measures = r["verified_financials"]["measures"]
+    assert [m["value"] for m in measures] == [53, 52, -1]
+    assert measures[-1]["direction"] == "decreased" and measures[-1]["unit"] == "weeks"
+    assert len(measures[-1]["citations"]) == 2
+
+
+@pytest.mark.integration
+def test_calendar_wrong_unit_or_direction_withholds_conclusion(populated):
+    for year, start, end in [
+        (2023, date(2022, 9, 25), date(2023, 9, 30)),
+        (2024, date(2023, 10, 1), date(2024, 9, 28)),
+    ]:
+        f = populated.get(Fact, f"AAPL-{year}-revenue")
+        f.start, f.end = start, end
+    populated.commit()
+    r = research(
+        populated,
+        AskInput(question="Compare fiscal 2023 and fiscal 2024 week counts"),
+        ContractCopyTestDouble(lambda a: a[-1].update(direction="unchanged")),
+    )
+    assert r["status"] == "financial_conclusion_withheld" and not r["answer"]["claims"]
+
+
+@pytest.mark.integration
+def test_non_week_calendar_does_not_assume_fifty_two_weeks(populated):
+    r = research(populated, AskInput(question="How many weeks in fiscal 2024?"), NeverCalled())
+    assert r["status"] == "abstained" and "whole-week" in str(r["verified_financials"]["issues"])

@@ -46,3 +46,9 @@ Final pre-freeze review added single-company output scoping, subtraction wording
 Before writing any new cases, a final period-boundary review found that compact `FY2024` notation was not recognized consistently by the old bare-year regex. Added one shared year parser across scope, retrieval and finance, plus five regressions including unavailable FY2025. This supersedes the first correction commit before any new batch execution; no consumed batch is being called fresh. The final native suite passes 94 tests without skips.
 
 The last pre-batch definition check made unsupported net/adjusted definitions unconditional: an unrelated occurrence of “gross” cannot authorize them. Three additional regression variants pass. The definitive correction suite is 97 tests, zero skipped. New evaluation cases are written only after the following code commit.
+
+## Consumed first v1.1 evaluation and period correction
+
+The first new 31-question batch completed on frozen commit `f009015`. It is retained, including ten pending review responses, complete outputs and checksums. It exposed a false calendar comparison: Dell FY2023 and FY2024 were said to have equal week counts despite source evidence of 53 and 52. Financial reference-answer coverage was only 5/15; strict validation rejected many model proposals. Qualitative responses often remained generic. No success target or inferred semantic-support score is claimed.
+
+Corrected the calendar route generally using verified inclusive fiscal dates and deterministic whole-week/change contracts. Added comparison wording variants, wrong-direction refusal and non-week-calendar tests. The consumed Q18 is a labeled regression replay. The first batch's simple answered-status behavior metric did not detect its false substance; that limitation is published explicitly. The next batch must be distinct and frozen after this correction, rather than rerunning old questions and calling them new.

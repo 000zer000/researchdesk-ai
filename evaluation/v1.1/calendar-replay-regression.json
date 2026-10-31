@@ -1,0 +1,259 @@
+{
+  "classification": "Known Q18 replay after calendar correction; not a new test",
+  "result": {
+    "status": "answered",
+    "origin": "live model proposal + deterministic rendering",
+    "answer": {
+      "abstain": false,
+      "claims": [
+        {
+          "text": "DELL \u00b7 2022-01-29/2023-02-03 \u00b7 consolidated: Fiscal period length: 53.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+          "citations": [
+            "DELL-2023-revenue"
+          ]
+        },
+        {
+          "text": "DELL \u00b7 2023-02-04/2024-02-02 \u00b7 consolidated: Fiscal period length: 52.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+          "citations": [
+            "DELL-2024-revenue"
+          ]
+        },
+        {
+          "text": "DELL \u00b7 2022-01-29/2023-02-03, 2023-02-04/2024-02-02 \u00b7 consolidated: Fiscal period length change: -1.00 weeks (decreased). Definition: delta(inclusive_fiscal_days/7).",
+          "citations": [
+            "DELL-2023-revenue",
+            "DELL-2024-revenue"
+          ]
+        }
+      ],
+      "limitations": [
+        "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+      ]
+    },
+    "evidence": [
+      {
+        "id": "DELL-2023-revenue",
+        "document_id": "DELL-2023",
+        "company": "DELL",
+        "fiscal_year": 2023,
+        "filed": "2023-03-30",
+        "section": "XBRL / revenue",
+        "anchor": "",
+        "start": -1,
+        "end": -1,
+        "offset_basis": "structured XBRL evidence; no HTML offsets",
+        "text": "DELL FY2023, consolidated annual XBRL. revenue (Revenues) = 102301000000 USD. Period 2022-01-29 to 2023-02-03. Filed 2023-03-30; accession 0001571996-23-000007. Source: SEC Company Facts, exact accession and period filter.",
+        "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+        "accession": "0001571996-23-000007",
+        "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+        "score": 0
+      },
+      {
+        "id": "DELL-2024-revenue",
+        "document_id": "DELL-2024",
+        "company": "DELL",
+        "fiscal_year": 2024,
+        "filed": "2024-03-25",
+        "section": "XBRL / revenue",
+        "anchor": "",
+        "start": -1,
+        "end": -1,
+        "offset_basis": "structured XBRL evidence; no HTML offsets",
+        "text": "DELL FY2024, consolidated annual XBRL. revenue (Revenues) = 88425000000 USD. Period 2023-02-04 to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+        "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+        "accession": "0001571996-24-000036",
+        "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+        "score": 0
+      }
+    ],
+    "trace": [
+      {
+        "tool": "get_financial_facts",
+        "status": "ok",
+        "annual_periods": 2
+      },
+      {
+        "tool": "get_financial_facts",
+        "status": "ok",
+        "evidence_ids": [
+          "DELL-2023-revenue",
+          "DELL-2024-revenue"
+        ]
+      },
+      {
+        "tool": "calculate_metrics",
+        "status": "ok",
+        "verified_measures": [
+          {
+            "id": "period_weeks:2023",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 53.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2023-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks:2024",
+            "company": "DELL",
+            "periods": [
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 52.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2024-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks_change:2023:2024",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03",
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "delta(inclusive_fiscal_days/7)",
+            "value": -1.0,
+            "direction": "decreased",
+            "citations": [
+              "DELL-2023-revenue",
+              "DELL-2024-revenue"
+            ],
+            "label": "Fiscal period length change"
+          }
+        ]
+      }
+    ],
+    "calculations": null,
+    "verified_financials": {
+      "measures": [
+        {
+          "id": "period_weeks:2023",
+          "company": "DELL",
+          "periods": [
+            "2022-01-29/2023-02-03"
+          ],
+          "scope": "consolidated",
+          "unit": "weeks",
+          "definition": "inclusive_fiscal_days/7",
+          "value": 53.0,
+          "direction": "level",
+          "citations": [
+            "DELL-2023-revenue"
+          ],
+          "label": "Fiscal period length"
+        },
+        {
+          "id": "period_weeks:2024",
+          "company": "DELL",
+          "periods": [
+            "2023-02-04/2024-02-02"
+          ],
+          "scope": "consolidated",
+          "unit": "weeks",
+          "definition": "inclusive_fiscal_days/7",
+          "value": 52.0,
+          "direction": "level",
+          "citations": [
+            "DELL-2024-revenue"
+          ],
+          "label": "Fiscal period length"
+        },
+        {
+          "id": "period_weeks_change:2023:2024",
+          "company": "DELL",
+          "periods": [
+            "2022-01-29/2023-02-03",
+            "2023-02-04/2024-02-02"
+          ],
+          "scope": "consolidated",
+          "unit": "weeks",
+          "definition": "delta(inclusive_fiscal_days/7)",
+          "value": -1.0,
+          "direction": "decreased",
+          "citations": [
+            "DELL-2023-revenue",
+            "DELL-2024-revenue"
+          ],
+          "label": "Fiscal period length change"
+        }
+      ],
+      "issues": [],
+      "observations": [
+        {
+          "metric": "revenue",
+          "company": "DELL",
+          "value": 102301.0,
+          "raw_value": 102301000000.0,
+          "concept": "us-gaap:Revenues",
+          "unit": "USD",
+          "currency": "USD",
+          "start": "2022-01-29",
+          "end": "2023-02-03",
+          "scope": "consolidated",
+          "reporting_basis": "as_reported",
+          "restates_accession": null,
+          "evidence_id": "DELL-2023-revenue",
+          "evidence_ids": [
+            "DELL-2023-revenue"
+          ],
+          "document_id": "DELL-2023",
+          "accession": "0001571996-23-000007",
+          "filed": "2023-03-30",
+          "fiscal_year": 2023
+        },
+        {
+          "metric": "revenue",
+          "company": "DELL",
+          "value": 88425.0,
+          "raw_value": 88425000000.0,
+          "concept": "us-gaap:Revenues",
+          "unit": "USD",
+          "currency": "USD",
+          "start": "2023-02-04",
+          "end": "2024-02-02",
+          "scope": "consolidated",
+          "reporting_basis": "as_reported",
+          "restates_accession": null,
+          "evidence_id": "DELL-2024-revenue",
+          "evidence_ids": [
+            "DELL-2024-revenue"
+          ],
+          "document_id": "DELL-2024",
+          "accession": "0001571996-24-000036",
+          "filed": "2024-03-25",
+          "fiscal_year": 2024
+        }
+      ],
+      "conflicts": []
+    },
+    "citation_support": "structured source inputs checked; human review pending",
+    "model": {
+      "provider": "mlx",
+      "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+      "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+      "license": "Apache-2.0",
+      "quantization": "4bit MLX",
+      "temperature": 0,
+      "max_tokens": 1200,
+      "elapsed_seconds": 8.191242374945432,
+      "prompt_tokens": 530,
+      "generation_tokens": 364,
+      "attempts": 1
+    },
+    "elapsed_seconds": 10.12419724999927
+  }
+}

@@ -51,10 +51,12 @@ def validate_freeze() -> tuple[list, dict]:
         assert digest(ROOT / name) == expected, f"Frozen runtime changed: {name}"
     assert set(freeze["source_sha256"]) == set(runtime_files()), "Runtime file list changed"
     old = json.loads((ROOT / "evaluation/v1.0/cases.json").read_text())
+    for consumed in sorted(EVAL.glob("attempt-*/cases.json")):
+        old.extend(json.loads(consumed.read_text()))
     normalized = lambda q: " ".join(q.lower().split())  # noqa: E731
     assert not (
         {normalized(c["question"]) for c in cases} & {normalized(c["question"]) for c in old}
-    ), "Exact v1.0 question replay"
+    ), "Exact question replay from a previous batch"
     assert len({c["id"] for c in cases}) == len(cases)
     return cases, freeze
 
@@ -179,7 +181,11 @@ class InjectionProbe:
 
 def evaluate():
     cases, freeze = validate_freeze()
-    prior_runs = list((EVAL / "runs").glob("*/results.json"))
+    prior_runs = [
+        p
+        for p in (EVAL / "runs").glob("*/results.json")
+        if json.loads(p.read_text()).get("freeze_sha256") == digest(EVAL / "freeze.json")
+    ]
     run = EVAL / "runs" / datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
     run.mkdir(parents=True, exist_ok=False)
     data = {

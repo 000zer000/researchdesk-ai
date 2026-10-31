@@ -250,6 +250,9 @@ METRIC_PATTERNS = {
 }
 
 
+COMPARISON_PATTERN = r"\b(change|growth|compare|comparison|increase|decrease|rose|fell|grew|declined|versus|vs|trend|equal|same|different|longer|shorter|higher|lower|greater|smaller)\b"
+
+
 def financial_plan(question: str, rows: list[dict], company: str) -> dict | None:
     """Bounded question interpretation; all arithmetic and measure contracts live here.
 
@@ -257,6 +260,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     Dates are actual fiscal dates, not inferred calendar-year periods.
     """
     q = question.lower()
+    calendar = bool(re.search(r"\b(weeks?|calendar|fiscal period)\b", q))
     metrics = [m for m, pattern in METRIC_PATTERNS.items() if re.search(pattern, q)]
     margin = bool(re.search(r"\boperating(?: profit| income)? margin\b", q))
     proxy = bool(
@@ -271,13 +275,16 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
         and bool(re.search(r"\b(minus|less|subtract|net of|after)\b", q))
     )
     financial = bool(
-        metrics
+        calendar
+        or metrics
         or margin
         or proxy
         or re.search(r"\b(margin|growth|cash flow|net income|ebitda)\b", q)
     )
     # Qualitative risk disclosures retain the prose route, with a numeric-claim gate.
-    if not financial or re.search(r"\b(risks?|could|drivers?|factors?|reasons?)\b", q):
+    if not financial or (
+        not calendar and re.search(r"\b(risks?|could|drivers?|factors?|reasons?)\b", q)
+    ):
         return None
     issues = []
     unsupported_definition = bool(
@@ -302,12 +309,14 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     selected = [r for r in rows if not explicit or r["fiscal_year"] in explicit]
     if not explicit and selected:
         if re.search(
-            r"\b(change|growth|compare|comparison|increase|decrease|rose|fell|grew|declined|versus|vs|trend)\b",
+            COMPARISON_PATTERN,
             q,
         ):
             selected = selected[-2:]
         else:
             selected = selected[-1:]
+    if calendar:
+        metrics = ["revenue"]
     if margin:
         metrics = list(dict.fromkeys(metrics + ["revenue", "operating_income"]))
     if proxy:
@@ -380,8 +389,31 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
     def D(r, m):
         return Decimal(str(r["facts"][m]["raw_value"])) / Decimal(1000000)
 
+    def period_weeks(row):
+        fact = row["facts"]["revenue"]
+        if not fact["start"]:
+            return None
+        days = (date.fromisoformat(fact["end"]) - date.fromisoformat(fact["start"])).days + 1
+        return Decimal(days) / 7 if days % 7 == 0 else None
+
     for r in complete:
-        if margin:
+        if calendar:
+            weeks = period_weeks(r)
+            if weeks is None:
+                issues.append(
+                    "A whole-week fiscal calendar is not established by this annual period. Actual source dates remain visible; no week count is assumed."
+                )
+            else:
+                add(
+                    "period_weeks",
+                    [r],
+                    ["revenue"],
+                    weeks,
+                    "weeks",
+                    "inclusive_fiscal_days/7",
+                    "Fiscal period length",
+                )
+        elif margin:
             if D(r, "revenue") <= 0:
                 issues.append("Positive revenue is required for operating margin.")
                 continue
@@ -417,7 +449,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
                 )
     change = bool(
         re.search(
-            r"\b(change|growth|increase|decrease|rose|fell|grew|declined|versus|vs|compare|comparison|trend)\b",
+            COMPARISON_PATTERN,
             q,
         )
     )
@@ -426,7 +458,20 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
             issues.append("A change requires two explicitly available comparable annual periods.")
         else:
             a, b = complete
-            if margin and D(a, "revenue") > 0 and D(b, "revenue") > 0:
+            if calendar:
+                wa, wb = period_weeks(a), period_weeks(b)
+                if wa is not None and wb is not None:
+                    add(
+                        "period_weeks_change",
+                        complete,
+                        ["revenue"],
+                        wb - wa,
+                        "weeks",
+                        "delta(inclusive_fiscal_days/7)",
+                        "Fiscal period length change",
+                        True,
+                    )
+            elif margin and D(a, "revenue") > 0 and D(b, "revenue") > 0:
                 value = (
                     D(b, "operating_income") / D(b, "revenue")
                     - D(a, "operating_income") / D(a, "revenue")

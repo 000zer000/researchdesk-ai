@@ -6,6 +6,9 @@ import json
 from researchdesk.config import ROOT
 from researchdesk.evaluation import EVAL, summarize, validate_freeze
 
+for manifest in (ROOT / "evaluation/v1.1").glob("attempt-*/archive-sha256.json"):
+    for name, expected in json.loads(manifest.read_text()).items():
+        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
 cases, freeze = validate_freeze()
 latest = json.loads((EVAL / "latest.json").read_text())
 run = ROOT / latest["run"]
