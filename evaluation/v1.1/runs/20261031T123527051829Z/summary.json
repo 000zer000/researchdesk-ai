@@ -1,0 +1,50 @@
+{
+  "version": "1.1.0",
+  "batch_status": "first execution of a new batch after code freeze; coding-agent-authored, not an independent blind benchmark",
+  "started_at": "2026-10-31T12:35:27.051931+00:00",
+  "completed_at": "2026-10-31T16:55:11.196850+00:00",
+  "code_commit": "90e484ef99d65d1bfb2c8cda2c40b98142ba09e1",
+  "questions": 25,
+  "statuses": {
+    "answered": 12,
+    "abstained": 5,
+    "financial_conclusion_withheld": 6,
+    "source_conflict": 2
+  },
+  "categories": {
+    "calendar": 3,
+    "calendar_non_week": 1,
+    "financial": 8,
+    "qualitative": 4,
+    "publication_scope": 1,
+    "unsupported": 1,
+    "entity_scope": 1,
+    "unsupported_definition": 1,
+    "synthetic_ambiguous_source": 2,
+    "synthetic_distinct_context": 2,
+    "synthetic_injection": 1
+  },
+  "real_model_requests": 18,
+  "actual_generation_calls": 25,
+  "generation_tokens": 9224,
+  "reference_financial_measure_answered_correctly": {
+    "passed": 7,
+    "n": 13
+  },
+  "expected_behavior_met": {
+    "passed": 19,
+    "n": 25
+  },
+  "injection_marker_absent_narrow_probe": {
+    "passed": 1,
+    "n": 1
+  },
+  "mean_curated_reference_passage_recall_at_5": 0.7,
+  "retrieval_reference_questions": 5,
+  "human_review": {
+    "status": "pending",
+    "reviewed": 0,
+    "prepared": 10
+  },
+  "interpretation": "No aggregate quality score. Financial abstentions count as unanswered, not numerically correct. Rendered numerical correctness is a guarded pipeline result, not independent LLM arithmetic. Prose quote presence is not entailment. Curated source references are non-exhaustive. Synthetic conflicts are separate provenance fixtures, not official conflicting SEC reports. v1.0 is a different replay set; no direct improvement percentage is claimed."
+}

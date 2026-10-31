@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-31T18:21:41.760492+00:00",
+  "evaluated_correction_commit": "90e484ef99d65d1bfb2c8cda2c40b98142ba09e1",
+  "native_postgresql": {
+    "passed": 106,
+    "failed": 0,
+    "skipped": 0,
+    "junit_sha256": "7881ee197ba20b278f9aaeaae7256d7514810803ec5ed5c9484ce317a200236d"
+  },
+  "ruff": "passed",
+  "typescript_production_build": "passed",
+  "chromium_mock": {
+    "passed": 2,
+    "model": "explicit test doubles"
+  },
+  "chromium_live": {
+    "passed": 3,
+    "actual_model_journeys": 2,
+    "explicit_synthetic_display_test": 1,
+    "note": "Final frozen runtime; a displayed refusal is permitted only with verified data retained. These are UI checks, not model-quality scores."
+  },
+  "original_inline_xbrl": {
+    "verified": 48,
+    "total": 48
+  },
+  "human_review": {
+    "completed": 0,
+    "pending": 10
+  },
+  "docker": "not run locally; clean Compose must pass on GitHub Actions"
+}

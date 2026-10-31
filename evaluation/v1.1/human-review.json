@@ -1,0 +1,1578 @@
+{
+  "status": "pending",
+  "human_reviews_completed": 0,
+  "run": "evaluation/v1.1/runs/20261031T123527051829Z",
+  "instructions": "These are actual pipeline responses, including refusals and rejected outputs. Check the answer against the linked official source and exact fiscal period. Quote presence and deterministic consistency do not establish full semantic support. Financial prose is rendered by code after validation of an actual model proposal. Mark each criterion yourself; none has been pre-approved.",
+  "responses": [
+    {
+      "id": "N01",
+      "question": "Was the Apple fiscal calendar longer in FY2023 than FY2024? Show both lengths and the change in weeks.",
+      "company": "AAPL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live model proposal + deterministic rendering",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: Fiscal period length: 53.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+            "citations": [
+              "AAPL-2023-revenue"
+            ]
+          },
+          {
+            "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: Fiscal period length: 52.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+            "citations": [
+              "AAPL-2024-revenue"
+            ]
+          },
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Fiscal period length change: -1.00 weeks (decreased). Definition: delta(inclusive_fiscal_days/7).",
+            "citations": [
+              "AAPL-2023-revenue",
+              "AAPL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": [
+          "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+        ]
+      },
+      "answer_sha256": "2529ce1edfc17ae37b885ce832cc4f3a4f4790098f877a649d8f099e13a5a2ed",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "period_weeks:2023",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 53.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2023-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 52.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks_change:2023:2024",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30",
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "delta(inclusive_fiscal_days/7)",
+            "value": -1.0,
+            "direction": "decreased",
+            "citations": [
+              "AAPL-2023-revenue",
+              "AAPL-2024-revenue"
+            ],
+            "label": "Fiscal period length change"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "revenue",
+            "company": "AAPL",
+            "value": 383285.0,
+            "raw_value": 383285000000.0,
+            "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2023-revenue",
+            "evidence_ids": [
+              "AAPL-2023-revenue"
+            ],
+            "document_id": "AAPL-2023",
+            "accession": "0000320193-23-000106",
+            "filed": "2023-11-03",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "revenue",
+            "company": "AAPL",
+            "value": 391035.0,
+            "raw_value": 391035000000.0,
+            "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-revenue",
+            "evidence_ids": [
+              "AAPL-2024-revenue"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "AAPL-2023-revenue",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "source_excerpt": "AAPL FY2023, consolidated annual XBRL. revenue (RevenueFromContractWithCustomerExcludingAssessedTax) = 383285000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-revenue",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "source_excerpt": "AAPL FY2024, consolidated annual XBRL. revenue (RevenueFromContractWithCustomerExcludingAssessedTax) = 391035000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N02",
+      "question": "Compare the length in weeks of Dell annual periods ending in 2023 and 2024.",
+      "company": "DELL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live model proposal + deterministic rendering",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "DELL \u00b7 2022-01-29/2023-02-03 \u00b7 consolidated: Fiscal period length: 53.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+            "citations": [
+              "DELL-2023-revenue"
+            ]
+          },
+          {
+            "text": "DELL \u00b7 2023-02-04/2024-02-02 \u00b7 consolidated: Fiscal period length: 52.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+            "citations": [
+              "DELL-2024-revenue"
+            ]
+          },
+          {
+            "text": "DELL \u00b7 2022-01-29/2023-02-03, 2023-02-04/2024-02-02 \u00b7 consolidated: Fiscal period length change: -1.00 weeks (decreased). Definition: delta(inclusive_fiscal_days/7).",
+            "citations": [
+              "DELL-2023-revenue",
+              "DELL-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": [
+          "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+        ]
+      },
+      "answer_sha256": "585edeebef945a80c11e1bb8aa59767a77b4515dca39a1c55b565af87dfc5dc2",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "period_weeks:2023",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 53.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2023-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks:2024",
+            "company": "DELL",
+            "periods": [
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 52.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2024-revenue"
+            ],
+            "label": "Fiscal period length"
+          },
+          {
+            "id": "period_weeks_change:2023:2024",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03",
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "delta(inclusive_fiscal_days/7)",
+            "value": -1.0,
+            "direction": "decreased",
+            "citations": [
+              "DELL-2023-revenue",
+              "DELL-2024-revenue"
+            ],
+            "label": "Fiscal period length change"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "revenue",
+            "company": "DELL",
+            "value": 102301.0,
+            "raw_value": 102301000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-01-29",
+            "end": "2023-02-03",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "DELL-2023-revenue",
+            "evidence_ids": [
+              "DELL-2023-revenue"
+            ],
+            "document_id": "DELL-2023",
+            "accession": "0001571996-23-000007",
+            "filed": "2023-03-30",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "revenue",
+            "company": "DELL",
+            "value": 88425.0,
+            "raw_value": 88425000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-02-04",
+            "end": "2024-02-02",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "DELL-2024-revenue",
+            "evidence_ids": [
+              "DELL-2024-revenue"
+            ],
+            "document_id": "DELL-2024",
+            "accession": "0001571996-24-000036",
+            "filed": "2024-03-25",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "DELL-2023-revenue",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0,
+          "source_excerpt": "DELL FY2023, consolidated annual XBRL. revenue (Revenues) = 102301000000 USD. Period 2022-01-29 to 2023-02-03. Filed 2023-03-30; accession 0001571996-23-000007. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "DELL-2024-revenue",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0,
+          "source_excerpt": "DELL FY2024, consolidated annual XBRL. revenue (Revenues) = 88425000000 USD. Period 2023-02-04 to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N04",
+      "question": "State the verified number of reporting weeks in Apple fiscal 2024.",
+      "company": "AAPL",
+      "as_of": "2024-12-31",
+      "status": "financial_conclusion_withheld",
+      "origin": "live local inference rejected",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The model proposal failed the financial contract (value, unit, period, company, scope, definition, direction or complete citations). Its conclusion is withheld. Use the verified data below."
+        ]
+      },
+      "answer_sha256": "ffa0dc1b99410cf9429fa90c280d8d5dea5ece3e3aa6242c5cf9a83b25d765e6",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "period_weeks:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "weeks",
+            "definition": "inclusive_fiscal_days/7",
+            "value": 52.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-revenue"
+            ],
+            "label": "Fiscal period length"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "revenue",
+            "company": "AAPL",
+            "value": 391035.0,
+            "raw_value": 391035000000.0,
+            "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-revenue",
+            "evidence_ids": [
+              "AAPL-2024-revenue"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "AAPL-2024-revenue",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "source_excerpt": "AAPL FY2024, consolidated annual XBRL. revenue (RevenueFromContractWithCustomerExcludingAssessedTax) = 391035000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N05",
+      "question": "Calculate the USD million change in Apple operating income between fiscal 2023 and fiscal 2024.",
+      "company": "AAPL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live model proposal + deterministic rendering",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: Operating income: 114,301.00 USD million (level). Definition: us-gaap:OperatingIncomeLoss.",
+            "citations": [
+              "AAPL-2023-operating_income"
+            ]
+          },
+          {
+            "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: Operating income: 123,216.00 USD million (level). Definition: us-gaap:OperatingIncomeLoss.",
+            "citations": [
+              "AAPL-2024-operating_income"
+            ]
+          },
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Operating income change: 8,915.00 USD million (increased). Definition: delta:us-gaap:OperatingIncomeLoss.",
+            "citations": [
+              "AAPL-2023-operating_income",
+              "AAPL-2024-operating_income"
+            ]
+          }
+        ],
+        "limitations": [
+          "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+        ]
+      },
+      "answer_sha256": "61730960bb2dcc50780131e0ec2230a5423f0854fb34d7a24afbc14717e8fe1f",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "operating_income:2023",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:OperatingIncomeLoss",
+            "value": 114301.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2023-operating_income"
+            ],
+            "label": "Operating income"
+          },
+          {
+            "id": "operating_income:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:OperatingIncomeLoss",
+            "value": 123216.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-operating_income"
+            ],
+            "label": "Operating income"
+          },
+          {
+            "id": "operating_income_change:2023:2024",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30",
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "delta:us-gaap:OperatingIncomeLoss",
+            "value": 8915.0,
+            "direction": "increased",
+            "citations": [
+              "AAPL-2023-operating_income",
+              "AAPL-2024-operating_income"
+            ],
+            "label": "Operating income change"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "operating_income",
+            "company": "AAPL",
+            "value": 114301.0,
+            "raw_value": 114301000000.0,
+            "concept": "us-gaap:OperatingIncomeLoss",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2023-operating_income",
+            "evidence_ids": [
+              "AAPL-2023-operating_income"
+            ],
+            "document_id": "AAPL-2023",
+            "accession": "0000320193-23-000106",
+            "filed": "2023-11-03",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "operating_income",
+            "company": "AAPL",
+            "value": 123216.0,
+            "raw_value": 123216000000.0,
+            "concept": "us-gaap:OperatingIncomeLoss",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-operating_income",
+            "evidence_ids": [
+              "AAPL-2024-operating_income"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "AAPL-2023-operating_income",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "XBRL / operating_income",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "source_excerpt": "AAPL FY2023, consolidated annual XBRL. operating_income (OperatingIncomeLoss) = 114301000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-operating_income",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / operating_income",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "source_excerpt": "AAPL FY2024, consolidated annual XBRL. operating_income (OperatingIncomeLoss) = 123216000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N06",
+      "question": "What was the percentage growth rate of Dell CFO from fiscal 2023 to fiscal 2024?",
+      "company": "DELL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live model proposal + deterministic rendering",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "DELL \u00b7 2022-01-29/2023-02-03 \u00b7 consolidated: Cfo: 3,565.00 USD million (level). Definition: us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "DELL-2023-cfo"
+            ]
+          },
+          {
+            "text": "DELL \u00b7 2023-02-04/2024-02-02 \u00b7 consolidated: Cfo: 8,676.00 USD million (level). Definition: us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "DELL-2024-cfo"
+            ]
+          },
+          {
+            "text": "DELL \u00b7 2022-01-29/2023-02-03, 2023-02-04/2024-02-02 \u00b7 consolidated: Cfo change: 5,111.00 USD million (increased). Definition: delta:us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "DELL-2023-cfo",
+              "DELL-2024-cfo"
+            ]
+          },
+          {
+            "text": "DELL \u00b7 2022-01-29/2023-02-03, 2023-02-04/2024-02-02 \u00b7 consolidated: Cfo growth: 143.37 percent (increased). Definition: growth:us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "DELL-2023-cfo",
+              "DELL-2024-cfo"
+            ]
+          }
+        ],
+        "limitations": [
+          "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+        ]
+      },
+      "answer_sha256": "9e97cf59777746422f5c0eb2ddafdb97b72d5a29194be1a2e86645f2539567a0",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "cfo:2023",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 3565.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2023-cfo"
+            ],
+            "label": "Cfo"
+          },
+          {
+            "id": "cfo:2024",
+            "company": "DELL",
+            "periods": [
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 8676.0,
+            "direction": "level",
+            "citations": [
+              "DELL-2024-cfo"
+            ],
+            "label": "Cfo"
+          },
+          {
+            "id": "cfo_change:2023:2024",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03",
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "delta:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 5111.0,
+            "direction": "increased",
+            "citations": [
+              "DELL-2023-cfo",
+              "DELL-2024-cfo"
+            ],
+            "label": "Cfo change"
+          },
+          {
+            "id": "cfo_growth:2023:2024",
+            "company": "DELL",
+            "periods": [
+              "2022-01-29/2023-02-03",
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "percent",
+            "definition": "growth:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 143.36605890603084,
+            "direction": "increased",
+            "citations": [
+              "DELL-2023-cfo",
+              "DELL-2024-cfo"
+            ],
+            "label": "Cfo growth"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "cfo",
+            "company": "DELL",
+            "value": 3565.0,
+            "raw_value": 3565000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-01-29",
+            "end": "2023-02-03",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "DELL-2023-cfo",
+            "evidence_ids": [
+              "DELL-2023-cfo"
+            ],
+            "document_id": "DELL-2023",
+            "accession": "0001571996-23-000007",
+            "filed": "2023-03-30",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "cfo",
+            "company": "DELL",
+            "value": 8676.0,
+            "raw_value": 8676000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-02-04",
+            "end": "2024-02-02",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "DELL-2024-cfo",
+            "evidence_ids": [
+              "DELL-2024-cfo"
+            ],
+            "document_id": "DELL-2024",
+            "accession": "0001571996-24-000036",
+            "filed": "2024-03-25",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "DELL-2023-cfo",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0,
+          "source_excerpt": "DELL FY2023, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 3565000000 USD. Period 2022-01-29 to 2023-02-03. Filed 2023-03-30; accession 0001571996-23-000007. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "DELL-2024-cfo",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0,
+          "source_excerpt": "DELL FY2024, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 8676000000 USD. Period 2023-02-04 to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N07",
+      "question": "Compare HP operating margins for 2023 and 2024, including the signed percentage-point change.",
+      "company": "HPQ",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live model proposal + deterministic rendering",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "HPQ \u00b7 2022-11-01/2023-10-31 \u00b7 consolidated: Operating margin: 6.43 percent (level). Definition: operating_income/revenue.",
+            "citations": [
+              "HPQ-2023-operating_income",
+              "HPQ-2023-revenue"
+            ]
+          },
+          {
+            "text": "HPQ \u00b7 2023-11-01/2024-10-31 \u00b7 consolidated: Operating margin: 7.13 percent (level). Definition: operating_income/revenue.",
+            "citations": [
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ]
+          },
+          {
+            "text": "HPQ \u00b7 2022-11-01/2023-10-31, 2023-11-01/2024-10-31 \u00b7 consolidated: Operating margin change: 0.69 percentage points (increased). Definition: delta(operating_income/revenue)*100.",
+            "citations": [
+              "HPQ-2023-operating_income",
+              "HPQ-2023-revenue",
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ]
+          }
+        ],
+        "limitations": [
+          "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+        ]
+      },
+      "answer_sha256": "ca4958ed2bc895ee1386eef4f0c867c1bb4af8efd508ddadf6aef8e0aa790f32",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "operating_margin:2023",
+            "company": "HPQ",
+            "periods": [
+              "2022-11-01/2023-10-31"
+            ],
+            "scope": "consolidated",
+            "unit": "percent",
+            "definition": "operating_income/revenue",
+            "value": 6.433597676756395,
+            "direction": "level",
+            "citations": [
+              "HPQ-2023-operating_income",
+              "HPQ-2023-revenue"
+            ],
+            "label": "Operating margin"
+          },
+          {
+            "id": "operating_margin:2024",
+            "company": "HPQ",
+            "periods": [
+              "2023-11-01/2024-10-31"
+            ],
+            "scope": "consolidated",
+            "unit": "percent",
+            "definition": "operating_income/revenue",
+            "value": 7.128587165555742,
+            "direction": "level",
+            "citations": [
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ],
+            "label": "Operating margin"
+          },
+          {
+            "id": "operating_margin_change:2023:2024",
+            "company": "HPQ",
+            "periods": [
+              "2022-11-01/2023-10-31",
+              "2023-11-01/2024-10-31"
+            ],
+            "scope": "consolidated",
+            "unit": "percentage points",
+            "definition": "delta(operating_income/revenue)*100",
+            "value": 0.6949894887993477,
+            "direction": "increased",
+            "citations": [
+              "HPQ-2023-operating_income",
+              "HPQ-2023-revenue",
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ],
+            "label": "Operating margin change"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "operating_income",
+            "company": "HPQ",
+            "value": 3456.0,
+            "raw_value": 3456000000.0,
+            "concept": "us-gaap:OperatingIncomeLoss",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-11-01",
+            "end": "2023-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2023-operating_income",
+            "evidence_ids": [
+              "HPQ-2023-operating_income"
+            ],
+            "document_id": "HPQ-2023",
+            "accession": "0000047217-23-000100",
+            "filed": "2023-12-18",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "revenue",
+            "company": "HPQ",
+            "value": 53718.0,
+            "raw_value": 53718000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-11-01",
+            "end": "2023-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2023-revenue",
+            "evidence_ids": [
+              "HPQ-2023-revenue"
+            ],
+            "document_id": "HPQ-2023",
+            "accession": "0000047217-23-000100",
+            "filed": "2023-12-18",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "operating_income",
+            "company": "HPQ",
+            "value": 3818.0,
+            "raw_value": 3818000000.0,
+            "concept": "us-gaap:OperatingIncomeLoss",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-11-01",
+            "end": "2024-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2024-operating_income",
+            "evidence_ids": [
+              "HPQ-2024-operating_income"
+            ],
+            "document_id": "HPQ-2024",
+            "accession": "0000047217-24-000080",
+            "filed": "2024-12-13",
+            "fiscal_year": 2024
+          },
+          {
+            "metric": "revenue",
+            "company": "HPQ",
+            "value": 53559.0,
+            "raw_value": 53559000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-11-01",
+            "end": "2024-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2024-revenue",
+            "evidence_ids": [
+              "HPQ-2024-revenue"
+            ],
+            "document_id": "HPQ-2024",
+            "accession": "0000047217-24-000080",
+            "filed": "2024-12-13",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "HPQ-2023-operating_income",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "XBRL / operating_income",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0,
+          "source_excerpt": "HPQ FY2023, consolidated annual XBRL. operating_income (OperatingIncomeLoss) = 3456000000 USD. Period 2022-11-01 to 2023-10-31. Filed 2023-12-18; accession 0000047217-23-000100. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2023-revenue",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0,
+          "source_excerpt": "HPQ FY2023, consolidated annual XBRL. revenue (Revenues) = 53718000000 USD. Period 2022-11-01 to 2023-10-31. Filed 2023-12-18; accession 0000047217-23-000100. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2024-operating_income",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "XBRL / operating_income",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0,
+          "source_excerpt": "HPQ FY2024, consolidated annual XBRL. operating_income (OperatingIncomeLoss) = 3818000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2024-revenue",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0,
+          "source_excerpt": "HPQ FY2024, consolidated annual XBRL. revenue (Revenues) = 53559000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N08",
+      "question": "State Apple capex for fiscal 2024 using its original annual observation.",
+      "company": "AAPL",
+      "as_of": "2024-12-31",
+      "status": "financial_conclusion_withheld",
+      "origin": "live local inference rejected",
+      "answer": {
+        "abstain": true,
+        "claims": [],
+        "limitations": [
+          "The model proposal failed the financial contract (value, unit, period, company, scope, definition, direction or complete citations). Its conclusion is withheld. Use the verified data below."
+        ]
+      },
+      "answer_sha256": "ffa0dc1b99410cf9429fa90c280d8d5dea5ece3e3aa6242c5cf9a83b25d765e6",
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "capex:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "value": 9447.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-capex"
+            ],
+            "label": "Capex"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "capex",
+            "company": "AAPL",
+            "value": 9447.0,
+            "raw_value": 9447000000.0,
+            "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-capex",
+            "evidence_ids": [
+              "AAPL-2024-capex"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": []
+      },
+      "evidence": [
+        {
+          "id": "AAPL-2024-capex",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / capex",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "source_excerpt": "AAPL FY2024, consolidated annual XBRL. capex (PaymentsToAcquirePropertyPlantAndEquipment) = 9447000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N13",
+      "question": "Using the FY2023 report, explain why limited component suppliers expose Apple to supply and pricing risk.",
+      "company": "AAPL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Limited component suppliers expose Apple to supply and pricing risks.",
+            "citations": [
+              "AAPL-2023-p0072"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "AAPL-2023-p0072",
+                "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple",
+                "span_id": "s0"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "0bd19a8d59abb4cd68c69bc915f199794ff844a76ec7e8453c647a1a51e053fb",
+      "verified_financials": null,
+      "evidence": [
+        {
+          "id": "AAPL-2023-p0072",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 40905,
+          "end": 41919,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0.1522664584959667,
+          "source_excerpt": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition. For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms or at all. Such disruptions could occur in the future. While the Company has entered into agreements for the supply of many components, there can be no assurance the Company will be able to extend or renew these agreem",
+          "cited_spans": [
+            "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple"
+          ],
+          "excerpt_truncated": true
+        },
+        {
+          "id": "AAPL-2023-p0039",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 1. Business",
+          "anchor": "",
+          "start": 15421,
+          "end": 16105,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0.13630940988835727,
+          "source_excerpt": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.\nSupply of Components\nAlthough most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2023-p0211",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 8. Financial Statements and Supplementary Data",
+          "anchor": "f-1069-1",
+          "start": 162852,
+          "end": 163470,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm#f-1069-1",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0.13505156136528684,
+          "source_excerpt": "Concentrations in the Available Sources of Supply of Materials and Product\nAlthough most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+          "cited_spans": [],
+          "excerpt_truncated": false
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N14",
+      "question": "Describe the restrictions that acquisition-related debt financing can place on Dell, as disclosed in 2023.",
+      "company": "DELL",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Restrictions on acquisition-related debt financing can limit Dell's capital-raising activities and operating flexibility.",
+            "citations": [
+              "DELL-2023-p0125",
+              "DELL-2023-p0163"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2023-p0125",
+                "quote": "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve",
+                "span_id": "s0"
+              },
+              {
+                "citation": "DELL-2023-p0163",
+                "quote": "borrowing under our revolving credit facility and $5.0 billion of availability under our commercial paper program. Although continued debt paydown is part of our overall capital allocation strategy, a substantial",
+                "span_id": "s1"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "78bd302bc518c6db7e89f4d3fc083e5c12bcc69cf595b5772faf0e5603193b70",
+      "verified_financials": null,
+      "evidence": [
+        {
+          "id": "DELL-2023-p0125",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 87771,
+          "end": 88619,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0.1517540322580645,
+          "source_excerpt": "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility. Further, an acquisition may negatively affect our results of operations because it may expose us to unexpected liabilities, require the incurrence of charges and substantial indebtedness or other liabilities, have adverse tax consequences, result in acquired in-process research and development expenses, or in the future require the amortization, write-down, or impairment of amounts related to deferred compensation, goodwill, and other intangible assets, or fail to generate a financial return sufficient to offset acquisition costs.",
+          "cited_spans": [
+            "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve"
+          ],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "DELL-2023-p0163",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 117995,
+          "end": 118993,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0.15088619624613922,
+          "source_excerpt": "As of February 3, 2023, we and our subsidiaries had approximately $29.6 billion aggregate principal amount of indebtedness. As of the same date, we and our subsidiaries also had an additional $6.0 billion available for borrowing under our revolving credit facility and $5.0 billion of availability under our commercial paper program. Although continued debt paydown is part of our overall capital allocation strategy, a substantial portion of our cash flow from operations is used to make interest and other debt service payments, which reduces funds available to us for other purposes such as working capital, capital expenditures, other general corporate purposes, and potential acquisitions. Our indebtedness could also reduce our flexibility in responding to current and changing industry and financial market conditions. We may be able to incur significant additional secured and unsecured indeb",
+          "cited_spans": [
+            "borrowing under our revolving credit facility and $5.0 billion of availability under our commercial paper program. Although continued debt paydown is part of our overall capital allocation strategy, a substantial"
+          ],
+          "excerpt_truncated": true
+        },
+        {
+          "id": "DELL-2023-p0336",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 7A \u2014 QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK",
+          "anchor": "",
+          "start": 258672,
+          "end": 259748,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0.12528692699490662,
+          "source_excerpt": "Dell Technologies is primarily exposed to interest rate risk related to its variable-rate debt portfolio and fixed-rate debt which has been converted to variable-rate debt through the use of derivative instruments. As of February 3, 2023, the majority of this risk exposure is related to DFS borrowings.\nDFS debt represents borrowings under securitization programs and structured financing programs that facilitate the funding of leases, loans, and other alternative payment structures. Amounts outstanding under these facilities generally bear interest at variable rates equal to applicable margins plus specified base rates. Interest expense on such borrowings is recognized within interest and other, net whereas interest income on the underlying assets is recognized to net revenue over time. The Company uses interest rate swaps to hedge the variability in cash flows related to the interest rat",
+          "cited_spans": [],
+          "excerpt_truncated": true
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "N15",
+      "question": "Summarize how digital alternatives and third-party supplies can affect HP printing demand, based on the 2024 annual filing.",
+      "company": "HPQ",
+      "as_of": "2024-12-31",
+      "status": "answered",
+      "origin": "live local inference",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "HPQ's printing demand is affected by digital alternatives and third-party supplies.",
+            "citations": [
+              "HPQ-2024-p0087",
+              "HPQ-2024-p0214"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2024-p0214",
+                "quote": "\u2022 In Personal Systems, we face challenges with a competitive pricing environment, variability in commodity costs, and demand softness in certain geographic regions.\n\u2022 In Printing, we face challenges from changing",
+                "span_id": "s0"
+              },
+              {
+                "citation": "HPQ-2024-p0087",
+                "quote": "weaknesses, disputes with suppliers (some of whom are also our customers), disruptions in the operations of component suppliers, supplier ability to demonstrate regulatory compliance, regulatory restrictions on specific",
+                "span_id": "s1"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "dc1192e647a15c7f23ad06e47cc19a0ca6b66d923f5e60817f19c0bd3a3b90bf",
+      "verified_financials": null,
+      "evidence": [
+        {
+          "id": "HPQ-2024-p0214",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations.",
+          "anchor": "",
+          "start": 156963,
+          "end": 157611,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.18310897092919565,
+          "source_excerpt": "\u2022 In Personal Systems, we face challenges with a competitive pricing environment, variability in commodity costs, and demand softness in certain geographic regions.\n\u2022 In Printing, we face challenges from changing customer behaviors as well as competitors with a favorable foreign currency environment and non-original supplies (which includes imitation, refill, or remanufactured alternatives). We also obtain many Printing components from single source suppliers due to technology, availability, price, quality, or other considerations.\nHP INC. AND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations",
+          "cited_spans": [
+            "\u2022 In Personal Systems, we face challenges with a competitive pricing environment, variability in commodity costs, and demand softness in certain geographic regions.\n\u2022 In Printing, we face challenges from changing"
+          ],
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2024-p0087",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 55702,
+          "end": 56694,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.10247794966520435,
+          "source_excerpt": "\u2022 Component shortages. We have at times experienced and may in the future experience a shortage of, or a delay in receiving, certain components as a result of strong demand, capacity constraints, supplier financial weaknesses, disputes with suppliers (some of whom are also our customers), disruptions in the operations of component suppliers, supplier ability to demonstrate regulatory compliance, regulatory restrictions on specific components in certain markets, other problems experienced by suppliers or problems we face during the transition to new suppliers. For example, a market shortage of integrated circuits and panels and other component supply has at times affected, and may affect in the future, lead times, the cost of that supply, and our ability to meet customer demand for our products. Additionally, our Personal Systems business relies heavily upon OMs to manufacture our product",
+          "cited_spans": [
+            "weaknesses, disputes with suppliers (some of whom are also our customers), disruptions in the operations of component suppliers, supplier ability to demonstrate regulatory compliance, regulatory restrictions on specific"
+          ],
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2024-p0103",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 69744,
+          "end": 70838,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.10182766239505082,
+          "source_excerpt": "Industry consolidation may also affect competition by creating larger, more homogeneous and potentially stronger competitors in the markets in which we operate. Our competitors may also affect our business by entering into exclusive arrangements with our existing or potential customers or suppliers. Furthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business. We may not be able to prevent the use of imitation print supplies with our printers using technological protection measures, including due to regulatory issues or other legal challenges. In addition, online and omnichannel retailers, resellers and distributors often sell our products alongside competing products, including non-original supplies, or they may highlight the availability of lower cost non-original ",
+          "cited_spans": [],
+          "excerpt_truncated": true
+        }
+      ],
+      "review_status": "pending",
+      "human_review": {
+        "reviewer": null,
+        "date": null,
+        "financial_correctness": null,
+        "units_period_definition": null,
+        "citation_support": null,
+        "answer_completeness": null,
+        "conflict_handling": null,
+        "notes": null
+      }
+    }
+  ]
+}
