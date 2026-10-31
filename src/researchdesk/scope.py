@@ -68,3 +68,8 @@ def capability_gap(question: str, company: str) -> str | None:
     if not re.search(FINANCIAL, lower) and not re.search(DOCUMENTARY, lower):
         return "Supported questions concern annual financial metrics, disclosed business risks and reporting calendars. The requested information is outside those capabilities."
     return None
+
+
+def requested_years(question: str) -> set[int]:
+    """Recognize both FY2024 and bare year notation at every workflow boundary."""
+    return {int(y) for y in re.findall(r"\b(?:FY\s*)?(20\d{2})(?!\d)", question, re.I)}

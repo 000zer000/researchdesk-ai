@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 
 from .db import Document, Passage
 from .embeddings import embedder
+from .scope import requested_years
 
 
 class SearchInput(BaseModel):
@@ -48,7 +49,7 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
         .join(Document)
         .where(Document.company == args.company, Document.filed <= args.as_of)
     )
-    years = {int(y) for y in re.findall(r"\b20\d{2}\b", args.question)}
+    years = requested_years(args.question)
     if years:
         base = base.where(Document.fiscal_year.in_(years))
     stop = set(

@@ -1,5 +1,4 @@
 import json
-import re
 import time
 from typing import Literal
 
@@ -20,7 +19,7 @@ from .grounding import (
     validate_prose_support,
 )
 from .provider import provider
-from .scope import capability_gap
+from .scope import capability_gap, requested_years
 from .search import SearchInput, search_documents, serialize
 
 SYSTEM = """You are ResearchDesk, a cautious document analyst. Answer in English.
@@ -113,7 +112,7 @@ def research(session: Session, args: AskInput, llm=None) -> dict:
         }
     rows = historical(session, args.company, args.as_of)
     trace.append({"tool": "get_financial_facts", "status": "ok", "annual_periods": len(rows)})
-    years = set(re.findall(r"\b20\d{2}\b", args.question))
+    years = {str(y) for y in requested_years(args.question)}
     available = {str(row["fiscal_year"]) for row in rows}
     if years - available:
         return {

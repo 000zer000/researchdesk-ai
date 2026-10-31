@@ -393,3 +393,30 @@ def test_selected_company_is_not_silently_used_for_cross_entity_comparison():
 
     for q in ["Compare Apple and Dell operating income in 2024.", "HP versus Apple revenue."]:
         assert capability_gap(q, "AAPL")
+
+
+@pytest.mark.parametrize(
+    "question,years",
+    [
+        ("FY2024 revenue", {2024}),
+        ("fy 2023 versus FY2024", {2023, 2024}),
+        ("2023 to 2024", {2023, 2024}),
+    ],
+)
+def test_fiscal_notation_is_consistent_at_all_boundaries(question, years):
+    from researchdesk.scope import requested_years
+
+    assert requested_years(question) == years
+
+
+@pytest.mark.integration
+def test_unavailable_fy_notation_cannot_silently_select_latest_period(populated):
+    r = research(populated, AskInput(question="FY2025 revenue"), NeverCalled())
+    assert r["status"] == "abstained"
+
+
+@pytest.mark.integration
+def test_compact_fy_notation_selects_only_requested_period(populated):
+    r = research(populated, AskInput(question="FY2023 revenue"), ContractCopyTestDouble())
+    assert r["status"] == "answered"
+    assert [m["id"] for m in r["verified_financials"]["measures"]] == ["revenue:2023"]

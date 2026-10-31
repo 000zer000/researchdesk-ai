@@ -136,7 +136,7 @@ def validate_prose_support(answer: dict, passages: list[dict], company: str | No
     # Prose is not an alternate route around the numerical contract. Calendar
     # week counts and fiscal-year labels are the only numeric prose exceptions.
     for text in [c["text"] for c in answer["claims"]] + answer["limitations"]:
-        scrubbed = re.sub(r"\b20\d{2}\b|\b(?:52|53)[ -]weeks?\b", "", text, flags=re.I)
+        scrubbed = re.sub(r"\b(?:FY\s*)?20\d{2}\b|\b(?:52|53)[ -]weeks?\b", "", text, flags=re.I)
         if re.search(
             r"\d|[$€£%]|\b(millions?|billions?|trillions?|percent|percentage|usd|dollars?)\b",
             scrubbed,

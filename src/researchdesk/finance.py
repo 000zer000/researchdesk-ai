@@ -10,6 +10,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .db import Document, Fact
+from .scope import requested_years
 
 
 class MissingData(ValueError):
@@ -291,7 +292,7 @@ def financial_plan(question: str, rows: list[dict], company: str) -> dict | None
         issues.append(
             "Reverse chronological change is outside the supported comparison convention; no reversal was assumed."
         )
-    explicit = sorted({int(y) for y in re.findall(r"\b20\d{2}\b", q)})
+    explicit = sorted(requested_years(q))
     selected = [r for r in rows if not explicit or r["fiscal_year"] in explicit]
     if not explicit and selected:
         if re.search(
