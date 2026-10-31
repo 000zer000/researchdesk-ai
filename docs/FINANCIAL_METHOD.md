@@ -6,7 +6,7 @@ Coverage: Apple (CIK 0000320193), Dell (0001571996), HP (0000047217), original F
 
 Publication filtering is inclusive at **end of the chosen calendar day**, not an intraday backtest. The original SEC filing date is used, not the report period end. No sources published later are retrieved or exposed by the evidence API. This is a small frozen corpus, not a current financial-data feed.
 
-`evaluation/financial-source-checks.json` records a second parser's check of the original inline XBRL context, scale, sign, unit and value. That is independent of Company Facts selection, but it is not independent human validation.
+`evaluation/v1.1/financial-source-checks.json` records a second parser's check of the original inline XBRL context, scale, sign, unit and value. That is independent of Company Facts selection, but it is not independent human validation.
 
 ## Definitions and signs
 
@@ -40,3 +40,12 @@ Year six is recomputed using terminal growth and the same operating ratios, incl
 Decimal arithmetic is used in the DCF. First forecast cash flow is discounted one full year (year-end convention). A positive minimum discount rate and at least a 0.01-percentage-point spread over terminal growth prevent numerically unstable denominators. Invalid sensitivity cells are absent values, not fabricated zeros. Taxes receive no loss credit; loss carryforwards are not modeled. No leases, acquisitions, cash/debt bridge, share counts, dilution, market price or upside is inferred.
 
 The annuity/perpetuity test independently checks a flat USD100 revenue business with USD15 annual FCFF and 10% discount rate: EV = 15 / 0.10 = USD150. Separate tests check year-one/year-five discount periods, working capital, terminal year-six cash flow, sensitivities, invalid inputs, and missing facts.
+
+
+## v1.1 answer consistency and conflicting evidence
+
+Every supported research financial measure carries actual start/end dates, consolidated scope, USD display unit, concept/definition, value, direction and the complete source-input citation set. Margin change uses percentage points, not percentage growth. CFO less gross PPE capex requires both CFO and gross-capex evidence; it must not be replaced by Dell's company-reported net-capex FCF. A requested definition absent from the ledger is refused, with the available verified data shown separately.
+
+Multiple same-metric observations are compared before selection. Different companies never enter the same selected-company ledger. Currency and segment records cannot replace consolidated USD records. Period, concept, value or reporting-basis disagreements within the eligible annual metric remain unresolved: both sources are exposed and derived conclusions withheld. `reporting_basis` and `restates_accession` preserve explicitly curated revision metadata; the LLM never assigns it. The present official corpus contains original filings, not a claimed exhaustive restatement history.
+
+The model proposes structured measures; code validates every field and renders the accepted financial wording. Financial assertions cannot bypass the contract through qualitative prose or limitations. Source excerpts may contain other reported figures: these remain labeled source evidence, not approved calculations. Unsupported paraphrases of intent can lead to abstention or incomplete interpretation; the small dataset does not establish universal natural-language understanding.

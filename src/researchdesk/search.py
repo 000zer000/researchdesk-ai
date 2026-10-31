@@ -56,7 +56,9 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
     )
     words = [w for w in re.findall(r"[a-zA-Z]+", args.question.lower()) if w not in stop]
     cleaned = " ".join(words) or args.question
-    query = func.websearch_to_tsquery("english", " OR ".join(words) or args.question)
+    focus = retrieval_focus(args.question)
+    expanded = words + [w for group in focus for w in group]
+    query = func.websearch_to_tsquery("english", " OR ".join(expanded) or args.question)
     vector = func.to_tsvector("english", Passage.text)
     lexical = session.execute(
         base.where(vector.op("@@")(query))
@@ -64,14 +66,17 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
         .limit(30)
     ).all()
     if args.method == "lexical":
-        return [serialize(p, d, 1 / (i + 1)) for i, (p, d) in enumerate(lexical[: args.k])]
+        ranked = [(p, d, 1 / (60 + i + 1)) for i, (p, d) in enumerate(lexical)]
+        return rerank(ranked, focus, args.k)
     # RRF is transparent and needs no learned reranker. Corpus is intentionally small.
     candidates = session.execute(base.where(Passage.embedding.is_not(None))).all()
     if not candidates:
         if session.execute(base.limit(1)).first() is None:
             return []
         raise RuntimeError("Semantic index unavailable; run ingestion with local embeddings")
-    q = np.array(embedder().encode([cleaned])[0])
+    q = np.array(
+        embedder().encode([cleaned + " " + " ".join(w for group in focus for w in group)])[0]
+    )
     vectors = np.array([p.embedding for p, _ in candidates])
     similarities = vectors @ q
     order = np.argsort(-similarities, kind="stable")[:30]
@@ -82,5 +87,73 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
         for rank, (p, d) in enumerate(ranked, 1):
             scores[p.id] = scores.get(p.id, 0) + 1 / (60 + rank)
             lookup[p.id] = (p, d)
-    ids = sorted(scores, key=lambda key: (-scores[key], key))[: args.k]
-    return [serialize(*lookup[key], scores[key]) for key in ids]
+    return rerank([(p, d, scores[key]) for key, (p, d) in lookup.items()], focus, args.k)
+
+
+# Query expansion and specificity are topic rules, never question IDs or company-
+# specific answers. They target observed boilerplate and wrong-section retrieval.
+FOCUSES = [
+    (
+        r"supply.chain|suppli|outsourc|component|manufactur",
+        [
+            ("supplier", "suppliers", "manufacturing", "component", "components", "outsourcing"),
+            ("shortage", "disruption", "limited", "single", "accident", "concentration"),
+        ],
+    ),
+    (
+        r"debt|indebted|covenant|borrow",
+        [
+            ("debt", "indebtedness", "borrowing", "covenants"),
+            ("restrict", "repay", "service", "interest", "financing", "adverse"),
+        ],
+    ),
+    (
+        r"privacy|cyber|personal information|ransomware",
+        [
+            ("privacy", "cybersecurity", "personal", "confidential", "ransomware", "unauthorized"),
+            ("breach", "attack", "damage", "harm", "access", "sensitive"),
+        ],
+    ),
+    (
+        r"printing|digitization|print demand",
+        [
+            ("printing", "print", "printer", "printers"),
+            ("demand", "digitization", "hybrid", "decline", "alternatives", "softness"),
+        ],
+    ),
+    (r"calendar|weeks?|fiscal period", [("week", "weeks"), ("52", "53", "calendar", "fiscal")]),
+]
+
+
+def retrieval_focus(question: str) -> list[tuple[str, ...]]:
+    return [
+        tuple(group)
+        for pattern, groups in FOCUSES
+        if re.search(pattern, question, re.I)
+        for group in groups
+    ]
+
+
+def specificity(text: str, groups: list[tuple[str, ...]]) -> float:
+    if not groups:
+        return 0
+    lower = text.lower()
+    hits = [sum(bool(re.search(r"\b" + re.escape(w), lower)) for w in group) for group in groups]
+    # Requiring different topic components prevents generic "risk factors" text
+    # and unrelated cash/portfolio concentration from outranking direct evidence.
+    score = sum(min(n, 3) for n in hits) + (4 if all(hits) else 0)
+    if len(text.split()) < 28:
+        score -= 5
+    if re.search(r"refer to.*risk factors|risks and uncertainties.*could", lower) and sum(hits) < 2:
+        score -= 3
+    return score
+
+
+def rerank(candidates: list, focus: list, k: int) -> list[dict]:
+    ordered = sorted(
+        candidates,
+        key=lambda item: (-(item[2] + 0.012 * specificity(item[0].text, focus)), item[0].id),
+    )
+    return [
+        serialize(p, d, score + 0.012 * specificity(p.text, focus)) for p, d, score in ordered[:k]
+    ]

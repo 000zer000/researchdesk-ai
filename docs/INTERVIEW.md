@@ -40,3 +40,12 @@ Add an optional **mid-year discount convention** while preserving the current ye
 6. Run Ruff, Pytest on the dedicated PostgreSQL test database, TypeScript and the browser journey. Add a short explanation of why enterprise value changes.
 
 This exercise is deliberately left for the repository owner. Being able to explain and verify the change is more valuable than memorizing the existing implementation.
+
+
+## Explaining v1.1 honestly
+
+The v1.0 model could copy correct ratios and still say that margin fell. Numeric string scoring did not catch this semantic error. v1.1 makes the numerical claim a typed proposal: value, unit, exact dates, definition, scope, company, direction and full input citations must agree with the deterministic ledger. The final financial sentence is code-rendered after real inference; I would not claim it demonstrates LLM arithmetic.
+
+Conflicting source handling starts with identity: another company, segment, currency, fiscal period or adjusted definition is not automatically the same observation. Ambiguous comparable values or reporting bases retain both proofs and block the conclusion. A later date is not a truth ranking. The present original-filings corpus does not prove automatic discovery of every restatement or prose contradiction.
+
+For prose, selection of real source spans prevents invented quotation text. It does not guarantee that the selected span supports the whole answer. The ten-response packet deliberately leaves human assessment blank. New evaluation questions were frozen after the correction commit and before inference; old results remain separate. Guarded numerical output, refusal rate, retrieval and semantic completeness must be discussed separately, without a single flattering score.

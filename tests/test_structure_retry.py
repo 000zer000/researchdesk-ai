@@ -22,7 +22,9 @@ def test_structural_repair_is_bounded_and_usage_includes_both_calls(populated):
             ), {"generation_tokens": 7, "prompt_tokens": 33}
 
     simulated = ExplicitRetryTestDouble()
-    result = research(populated, AskInput(question="revenue", method="lexical"), simulated)
+    result = research(
+        populated, AskInput(question="supply chain risks", method="lexical"), simulated
+    )
     assert simulated.calls == 2
     assert result["model"]["generation_tokens"] == 18
     assert result["model"]["prompt_tokens"] == 55

@@ -1689,3 +1689,7 @@ footer b {
     transition: none !important;
   }
 }
+
+.calculation {
+  overflow-wrap: anywhere;
+}

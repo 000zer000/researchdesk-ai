@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     llm_model: str = "mlx-community/Qwen2.5-1.5B-Instruct-4bit"
     local_llm_url: str = "http://127.0.0.1:8081/v1/chat/completions"
     llm_timeout: int = 90
-    llm_max_tokens: int = 700
+    llm_max_tokens: int = 1200
     data_dir: Path = ROOT / "data"
 
 

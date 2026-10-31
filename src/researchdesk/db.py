@@ -51,6 +51,10 @@ class Fact(Base):
     start: Mapped[date | None] = mapped_column(Date, nullable=True)
     end: Mapped[date] = mapped_column(Date)
     scope: Mapped[str] = mapped_column(String, default="consolidated")
+    reporting_basis: Mapped[str] = mapped_column(
+        String, default="as_reported", server_default="as_reported"
+    )
+    restates_accession: Mapped[str | None] = mapped_column(String, nullable=True)
     evidence_id: Mapped[str | None] = mapped_column(ForeignKey("passages.id"), nullable=True)
 
 

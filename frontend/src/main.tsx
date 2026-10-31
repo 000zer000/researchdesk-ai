@@ -68,10 +68,44 @@ type Answer = {
     abstain: boolean;
     claims: { text: string; citations: string[] }[];
     limitations: string[];
+    conflicts?: { evidence: { citation: string; quote: string }[] }[];
   } | null;
   evidence: Evidence[];
   trace: unknown[];
   calculations: Record<string, number | string> | null;
+  verified_financials?: {
+    measures: {
+      id: string;
+      label: string;
+      company: string;
+      periods: string[];
+      scope: string;
+      definition: string;
+      value: number;
+      unit: string;
+      direction: string;
+      citations: string[];
+    }[];
+    issues: string[];
+    conflicts: { metric: string; reason: string }[];
+    observations: {
+      metric: string;
+      fiscal_year: number;
+      company: string;
+      raw_value: number;
+      unit: string;
+      currency: string;
+      start: string | null;
+      end: string;
+      scope: string;
+      concept: string;
+      reporting_basis: string;
+      restates_accession: string | null;
+      accession: string;
+      filed: string;
+      evidence_id: string;
+    }[];
+  };
   model?: { model: string; elapsed_seconds: number; generation_tokens: number };
   elapsed_seconds: number;
 };
@@ -428,7 +462,7 @@ function App() {
             Evidence before opinion
             <small>Local AI. Explicit assumptions.</small>
           </div>
-          <span className="version">V1</span>
+          <span className="version">V1.1</span>
         </div>
       </aside>
       <main>
@@ -683,29 +717,112 @@ function App() {
                           </div>
                         </div>
                       ) : null}
-                      {answer.calculations && (
-                        <div className="calculation">
-                          <h3>Deterministic calculation</h3>
+                      {answer.answer?.conflicts?.map((conflict, i) => (
+                        <section
+                          className="calculation"
+                          key={i}
+                          aria-label="Conflicting source proofs"
+                        >
+                          <h3>Unresolved source conflict</h3>
+                          {conflict.evidence.map((proof, j) => (
+                            <div className="claim" key={j}>
+                              <blockquote>{proof.quote}</blockquote>
+                              <div className="citations">
+                                <button
+                                  onClick={() => openEvidence(proof.citation)}
+                                >
+                                  {proof.citation}
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+                        </section>
+                      ))}
+                      {answer.verified_financials && (
+                        <section
+                          className="calculation"
+                          aria-label="Verified financial data"
+                        >
+                          <h3>Verified financial data</h3>
                           <p>
-                            Revenue growth:{" "}
-                            {pct(Number(answer.calculations.revenue_growth), 2)}{" "}
-                            · Margin change:{" "}
-                            {money(
-                              Number(answer.calculations.margin_change_pp),
-                              2,
-                            )}{" "}
-                            percentage points
+                            Conclusions above are withheld when the model or
+                            sources disagree. These records preserve the source
+                            basis.
                           </p>
-                          <small>
-                            {String(answer.calculations.from_year)} →{" "}
-                            {String(answer.calculations.to_year)} · Units: USD
-                            millions
-                          </small>
-                        </div>
+                          {answer.verified_financials.measures.map((m) => (
+                            <div className="claim" key={m.id}>
+                              <strong>
+                                {m.label}: {money(m.value, 2)} {m.unit}
+                              </strong>
+                              <p>
+                                {m.company} · {m.periods.join(" → ")} ·{" "}
+                                {m.scope} · {m.direction}
+                              </p>
+                              <small>Definition: {m.definition}</small>
+                              <div className="citations">
+                                {m.citations.map((id) => (
+                                  <button
+                                    key={id}
+                                    onClick={() => openEvidence(id)}
+                                  >
+                                    {id}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                          {answer.verified_financials.conflicts.map((c, i) => (
+                            <p className="error" key={i}>
+                              {c.metric}: {c.reason}
+                            </p>
+                          ))}
+                          <details
+                            open={
+                              answer.verified_financials.conflicts.length > 0
+                            }
+                          >
+                            <summary>
+                              Source observations and reporting basis
+                            </summary>
+                            {answer.verified_financials.observations.map(
+                              (o, i) => (
+                                <div className="claim" key={i}>
+                                  <strong>
+                                    {o.company} FY{o.fiscal_year} · {o.metric}:{" "}
+                                    {money(o.raw_value, 0)} {o.unit}
+                                  </strong>
+                                  <p>
+                                    {o.start || "instant"} / {o.end} · {o.scope}{" "}
+                                    · {o.currency}
+                                  </p>
+                                  <p>
+                                    {o.concept} · {o.reporting_basis}
+                                    {o.restates_accession
+                                      ? ` · restates ${o.restates_accession}`
+                                      : ""}
+                                  </p>
+                                  <small>
+                                    Filed {o.filed} · accession {o.accession}
+                                  </small>
+                                  <div className="citations">
+                                    <button
+                                      onClick={() =>
+                                        openEvidence(o.evidence_id)
+                                      }
+                                    >
+                                      {o.evidence_id}
+                                    </button>
+                                  </div>
+                                </div>
+                              ),
+                            )}
+                          </details>
+                        </section>
                       )}
                       <p className="support-note">
-                        Citation IDs are validated. Whether each citation
-                        supports its claim still needs independent review.
+                        {answer.verified_financials
+                          ? "Financial values and complete input citations are checked against the ledger. Displayed financial wording is rendered by code."
+                          : "Citation IDs and exact evidence spans are checked. Semantic support and answer completeness still need human review."}
                       </p>
                       {answer.model && (
                         <div className="model-meta">
@@ -1191,14 +1308,15 @@ function App() {
                   <FlaskConical size={22} />
                   <h2>Evaluation, without shortcuts</h2>
                   <p>
-                    Lexical PostgreSQL search is compared with MiniLM + lexical
-                    reciprocal-rank fusion on the same questions. The real local
-                    model is evaluated separately from deterministic CI.
+                    The v1.1 evaluation uses a separately frozen question batch.
+                    Archived v1.0 runs remain available and are not relabeled as
+                    fresh tests. Actual local inference is separate from
+                    deterministic CI.
                   </p>
                   <p>
-                    Reference evidence is source-reviewed by the coding agent.
-                    Independent human review remains outstanding. Citation-ID
-                    validity does not establish semantic support.
+                    Ten actual answers and source excerpts are prepared for
+                    human review. That review remains pending. Exact quote
+                    presence does not establish semantic support.
                   </p>
                   <details open>
                     <summary>Recorded evaluation results</summary>

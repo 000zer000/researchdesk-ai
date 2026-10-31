@@ -12,12 +12,18 @@ ALIASES = {
     "DELL": {"dell", "dell technologies", "dell technologies inc"},
     "HPQ": {"hp", "hp inc", "hpq", "hewlett packard"},
 }
-FINANCIAL = r"\b(revenue|revenues|sales|operating income|margin|cash flow|cfo|capex|capital expenditure|depreciation|amortization|cash balance|cash equivalents|current assets|current liabilities)\b"
+FINANCIAL = r"\b(revenue|revenues|sales|operating income|operating profit|operating earnings|ebitda|net income|margin|growth|cash flow|free cash flow|fcf|cfo|capex|capital expenditure|depreciation|amortization|cash balance|cash equivalents|current assets|current liabilities)\b"
 DOCUMENTARY = r"\b(risks?|supply.chain|suppliers?|outsourc\w*|manufactur\w*|component\w*|indebtedness|debt|acquisition|financing|privacy|personal information|cyber\w*|digitization|printing|calendar|weeks?|fiscal period|seasonality)\b"
 
 
 def capability_gap(question: str, company: str) -> str | None:
     lower = question.lower()
+    for other, aliases in ALIASES.items():
+        if other != company and any(
+            re.search(r"\b" + re.escape(alias) + r"\b", lower) for alias in aliases
+        ):
+            return "Research answers cover one selected company. A different covered company is named; select it or ask separately."
+
     # Detect explicit subject names, including unknown companies; do not whitelist
     # individual benchmark names. Generic "the company" means the selected company.
     subject = re.search(

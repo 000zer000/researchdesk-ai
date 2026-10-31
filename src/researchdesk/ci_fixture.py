@@ -51,8 +51,14 @@ if __name__ == "__main__":
                     currency="USD",
                     start=date(2023, 10, 1),
                     end=date(2024, 9, 30),
-                    scope="synthetic",
+                    scope="consolidated",
                     evidence_id="CI-revenue",
                 )
             )
+            s.commit()
+
+        # Migrate only our explicitly identified synthetic CI fixture from v1.0.
+        fact = s.get(Fact, "CI-revenue")
+        if fact.scope == "synthetic":
+            fact.scope = "consolidated"
             s.commit()

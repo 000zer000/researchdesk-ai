@@ -1,8 +1,5 @@
 """Freeze source-reviewed references. Never import these answers into generation."""
 
-import json
-from pathlib import Path
-
 cases = []
 
 
@@ -176,5 +173,7 @@ for payload in [
         payload=payload,
     )
 assert len(cases) == 40
-Path("evaluation/cases.json").write_text(json.dumps(cases, indent=2) + "\n")
+raise SystemExit(
+    "Historical v1.0 case builder is archived; it must not replace a frozen evaluation batch."
+)
 print("Frozen", len(cases), "questions;", sum(c["split"] == "final" for c in cases), "final")

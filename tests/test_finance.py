@@ -93,6 +93,13 @@ def test_ratios_have_numeric_reference_and_missing_data_error():
             "facts": {"revenue": {"value": 110}, "operating_income": {"value": 24.2}},
         },
     ]
+    for row in rows:
+        for metric, fact in row["facts"].items():
+            fact.update(
+                start=f"{row['fiscal_year'] - 1}-10-01",
+                end=f"{row['fiscal_year']}-09-30",
+                concept="test:" + metric,
+            )
     actual = calculate_metrics(rows)
     assert actual["revenue_growth"] == pytest.approx(0.1)
     assert actual["margin_change_pp"] == pytest.approx(2)

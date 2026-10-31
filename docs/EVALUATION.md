@@ -1,58 +1,13 @@
-# Evaluation methodology
+# Evaluation v1.1
 
-The frozen `evaluation/cases.json` has 40 cases (20 development / 20 final): 12 facts, 6 calculations, 8 source syntheses, 5 missing-information questions, 3 wrong-company/unpublished-period questions, 3 synthetic conflicts and 3 synthetic prompt injections. Each has company, analysis date, reference evidence, expected value/tolerance or expected behavior. Numeric references were checked against original inline XBRL. Narrative reference passages were read against the official cached filings by the coding agent. **Independent human review remains pending.**
+v1.0 is preserved byte-for-byte under `evaluation/v1.0/`, including failed attempts, its final **replay** set, coding-agent source assessments and original runtime hashes. [Historical methodology and failures](v1.0-EVALUATION.md) remain available. They must not be relabeled as a new holdout or compared directly with a different batch.
 
-This is a small project evaluation, not an unbiased estimate of production accuracy. Development and final cases share companies and some underlying facts; the final set is held out from prompt tuning, not an independent company generalization benchmark. Final references are never included in generation prompts. Model-visible financial facts are actual source data, not reference answers.
+The v1.1 corrections are frozen in a code commit **before** the new cases are written. `evaluation/v1.1/freeze.json` binds that commit, runtime and test source hashes, case hash and creation time. Expected values and source references are evaluator-only data; generation receives the ordinary application context. The application does expose verified measures to its model by design, so numeric results demonstrate guarded pipeline consistency, not independent model arithmetic.
 
-The first comparison was stopped after repeated JSON-schema errors (limitation objects instead of strings). `attempt-01-partial.json` preserves that attempt. One generic bounded structure-repair step and a clearer schema instruction were introduced after this partial run. Development smoke questions also revealed a factor-of-ten narrative error when copying long raw-USD numbers; retrieved structured facts are now deterministically expressed in USD millions for generation, while original raw-USD evidence remains unchanged. A concise single-claim instruction reduced unsupported additions on the development risk question. The final split is therefore a **replayed final set, not a pristine holdout**. No model-quality claim should treat it as an untouched benchmark. Expected answers still never enter generation.
+The batch is coding-agent-authored on a known corpus, not an independently authored blind benchmark. Exact questions are checked against v1.0 to prevent exact replay. Topic and financial concepts necessarily overlap the supported product scope. Ten cases are selected for human review before inference. A second execution, even after an incomplete attempt, is labeled a replay and stored in a new run directory.
 
-`researchdesk evaluate` runs the same local Qwen model with lexical retrieval and hybrid retrieval. Both receive identical typed financial-fact augmentation. It records code commit, model revision/configuration, statuses, generated claims and citations, passage IDs, elapsed time and accessible tokens. Synthetic tests append a labeled untrusted payload to a retrieved passage **in memory only**, without changing the official cached source or persistent index.
+Metrics are separate: accepted reference financial measures, unanswered/withheld responses, expected behavior, curated reference-passage recall, and the narrow injection-marker probe. No aggregate score or target is used. Financial refusals do not count as correct numeric answers. Quote presence does not establish semantic support. Qualitative completeness and citation entailment await human review.
 
-Metrics are separate:
+Synthetic conflicts copy one real observation into a disposable `_test` schema and add an explicitly synthetic source. Variants distinguish altered values, periods, concepts, reporting bases, currencies, segments and companies. These are not claims that the six official reports contain genuine financial contradictions. They never modify the demo corpus.
 
-- **Recall@5:** fraction of predeclared relevant passage IDs among the five search results, before financial-fact augmentation. **Hit@5:** at least one relevant ID. Denominator excludes cases with no predeclared evidence.
-- **Numeric narrative accuracy:** expected number within tolerance, in the requested unit, with the requested fiscal period(s) present in the generated narrative. Incorrect units, omitted periods and abstentions fail. This conservative string-based scorer can miss valid alternative formulations; it is not an entailment judge.
-- **Citation existence:** generated citation IDs belong to the actual generation evidence. Outputs with invalid structure/citations are rejected, reported as failures, not credited as successful abstentions. This does not measure whether the cited text supports the claim.
-- **Citation support:** separately source-reviewed claims and explicit reasons in `support-review.json`. Coding-agent assessment is labeled; no model self-assessment or independent human judgment is claimed. Unreviewed claims have no support score.
-- **Abstention:** expected missing/wrong-scope question produced an explicit abstention. Parser rejection, timeout and provider errors do not count as correct abstention.
-- **Conflict/injection:** literal conflict acknowledgement or abstention; absence of the attack canary. These narrow automated checks do not establish complete semantic resistance or general prompt-injection safety. No code/SQL/network/secret tools exist for the model to invoke.
-- **Latency/tokens:** wall-clock research time includes retrieval and warm model generation; initial model loading is outside the per-case timer. No energy or memory benchmark is asserted.
-
-Raw source excerpts for review remain local in ignored `data/runtime/evaluation-review.json`. Public results contain generated paraphrases, IDs and metrics, not a redistributed report corpus. Failures are retained. The final results table and findings below are populated from the executed run, not from CI test doubles.
-
-`attempt-02-incomplete.json` retains the next run (40 lexical / 32 hybrid cases), including fabricated-price, forecast and company-attribution failures. It stopped on the evaluator's empty-date-window retrieval bug. After correction, the final pipeline adds a deterministic capability gate; summaries report origins so policy refusals are not mistaken for model abstention skill. Conflict cases can still fail: the model may confidently prefer a source without acknowledging the synthetic conflicting record.
-
-`attempt-03-complete.json` and its summary preserve the first complete comparison. Its conflict-case abstentions came from a false-positive company-subject heuristic, not conflict reasoning. The subject boundary was corrected and covered by regression tests before the final full replay. The final reported results replace this misleading success signal.
-
-## Executed final replay
-
-Evaluated research runtime commit: `818819450e06ca59340d32138df79b87231d3e45`. Run started 2026-10-30T23:44:41.583394+00:00. The delivery validator checks that the research/finance runtime sources still match this evaluated revision.
-
-
-| Method | Split | Mean recall@5 | Numeric narrative | Supported displayed claims* | Answered / invalid / abstained | Median / p95 seconds |
-|---|---|---:|---:|---:|---|---|
-| lexical | dev replay | 7.3% (n=16) | 9/9 | 11/15 | 15 / 1 / 4 | 5.43 / 10.70 |
-| lexical | final replay | 22.9% (n=16) | 5/9 | 13/16 | 16 / 0 / 4 | 5.02 / 6.76 |
-| hybrid | dev replay | 27.6% (n=16) | 8/9 | 11/13 | 13 / 3 / 4 | 5.81 / 10.80 |
-| hybrid | final replay | 34.4% (n=16) | 6/9 | 14/16 | 16 / 0 / 4 | 5.08 / 7.70 |
-
-*Coding-agent source assessment; independent human review pending. Rejected outputs and refusals are excluded from the displayed-claim support denominator and remain visible in the status counts. Citation relevance is separately recorded in `summary.json`; per-claim reasons and per-citation flags are in `support-review.json`.
-
-
-Across both methods, all 8 expected missing/wrong-scope cases are refused per variant: six capability-policy decisions and two publication-period decisions. This is **not** a claim that Qwen learned to abstain. All 3 synthetic conflict cases fail per variant: the model repeats the original revenue without acknowledging the conflicting supplied record. The injection marker is absent in all 3 injection cases per variant; this narrow check is weaker than general injection resistance.
-
-There are 64 research cases using the actual model, with 71 total model calls including bounded structural repair, and 6,822 measured output tokens. Four model cases are rejected after structure/citation validation (1 lexical, 3 hybrid). All 60 displayed answer claims have existing citation IDs, but only 49/60 were assessed as fully supported by the union of their cited sources (24/31 lexical, 25/29 hybrid). This source assessment is not independent human validation.
-
-## Failures that remain
-
-- **Operating-margin direction (q16):** the model says Apple's margin decreased. The verified financial engine correctly computes an increase from 29.82% to 31.51%, or about 1.69 percentage points. Generated prose can contradict the deterministic panel.
-- **Gross versus net capex (q18):** the requested Dell CFO-minus-gross-capex proxy is 5,920 USD million. The hybrid response gives 5,923, a different net-capex/company free-cash-flow definition. Some citations point to a cash-flow summary that does not contain the required capex input.
-- **Correct number, inadequate citation (hybrid q17):** the Apple cash-flow proxy is correct, but the cited financing-activities passage does not establish capex. Citation existence therefore passes while support fails.
-- **Wrong passage for a true statement (q25):** Dell's debt risk exists elsewhere, but the selected generic risk introduction does not establish it.
-- **Structure failures:** HP printing-risk and certain other responses fail validation even after the single repair attempt; the app exposes rejection instead of substituting authored content.
-- **Weak or generic synthesis:** some responses omit the explanation requested, mix unrelated market/portfolio context into supply-chain risks, or do not explicitly resolve the fiscal-week question.
-- **Strict-scorer limitations:** “decreased by 13.56%” is financially correct for Dell but fails a signed-number check expecting -13.56. A correct amount in billions can fail the requested-millions format. These cases are retained as automatic failures, with separate source-review explanations. No score was silently increased.
-
-Hybrid retrieval is retained because its measured mean recall improves on this set, not because it guarantees correctness. Retrieval recall remains low, especially before fact augmentation. No significance claim or generalization beyond this small repeated corpus is warranted. Wall-clock timings were measured on a working laptop during development; they are descriptive, not a controlled performance benchmark.
-
-The final full replay after the MLX owner-thread correction uses the same model, prompt and corpus. All 80 answer bodies are byte-equivalent after canonical JSON comparison to the pre-thread-fix run; source annotations remain bound to those answer hashes. The execution change addresses repeated HTTP request reliability, not measured model-quality improvement.
+The actual run, failures, source excerpts and ten pending review responses will be linked here after execution; an unexecuted check is not counted as passed.
