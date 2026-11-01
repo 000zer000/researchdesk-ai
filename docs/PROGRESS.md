@@ -110,3 +110,10 @@ The generated/extractive modes and numerical results have distinct origins. Sour
 excerpts are an inspectable browsing mode, not a claim of improved AI synthesis.
 Detailed measurements, scope/reference mistakes and limitations are published in
 V13_VERIFICATION.md. No historical source/results were overwritten.
+
+
+The frozen source is now anchored at 21a22f9. After consuming the batch, corrected
+duplicate citation-label counting and the visible version badge. The final native
+suite passes 152 tests. Deterministic replay accepts the prior V308 formatting but
+still rejects V305 for too many distinct sources. No new model-quality score is
+inferred; original outputs and first-run metrics remain untouched.

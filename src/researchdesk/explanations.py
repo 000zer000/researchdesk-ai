@@ -4,7 +4,7 @@ import threading
 import time
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from .config import settings
 from .context import PROMPT_TOKEN_LIMIT, assemble_context, counter, render_context, words
@@ -29,6 +29,15 @@ class GeneratedClaim(BaseModel):
     kind: Literal["disclosed_fact", "interpretation"]
     text: str = Field(min_length=12, max_length=900)
     evidence_ids: list[str] = Field(min_length=1, max_length=3)
+
+    @field_validator("evidence_ids", mode="before")
+    @classmethod
+    def unique_references(cls, value):
+        # Repeating a label adds no evidence. Bound distinct references, while
+        # preserving normal schema rejection for malformed or unknown labels.
+        if isinstance(value, list) and all(isinstance(item, str) for item in value):
+            return list(dict.fromkeys(value))
+        return value
 
 
 class GeneratedAnswer(BaseModel):

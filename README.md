@@ -35,6 +35,8 @@ free-text working-capital operation and was refused. The authored target and ref
 are retained. Five new human-review responses remain pending. These are narrow
 engineering measurements on a familiar corpus, not an independent quality score.
 
+**Final engineering checks:** 152 native PostgreSQL tests without skips, four Chromium journeys, TypeScript/build and Ruff passed. A post-evaluation repeated-citation formatting correction has a separately labelled parser replay; the frozen first-run scores above remain unchanged.
+
 [Current changes and limitations](docs/V13_VERIFICATION.md) ·
 [First-run results](evaluation/v1.3/summary.json) ·
 [Pending review](evaluation/v1.3/human-review-pending.json)

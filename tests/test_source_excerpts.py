@@ -6,8 +6,35 @@ import pytest
 
 from researchdesk.context import PROMPT_TOKEN_LIMIT, assemble_context
 from researchdesk.db import Document, Passage
-from researchdesk.explanations import extract_source_sentences
+from researchdesk.explanations import GeneratedClaim, extract_source_sentences
 from researchdesk.research import AskInput, research
+
+
+def test_repeated_source_labels_do_not_inflate_distinct_reference_limit():
+    claim = GeneratedClaim(
+        kind="disclosed_fact",
+        text="Supplier concentration can disrupt production.",
+        evidence_ids=["E1", "E2", "E1", "E3", "E2"],
+    )
+    assert claim.evidence_ids == ["E1", "E2", "E3"]
+
+
+def test_four_distinct_sources_remain_rejected():
+    with pytest.raises(ValueError, match="at most 3"):
+        GeneratedClaim(
+            kind="disclosed_fact",
+            text="Supplier concentration can disrupt production.",
+            evidence_ids=["E1", "E2", "E3", "E4", "E1"],
+        )
+
+
+def test_non_string_source_labels_remain_schema_errors():
+    with pytest.raises(ValueError):
+        GeneratedClaim(
+            kind="disclosed_fact",
+            text="Supplier concentration can disrupt production.",
+            evidence_ids=[{"not": "a reference"}],
+        )
 
 
 def add_disclosures(session):

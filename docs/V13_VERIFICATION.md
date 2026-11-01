@@ -55,7 +55,7 @@ acceptance batch, not independent validation or a general accuracy benchmark.
 
 ## Executed checks
 
-149 native PostgreSQL tests passed, zero skipped. Ruff, formatting, TypeScript and
+149 native PostgreSQL tests passed before the formatting correction; the final suite passes 152, zero skipped. Ruff, formatting, TypeScript and
 frontend production build passed. Four Chromium tests passed including desktop
 and mobile source-mode labeling; synthetic browser responses remain explicitly
 marked test doubles. The earlier failed launch used the wrong browser-cache path;
@@ -67,3 +67,21 @@ No new Docker or hosted deployment was performed locally for this iteration.
 The required GitHub workflow retains its clean Compose check. The historical
 v1.2 release, video, evaluation results and hashes are unchanged. Run
 `python scripts/evaluate_v13.py validate` to verify this new batch's receipts.
+
+
+## Post-evaluation formatting correction
+
+The evaluated runtime is preserved at commit
+`21a22f99a96628e6ae782f39a25eb599c963fb2f`; the freeze is checked against that
+immutable source, as with earlier release archives. A subsequent small patch
+normalizes repeated identical source labels before applying the existing
+three-distinct-source limit and corrects the visible version badge. Claim text,
+unknown-label rejection and the bound on genuinely distinct references remain.
+Three new regressions test duplicate, over-limit and malformed references.
+
+A deterministic parser replay of the saved raw text now accepts V308, which had
+three unique labels repeated four times; V305 still exceeds the distinct-source
+limit and is rejected. The replay makes no model call and does not measure
+semantic improvement. Its evidence is separate in formatting-replay.json. The
+original 3/5 generation-format result, raw outputs, cases and references remain
+unchanged. No favorable replay is presented as a replacement final evaluation.

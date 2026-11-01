@@ -1,0 +1,4 @@
+{
+  "commit": "21a22f99a96628e6ae782f39a25eb599c963fb2f",
+  "scope": "Original frozen eight-case evaluation source; subsequent patch only deduplicates repeated citation IDs and corrects the visible version label. No final outputs or references are overwritten."
+}

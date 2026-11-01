@@ -529,7 +529,7 @@ function App() {
             Evidence before opinion
             <small>Local AI. Explicit assumptions.</small>
           </div>
-          <span className="version">V1.2</span>
+          <span className="version">V1.3</span>
         </div>
       </aside>
       <main>

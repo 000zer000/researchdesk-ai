@@ -5,6 +5,7 @@ import hashlib
 import json
 import resource
 import statistics
+import subprocess
 import sys
 import time
 from datetime import UTC, datetime
@@ -23,10 +24,17 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def check_freeze():
+def check_freeze(historical_ref=None):
     frozen = json.loads((EVAL / "freeze.json").read_text())
     assert frozen["cases_sha256"] == digest(EVAL / "cases.json")
-    assert frozen["source_sha256"] == source_hashes(), "Runtime changed after freeze"
+    if historical_ref:
+        for name, expected in frozen["source_sha256"].items():
+            original = subprocess.check_output(
+                ["git", "show", historical_ref + ":" + name], cwd=ROOT
+            )
+            assert hashlib.sha256(original).hexdigest() == expected, name
+    else:
+        assert frozen["source_sha256"] == source_hashes(), "Runtime changed after freeze"
     assert frozen["corpus_manifest_sha256"] == digest(ROOT / "data/manifest.json")
     return frozen
 
@@ -174,7 +182,8 @@ def run():
 
 
 def validate():
-    check_freeze()
+    reference = json.loads((EVAL / "source-reference.json").read_text())
+    check_freeze(historical_ref=reference["commit"])
     receipts = json.loads((EVAL / "receipts.json").read_text())
     for name, expected in receipts.items():
         assert digest(EVAL / name) == expected, name
