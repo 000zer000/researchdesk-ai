@@ -1,0 +1,507 @@
+{
+  "classification": "Real browser demonstration replay, separate from frozen evaluation",
+  "result": {
+    "question": "What supply risks in the FY2024 report arise from single or limited component sources and competition for those components?",
+    "origin": "source_extract",
+    "evidence": [
+      {
+        "id": "AAPL-2024-p0073",
+        "document_id": "AAPL-2024",
+        "company": "AAPL",
+        "fiscal_year": 2024,
+        "filed": "2024-11-01",
+        "section": "Item 1A. Risk Factors",
+        "anchor": "",
+        "start": 41864,
+        "end": 42884,
+        "offset_basis": "normalized text; html-normalized-v2",
+        "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company’s business, results of operations and financial condition. For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company’s ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all. Such disruptions could occur in the future. While the Company has entered into agreements for the supply of many components, there can be no assurance the Company will be able to extend or renew these agreements on similar terms, or at all. In addition, component suppliers may suffer from poor financial conditions, which can",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "accession": "0000320193-24-000123",
+        "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+        "score": 0.216423011797583
+      },
+      {
+        "id": "AAPL-2024-p0039",
+        "document_id": "AAPL-2024",
+        "company": "AAPL",
+        "fiscal_year": 2024,
+        "filed": "2024-11-01",
+        "section": "Item 1. Business",
+        "anchor": "",
+        "start": 15489,
+        "end": 16173,
+        "offset_basis": "normalized text; html-normalized-v2",
+        "text": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.\nSupply of Components\nAlthough most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "accession": "0000320193-24-000123",
+        "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+        "score": 0.19644964825178157
+      },
+      {
+        "id": "AAPL-2024-p0061",
+        "document_id": "AAPL-2024",
+        "company": "AAPL",
+        "fiscal_year": 2024,
+        "filed": "2024-11-01",
+        "section": "Item 1A. Risk Factors",
+        "anchor": "",
+        "start": 32333,
+        "end": 33083,
+        "offset_basis": "normalized text; html-normalized-v2",
+        "text": "Following any interruption to its business, the Company can require substantial recovery time, experience significant expenditures to resume operations, and lose significant sales. Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company. While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.\nGlobal markets for the Company’s products and services are highly competitive and subject to rapid technological change, and the Company may be unable to compete effectively in these markets.",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "accession": "0000320193-24-000123",
+        "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+        "score": 0.19017630245714884
+      },
+      {
+        "id": "AAPL-2024-p0071",
+        "document_id": "AAPL-2024",
+        "company": "AAPL",
+        "fiscal_year": 2024,
+        "filed": "2024-11-01",
+        "section": "Item 1A. Risk Factors",
+        "anchor": "",
+        "start": 40156,
+        "end": 40939,
+        "offset_basis": "normalized text; html-normalized-v2",
+        "text": "The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company’s hardware products. Any failure of these partners to perform can have a negative impact on the Company’s cost or supply of components or finished goods. In addition, manufacturing or logistics in these locations or transit to final destinations can be disrupted for a variety of reasons, including natural and man-made disasters, information technology system failures, commercial disputes, economic, business, labor, environmental, public health or political issues, trade and other international disputes, geopolitical tensions, or conflict.",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "accession": "0000320193-24-000123",
+        "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+        "score": 0.12525219334577042
+      },
+      {
+        "id": "AAPL-2024-p0038",
+        "document_id": "AAPL-2024",
+        "company": "AAPL",
+        "fiscal_year": 2024,
+        "filed": "2024-11-01",
+        "section": "Item 1. Business",
+        "anchor": "",
+        "start": 14405,
+        "end": 15488,
+        "offset_basis": "normalized text; html-normalized-v2",
+        "text": "The Company is focused on expanding its market opportunities related to smartphones, personal computers, tablets, wearables and accessories, and services. The Company faces substantial competition in these markets from companies that have significant technical, marketing, distribution and other resources, as well as established hardware, software, and service offerings with large customer bases. In addition, some of the Company’s competitors have broader product lines, lower-priced products and a larger installed base of active devices. Competition has been particularly intense as competitors have aggressively cut prices and lowered product margins. Certain competitors have the resources, experience or cost structures to provide products at little or no profit or even at a loss. The Company’s services compete with business models that provide content to users for free and use illegitimate means to obtain third-party digital content and applications. The Company faces significant competition as competitors imitate the Company’s product features and applications within",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "accession": "0000320193-24-000123",
+        "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+        "score": 0
+      }
+    ],
+    "context_audit": {
+      "strategy": "coverage_budgeted",
+      "search_ids": [
+        "AAPL-2024-p0073",
+        "AAPL-2024-p0039",
+        "AAPL-2024-p0061",
+        "AAPL-2024-p0214",
+        "AAPL-2024-p0126",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0072",
+        "AAPL-2024-p0074"
+      ],
+      "generation_passage_ids": [
+        "AAPL-2024-p0038",
+        "AAPL-2024-p0039",
+        "AAPL-2024-p0061",
+        "AAPL-2024-p0071",
+        "AAPL-2024-p0073"
+      ],
+      "sentences": [
+        {
+          "id": "E1",
+          "passage_id": "AAPL-2024-p0038",
+          "passage_ids": [
+            "AAPL-2024-p0039"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "Supply of Components\nAlthough most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from single or limited sources.",
+              "start": 15609,
+              "end": 15811
+            }
+          ],
+          "text": "Supply of Components\nAlthough most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from single or limited sources.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 15609,
+          "source_sentence_id": "AAPL-2024-p0038:s7"
+        },
+        {
+          "id": "E2",
+          "passage_id": "AAPL-2024-p0038",
+          "passage_ids": [
+            "AAPL-2024-p0038",
+            "AAPL-2024-p0039"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0038",
+              "quote": "The Company faces significant competition as competitors imitate the Company’s product features and applications within",
+              "start": 15369,
+              "end": 15488
+            },
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.",
+              "start": 15489,
+              "end": 15608
+            }
+          ],
+          "text": "The Company faces significant competition as competitors imitate the Company’s product features and applications within their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 15369,
+          "source_sentence_id": "AAPL-2024-p0038:s6"
+        },
+        {
+          "id": "E3",
+          "passage_id": "AAPL-2024-p0061",
+          "passage_ids": [
+            "AAPL-2024-p0061"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0061",
+              "quote": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.",
+              "start": 32514,
+              "end": 32735
+            }
+          ],
+          "text": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 32514,
+          "source_sentence_id": "AAPL-2024-p0061:s4"
+        },
+        {
+          "id": "E4",
+          "passage_id": "AAPL-2024-p0072",
+          "passage_ids": [
+            "AAPL-2024-p0073"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0073",
+              "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+              "start": 41864,
+              "end": 42016
+            }
+          ],
+          "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 41864,
+          "source_sentence_id": "AAPL-2024-p0072:s7"
+        },
+        {
+          "id": "E5",
+          "passage_id": "AAPL-2024-p0061",
+          "passage_ids": [
+            "AAPL-2024-p0061"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0061",
+              "quote": "While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
+              "start": 32736,
+              "end": 32891
+            }
+          ],
+          "text": "While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 32736,
+          "source_sentence_id": "AAPL-2024-p0061:s5"
+        },
+        {
+          "id": "E6",
+          "passage_id": "AAPL-2024-p0038",
+          "passage_ids": [
+            "AAPL-2024-p0039"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+              "start": 15973,
+              "end": 16173
+            }
+          ],
+          "text": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 15973,
+          "source_sentence_id": "AAPL-2024-p0038:s9"
+        },
+        {
+          "id": "E7",
+          "passage_id": "AAPL-2024-p0072",
+          "passage_ids": [
+            "AAPL-2024-p0073"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0073",
+              "quote": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company’s business, results of operations and financial condition.",
+              "start": 42017,
+              "end": 42294
+            }
+          ],
+          "text": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company’s business, results of operations and financial condition.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 42017,
+          "source_sentence_id": "AAPL-2024-p0072:s8"
+        },
+        {
+          "id": "E8",
+          "passage_id": "AAPL-2024-p0071",
+          "passage_ids": [
+            "AAPL-2024-p0071"
+          ],
+          "fragments": [
+            {
+              "citation": "AAPL-2024-p0071",
+              "quote": "The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company’s hardware products.",
+              "start": 40156,
+              "end": 40415
+            }
+          ],
+          "text": "The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company’s hardware products.",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "document_id": "AAPL-2024",
+          "source_start": 40156,
+          "source_sentence_id": "AAPL-2024-p0071:s0"
+        }
+      ],
+      "omitted": [
+        {
+          "id": "AAPL-2024-p0039:s7",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0073:s4",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0214:s5",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0039:s9",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0073:s5",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0215:s0",
+          "reason": "near_duplicate"
+        },
+        {
+          "id": "AAPL-2024-p0039:s6",
+          "reason": "near_duplicate"
+        }
+      ],
+      "estimated_prompt_tokens_including_reserve": 812,
+      "prompt_token_limit": 2400,
+      "output_token_limit": 650,
+      "query_terms_covered": [
+        "arise",
+        "competit",
+        "component",
+        "limited",
+        "singl",
+        "sourc",
+        "supply",
+        "those"
+      ],
+      "query_terms_not_covered": [],
+      "coverage_note": "Lexical term coverage only; not semantic completeness or support.",
+      "context_sha256": "7c3be1c037911a1e8dd6d3a08fa54a2aac5e872c68102347b21e096bc73a3f59",
+      "support_status": "Source identity and sentence presence only; semantic support requires review."
+    },
+    "citation_support": "Verbatim sentence and fragment identity verified; relevance and completeness unreviewed.",
+    "model_calls": [],
+    "answer": {
+      "abstain": false,
+      "claims": [
+        {
+          "text": "Supply of Components\nAlthough most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from single or limited sources.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0039"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "Supply of Components\nAlthough most components essential to the Company’s business are generally available from multiple sources, certain components are currently obtained from single or limited sources.",
+              "start": 15609,
+              "end": 15811,
+              "sentence_id": "E1"
+            }
+          ]
+        },
+        {
+          "text": "The Company faces significant competition as competitors imitate the Company’s product features and applications within their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0038",
+            "AAPL-2024-p0039"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0038",
+              "quote": "The Company faces significant competition as competitors imitate the Company’s product features and applications within",
+              "start": 15369,
+              "end": 15488,
+              "sentence_id": "E2"
+            },
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.",
+              "start": 15489,
+              "end": 15608,
+              "sentence_id": "E2"
+            }
+          ]
+        },
+        {
+          "text": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0061"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0061",
+              "quote": "Because the Company relies on single or limited sources for the supply and manufacture of many critical components, a business interruption affecting such sources would exacerbate any negative consequences to the Company.",
+              "start": 32514,
+              "end": 32735,
+              "sentence_id": "E3"
+            }
+          ]
+        },
+        {
+          "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0073"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0073",
+              "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+              "start": 41864,
+              "end": 42016,
+              "sentence_id": "E4"
+            }
+          ]
+        },
+        {
+          "text": "While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0061"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0061",
+              "quote": "While the Company maintains insurance coverage for certain types of losses, such insurance coverage may be insufficient to cover all losses that may arise.",
+              "start": 32736,
+              "end": 32891,
+              "sentence_id": "E5"
+            }
+          ]
+        },
+        {
+          "text": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0039"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0039",
+              "quote": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+              "start": 15973,
+              "end": 16173,
+              "sentence_id": "E6"
+            }
+          ]
+        },
+        {
+          "text": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company’s business, results of operations and financial condition.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0073"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0073",
+              "quote": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company’s business, results of operations and financial condition.",
+              "start": 42017,
+              "end": 42294,
+              "sentence_id": "E7"
+            }
+          ]
+        },
+        {
+          "text": "The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company’s hardware products.",
+          "kind": "source_excerpt",
+          "origin": "source_extract",
+          "citations": [
+            "AAPL-2024-p0071"
+          ],
+          "evidence_spans": [
+            {
+              "citation": "AAPL-2024-p0071",
+              "quote": "The Company relies on single-source outsourcing partners in the U.S., Asia and Europe to supply and manufacture many components, and on outsourcing partners primarily located in Asia, for final assembly of substantially all of the Company’s hardware products.",
+              "start": 40156,
+              "end": 40415,
+              "sentence_id": "E8"
+            }
+          ]
+        }
+      ],
+      "conflicts": [],
+      "limitations": [
+        "Verbatim source excerpts selected by retrieval; no AI synthesis or independent conclusion. Relevance, completeness and conflicting disclosures require review. Numbers in quotations are source text, not additional verified calculations."
+      ]
+    },
+    "status": "answered",
+    "elapsed_seconds": 0.5617337499279529,
+    "trace": [
+      {
+        "tool": "search_documents",
+        "status": "ok",
+        "context_strategy": "coverage_budgeted"
+      },
+      {
+        "tool": "generate_explanation",
+        "status": "answered"
+      }
+    ],
+    "calculations": null
+  }
+}

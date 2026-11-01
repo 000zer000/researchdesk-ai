@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import math
 import re
 from functools import lru_cache
 from pathlib import Path
@@ -16,7 +17,7 @@ from .search import SearchInput, search_documents, serialize
 
 PROMPT_TOKEN_LIMIT = 2400
 OUTPUT_TOKEN_LIMIT = 650
-CONTEXT_MODES = ("legacy_fragments", "sentences", "neighbors_dedup")
+CONTEXT_MODES = ("legacy_fragments", "sentences", "neighbors_dedup", "coverage_budgeted")
 
 
 @lru_cache(maxsize=1)
@@ -79,18 +80,38 @@ def relevance(text, question):
     return score
 
 
-def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
+def coverage_terms(text):
+    """Lightweight lexical normalization, not a semantic entailment model."""
+    result = set()
+    for term in words(text):
+        if term.endswith("ies"):
+            term = term[:-3] + "y"
+        elif len(term) > 4 and term.endswith("s") and not term.endswith(("ss", "is")):
+            term = term[:-1]
+        if len(term) > 6 and term.endswith("ing"):
+            term = term[:-3]
+        elif len(term) > 7 and term.endswith("ion"):
+            term = term[:-3]
+        elif len(term) > 5 and term.endswith("e"):
+            term = term[:-1]
+        result.add(term)
+    return result
+
+
+def assemble_context(session, args, system, mode="coverage_budgeted", count=None):
     if mode not in CONTEXT_MODES:
         raise ValueError("Unknown server context strategy")
     count = count or counter()
     hits = search_documents(
         session,
-        SearchInput(**{k: v for k, v in args.model_dump().items() if k not in {"explain"}}),
+        SearchInput(
+            **{k: v for k, v in args.model_dump().items() if k not in {"explain", "response_mode"}}
+        ),
         profile="legacy" if mode == "legacy_fragments" else "focused",
     )
     sources = {p["id"]: p for p in hits}
     candidates = list(hits[:3] if mode == "legacy_fragments" else hits)
-    if mode == "neighbors_dedup":
+    if mode in {"neighbors_dedup", "coverage_budgeted"}:
         for p in hits[:5]:
             if p["start"] < 0:
                 continue
@@ -119,7 +140,7 @@ def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
     pool = []
     for p in candidates:
         group = [p]
-        if mode == "neighbors_dedup" and p["start"] >= 0:
+        if mode in {"neighbors_dedup", "coverage_budgeted"} and p["start"] >= 0:
             same = sorted(
                 [x for x in candidates if x["document_id"] == p["document_id"] and x["start"] >= 0],
                 key=lambda x: x["start"],
@@ -169,6 +190,8 @@ def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
                     "fiscal_year": p["fiscal_year"],
                     "score": relevance(sentence, args.question),
                     "neighbor": p["id"] not in {h["id"] for h in hits},
+                    "document_id": p["document_id"],
+                    "source_start": sentence_start,
                 }
             )
     if mode != "legacy_fragments":
@@ -181,14 +204,39 @@ def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
         "sentences": [],
         "question": args.question,
     }
-    for item in pool:
+    covered = set()
+    wanted = coverage_terms(args.question)
+    weights = {
+        w: math.log(1 + len(pool) / (1 + sum(w in coverage_terms(p["text"]) for p in pool)))
+        for w in wanted
+    }
+    remaining = list(pool)
+    while remaining:
+        if mode == "coverage_budgeted":
+            # Rare query terms anchor the topic; nearby source sentences retain
+            # conditions/consequences that need not repeat the topic noun.
+            def priority(sentence):
+                matches = coverage_terms(sentence["text"]) & wanted
+                anchors = sum(weights[w] for w in matches)
+                novelty = sum(weights[w] for w in matches - covered)
+                nearby = any(
+                    s.get("document_id") == sentence["document_id"]
+                    and abs(s["source_start"] - sentence["source_start"]) < 1500
+                    for s in selected
+                )
+                return (-(anchors + 0.5 * novelty + (3 if nearby else 0)), sentence["id"])
+
+            remaining.sort(key=priority)
+        item = remaining.pop(0)
         bag = words(item["text"])
-        if mode == "neighbors_dedup" and any(
+        if mode in {"neighbors_dedup", "coverage_budgeted"} and any(
             len(bag & prior) / max(1, len(bag | prior)) > 0.8 for prior in seen
         ):
             omitted.append({"id": item["id"], "reason": "near_duplicate"})
             continue
-        if mode != "legacy_fragments" and per_source.get(item["passage_id"], 0) >= 2:
+        source_limit = 6 if mode == "coverage_budgeted" else 2
+        if mode != "legacy_fragments" and per_source.get(item["passage_id"], 0) >= source_limit:
+            omitted.append({"id": item["id"], "reason": "source_diversity_limit"})
             continue
         public = {k: v for k, v in item.items() if k not in {"score", "neighbor"}}
         public["id"] = f"E{len(selected) + 1}"
@@ -203,8 +251,11 @@ def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
         public["id"] = f"E{len(selected) + 1}"
         selected.append(public)
         seen.append(bag)
+        covered.update(coverage_terms(item["text"]) & wanted)
         per_source[item["passage_id"]] = per_source.get(item["passage_id"], 0) + 1
-        if len(selected) >= (18 if mode == "legacy_fragments" else 4):
+        if len(selected) >= (
+            18 if mode == "legacy_fragments" else 8 if mode == "coverage_budgeted" else 4
+        ):
             break
     context = {**base, "sentences": selected}
     ids = {i for s in selected for i in s.get("passage_ids", [s["passage_id"]])}
@@ -219,6 +270,9 @@ def assemble_context(session, args, system, mode="neighbors_dedup", count=None):
         + 100,
         "prompt_token_limit": PROMPT_TOKEN_LIMIT,
         "output_token_limit": OUTPUT_TOKEN_LIMIT,
+        "query_terms_covered": sorted(covered),
+        "query_terms_not_covered": sorted(wanted - covered),
+        "coverage_note": "Lexical term coverage only; not semantic completeness or support.",
         "context_sha256": hashlib.sha256(json.dumps(context, sort_keys=True).encode()).hexdigest(),
         "support_status": "Source identity and sentence presence only; semantic support requires review.",
     }

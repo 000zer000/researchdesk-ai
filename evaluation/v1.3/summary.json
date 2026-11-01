@@ -1,0 +1,14 @@
+{
+  "scope": "Coding-agent-authored acceptance cases on the familiar six-report corpus; not independent or a general accuracy estimate.",
+  "financial_targets": 3,
+  "financial_targets_accepted_and_correct": 2,
+  "documentary_cases": 5,
+  "generated_documentary_answers_accepted": 3,
+  "source_excerpt_answers_available": 5,
+  "source_excerpt_model_calls": 0,
+  "human_reviews_completed": 0,
+  "semantic_support": "Unscored; source identity and answered status do not establish support or completeness.",
+  "generated_documentary_median_seconds": 15.895547583000734,
+  "extractive_documentary_median_seconds": 0.2768277919385582,
+  "peak_process_rss_mib": 484.484375
+}

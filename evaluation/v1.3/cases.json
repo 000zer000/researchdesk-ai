@@ -1,0 +1,96 @@
+[
+  {
+    "id": "V301",
+    "category": "financial",
+    "company": "AAPL",
+    "question": "Report Apple FY2023 cash flow from operations in raw USD.",
+    "reference_value": 110543000000.0,
+    "reference_unit": "USD",
+    "absolute_tolerance": 0.1
+  },
+  {
+    "id": "V302",
+    "category": "financial",
+    "company": "DELL",
+    "question": "State the operating margin for Dell FY2024 as a percentage.",
+    "reference_value": 5.893129770992366,
+    "reference_unit": "percent",
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "id": "V303",
+    "category": "financial",
+    "company": "HPQ",
+    "question": "Compute HP FY2024 working capital in raw USD.",
+    "reference_value": -7927000000.0,
+    "reference_unit": "USD",
+    "absolute_tolerance": 0.1
+  },
+  {
+    "id": "V304",
+    "category": "documentary",
+    "company": "AAPL",
+    "question": "What supply risks in the FY2024 report arise from single or limited component sources and competition for those components?",
+    "reference_passages": [
+      "AAPL-2024-p0039",
+      "AAPL-2024-p0061"
+    ],
+    "reference_aspects": [
+      "Some essential components use single or limited suppliers",
+      "Competition, shortages and commodity pricing fluctuations",
+      "Business interruptions of critical sources exacerbate consequences"
+    ]
+  },
+  {
+    "id": "V305",
+    "category": "documentary",
+    "company": "DELL",
+    "question": "Describe the FY2024 risks of concentrating outsourced manufacturing and component receivables with a few manufacturers.",
+    "reference_passages": [
+      "DELL-2024-p0100"
+    ],
+    "reference_aspects": [
+      "Manufacturing concentration and limited direct control",
+      "Component sales create non-trade receivables and exposure to manufacturer failure"
+    ]
+  },
+  {
+    "id": "V306",
+    "category": "documentary",
+    "company": "HPQ",
+    "question": "What FY2024 risks can a weak Japanese yen create for competition in printing products and services?",
+    "reference_passages": [
+      "HPQ-2024-p0102"
+    ],
+    "reference_aspects": [
+      "Currency fluctuations, particularly yen weakness, can exacerbate printing pricing competition"
+    ]
+  },
+  {
+    "id": "V307",
+    "category": "documentary",
+    "company": "AAPL",
+    "question": "Describe the FY2023 risks of reseller-support investments and weakening reseller financial conditions.",
+    "reference_passages": [
+      "AAPL-2023-p0090"
+    ],
+    "reference_aspects": [
+      "Support investments do not assure returns or additional sales",
+      "Resellers may weaken, stop distribution or cut ordering and marketing"
+    ]
+  },
+  {
+    "id": "V308",
+    "category": "documentary",
+    "company": "HPQ",
+    "question": "Which FY2023 acquisition risks involve due diligence, third-party disclosures and the target\u2019s cybersecurity controls?",
+    "reference_passages": [
+      "HPQ-2023-p0164"
+    ],
+    "reference_aspects": [
+      "Due diligence can miss significant quality, financial or control issues",
+      "Reliance on third-party truth and completeness",
+      "Target can have inadequate cybersecurity and data-protection controls"
+    ]
+  }
+]

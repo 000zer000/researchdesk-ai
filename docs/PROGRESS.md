@@ -91,3 +91,22 @@ The distinct post-correction final batch ran once on frozen source: 15/16 answer
 All four real-mode Chromium journeys pass, including actual generation, evidence, changed WACC/PDF and real deterministic financial display. Fault-injection/conflict display tests remain explicitly simulated. Three PDF pages render cleanly and contain the changed 12% scenario. The initial bundled renderer had invalid Fontconfig paths; a workspace-local cache/config fixed rendering without changing the app. The recording's first hidden-mobile selector and second rapid-switch/wait failure were capture defects; a real settled-state rehearsal answered in 29.76 seconds. The third completed take had a full-page-screenshot video-resize artifact, found by frame inspection; a viewport-only capture replaces it. All recording attempts and actual calls are declared separately from final evaluation.
 
 Final take 4 passed visual QA at sampled frames, with viewport-only capture. Actual recorded Dell generation took 26.56 seconds. Delivered WebM is 90.00 seconds, 1440×1000, VP9/25 fps, stream-copied without acceleration. Latest three-page PDF was re-rendered and inspected after this take; the 12% scenario is present. Media hashes and the recording-only helper hash are published. Frozen product/evaluation source hashes remain unchanged.
+
+
+## 1 November 2026 — documentary source excerpts and bounded coverage
+
+Added a clearly distinct verbatim source mode with zero model calls and fragment
+identity validation, plus budgeted topic/context selection and visible response-mode
+labels. Preserved deterministic financial execution and all v1.2 outputs. The first
+development replay and subsequent context-only inspection are retained. The frozen
+v1.3 eight-case acceptance run produced two correct accepted financial targets,
+one out-of-scope working-capital refusal, five excerpt responses and three accepted
+generated documentary responses. Excess/repeated model citations caused two format
+rejections; accepted prose still contains unsupported elaboration/irrelevance.
+Human review is zero of five new packets, with prior reviews also pending.
+
+149 native tests and four mock Chromium journeys pass, plus build/lint/format.
+The generated/extractive modes and numerical results have distinct origins. Source
+excerpts are an inspectable browsing mode, not a claim of improved AI synthesis.
+Detailed measurements, scope/reference mistakes and limitations are published in
+V13_VERIFICATION.md. No historical source/results were overwritten.

@@ -230,6 +230,9 @@ function App() {
     "Which supply-chain risks does Apple disclose in its 2024 annual report?",
   );
   const [answer, setAnswer] = useState<Answer | null>(null);
+  const [responseMode, setResponseMode] = useState<"generated" | "extractive">(
+    "generated",
+  );
   const [busy, setBusy] = useState(false);
   const [researchError, setResearchError] = useState("");
   const [evidence, setEvidence] = useState<Evidence | null>(null);
@@ -348,6 +351,7 @@ function App() {
             method: "hybrid",
             k: 8,
             explain,
+            response_mode: explain ? "generated" : responseMode,
           },
           c.signal,
         ),
@@ -669,6 +673,29 @@ function App() {
                       onChange={(e) => setQuestion(e.target.value)}
                       rows={3}
                     />
+                    <label className="response-mode">
+                      Documentary response
+                      <select
+                        aria-label="Documentary response mode"
+                        value={responseMode}
+                        disabled={busy}
+                        onChange={(e) =>
+                          setResponseMode(
+                            e.target.value as "generated" | "extractive",
+                          )
+                        }
+                      >
+                        <option value="generated">
+                          AI synthesis · review required
+                        </option>
+                        <option value="extractive">
+                          Verbatim source excerpts · no AI synthesis
+                        </option>
+                      </select>
+                      <small>
+                        Financial calculations remain verified in either mode.
+                      </small>
+                    </label>
                     <div className="question-actions">
                       <span>
                         <ShieldCheck size={14} /> Grounded in selected documents
@@ -720,7 +747,9 @@ function App() {
                       <span className="small-tag">
                         {answer.origin === "generated_text"
                           ? "AI generated explanation"
-                          : answer.origin}
+                          : answer.origin === "source_extract"
+                            ? "Verbatim source excerpts"
+                            : answer.origin}
                       </span>
                     )}
                   </div>
@@ -760,7 +789,9 @@ function App() {
                         {answer.status === "answered"
                           ? answer.financial_request
                             ? "Verified result"
-                            : "Generated explanation · review required"
+                            : answer.origin === "source_extract"
+                              ? "Source excerpts · relevance and completeness need review"
+                              : "Generated explanation · review required"
                           : answer.status.replaceAll("_", " ")}
                         <span>{answer.elapsed_seconds.toFixed(1)}s</span>
                       </div>
@@ -774,10 +805,16 @@ function App() {
                         answer.answer?.claims.map((c, i) => (
                           <div className="claim" key={i}>
                             <small className="origin-label">
-                              AI generated ·{" "}
-                              {c.kind === "interpretation"
-                                ? "interpretation"
-                                : "reported disclosure (model label)"}
+                              {c.origin === "source_extract" ? (
+                                "Verbatim source excerpt · no AI synthesis"
+                              ) : (
+                                <>
+                                  AI generated ·{" "}
+                                  {c.kind === "interpretation"
+                                    ? "interpretation"
+                                    : "reported disclosure (model label)"}
+                                </>
+                              )}
                             </small>
                             <p>{c.text}</p>
                             <div className="citations">

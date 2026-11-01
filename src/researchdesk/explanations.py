@@ -16,7 +16,7 @@ SYSTEM = """You are ResearchDesk, an analyst explaining annual-report disclosure
 Use the supplied sources to answer the QUESTION directly in English.
 Explain only mechanisms and consequences explicitly stated in the cited source sentences. Do not add general business knowledge, examples, assumed requirements, thresholds, or causal details not present in those sentences. A source saying a covenant limits flexibility does not establish any particular unmentioned condition.
 If a requested mechanism is not specified, state that limitation while answering the parts that are disclosed. Do not merely repeat the question.
-Write two short bullet points, at most 100 words total. No headings. Keep the label and the statement on the same line. Start each with Disclosure: for information explicitly stated in the source. Use Interpretation: only when the question explicitly asks for implications; label it cautiously and do not introduce new factual conditions. End EVERY bullet with one or two source references like [E1] [E2]. Use only labels present in SOURCES.
+Write two to four short bullet points, at most 160 words total. Cover the distinct requested mechanisms and consequences when the sources disclose them. Preserve time order, conditional wording and negation; a pre-event change and a post-event change are not the same event. No headings. Keep the label and the statement on the same line. Start each with Disclosure: for information explicitly stated in the source. Use Interpretation: only when the question explicitly asks for implications; label it cautiously and do not introduce new factual conditions. End EVERY bullet with one or two source references like [E1] [E2]. Use only labels present in SOURCES.
 Do not copy the question, give a generic warning, invent facts or repeat numerical financial figures.
 If the sources genuinely cannot answer, write INSUFFICIENT: followed by the precise missing information.
 Do not choose between genuinely contradictory sources. Different conditions or populations can both be true; they are not automatically contradictions.
@@ -150,8 +150,47 @@ def validate_generated(raw, context, evidence, company):
     return answer
 
 
+def extract_source_sentences(context, evidence):
+    """Return unchanged excerpts, with exact fragment proofs, without inference.
+
+    Identity is verified. Relevance, omissions and conflicting disclosures still
+    require the reader; these are source extracts, never model conclusions.
+    """
+    source_text = {p["id"]: p["text"] for p in evidence}
+    claims = []
+    for sentence in context["sentences"]:
+        fragments = sentence["fragments"]
+        if any(f["quote"] not in source_text.get(f["citation"], "") for f in fragments):
+            raise ValueError("Extract fragment is absent from its original passage")
+        joined = "".join(f["quote"] for f in fragments)
+        # Joined chunks have exactly one normalized space at their boundary.
+        if " ".join(joined.split()) != " ".join(sentence["text"].split()):
+            joined = " ".join(f["quote"].strip() for f in fragments)
+            if " ".join(joined.split()) != " ".join(sentence["text"].split()):
+                raise ValueError("Extract differs from its complete source sentence")
+        claims.append(
+            {
+                "text": sentence["text"],
+                "kind": "source_excerpt",
+                "origin": "source_extract",
+                "citations": sorted({f["citation"] for f in fragments}),
+                "evidence_spans": [{**f, "sentence_id": sentence["id"]} for f in fragments],
+            }
+        )
+    return {
+        "abstain": not bool(claims),
+        "claims": claims,
+        "conflicts": [],
+        "limitations": [
+            "Verbatim source excerpts selected by retrieval; no AI synthesis or independent conclusion. "
+            "Relevance, completeness and conflicting disclosures require review. "
+            "Numbers in quotations are source text, not additional verified calculations."
+        ],
+    }
+
+
 def generate_explanation(
-    session, args, llm=None, mode="neighbors_dedup", token_count=None, calculation=None
+    session, args, llm=None, mode="coverage_budgeted", token_count=None, calculation=None
 ):
     started = time.monotonic()
     calculation_text = ""
@@ -188,6 +227,16 @@ def generate_explanation(
         "citation_support": "Source identity checked; semantic support and completeness await review.",
         "model_calls": [],
     }
+    if args.response_mode == "extractive":
+        answer = extract_source_sentences(context, evidence)
+        return {
+            **result,
+            "origin": "source_extract",
+            "answer": answer,
+            "status": "answered" if answer["claims"] else "abstained",
+            "citation_support": "Verbatim sentence and fragment identity verified; relevance and completeness unreviewed.",
+            "elapsed_seconds": time.monotonic() - started,
+        }
     if not context["sentences"]:
         return {
             **result,
