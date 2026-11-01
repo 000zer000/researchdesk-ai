@@ -1,217 +1,1793 @@
 [
   {
     "attempt": "20261031T233532",
+    "case": "D05",
     "mode": "legacy_fragments",
-    "statuses": {
-      "invalid_model_answer": 4
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1543,
+    "actual_call_prompt_tokens": [
+      1464,
+      1711
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
     "attempt": "20261031T233532",
-    "mode": "neighbors_dedup",
-    "statuses": {
-      "answered": 4,
-      "invalid_model_answer": 4,
-      "clarification_required": 2,
-      "abstained": 2
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+    "case": "D06",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1777,
+    "actual_call_prompt_tokens": [
+      1698,
+      1804
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
     "attempt": "20261031T233532",
-    "mode": "sentences",
-    "statuses": {
-      "invalid_model_answer": 4
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "case": "D07",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1699,
+    "actual_call_prompt_tokens": [
+      1620,
+      1965
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0083",
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0085"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0214"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D08",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1786,
+    "actual_call_prompt_tokens": [
+      1707,
+      1955
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0096"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D05",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1217,
+    "actual_call_prompt_tokens": [
+      1138,
+      1396
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D06",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1180,
+    "actual_call_prompt_tokens": [
+      1101,
+      1230
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163",
+      "DELL-2023-p0298"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D07",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1192,
+    "actual_call_prompt_tokens": [
+      1113,
+      1318
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D08",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1298,
+    "actual_call_prompt_tokens": [
+      1219,
+      1467
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D01",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D02",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D03",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D04",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D05",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1228,
+    "actual_call_prompt_tokens": [
+      1149,
+      1441
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D06",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1181,
+    "actual_call_prompt_tokens": [
+      1102,
+      1231
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0131",
+      "DELL-2023-p0132",
+      "DELL-2023-p0133",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D07",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1204,
+    "actual_call_prompt_tokens": [
+      1125,
+      1231
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0104",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D08",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1298,
+    "actual_call_prompt_tokens": [
+      1219,
+      1467
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D09",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D10",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D11",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233532",
+    "case": "D12",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
     "attempt": "20261031T233912",
+    "case": "D05",
     "mode": "legacy_fragments",
-    "statuses": {
-      "abstained": 4
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1632,
+    "actual_call_prompt_tokens": [
+      1553
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
     "attempt": "20261031T233912",
-    "mode": "neighbors_dedup",
-    "statuses": {
-      "answered": 4,
-      "abstained": 6,
-      "clarification_required": 2
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+    "case": "D06",
+    "mode": "legacy_fragments",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1886,
+    "actual_call_prompt_tokens": [
+      1807
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
     "attempt": "20261031T233912",
-    "mode": "sentences",
-    "statuses": {
-      "abstained": 4
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "label": "consumed development, not independent final"
-  },
-  {
-    "attempt": "20261031T234314",
+    "case": "D07",
     "mode": "legacy_fragments",
-    "statuses": {
-      "answered": 3,
-      "invalid_model_answer": 1
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1798,
+    "actual_call_prompt_tokens": [
+      1719
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0083",
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0085"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0214"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
-    "attempt": "20261031T234314",
-    "mode": "neighbors_dedup",
-    "statuses": {
-      "answered": 5,
-      "invalid_model_answer": 3,
-      "clarification_required": 2,
-      "abstained": 2
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "label": "consumed development, not independent final"
-  },
-  {
-    "attempt": "20261031T234314",
-    "mode": "sentences",
-    "statuses": {
-      "answered": 1,
-      "invalid_model_answer": 3
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
-    ],
-    "label": "consumed development, not independent final"
-  },
-  {
-    "attempt": "20261031T234815",
+    "attempt": "20261031T233912",
+    "case": "D08",
     "mode": "legacy_fragments",
-    "statuses": {
-      "invalid_model_answer": 3,
-      "answered": 1
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1895,
+    "actual_call_prompt_tokens": [
+      1816
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0096"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   },
   {
-    "attempt": "20261031T234815",
-    "mode": "neighbors_dedup",
-    "statuses": {
-      "answered": 4,
-      "invalid_model_answer": 4,
-      "clarification_required": 2,
-      "abstained": 2
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "label": "consumed development, not independent final"
-  },
-  {
-    "attempt": "20261031T234815",
+    "attempt": "20261031T233912",
+    "case": "D05",
     "mode": "sentences",
-    "statuses": {
-      "answered": 2,
-      "invalid_model_answer": 2
-    },
-    "context_tokens": [
-      null,
-      null,
-      null,
-      null
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1267,
+    "actual_call_prompt_tokens": [
+      1188
     ],
-    "label": "consumed development, not independent final"
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D06",
+    "mode": "sentences",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1230,
+    "actual_call_prompt_tokens": [
+      1151
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163",
+      "DELL-2023-p0298"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D07",
+    "mode": "sentences",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1242,
+    "actual_call_prompt_tokens": [
+      1163
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D08",
+    "mode": "sentences",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1348,
+    "actual_call_prompt_tokens": [
+      1269
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D01",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D02",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D03",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D04",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D05",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1278,
+    "actual_call_prompt_tokens": [
+      1199
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D06",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1231,
+    "actual_call_prompt_tokens": [
+      1152
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0131",
+      "DELL-2023-p0132",
+      "DELL-2023-p0133",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D07",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1254,
+    "actual_call_prompt_tokens": [
+      1175
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0104",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D08",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": 1348,
+    "actual_call_prompt_tokens": [
+      1269
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D09",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D10",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D11",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T233912",
+    "case": "D12",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D05",
+    "mode": "legacy_fragments",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 1576,
+    "actual_call_prompt_tokens": [
+      747
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D06",
+    "mode": "legacy_fragments",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 1830,
+    "actual_call_prompt_tokens": [
+      907
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D07",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1742,
+    "actual_call_prompt_tokens": [
+      843,
+      1147
+    ],
+    "search_ids": [
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0083",
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0085"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0214"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D08",
+    "mode": "legacy_fragments",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 1839,
+    "actual_call_prompt_tokens": [
+      868,
+      1150
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0096"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D05",
+    "mode": "sentences",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 1211,
+    "actual_call_prompt_tokens": [
+      615,
+      869
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D06",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1174,
+    "actual_call_prompt_tokens": [
+      599,
+      862
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163",
+      "DELL-2023-p0298"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D07",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1153,
+    "actual_call_prompt_tokens": [
+      562,
+      846
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D08",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1292,
+    "actual_call_prompt_tokens": [
+      684,
+      966
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D01",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D02",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D03",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D04",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D05",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 1222,
+    "actual_call_prompt_tokens": [
+      631,
+      862
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D06",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1175,
+    "actual_call_prompt_tokens": [
+      600,
+      1003
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0131",
+      "DELL-2023-p0132",
+      "DELL-2023-p0133",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D07",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1165,
+    "actual_call_prompt_tokens": [
+      574,
+      878
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0111",
+      "HPQ-2024-p0075"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0104",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D08",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 1292,
+    "actual_call_prompt_tokens": [
+      684,
+      966
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D09",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D10",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D11",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234314",
+    "case": "D12",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D05",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 831,
+    "actual_call_prompt_tokens": [
+      744,
+      1128
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0071",
+      "AAPL-2023-p0070",
+      "AAPL-2023-p0068",
+      "AAPL-2023-p0073"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D06",
+    "mode": "legacy_fragments",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 991,
+    "actual_call_prompt_tokens": [
+      904
+    ],
+    "search_ids": [
+      "DELL-2023-p0163",
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0298",
+      "DELL-2023-p0336",
+      "DELL-2023-p0465",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D07",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 927,
+    "actual_call_prompt_tokens": [
+      840,
+      1104
+    ],
+    "search_ids": [
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0083",
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0085"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0087",
+      "HPQ-2024-p0092",
+      "HPQ-2024-p0214"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D08",
+    "mode": "legacy_fragments",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 952,
+    "actual_call_prompt_tokens": [
+      865,
+      981
+    ],
+    "search_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0114"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0096"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D05",
+    "mode": "sentences",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 677,
+    "actual_call_prompt_tokens": [
+      590
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0119",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0123",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0125"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0123",
+      "AAPL-2023-p0211"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D06",
+    "mode": "sentences",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": 699,
+    "actual_call_prompt_tokens": [
+      612,
+      880
+    ],
+    "search_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0163",
+      "DELL-2023-p0132",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299",
+      "DELL-2023-p0249",
+      "DELL-2023-p0291",
+      "DELL-2023-p0482"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0163",
+      "DELL-2023-p0482"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D07",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 646,
+    "actual_call_prompt_tokens": [
+      559,
+      985
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0032",
+      "HPQ-2024-p0075",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0074"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": false,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D08",
+    "mode": "sentences",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 712,
+    "actual_call_prompt_tokens": [
+      625,
+      851
+    ],
+    "search_ids": [
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0115"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0115",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D01",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D02",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D03",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D04",
+    "mode": "neighbors_dedup",
+    "status": "answered",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D05",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 858,
+    "actual_call_prompt_tokens": [
+      771,
+      1063
+    ],
+    "search_ids": [
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0119",
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0211",
+      "AAPL-2023-p0058",
+      "AAPL-2023-p0123",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0125"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0039",
+      "AAPL-2023-p0057",
+      "AAPL-2023-p0072",
+      "AAPL-2023-p0073",
+      "AAPL-2023-p0119",
+      "AAPL-2023-p0120",
+      "AAPL-2023-p0123"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D06",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 750,
+    "actual_call_prompt_tokens": [
+      663,
+      1085
+    ],
+    "search_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0163",
+      "DELL-2023-p0132",
+      "DELL-2023-p0360",
+      "DELL-2023-p0299",
+      "DELL-2023-p0249",
+      "DELL-2023-p0291",
+      "DELL-2023-p0482"
+    ],
+    "generation_ids": [
+      "DELL-2023-p0125",
+      "DELL-2023-p0132",
+      "DELL-2023-p0133",
+      "DELL-2023-p0163",
+      "DELL-2023-p0164",
+      "DELL-2023-p0482"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D07",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 673,
+    "actual_call_prompt_tokens": [
+      586,
+      967
+    ],
+    "search_ids": [
+      "HPQ-2024-p0242",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0032",
+      "HPQ-2024-p0075",
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0074"
+    ],
+    "generation_ids": [
+      "HPQ-2024-p0046",
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0075",
+      "HPQ-2024-p0103",
+      "HPQ-2024-p0209",
+      "HPQ-2024-p0214",
+      "HPQ-2024-p0242"
+    ],
+    "contains_complete_digitization_sentence": true,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D08",
+    "mode": "neighbors_dedup",
+    "status": "invalid_model_answer",
+    "estimated_input_tokens_including_reserve": 695,
+    "actual_call_prompt_tokens": [
+      608,
+      834
+    ],
+    "search_ids": [
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0117",
+      "AAPL-2023-p0093",
+      "AAPL-2023-p0096",
+      "AAPL-2023-p0094",
+      "AAPL-2023-p0091",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0115"
+    ],
+    "generation_ids": [
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0095",
+      "AAPL-2023-p0115",
+      "AAPL-2023-p0116",
+      "AAPL-2023-p0117"
+    ],
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D09",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D10",
+    "mode": "neighbors_dedup",
+    "status": "clarification_required",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D11",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
+  },
+  {
+    "attempt": "20261031T234815",
+    "case": "D12",
+    "mode": "neighbors_dedup",
+    "status": "abstained",
+    "estimated_input_tokens_including_reserve": null,
+    "actual_call_prompt_tokens": [],
+    "search_ids": null,
+    "generation_ids": null,
+    "contains_complete_digitization_sentence": null,
+    "classification": "Derived audit of consumed development runs; not an independent test"
   }
 ]

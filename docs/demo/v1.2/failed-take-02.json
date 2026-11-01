@@ -1,0 +1,8 @@
+{
+  "status": "failed recording take, not an evaluation run",
+  "failure": "No qualitative research response observed within the recorder default 30-second response wait after a rapid desktop company switch. No qualitative POST is present in API log for this take.",
+  "raw_take_sha256": "4232e239cd867a779b111c94054bdb59d446aa86c940fbde8f135ec7f983dee9",
+  "raw_take_bytes": 7864320,
+  "retained_locally": "work/v12-recordings/page@b49a207c73a6675827f680ea6ddcf562.webm",
+  "fix": "Wait for the selected-company metric to render and effects to settle, and use the product 100-second browser wait. A separate real rehearsal verified a qualitative POST and saved its actual output. Frozen product runtime unchanged."
+}

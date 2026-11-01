@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-11-01T12:25:08.210205+00:00",
+  "final_take": 4,
+  "duration_seconds": 90.0,
+  "verification": "FFmpeg parsed actual delivered WebM header: 00:01:30.00, 1440x1000, VP9, 25 fps. Stream copy trimmed only idle tail; no speed changes or replaced frames. Sampled 6/20/35/60/80/89-second frames and generated-evidence screenshot visually inspected.",
+  "actual_explanation_seconds": 26.558891750173643,
+  "recording_script": "docs/demo/v1.2/record.mjs",
+  "recording_script_sha256": "86c14bca6a9144043751660504f0364457e29d64a61a0cb4f0793adf94ca8c79",
+  "raw_take_sha256": "96214eb9bcf7f544ebca749205a31bfbd3ef5abf2c4ff317a46b654646b43939",
+  "video_sha256": "70b113283c28f36dab5c2b159ccfcaf163d13e9169ebffdbd1c6774969234e26",
+  "video_bytes": 10991117,
+  "pdf_sha256": "dcc91d3addce4d09055fbe1a299003d26bd6421305fc35d614926fda3377f4d7",
+  "pdf_pages": 3,
+  "pdf_discount_rate_percent": 12,
+  "pdf_visual_review": "Latest export re-rendered using Poppler; all three pages inspected, no clipping/overlap/unreadable text.",
+  "human_review": "pending; media verification is not human semantic review"
+}

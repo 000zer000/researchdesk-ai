@@ -1,14 +1,15 @@
-# Verification v1.1
+# Verification v1.2
 
-The release records actual checks, separate from model-quality claims. Historical v1.0 evidence is retained in `evaluation/v1.0/` and [the v1.0 verification note](v1.0-VERIFICATION.md).
+Runtime correction commit: `99edbef`. Final question seal: `5c47ef6`. [Evaluation](EVALUATION.md) separates source identity, numerical targets, semantic support, completeness and refusals. [Historical v1.1 checks](v1.1-VERIFICATION.md) remain available.
 
-Before code freeze: native PostgreSQL tests pass **106/106, zero skipped**; Ruff and the TypeScript/production build pass. All **48** financial facts were rechecked against original inline-XBRL contexts, dates, scale, sign and USD units (`evaluation/v1.1/financial-source-checks.json`). The dedicated browser double tests verify the ordinary journey and the display of both contradictory source proofs. Real MLX inference and the financial evidence UI are checked separately.
+Completed locally on the target 8 GiB M1 Mac:
 
-The final 25-question batch executed on the frozen runtime: 7/13 reference financial/calendar targets answered correctly, six withheld; two ambiguous synthetic conflicts refused. Full records and the consumed earlier batch are preserved separately. CI receipts are added only after execution. The ten-response human-review packet is prepared from actual outputs; no human review is claimed. Hosted interactive AI, paid models, new subscriptions and changes to other projects are outside this delivery. No raw full reports, model weights, private `.env` or machine-specific runtime paths are published.
+- Ruff check and format check pass; TypeScript/Vite production build passes.
+- **144 Pytest tests pass, zero skipped**, on native PostgreSQL 17 in isolated `_test` schemas. Demo data are not reset. One upstream Starlette/httpx deprecation warning remains.
+- **3 Chromium mock-mode journeys pass**: full scenario/evidence/PDF journey, synthetic conflicting-proof display, and optional AI transport failure after editing the form question. Test doubles are explicit.
+- **4 Chromium live-mode journeys pass** on the real-data API: actual local generated research and source inspection, scenario change and PDF, real deterministic financial display, plus the separately labeled simulated conflict/transport-failure tests. “Live mode” does not turn the latter simulated fault injections into real source conflicts.
+- **48/48 original financial facts** match a separate inline-XBRL parser's exact concept, annual/instant dates, consolidated context, USD unit, scale, sign and value.
+- Historical v1.0 and v1.1 archive validation passes; final v1.2 case/source/result hashes, model revision, token budgets and ten pending human-review records validate.
+- The first execution of the final distinct 25-case batch is retained, including a failed explanation and rejected optional prose. Its limitations are published; this is not an aggregate quality pass.
 
-
-Final local checks: **106 native PostgreSQL tests, zero failures/skips; two deterministic Chromium journeys; three final local Chromium journeys (two actual-model journeys and one explicitly simulated conflict-display case)**. TypeScript/build, Ruff and immutable-archive/frozen-result validators passed. The actual financial screenshot visibly shows a rejected proposal with preserved data, not a fabricated successful answer. See `evaluation/v1.1/final-local-verification.json`.
-
-The ten-response packet deliberately includes two withheld financial proposals among its preselected cases. Its source records and verified data remain reviewable. Human review is **0/10**, not completed by the coding agent. No new hosted AI service or paid resource is claimed.
-
-GitHub Actions [run 41229121264](https://github.com/000zer000/researchdesk-ai/actions/runs/41229121264) passed on published commit `84baf69`: PostgreSQL/Chromium and clean Docker Compose, including migration/import/restart persistence. Its log confirms 106 Pytest tests passed. The evaluated runtime fingerprints are unchanged; the release tag receives its own CI and the immutable final run is linked in release notes.
+The recorded demonstration and PDF rendering checks are documented with actual receipts under `docs/demo/v1.2/`. GitHub CI and release receipts are linked from the release notes after completion. A green deterministic build is not independent AI validation.

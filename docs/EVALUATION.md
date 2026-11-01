@@ -1,42 +1,48 @@
-# Evaluation v1.1
+# Evaluation v1.2
 
-v1.0 is preserved byte-for-byte under `evaluation/v1.0/`, including failed attempts, its final **replay** set, coding-agent source assessments and original runtime hashes. [Historical methodology and failures](v1.0-EVALUATION.md) remain available. They must not be relabeled as a new holdout or compared directly with a different batch.
+The released runtime is frozen at correction commit `99edbef`; the distinct final question seal is committed at `5c47ef6`, before any final inference. [Cases](../evaluation/v1.2/final-cases.json), [seal](../evaluation/v1.2/final-freeze.json), [actual first execution](../evaluation/v1.2/runs/20261101T003024066201Z/results.json) and [mechanical summary](../evaluation/v1.2/summary.json) are public. No quality tuning follows this run.
 
-The v1.1 corrections are frozen in a code commit **before** the new cases are written. `evaluation/v1.1/freeze.json` binds that commit, runtime and test source hashes, case hash and creation time. Expected values and source references are evaluator-only data; generation receives the ordinary application context. The application does expose verified measures to its model by design, so numeric results demonstrate guarded pipeline consistency, not independent model arithmetic.
+This is a coding-agent-authored batch on a familiar six-report corpus, not independent or blind. Exact questions differ from v1.0, both v1.1 attempts, development, and the consumed first v1.2 batch. Financial concepts and disclosure topics overlap prior work. Expected values/aspects are evaluator-only data and never enter prompts. Ten review IDs were selected before inference. Additional executions are labeled replays, not independent tests.
 
-The batch is coding-agent-authored on a known corpus, not an independently authored blind benchmark. Exact questions are checked against v1.0 to prevent exact replay. Topic and financial concepts necessarily overlap the supported product scope. Ten cases are selected for human review before inference. A second execution, even after an incomplete attempt, is labeled a replay and stored in a new run directory.
+## Historical and consumed results
 
-Metrics are separate: accepted reference financial measures, unanswered/withheld responses, expected behavior, curated reference-passage recall, and the narrow injection-marker probe. No aggregate score or target is used. Financial refusals do not count as correct numeric answers. Quote presence does not establish semantic support. Qualitative completeness and citation entailment await human review.
+[v1.0](v1.0-EVALUATION.md) and [v1.1](v1.1-EVALUATION.md) remain separately documented and byte-preserved. The [six-blocker diagnosis](V12_DIAGNOSIS.md) distinguishes valid financial data from failed model-copy formatting; original raw v1.1 proposals were unavailable, so instrumented replay causes are not asserted as original raw causes.
 
-Synthetic conflicts copy one real observation into a disposable `_test` schema and add an explicitly synthetic source. Variants distinguish altered values, periods, concepts, reporting bases, currencies, segments and companies. These are not claims that the six official reports contain genuine financial contradictions. They never modify the demo corpus.
+[Development experiments](V12_DEVELOPMENT.md) retain unsuccessful JSON protocols, source truncation, all context/model trials, the first 4B hallucinations, and immutable v1.1 versus v1.2 on the same 12 questions. Baseline financial mode requires an actual model proposal; v1.2 directly executes a validated request. Prose changes model, prompt and context, so no single-component causal claim is made.
 
-The final run, failures, source excerpts and pending review responses are recorded below. Unexecuted checks are not counted as passed.
+The consumed [first v1.2 batch](../evaluation/v1.2/attempt-01/) remains unchanged with its first-run outputs. It answered 13/16 answerable questions, falsely refused three documentary questions, and matched 7/10 financial references. One real intent defect selected amount change for percentage growth. Two evaluator references incorrectly assumed HP FY2023 capex of 593 rather than the source-verified 609; the displayed proxy change and capex-growth computations were consistent with 609. These reference errors are disclosed, not silently rescored into the raw summary. A source-comparison question also stopped at temporal clarification instead of displaying both conflict proofs.
 
-## Consumed first v1.1 batch: retained failure, not the final runtime
+General wording, documentary gating and source-versus-time comparison rules were corrected and regression-tested. The old questions were replayed explicitly as diagnostics; they are not the new final batch. A pre-inference reference-index correction is also retained under `preflight-01/`, with no inference performed on that seal.
 
-The first post-correction batch ran 31 questions on commit `f009015`. Its [cases and freeze](../evaluation/v1.1/attempt-01/) and [complete results](../evaluation/v1.1/runs/20261031T122309885153Z/results.json) remain unchanged. It produced 12 `answered`, 8 withheld financial conclusions, 7 abstentions and 4 source-conflict refusals. Only **5/15** reference financial measures were answered and correct; abstentions are unanswered, not numeric successes. All four synthetic ambiguous sources withheld conclusions, while two of three distinct-context cases were still rejected by the model contract despite correctly resolved ledger data.
+## Final distinct batch: actual measurements
 
-A coding-agent diagnosis found a substantive false answer in Q18: “equal week counts” contradicted the cited Dell disclosure of 53 and 52 weeks. Several qualitative answers were generic restatements rather than complete explanations. These are not passed semantic-support checks. The old mechanical `expected_behavior_met` count of 22/31 is **not a quality score**: it counted Q18's answered status without validating its substance. F10 also has a predeclared conservative refusal expectation despite asking for an otherwise valid CFO-minus-capex operation with negated net-capex wording; its numeric outcome correctly remains unanswered. No claim of improved semantic accuracy is drawn from this metric.
-
-The period defect was corrected generally: reporting-week comparisons now use inclusive verified fiscal dates, company/period/basis checks and the same model-proposal contract. Non-whole-week periods do not receive an assumed 52-week calendar. The Q18 replay is explicitly [a known regression](../evaluation/v1.1/calendar-replay-regression.json), not a fresh test. A distinct second batch is written only after the new correction commit and is checked for exact overlap with both earlier batches.
-
-
-## Final distinct batch on the delivered runtime
-
-Correction commit: `90e484ef99d65d1bfb2c8cda2c40b98142ba09e1`. Cases were then written and frozen at `10694df`. The [25-case batch](../evaluation/v1.1/cases.json) has no exact question overlap with v1.0 or the consumed first v1.1 batch. [Complete actual results](../evaluation/v1.1/runs/20261031T123527051829Z/results.json) and [summary](../evaluation/v1.1/runs/20261031T123527051829Z/summary.json) are retained. This was the first execution of this distinct batch; it remains coding-agent-authored on a familiar corpus, not an independent blind benchmark.
-
-| Measurement | Actual result | Interpretation |
+| Measurement | Observed result | Meaning |
 | --- | --- | --- |
-| Pipeline statuses | 12 answered; 6 financial conclusions withheld; 5 abstentions; 2 source conflicts | Withholding is not answer success |
-| Reference financial/calendar measures answered correctly | **7/13** | Seven accepted reference targets matched value, unit and direction; six were unanswered because proposals were rejected |
-| Ambiguous synthetic sources | **2/2** withheld with both proofs | Deterministic provenance policy; not model conflict reasoning |
-| Distinct currency/segment contexts | Ledger resolved correctly; **2/2 model conclusions still withheld** | Correct data resolution does not establish answer availability |
-| Reporting-week comparisons | Both new two-period comparisons answered with 53 → 52 weeks, −1 week | A single-period calendar request was still rejected by the model contract |
-| Curated reference passage recall@5 | **0.70** on five prose/reference questions | Non-exhaustive reference set, different from earlier batches; no improvement percentage claimed |
-| Actual inference | 18 requests, 25 generation calls including repair, 9,224 output tokens | Local pinned Qwen/MLX; seven requests were deterministic refusals |
-| Injection marker probe | 1/1 literal marker absent | Narrow synthetic check, not proof of injection immunity |
-| Independent human review | **0/10 completed** | [Ten preselected actual responses](../evaluation/v1.1/human-review.md) include refusals, source excerpts, verified data and blank review fields |
+| Answerable coverage | **15/16** | 10 financial/context questions and five of six document explanations accepted |
+| Accepted financial reference accuracy | **10/10** | Value, unit and direction match predeclared requested targets; not LLM arithmetic |
+| False refusals | **1/16 answerable** | R10 acquisition integration failed context/generation/validation |
+| False acceptances | **0/9 unanswerable** | Under this batch's definitions only |
+| Ambiguities / absent data | 4 clarification requests / 3 abstentions | No invented years, FX conversion, definitions or missing facts |
+| Incompatible structured contexts | **2/2** source conflicts with both proofs | Synthetic value/period variants, not alleged contradictions in official reports |
+| Distinct currency / segment contexts | **2/2** accepted correct consolidated USD targets | Different observations do not replace the selected scope |
+| Generated claim support, coding-agent assessment | **6 supported, 2 partial, 2 unsupported**, out of 10 accepted claims | Not independent human review; partial is not full support |
+| Reference-aspect completeness, coding-agent assessment | **4 covered, 2 partial, 10 missing**, out of 16 aspects | Includes the refused explanation; compound aspects use strict full coverage |
+| Human review | **0/10 completed** | [Actual preselected responses, excerpts and blank judgment grid](../evaluation/v1.2/human-review.md) |
 
-Qualitative responses remain short and sometimes generic: N13, N15, N16 and the injection case provide limited explanations. Exact source-span binding is verified, but their completeness and semantic support have not been independently validated. No source-support pass rate or overall quality score is invented. The displayed `expected_behavior_met` field is only a mechanical status check and must not be read as semantic accuracy.
+These are separate measurements, not an overall score. Financial accuracy is conditional on a bounded request being correctly understood. Schema validation does not guarantee a free-text parser always recognizes the user's intended operation. The consumed percentage error demonstrates this limit.
 
-The correction runtime is unchanged after this batch. Later changes concern documentation, receipts and packaging. The v1.0 replay, consumed first v1.1 batch and the known Q18 regression replay remain separately labeled. The first batch's calendar error is retained, not erased or reclassified as a success.
+[Claim-by-claim assessment](../evaluation/v1.2/coding-agent-review.json) binds judgments to actual answer hashes. R09 conflates post-launch inventory filling with pre-launch decline of older inventory. R11 omits distributor overordering/canceling/delaying. R12 omits compliance costs and penalties. R13 adds an unsupported quality/timing interpretation. R14 adds unsupported trade-secret implications and misses key licensing-term risks. These remain published defects, not passed checks.
+
+R10 retrieved the right acquisition paragraph, but selected only its partner sentence alongside unrelated cybersecurity context. The model incorrectly said the sources could not answer; its literal evidence marker in the refusal then triggered numeric-prose validation. This is a combined context/generation/validation failure, not missing disclosure. R03's optional AI explanation was rejected while the valid operating-margin result remained available.
+
+## Actual context and performance on the target Mac
+
+[Mac measurements](../evaluation/v1.2/mac-performance.json) record Apple M1, 8 GiB RAM, macOS 26.0.1, Python 3.12.14, pinned local Qwen3 4B / MLX. The hard budgets are 2,400 input tokens including reserved template overhead, 650 output tokens, 90 seconds per generation workflow, and a 5 GiB operational process-RSS ceiling. Final maximum actual call input/output was 2,067 / 82 tokens. Twelve calls include format repair; no undisclosed best answer is selected.
+
+Nine financial requests without optional AI: median **0.0032 s**, p95 **0.0608 s**, measured inside the server workflow, excluding HTTP/browser overhead. Six qualitative requests including failure/repair: median **11.75 s**, p95 **13.43 s**. The optional R03 request took **32.13 s** including cold setup and rejected prose; its correct financial result was retained. Browser optional prose is requested after showing the calculation. Process peak RSS was **863.7 MiB**; MLX allocator peak **2,991.8 MiB**. They overlap and must not be added; this is not total system memory-pressure measurement.
+
+Curated reference-passage recall averaged 0.917 both in search and actual generation on six explanations, but this is passage identity only. R10/R12/R13 show why it does not prove the essential sentences survived four-sentence packing. Actual transmitted sentences, omitted candidates, provenance fragments and hashes are retained per response. Context assembly is improved over short three-passage fragments, but the four-sentence selection still loses important aspects. No automatic semantic-entailment metric is inferred from citation matches.
+
+Synthetic conflicts use disposable schemas on the dedicated `_test` PostgreSQL database; the demo corpus is untouched. Independent inline-XBRL parsing rechecks all **48/48** original financial observations. CI uses clearly labeled provider doubles and original synthetic data; it proves neither model quality nor independent review.
+
+The later scripted browser recording is a consumed-development demonstration, not an additional final test. Its declared rehearsal took 29.76 seconds for the Dell explanation; final-take timing and response are in `docs/demo/v1.2/recording.json`. Model weights may be warm, but answers are generated on each request. Recording failures and the visual-QA replacement are retained separately. No replayed demonstration response is selected as a new evaluation result.

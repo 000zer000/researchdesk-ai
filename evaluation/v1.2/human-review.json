@@ -1,0 +1,2797 @@
+{
+  "status": "pending",
+  "completed": 0,
+  "run": "evaluation/v1.2/runs/20261101T003024066201Z",
+  "responses": [
+    {
+      "id": "R01",
+      "question": "How much did Apple operating cash flow grow in percentage terms between FY2023 and FY2024?",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: Cfo: 110,543.00 USD million (level). Definition: us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "AAPL-2023-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: Cfo: 118,254.00 USD million (level). Definition: us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "AAPL-2024-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Cfo change: 7,711.00 USD million (increased). Definition: delta:us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "AAPL-2023-cfo",
+              "AAPL-2024-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Cfo growth: 6.98 percent (increased). Definition: growth:us-gaap:NetCashProvidedByUsedInOperatingActivities.",
+            "citations": [
+              "AAPL-2023-cfo",
+              "AAPL-2024-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          }
+        ],
+        "limitations": [
+          "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+        ]
+      },
+      "answer_sha256": "bc1514b50cb3d1500a23d15e33b8dc62f0fdd462b13fd5204fab1cc3eff563fd",
+      "evidence": [
+        {
+          "id": "AAPL-2023-cfo",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2023, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 110543000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-cfo",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2024, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 118254000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": null,
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "cfo:2023",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 110543.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2023-cfo"
+            ],
+            "label": "Cfo",
+            "formula": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 110543.0,
+                "raw_value": 110543000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-cfo",
+                "evidence_ids": [
+                  "AAPL-2023-cfo"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              }
+            ],
+            "formula_display": "Reported consolidated value; output normalized to USD million"
+          },
+          {
+            "id": "cfo:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 118254.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-cfo"
+            ],
+            "label": "Cfo",
+            "formula": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 118254.0,
+                "raw_value": 118254000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-cfo",
+                "evidence_ids": [
+                  "AAPL-2024-cfo"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "Reported consolidated value; output normalized to USD million"
+          },
+          {
+            "id": "cfo_change:2023:2024",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30",
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "delta:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 7711.0,
+            "direction": "increased",
+            "citations": [
+              "AAPL-2023-cfo",
+              "AAPL-2024-cfo"
+            ],
+            "label": "Cfo change",
+            "formula": "delta:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 110543.0,
+                "raw_value": 110543000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-cfo",
+                "evidence_ids": [
+                  "AAPL-2023-cfo"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 118254.0,
+                "raw_value": 118254000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-cfo",
+                "evidence_ids": [
+                  "AAPL-2024-cfo"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "To-period value \u2212 from-period value"
+          },
+          {
+            "id": "cfo_growth:2023:2024",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30",
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "percent",
+            "definition": "growth:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "value": 6.975566069312395,
+            "direction": "increased",
+            "citations": [
+              "AAPL-2023-cfo",
+              "AAPL-2024-cfo"
+            ],
+            "label": "Cfo growth",
+            "formula": "growth:us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 110543.0,
+                "raw_value": 110543000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-cfo",
+                "evidence_ids": [
+                  "AAPL-2023-cfo"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 118254.0,
+                "raw_value": 118254000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-cfo",
+                "evidence_ids": [
+                  "AAPL-2024-cfo"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "(To-period value / from-period value \u2212 1) \u00d7 100"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "cfo",
+            "company": "AAPL",
+            "value": 110543.0,
+            "raw_value": 110543000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2023-cfo",
+            "evidence_ids": [
+              "AAPL-2023-cfo"
+            ],
+            "document_id": "AAPL-2023",
+            "accession": "0000320193-23-000106",
+            "filed": "2023-11-03",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "cfo",
+            "company": "AAPL",
+            "value": 118254.0,
+            "raw_value": 118254000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-cfo",
+            "evidence_ids": [
+              "AAPL-2024-cfo"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": [],
+        "request": {
+          "company": "AAPL",
+          "metrics": [
+            "cfo"
+          ],
+          "years": [
+            2023,
+            2024
+          ],
+          "operation": "growth",
+          "unit": "percent",
+          "scope": "consolidated",
+          "definition": "as_reported",
+          "period_selection": "explicit"
+        },
+        "result_ids": [
+          "cfo_growth:2023:2024"
+        ]
+      },
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R02",
+      "question": "State the FY2024 Dell annual revenue using USD billions.",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "DELL \u00b7 2023-02-04/2024-02-02 \u00b7 consolidated: Revenue: 88.42 USD billion (level). Definition: us-gaap:Revenues.",
+            "citations": [
+              "DELL-2024-revenue"
+            ],
+            "origin": "deterministic_calculation"
+          }
+        ],
+        "limitations": [
+          "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+        ]
+      },
+      "answer_sha256": "fbeed29c848ab5d729163d8bf7963fe670db5a783740cc621f506875d339deeb",
+      "evidence": [
+        {
+          "id": "DELL-2024-revenue",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "DELL FY2024, consolidated annual XBRL. revenue (Revenues) = 88425000000 USD. Period 2023-02-04 to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": null,
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "revenue:2024",
+            "company": "DELL",
+            "periods": [
+              "2023-02-04/2024-02-02"
+            ],
+            "scope": "consolidated",
+            "unit": "USD billion",
+            "definition": "us-gaap:Revenues",
+            "value": 88.425,
+            "direction": "level",
+            "citations": [
+              "DELL-2024-revenue"
+            ],
+            "label": "Revenue",
+            "formula": "us-gaap:Revenues; monetary output converted from USD million to USD billion",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "revenue",
+                "company": "DELL",
+                "value": 88425.0,
+                "raw_value": 88425000000.0,
+                "concept": "us-gaap:Revenues",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-02-04",
+                "end": "2024-02-02",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "DELL-2024-revenue",
+                "evidence_ids": [
+                  "DELL-2024-revenue"
+                ],
+                "document_id": "DELL-2024",
+                "accession": "0001571996-24-000036",
+                "filed": "2024-03-25",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "Reported consolidated value; output normalized to USD billion"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "revenue",
+            "company": "DELL",
+            "value": 88425.0,
+            "raw_value": 88425000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-02-04",
+            "end": "2024-02-02",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "DELL-2024-revenue",
+            "evidence_ids": [
+              "DELL-2024-revenue"
+            ],
+            "document_id": "DELL-2024",
+            "accession": "0001571996-24-000036",
+            "filed": "2024-03-25",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": [],
+        "request": {
+          "company": "DELL",
+          "metrics": [
+            "revenue"
+          ],
+          "years": [
+            2024
+          ],
+          "operation": "level",
+          "unit": "USD billion",
+          "scope": "consolidated",
+          "definition": "as_reported",
+          "period_selection": "explicit"
+        },
+        "result_ids": [
+          "revenue:2024"
+        ]
+      },
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R03",
+      "question": "Compute HP operating margin for FY2024 from operating income and revenue.",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "HPQ \u00b7 2023-11-01/2024-10-31 \u00b7 consolidated: Operating margin: 7.13 percent (level). Definition: operating_income/revenue.",
+            "citations": [
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ],
+            "origin": "deterministic_calculation"
+          }
+        ],
+        "limitations": [
+          "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+        ]
+      },
+      "answer_sha256": "1ea04fdcb32eb95a0a2fe4576fbe483975ef669299b4e2e5bc7b8f8a7793b45c",
+      "evidence": [
+        {
+          "id": "HPQ-2024-operating_income",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "XBRL / operating_income",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "HPQ FY2024, consolidated annual XBRL. operating_income (OperatingIncomeLoss) = 3818000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2024-revenue",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "XBRL / revenue",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "HPQ FY2024, consolidated annual XBRL. revenue (Revenues) = 53559000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": null,
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "operating_margin:2024",
+            "company": "HPQ",
+            "periods": [
+              "2023-11-01/2024-10-31"
+            ],
+            "scope": "consolidated",
+            "unit": "percent",
+            "definition": "operating_income/revenue",
+            "value": 7.128587165555742,
+            "direction": "level",
+            "citations": [
+              "HPQ-2024-operating_income",
+              "HPQ-2024-revenue"
+            ],
+            "label": "Operating margin",
+            "formula": "operating_income/revenue",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "operating_income",
+                "company": "HPQ",
+                "value": 3818.0,
+                "raw_value": 3818000000.0,
+                "concept": "us-gaap:OperatingIncomeLoss",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-11-01",
+                "end": "2024-10-31",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "HPQ-2024-operating_income",
+                "evidence_ids": [
+                  "HPQ-2024-operating_income"
+                ],
+                "document_id": "HPQ-2024",
+                "accession": "0000047217-24-000080",
+                "filed": "2024-12-13",
+                "fiscal_year": 2024
+              },
+              {
+                "metric": "revenue",
+                "company": "HPQ",
+                "value": 53559.0,
+                "raw_value": 53559000000.0,
+                "concept": "us-gaap:Revenues",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-11-01",
+                "end": "2024-10-31",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "HPQ-2024-revenue",
+                "evidence_ids": [
+                  "HPQ-2024-revenue"
+                ],
+                "document_id": "HPQ-2024",
+                "accession": "0000047217-24-000080",
+                "filed": "2024-12-13",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "Operating income / revenue \u00d7 100"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "operating_income",
+            "company": "HPQ",
+            "value": 3818.0,
+            "raw_value": 3818000000.0,
+            "concept": "us-gaap:OperatingIncomeLoss",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-11-01",
+            "end": "2024-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2024-operating_income",
+            "evidence_ids": [
+              "HPQ-2024-operating_income"
+            ],
+            "document_id": "HPQ-2024",
+            "accession": "0000047217-24-000080",
+            "filed": "2024-12-13",
+            "fiscal_year": 2024
+          },
+          {
+            "metric": "revenue",
+            "company": "HPQ",
+            "value": 53559.0,
+            "raw_value": 53559000000.0,
+            "concept": "us-gaap:Revenues",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-11-01",
+            "end": "2024-10-31",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "HPQ-2024-revenue",
+            "evidence_ids": [
+              "HPQ-2024-revenue"
+            ],
+            "document_id": "HPQ-2024",
+            "accession": "0000047217-24-000080",
+            "filed": "2024-12-13",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": [],
+        "request": {
+          "company": "HPQ",
+          "metrics": [
+            "operating_margin"
+          ],
+          "years": [
+            2024
+          ],
+          "operation": "level",
+          "unit": "percent",
+          "scope": "consolidated",
+          "definition": "operating_income/revenue",
+          "period_selection": "explicit"
+        },
+        "result_ids": [
+          "operating_margin:2024"
+        ]
+      },
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R04",
+      "question": "How did Apple CFO less gross PPE capex change between FY2023 and FY2024?",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: CFO less gross PPE capex (not company-reported net-capex FCF): 99,584.00 USD million (level). Definition: cfo-gross_PPE_capex.",
+            "citations": [
+              "AAPL-2023-capex",
+              "AAPL-2023-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: CFO less gross PPE capex (not company-reported net-capex FCF): 108,807.00 USD million (level). Definition: cfo-gross_PPE_capex.",
+            "citations": [
+              "AAPL-2024-capex",
+              "AAPL-2024-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: CFO less gross PPE capex change: 9,223.00 USD million (increased). Definition: delta(cfo-gross_PPE_capex).",
+            "citations": [
+              "AAPL-2023-capex",
+              "AAPL-2023-cfo",
+              "AAPL-2024-capex",
+              "AAPL-2024-cfo"
+            ],
+            "origin": "deterministic_calculation"
+          }
+        ],
+        "limitations": [
+          "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+        ]
+      },
+      "answer_sha256": "b8d429e8bd70cf02445acd4940a83efa41b18d36057ff30f1997ba05b24a55d1",
+      "evidence": [
+        {
+          "id": "AAPL-2023-capex",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "XBRL / capex",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2023, consolidated annual XBRL. capex (PaymentsToAcquirePropertyPlantAndEquipment) = 10959000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2023-cfo",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2023, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 110543000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-capex",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / capex",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2024, consolidated annual XBRL. capex (PaymentsToAcquirePropertyPlantAndEquipment) = 9447000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-cfo",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "XBRL / cfo",
+          "anchor": "",
+          "start": -1,
+          "end": -1,
+          "offset_basis": "structured XBRL evidence; no HTML offsets",
+          "text": "AAPL FY2024, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 118254000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": null,
+      "verified_financials": {
+        "measures": [
+          {
+            "id": "cfo_less_capex:2023",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "cfo-gross_PPE_capex",
+            "value": 99584.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2023-capex",
+              "AAPL-2023-cfo"
+            ],
+            "label": "CFO less gross PPE capex (not company-reported net-capex FCF)",
+            "formula": "cfo-gross_PPE_capex",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "capex",
+                "company": "AAPL",
+                "value": 10959.0,
+                "raw_value": 10959000000.0,
+                "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-capex",
+                "evidence_ids": [
+                  "AAPL-2023-capex"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 110543.0,
+                "raw_value": 110543000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-cfo",
+                "evidence_ids": [
+                  "AAPL-2023-cfo"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              }
+            ],
+            "formula_display": "Operating cash flow \u2212 gross PPE capital expenditure"
+          },
+          {
+            "id": "cfo_less_capex:2024",
+            "company": "AAPL",
+            "periods": [
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "cfo-gross_PPE_capex",
+            "value": 108807.0,
+            "direction": "level",
+            "citations": [
+              "AAPL-2024-capex",
+              "AAPL-2024-cfo"
+            ],
+            "label": "CFO less gross PPE capex (not company-reported net-capex FCF)",
+            "formula": "cfo-gross_PPE_capex",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "capex",
+                "company": "AAPL",
+                "value": 9447.0,
+                "raw_value": 9447000000.0,
+                "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-capex",
+                "evidence_ids": [
+                  "AAPL-2024-capex"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 118254.0,
+                "raw_value": 118254000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-cfo",
+                "evidence_ids": [
+                  "AAPL-2024-cfo"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "Operating cash flow \u2212 gross PPE capital expenditure"
+          },
+          {
+            "id": "cfo_less_capex_change:2023:2024",
+            "company": "AAPL",
+            "periods": [
+              "2022-09-25/2023-09-30",
+              "2023-10-01/2024-09-28"
+            ],
+            "scope": "consolidated",
+            "unit": "USD million",
+            "definition": "delta(cfo-gross_PPE_capex)",
+            "value": 9223.0,
+            "direction": "increased",
+            "citations": [
+              "AAPL-2023-capex",
+              "AAPL-2023-cfo",
+              "AAPL-2024-capex",
+              "AAPL-2024-cfo"
+            ],
+            "label": "CFO less gross PPE capex change",
+            "formula": "delta(cfo-gross_PPE_capex)",
+            "origin": "deterministic_calculation",
+            "inputs": [
+              {
+                "metric": "capex",
+                "company": "AAPL",
+                "value": 10959.0,
+                "raw_value": 10959000000.0,
+                "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-capex",
+                "evidence_ids": [
+                  "AAPL-2023-capex"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 110543.0,
+                "raw_value": 110543000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2022-09-25",
+                "end": "2023-09-30",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2023-cfo",
+                "evidence_ids": [
+                  "AAPL-2023-cfo"
+                ],
+                "document_id": "AAPL-2023",
+                "accession": "0000320193-23-000106",
+                "filed": "2023-11-03",
+                "fiscal_year": 2023
+              },
+              {
+                "metric": "capex",
+                "company": "AAPL",
+                "value": 9447.0,
+                "raw_value": 9447000000.0,
+                "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-capex",
+                "evidence_ids": [
+                  "AAPL-2024-capex"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              },
+              {
+                "metric": "cfo",
+                "company": "AAPL",
+                "value": 118254.0,
+                "raw_value": 118254000000.0,
+                "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+                "unit": "USD",
+                "currency": "USD",
+                "start": "2023-10-01",
+                "end": "2024-09-28",
+                "scope": "consolidated",
+                "reporting_basis": "as_reported",
+                "restates_accession": null,
+                "evidence_id": "AAPL-2024-cfo",
+                "evidence_ids": [
+                  "AAPL-2024-cfo"
+                ],
+                "document_id": "AAPL-2024",
+                "accession": "0000320193-24-000123",
+                "filed": "2024-11-01",
+                "fiscal_year": 2024
+              }
+            ],
+            "formula_display": "To-period value \u2212 from-period value"
+          }
+        ],
+        "issues": [],
+        "observations": [
+          {
+            "metric": "capex",
+            "company": "AAPL",
+            "value": 10959.0,
+            "raw_value": 10959000000.0,
+            "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2023-capex",
+            "evidence_ids": [
+              "AAPL-2023-capex"
+            ],
+            "document_id": "AAPL-2023",
+            "accession": "0000320193-23-000106",
+            "filed": "2023-11-03",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "cfo",
+            "company": "AAPL",
+            "value": 110543.0,
+            "raw_value": 110543000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2023-cfo",
+            "evidence_ids": [
+              "AAPL-2023-cfo"
+            ],
+            "document_id": "AAPL-2023",
+            "accession": "0000320193-23-000106",
+            "filed": "2023-11-03",
+            "fiscal_year": 2023
+          },
+          {
+            "metric": "capex",
+            "company": "AAPL",
+            "value": 9447.0,
+            "raw_value": 9447000000.0,
+            "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-capex",
+            "evidence_ids": [
+              "AAPL-2024-capex"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          },
+          {
+            "metric": "cfo",
+            "company": "AAPL",
+            "value": 118254.0,
+            "raw_value": 118254000000.0,
+            "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "unit": "USD",
+            "currency": "USD",
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "scope": "consolidated",
+            "reporting_basis": "as_reported",
+            "restates_accession": null,
+            "evidence_id": "AAPL-2024-cfo",
+            "evidence_ids": [
+              "AAPL-2024-cfo"
+            ],
+            "document_id": "AAPL-2024",
+            "accession": "0000320193-24-000123",
+            "filed": "2024-11-01",
+            "fiscal_year": 2024
+          }
+        ],
+        "conflicts": [],
+        "request": {
+          "company": "AAPL",
+          "metrics": [
+            "cfo_less_capex"
+          ],
+          "years": [
+            2023,
+            2024
+          ],
+          "operation": "change",
+          "unit": "USD million",
+          "scope": "consolidated",
+          "definition": "cfo-gross_PPE_capex",
+          "period_selection": "explicit"
+        },
+        "result_ids": [
+          "cfo_less_capex_change:2023:2024"
+        ]
+      },
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R09",
+      "question": "Explain Apple FY2024 seasonality risks: how do holiday demand and product introductions affect its distribution channels?",
+      "status": "answered",
+      "origin": "generated_text",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Holiday demand increases first-quarter net sales due to seasonal consumer spending.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "AAPL-2024-p0044",
+              "AAPL-2024-p0045"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "AAPL-2024-p0044",
+                "quote": "Business Seasonality and Product Introductions",
+                "start": 19377,
+                "end": 19423,
+                "sentence_id": "E1"
+              },
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
+                "start": 19424,
+                "end": 19588,
+                "sentence_id": "E1"
+              }
+            ]
+          },
+          {
+            "text": "Product launches lead to inventory replenishment in indirect distribution channels, causing declines in older product inventory.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "AAPL-2024-p0044",
+              "AAPL-2024-p0045"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.",
+                "start": 19715,
+                "end": 20006,
+                "sentence_id": "E3"
+              },
+              {
+                "citation": "AAPL-2024-p0044",
+                "quote": "Business Seasonality and Product Introductions",
+                "start": 19377,
+                "end": 19423,
+                "sentence_id": "E1"
+              },
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
+                "start": 19424,
+                "end": 19588,
+                "sentence_id": "E1"
+              },
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.",
+                "start": 19715,
+                "end": 20006,
+                "sentence_id": "E3"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "48f97ab82490838d9b01255ec074109d2b8a3ac7618647123306872bea929ab7",
+      "evidence": [
+        {
+          "id": "AAPL-2024-p0045",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "Item 1. Business",
+          "anchor": "",
+          "start": 19424,
+          "end": 20509,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand. Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses. The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches. Net sales can also be affected when consumers and distributors anticipate a product introduction.\nHuman Capital\nThe Company believes that its people play an important role in its success, and strives to attract, develop and retain the best talent. The Company works to create an inclusive, safe and supportive environ",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0.17478221122687798,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "AAPL-2024-p0060",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 31249,
+          "end": 32332,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "The Company\u2019s operations are also subject to the risks of industrial accidents at its suppliers and contract manufacturers. While the Company\u2019s suppliers are required to maintain safe working environments and operations, an industrial accident could occur and could result in serious injuries or loss of life, disruption to the Company\u2019s business, and harm to the Company\u2019s reputation. Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution ch",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0.13446912442913428,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "AAPL-2024-p0067",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 37155,
+          "end": 38201,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Due to the highly volatile and competitive nature of the markets and industries in which the Company competes, the Company must continually introduce new products, services and technologies, enhance existing products and services, effectively stimulate customer demand for new and upgraded products and services, and successfully manage the transition to these new and upgraded products and services. The success of new product and service introductions depends on a number of factors, including timely and successful development, market acceptance, the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the availability of application software or other third-party support for the Company\u2019s products and services, the effective management of purchase commitments and inventory levels in line with anticipated product demand, the availability of pr",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0.10580079835175955,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "AAPL-2024-p0044",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "Item 1. Business",
+          "anchor": "",
+          "start": 18856,
+          "end": 19423,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "In addition to Company-owned intellectual property, many of the Company\u2019s products and services are designed to include intellectual property owned by third parties. It may be necessary in the future to seek or renew licenses relating to various aspects of the Company\u2019s products, processes and services. While the Company has generally been able to obtain such licenses on commercially reasonable terms in the past, there is no guarantee that such licenses could be obtained in the future on reasonable terms or at all.\nBusiness Seasonality and Product Introductions",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0.09948840229357005,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2024-p0068",
+          "document_id": "AAPL-2024",
+          "company": "AAPL",
+          "fiscal_year": 2024,
+          "filed": "2024-11-01",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 38202,
+          "end": 38771,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "other defects or deficiencies. New products, services and technologies may replace or supersede existing offerings and may produce lower revenues and lower profit margins, which can materially adversely impact the Company\u2019s business, results of operations and financial condition. There can be no assurance the Company will successfully manage future introductions and transitions of products and services.\nThe Company depends on component and product manufacturing and logistical services provided by outsourcing partners, many of which are located outside of the U.S.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+          "accession": "0000320193-24-000123",
+          "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "AAPL-2024-p0045",
+          "AAPL-2024-p0122",
+          "AAPL-2024-p0060",
+          "AAPL-2024-p0120",
+          "AAPL-2024-p0067",
+          "AAPL-2024-p0066",
+          "AAPL-2024-p0044",
+          "AAPL-2024-p0035"
+        ],
+        "generation_passage_ids": [
+          "AAPL-2024-p0044",
+          "AAPL-2024-p0045",
+          "AAPL-2024-p0060",
+          "AAPL-2024-p0067",
+          "AAPL-2024-p0068"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "AAPL-2024-p0045",
+            "passage_ids": [
+              "AAPL-2024-p0044",
+              "AAPL-2024-p0045"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2024-p0044",
+                "quote": "Business Seasonality and Product Introductions",
+                "start": 19377,
+                "end": 19423
+              },
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
+                "start": 19424,
+                "end": 19588
+              }
+            ],
+            "text": "Business Seasonality and Product Introductions The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "AAPL-2024-p0045:s3"
+          },
+          {
+            "id": "E2",
+            "passage_id": "AAPL-2024-p0060",
+            "passage_ids": [
+              "AAPL-2024-p0060"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2024-p0060",
+                "quote": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.",
+                "start": 31635,
+                "end": 32332
+              }
+            ],
+            "text": "Major public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "AAPL-2024-p0060:s3"
+          },
+          {
+            "id": "E3",
+            "passage_id": "AAPL-2024-p0045",
+            "passage_ids": [
+              "AAPL-2024-p0045"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2024-p0045",
+                "quote": "The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.",
+                "start": 19715,
+                "end": 20006
+              }
+            ],
+            "text": "The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "AAPL-2024-p0045:s5"
+          },
+          {
+            "id": "E4",
+            "passage_id": "AAPL-2024-p0067",
+            "passage_ids": [
+              "AAPL-2024-p0067",
+              "AAPL-2024-p0068"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2024-p0067",
+                "quote": "The success of new product and service introductions depends on a number of factors, including timely and successful development, market acceptance, the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the availability of application software or other third-party support for the Company\u2019s products and services, the effective management of purchase commitments and inventory levels in line with anticipated product demand, the availability of products in appropriate quantities and at expected costs to meet anticipated demand, and the risk that new products and services may have quality or",
+                "start": 37556,
+                "end": 38201
+              },
+              {
+                "citation": "AAPL-2024-p0068",
+                "quote": "other defects or deficiencies.",
+                "start": 38202,
+                "end": 38232
+              }
+            ],
+            "text": "The success of new product and service introductions depends on a number of factors, including timely and successful development, market acceptance, the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the availability of application software or other third-party support for the Company\u2019s products and services, the effective management of purchase commitments and inventory levels in line with anticipated product demand, the availability of products in appropriate quantities and at expected costs to meet anticipated demand, and the risk that new products and services may have quality or other defects or deficiencies.",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "AAPL-2024-p0067:s4"
+          }
+        ],
+        "omitted": [],
+        "estimated_prompt_tokens_including_reserve": 771,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "d8f787021d73359f5f553a31c59fa35aaa72e6933bedae264b6e10e70062ed40",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2024\nBusiness Seasonality and Product Introductions The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand.\n\n[E2] AAPL FY2024\nMajor public health issues, including pandemics such as the COVID-19 pandemic, have adversely affected, and could in the future materially adversely affect, the Company due to their impact on the global economy and demand for consumer products; the imposition of protective public safety measures, such as stringent employee travel restrictions and limitations on freight services and the movement of products between regions; and disruptions in the Company\u2019s operations, supply chain and sales and distribution channels, resulting in interruptions to the supply of current products and offering of existing services, and delays in production ramps of new products and development of new services.\n\n[E3] AAPL FY2024\nThe timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches.\n\n[E4] AAPL FY2024\nThe success of new product and service introductions depends on a number of factors, including timely and successful development, market acceptance, the Company\u2019s ability to manage the risks associated with new technologies and production ramp-up issues, the availability of application software or other third-party support for the Company\u2019s products and services, the effective management of purchase commitments and inventory levels in line with anticipated product demand, the availability of products in appropriate quantities and at expected costs to meet anticipated demand, and the risk that new products and services may have quality or other defects or deficiencies.\n\nQUESTION: Explain Apple FY2024 seasonality risks: how do holiday demand and product introductions affect its distribution channels?",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R10",
+      "question": "What acquisition integration risks for staff, customers and strategic partners does Dell disclose in FY2023?",
+      "status": "invalid_model_answer",
+      "origin": "generated_text",
+      "answer": null,
+      "answer_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "evidence": [
+        {
+          "id": "DELL-2023-p0124",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 86888,
+          "end": 87770,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "We make strategic acquisitions of other companies as part of our growth strategy. We could experience unforeseen operating difficulties in integrating the businesses, technologies, services, products, personnel, or operations of acquired companies, especially if we are unable to retain the key personnel of an acquired company. Further, future acquisitions may result in a delay or reduction of sales for both us and the acquired company because of customer uncertainty about the continuity and effectiveness of solutions offered by either company and may disrupt our existing business by diverting resources and significant management attention that otherwise would be focused on development of the existing business. Acquisitions also may negatively affect our relationships with strategic partners if the acquisitions are seen as bringing us into competition with such partners.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0.1049429355037167,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "DELL-2023-p0118",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 81989,
+          "end": 83032,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "by cyber-attacks and data thefts resulting from ongoing wars and geopolitical conflicts. In the past, we have experienced security incidents, including the unauthorized activity on our network attempting to extract Dell.com customer information we disclosed in November 2018.\nThe costs to address cyber risks, both before and after a security incident, could be significant, regardless of whether incidents result from an attack on us directly or on third-party vendors upon which we rely. Our customers, partners, and third-party vendors continue to experience security incidents of varying severity, including, but not limited to, increased ransomware attacks, network intrusions, and unauthorized data exfiltration, which have directly and indirectly impacted our operations in the past. Targeted cyber-attacks or those that may result from a security incident directed at a third-party vendor cou",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0.08010386414585449,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "DELL-2023-p0052",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1 \u2014 BUSINESS",
+          "anchor": "",
+          "start": 26275,
+          "end": 27366,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "We operate in an industry in which there are rapid technological advances in hardware, software, and services offerings. We face ongoing product and price competition in all areas of our business, including from both branded and generic competitors. We compete based on our ability to offer customers competitive, scalable, and integrated solutions that provide the most current and desired product and services features at a competitive price. We closely monitor market pricing, including the effect of foreign exchange rate movements, in an effort to provide the best value for our customers. We believe that our strong relationships with our customers and channel partners allow us to respond quickly to changing customer needs and other macroeconomic factors.\nWe also face competition from non-traditional IT companies, including large Infrastructure-as-a-Service providers, that often buy their ",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "DELL-2023-p0117",
+          "document_id": "DELL-2023",
+          "company": "DELL",
+          "fiscal_year": 2023,
+          "filed": "2023-03-30",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 80876,
+          "end": 81988,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Despite our internal controls and significant and ongoing investment in security measures, criminal or other unauthorized threat actors, including nation states or state-sponsored organizations, may be able to penetrate our security defenses, breach our information technology systems, misappropriate or compromise confidential and proprietary information of our company or our customers, cause system disruptions and shutdowns, or introduce ransomware, malware, or vulnerabilities into our products, systems, and networks or those of our customers and partners. Employees, contractors, or other insiders may introduce vulnerabilities into our environments or otherwise may seek to misappropriate our intellectual property and proprietary information. The shift to work-from-home and flexible work arrangements following the COVID-19 pandemic may increase our vulnerability, as employees and contract",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+          "accession": "0001571996-23-000007",
+          "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+          "score": 0,
+          "excerpt_truncated": true
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "DELL-2023-p0124",
+          "DELL-2023-p0087",
+          "DELL-2023-p0111",
+          "DELL-2023-p0053",
+          "DELL-2023-p0118",
+          "DELL-2023-p0569",
+          "DELL-2023-p0176",
+          "DELL-2023-p0123"
+        ],
+        "generation_passage_ids": [
+          "DELL-2023-p0052",
+          "DELL-2023-p0117",
+          "DELL-2023-p0118",
+          "DELL-2023-p0124"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "DELL-2023-p0117",
+            "passage_ids": [
+              "DELL-2023-p0117"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2023-p0117",
+                "quote": "Despite our internal controls and significant and ongoing investment in security measures, criminal or other unauthorized threat actors, including nation states or state-sponsored organizations, may be able to penetrate our security defenses, breach our information technology systems, misappropriate or compromise confidential and proprietary information of our company or our customers, cause system disruptions and shutdowns, or introduce ransomware, malware, or vulnerabilities into our products, systems, and networks or those of our customers and partners.",
+                "start": 80876,
+                "end": 81438
+              }
+            ],
+            "text": "Despite our internal controls and significant and ongoing investment in security measures, criminal or other unauthorized threat actors, including nation states or state-sponsored organizations, may be able to penetrate our security defenses, breach our information technology systems, misappropriate or compromise confidential and proprietary information of our company or our customers, cause system disruptions and shutdowns, or introduce ransomware, malware, or vulnerabilities into our products, systems, and networks or those of our customers and partners.",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "DELL-2023-p0117:s0"
+          },
+          {
+            "id": "E2",
+            "passage_id": "DELL-2023-p0118",
+            "passage_ids": [
+              "DELL-2023-p0118"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2023-p0118",
+                "quote": "Our customers, partners, and third-party vendors continue to experience security incidents of varying severity, including, but not limited to, increased ransomware attacks, network intrusions, and unauthorized data exfiltration, which have directly and indirectly impacted our operations in the past.",
+                "start": 82479,
+                "end": 82779
+              }
+            ],
+            "text": "Our customers, partners, and third-party vendors continue to experience security incidents of varying severity, including, but not limited to, increased ransomware attacks, network intrusions, and unauthorized data exfiltration, which have directly and indirectly impacted our operations in the past.",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "DELL-2023-p0118:s6"
+          },
+          {
+            "id": "E3",
+            "passage_id": "DELL-2023-p0124",
+            "passage_ids": [
+              "DELL-2023-p0124"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2023-p0124",
+                "quote": "Acquisitions also may negatively affect our relationships with strategic partners if the acquisitions are seen as bringing us into competition with such partners.",
+                "start": 87608,
+                "end": 87770
+              }
+            ],
+            "text": "Acquisitions also may negatively affect our relationships with strategic partners if the acquisitions are seen as bringing us into competition with such partners.",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "DELL-2023-p0124:s6"
+          },
+          {
+            "id": "E4",
+            "passage_id": "DELL-2023-p0052",
+            "passage_ids": [
+              "DELL-2023-p0052"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2023-p0052",
+                "quote": "We believe that our strong relationships with our customers and channel partners allow us to respond quickly to changing customer needs and other macroeconomic factors.",
+                "start": 26870,
+                "end": 27038
+              }
+            ],
+            "text": "We believe that our strong relationships with our customers and channel partners allow us to respond quickly to changing customer needs and other macroeconomic factors.",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "DELL-2023-p0052:s4"
+          }
+        ],
+        "omitted": [
+          {
+            "id": "DELL-2023-p0118:s0",
+            "reason": "near_duplicate"
+          }
+        ],
+        "estimated_prompt_tokens_including_reserve": 649,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "68f237287177f8304aa0433945340494def2a9677f1e92324de8b23320f84590",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] DELL FY2023\nDespite our internal controls and significant and ongoing investment in security measures, criminal or other unauthorized threat actors, including nation states or state-sponsored organizations, may be able to penetrate our security defenses, breach our information technology systems, misappropriate or compromise confidential and proprietary information of our company or our customers, cause system disruptions and shutdowns, or introduce ransomware, malware, or vulnerabilities into our products, systems, and networks or those of our customers and partners.\n\n[E2] DELL FY2023\nOur customers, partners, and third-party vendors continue to experience security incidents of varying severity, including, but not limited to, increased ransomware attacks, network intrusions, and unauthorized data exfiltration, which have directly and indirectly impacted our operations in the past.\n\n[E3] DELL FY2023\nAcquisitions also may negatively affect our relationships with strategic partners if the acquisitions are seen as bringing us into competition with such partners.\n\n[E4] DELL FY2023\nWe believe that our strong relationships with our customers and channel partners allow us to respond quickly to changing customer needs and other macroeconomic factors.\n\nQUESTION: What acquisition integration risks for staff, customers and strategic partners does Dell disclose in FY2023?",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R11",
+      "question": "Why is HP channel inventory forecasting difficult in FY2024, and how can distributor ordering affect demand and pricing?",
+      "status": "answered",
+      "origin": "generated_text",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Channel inventory can adversely impact demand and pricing, and the extent and timing are difficult to predict.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2024-p0116",
+              "HPQ-2024-p0117"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2024-p0116",
+                "quote": "Elevated channel inventory can result in adverse impacts to demand and pricing for our products, the extent and",
+                "start": 81294,
+                "end": 81405,
+                "sentence_id": "E2"
+              },
+              {
+                "citation": "HPQ-2024-p0117",
+                "quote": "timing of which are difficult to predict with precision or sometimes at all.",
+                "start": 81406,
+                "end": 81482,
+                "sentence_id": "E2"
+              }
+            ]
+          },
+          {
+            "text": "Unauthorized resale by channel partners complicates forecasting and inventory management, potentially impacting pricing.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2024-p0116",
+              "HPQ-2024-p0117",
+              "HPQ-2024-p0118"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2024-p0118",
+                "quote": "Sales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market.",
+                "start": 81869,
+                "end": 82104,
+                "sentence_id": "E3"
+              },
+              {
+                "citation": "HPQ-2024-p0116",
+                "quote": "Elevated channel inventory can result in adverse impacts to demand and pricing for our products, the extent and",
+                "start": 81294,
+                "end": 81405,
+                "sentence_id": "E2"
+              },
+              {
+                "citation": "HPQ-2024-p0117",
+                "quote": "timing of which are difficult to predict with precision or sometimes at all.",
+                "start": 81406,
+                "end": 81482,
+                "sentence_id": "E2"
+              },
+              {
+                "citation": "HPQ-2024-p0118",
+                "quote": "Sales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market.",
+                "start": 81869,
+                "end": 82104,
+                "sentence_id": "E3"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "757d2c1f26aa56a080704dccdfec79cc7ec78850c07ec5a65aa5665777521bf2",
+      "evidence": [
+        {
+          "id": "HPQ-2024-p0118",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 81597,
+          "end": 82603,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "If we were to expand direct distribution initiatives, channel and indirect distributors could consider such initiatives in conflict with their business interests and reduce their investment in the distribution and sale of our products, or cease all sales of our products. Sales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market. For example, in the past we have had channel partners sell products outside of their agreed territory, and misrepresent sales to unauthorized resellers as sales to end-users, frustrating our efforts to estimate channel inventory or maintain consistent pricing, and negatively impacting gross margins. Moreover, our use of indirect distribution channels may limit our willingness or ability to",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.17150078874504276,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2024-p0116",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 80391,
+          "end": 81405,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Our inventory management is complex, as we continue to sell a significant mix of products through distributors. We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations). Our forecasts do not always accurately predict demand, and distributors have and may continue to increase orders during periods of product shortages, cancel orders if their inventory is too high or delay orders in anticipation of new products. Distributors also may adjust their orders in response to the supply of our products and the products of our competitors and seasonal fluctuations in end-user demand. Our reliance upon indirect distribution methods, including a multi-tiered channel, may reduce our visibility into inventories, demand and pricing trend",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.16689637528632947,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2024-p0117",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 81406,
+          "end": 81596,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "timing of which are difficult to predict with precision or sometimes at all. Accordingly, our distribution model makes forecasting and managing multi-tiered channel inventory more difficult.",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.130486720941477,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2024-p0089",
+          "document_id": "HPQ-2024",
+          "company": "HPQ",
+          "fiscal_year": 2024,
+          "filed": "2024-12-13",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 57616,
+          "end": 58659,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "acceptable quality to build products or provide services in a timely manner in the quantities needed or according to our specifications. Accordingly, we may lose time-sensitive sales, incur additional freight costs or be unable to pass on price increases to our customers due to such component shortages or delays. If we cannot adequately address a component supply issue, we may have to re-engineer some product or service offerings, which could result in further costs and delays.\n\u2022 Sourcing inventory planning. In order to secure components for our products or services, we have and may continue to make advance payments to suppliers or enter into non-cancelable commitments with vendors. In addition, we have and may continue to strategically purchase components in advance of demand to take advantage of favorable pricing or to address concerns about future availability, which could adversely a",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+          "accession": "0000047217-24-000080",
+          "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+          "score": 0.10680752779310551,
+          "excerpt_truncated": true
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "HPQ-2024-p0118",
+          "HPQ-2024-p0116",
+          "HPQ-2024-p0114",
+          "HPQ-2024-p0117",
+          "HPQ-2024-p0120",
+          "HPQ-2024-p0119",
+          "HPQ-2024-p0089",
+          "HPQ-2024-p0032"
+        ],
+        "generation_passage_ids": [
+          "HPQ-2024-p0089",
+          "HPQ-2024-p0116",
+          "HPQ-2024-p0117",
+          "HPQ-2024-p0118"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "HPQ-2024-p0115",
+            "passage_ids": [
+              "HPQ-2024-p0116"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2024-p0116",
+                "quote": "We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).",
+                "start": 80503,
+                "end": 80729
+              }
+            ],
+            "text": "We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "source_sentence_id": "HPQ-2024-p0115:s8"
+          },
+          {
+            "id": "E2",
+            "passage_id": "HPQ-2024-p0116",
+            "passage_ids": [
+              "HPQ-2024-p0116",
+              "HPQ-2024-p0117"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2024-p0116",
+                "quote": "Elevated channel inventory can result in adverse impacts to demand and pricing for our products, the extent and",
+                "start": 81294,
+                "end": 81405
+              },
+              {
+                "citation": "HPQ-2024-p0117",
+                "quote": "timing of which are difficult to predict with precision or sometimes at all.",
+                "start": 81406,
+                "end": 81482
+              }
+            ],
+            "text": "Elevated channel inventory can result in adverse impacts to demand and pricing for our products, the extent and timing of which are difficult to predict with precision or sometimes at all.",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "source_sentence_id": "HPQ-2024-p0116:s6"
+          },
+          {
+            "id": "E3",
+            "passage_id": "HPQ-2024-p0117",
+            "passage_ids": [
+              "HPQ-2024-p0118"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2024-p0118",
+                "quote": "Sales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market.",
+                "start": 81869,
+                "end": 82104
+              }
+            ],
+            "text": "Sales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market.",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "source_sentence_id": "HPQ-2024-p0117:s8"
+          },
+          {
+            "id": "E4",
+            "passage_id": "HPQ-2024-p0089",
+            "passage_ids": [
+              "HPQ-2024-p0089"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2024-p0089",
+                "quote": "In addition, we have and may continue to strategically purchase components in advance of demand to take advantage of favorable pricing or to address concerns about future availability, which could adversely affect our working capital and cash flow.",
+                "start": 58308,
+                "end": 58556
+              }
+            ],
+            "text": "In addition, we have and may continue to strategically purchase components in advance of demand to take advantage of favorable pricing or to address concerns about future availability, which could adversely affect our working capital and cash flow.",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "source_sentence_id": "HPQ-2024-p0089:s4"
+          }
+        ],
+        "omitted": [
+          {
+            "id": "HPQ-2024-p0116:s2",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "HPQ-2024-p0117:s1",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "HPQ-2024-p0117:s5",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "HPQ-2024-p0118:s2",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "HPQ-2024-p0119:s1",
+            "reason": "near_duplicate"
+          }
+        ],
+        "estimated_prompt_tokens_including_reserve": 608,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "0eafcad1739ef2f3ee9d938e7c6ab4883be5c84f93841f03b6bf0cea17a80592",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] HPQ FY2024\nWe must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).\n\n[E2] HPQ FY2024\nElevated channel inventory can result in adverse impacts to demand and pricing for our products, the extent and timing of which are difficult to predict with precision or sometimes at all.\n\n[E3] HPQ FY2024\nSales of our products by channel partners to unauthorized resellers or unauthorized resale of our products has and could continue to make our forecasting and channel inventory management more difficult and impact pricing in the market.\n\n[E4] HPQ FY2024\nIn addition, we have and may continue to strategically purchase components in advance of demand to take advantage of favorable pricing or to address concerns about future availability, which could adversely affect our working capital and cash flow.\n\nQUESTION: Why is HP channel inventory forecasting difficult in FY2024, and how can distributor ordering affect demand and pricing?",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R12",
+      "question": "In FY2023, what privacy compliance risks and costs does Apple describe for personal information transfers among international subsidiaries?",
+      "status": "answered",
+      "origin": "generated_text",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Laws restrict transfers of personal information among Apple and its international subsidiaries.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "AAPL-2023-p0115"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "AAPL-2023-p0115",
+                "quote": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+                "start": 77980,
+                "end": 78155,
+                "sentence_id": "E1"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "a5b10e6b5b3b0e3787ed4a9102cfa0cfe980ff49dc061ff4fd65077d4d85fce5",
+      "evidence": [
+        {
+          "id": "AAPL-2023-p0115",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 77784,
+          "end": 78668,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "The Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information. In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries. Several jurisdictions have passed laws in this area, and additional jurisdictions are considering imposing additional restrictions or have laws that are pending. These laws continue to develop and may be inconsistent from jurisdiction to jurisdiction. Complying with emerging and changing requirements causes the Company to incur substantial costs and has required and may in the future require the Company to change its business practices. Noncompliance could result in significant penalties or legal liability.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0.18077085454249464,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2023-p0116",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 78669,
+          "end": 79259,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "The Company makes statements about its use and disclosure of personal information through its privacy policy, information provided on its website, press statements and other privacy notices provided to customers. Any failure by the Company to comply with these public statements or with other federal, state or international privacy or data protection laws and regulations could result in inquiries or proceedings against the Company by governmental entities or others. In addition to reputational impacts, penalties could include ongoing audit requirements and significant legal liability.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0.11900177548034399,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "AAPL-2023-p0095",
+          "document_id": "AAPL-2023",
+          "company": "AAPL",
+          "fiscal_year": 2023,
+          "filed": "2023-11-03",
+          "section": "Item 1A. Risk Factors",
+          "anchor": "",
+          "start": 61631,
+          "end": 61979,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+          "accession": "0000320193-23-000106",
+          "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+          "score": 0,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "AAPL-2023-p0115",
+          "AAPL-2023-p0117",
+          "AAPL-2023-p0116",
+          "AAPL-2023-p0096",
+          "AAPL-2023-p0094",
+          "AAPL-2023-p0106",
+          "AAPL-2023-p0091",
+          "AAPL-2023-p0114"
+        ],
+        "generation_passage_ids": [
+          "AAPL-2023-p0095",
+          "AAPL-2023-p0115",
+          "AAPL-2023-p0116"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "AAPL-2023-p0115",
+            "passage_ids": [
+              "AAPL-2023-p0115"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2023-p0115",
+                "quote": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+                "start": 77980,
+                "end": 78155
+              }
+            ],
+            "text": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "AAPL-2023-p0115:s4"
+          },
+          {
+            "id": "E2",
+            "passage_id": "AAPL-2023-p0094",
+            "passage_ids": [
+              "AAPL-2023-p0095"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2023-p0095",
+                "quote": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+                "start": 61631,
+                "end": 61979
+              }
+            ],
+            "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "AAPL-2023-p0094:s8"
+          },
+          {
+            "id": "E3",
+            "passage_id": "AAPL-2023-p0115",
+            "passage_ids": [
+              "AAPL-2023-p0115"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2023-p0115",
+                "quote": "The Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information.",
+                "start": 77784,
+                "end": 77979
+              }
+            ],
+            "text": "The Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information.",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "AAPL-2023-p0115:s3"
+          },
+          {
+            "id": "E4",
+            "passage_id": "AAPL-2023-p0116",
+            "passage_ids": [
+              "AAPL-2023-p0116"
+            ],
+            "fragments": [
+              {
+                "citation": "AAPL-2023-p0116",
+                "quote": "The Company makes statements about its use and disclosure of personal information through its privacy policy, information provided on its website, press statements and other privacy notices provided to customers.",
+                "start": 78669,
+                "end": 78881
+              }
+            ],
+            "text": "The Company makes statements about its use and disclosure of personal information through its privacy policy, information provided on its website, press statements and other privacy notices provided to customers.",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "source_sentence_id": "AAPL-2023-p0116:s6"
+          }
+        ],
+        "omitted": [
+          {
+            "id": "AAPL-2023-p0116:s1",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "AAPL-2023-p0095:s4",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "AAPL-2023-p0096:s0",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "AAPL-2023-p0116:s0",
+            "reason": "near_duplicate"
+          }
+        ],
+        "estimated_prompt_tokens_including_reserve": 609,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "526376bdbafb3ff89a3b6519f588f7b12cbfdd7e8c2d06e6cb38f26ddab698c9",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2023\nIn many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.\n\n[E2] AAPL FY2023\nAlthough malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.\n\n[E3] AAPL FY2023\nThe Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information.\n\n[E4] AAPL FY2023\nThe Company makes statements about its use and disclosure of personal information through its privacy policy, information provided on its website, press statements and other privacy notices provided to customers.\n\nQUESTION: In FY2023, what privacy compliance risks and costs does Apple describe for personal information transfers among international subsidiaries?",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R13",
+      "question": "Explain the operational benefits and production-control risks of Dell contract manufacturers in FY2024.",
+      "status": "answered",
+      "origin": "generated_text",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Contract manufacturers provide operational flexibility, cost efficiencies, faster product delivery, and better customer service.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "DELL-2024-p0047"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2024-p0047",
+                "quote": "We also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain.",
+                "start": 22421,
+                "end": 22700,
+                "sentence_id": "E1"
+              }
+            ]
+          },
+          {
+            "text": "These relationships limit direct control over production.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "DELL-2024-p0100"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2024-p0100",
+                "quote": "Although these relationships generate cost efficiencies, they limit our direct control over production.",
+                "start": 67814,
+                "end": 67917,
+                "sentence_id": "E2"
+              }
+            ]
+          },
+          {
+            "text": "Limited control may affect quality and timing consistency.",
+            "kind": "interpretation",
+            "origin": "generated_text",
+            "citations": [
+              "DELL-2024-p0047",
+              "DELL-2024-p0100"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2024-p0100",
+                "quote": "Although these relationships generate cost efficiencies, they limit our direct control over production.",
+                "start": 67814,
+                "end": 67917,
+                "sentence_id": "E2"
+              },
+              {
+                "citation": "DELL-2024-p0047",
+                "quote": "We also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain.",
+                "start": 22421,
+                "end": 22700,
+                "sentence_id": "E1"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "741af4edf1934a54f6e617aa04fc8cd01d7d07b1ba24fd21e71a4f1670fcd49f",
+      "evidence": [
+        {
+          "id": "DELL-2024-p0100",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "ITEM 1A \u2014 RISK FACTORS",
+          "anchor": "",
+          "start": 67175,
+          "end": 68264,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "We obtain many products and all of our components from third-party vendors, many of which are located outside of the United States. In addition, significant portions of our products are assembled by contract manufacturers, primarily in various locations in Asia. A significant concentration of such outsourced manufacturing is performed by only a few contract manufacturers, often in single locations. We sell components to these contract manufacturers and generate large non-trade accounts receivables, an arrangement that would present a risk of uncollectibility if the financial condition of a contract manufacturer should deteriorate.\nAlthough these relationships generate cost efficiencies, they limit our direct control over production. The increasing reliance on vendors subjects us to a greater risk of shortages and reduced control over delivery schedules of components and products, as well",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0.14738876117367322,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "DELL-2024-p0047",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "ITEM 1 \u2014 BUSINESS",
+          "anchor": "",
+          "start": 22421,
+          "end": 23238,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "We also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain. When using contract manufacturers, we purchase components from suppliers and subsequently sell those components to the manufacturer. Our manufacturing process consists of assembly, software installation, functional testing, and quality control. We conduct operations utilizing a formal, documented quality management system to ensure that our products and services satisfy customer needs and expectations. Testing and quality control are also applied to components, parts, sub-assemblies, and systems obtained from third-party suppliers.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0.12903825661712504,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "DELL-2024-p0493",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "ITEM 8 \u2014 FINANCIAL STATEMENTS",
+          "anchor": "f-1507-3",
+          "start": 403825,
+          "end": 404898,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "The Company markets and sells its products and services to large corporate clients, governmental agencies, and health care and education accounts, as well as to small and medium-sized businesses and individuals. No single customer accounted for more than 10% of the Company\u2019s consolidated net revenue during the fiscal year ended February 2, 2024, February 3, 2023, and January 28, 2022.\nThe Company utilizes a limited number of contract manufacturers that assemble a portion of its products. The Company purchases components from suppliers and sells those components to such contract manufacturers. The Company reflects the sale of such components by recognizing non-trade receivables from the contract manufacturers and a reduction in inventory when title and risk of loss pass to the manufacturer. Cash flows related to such transactions are recorded within cash flows from operating activities. T",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm#f-1507-3",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0.09920343220927853,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "DELL-2024-p0248",
+          "document_id": "DELL-2024",
+          "company": "DELL",
+          "fiscal_year": 2024,
+          "filed": "2024-03-25",
+          "section": "ITEM 7 \u2014 MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+          "anchor": "",
+          "start": 189986,
+          "end": 190649,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Our gross margin is affected by our ability to achieve competitive pricing with our vendors and contract manufacturers, including through our negotiation of a variety of vendor rebate programs to achieve lower net costs for the various components we include in our products. Under these programs, vendors provide us with rebates or other discounts from the list prices for the components, which are generally elements of their pricing strategy. We account for vendor rebates and other discounts as a reduction in cost of net revenue. We manage our costs on a total net cost basis, which includes supplier list prices reduced by vendor rebates and other discounts.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+          "accession": "0001571996-24-000036",
+          "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+          "score": 0.07094677188140407,
+          "excerpt_truncated": false
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "DELL-2024-p0100",
+          "DELL-2024-p0047",
+          "DELL-2024-p0108",
+          "DELL-2024-p0493",
+          "DELL-2024-p0150",
+          "DELL-2024-p0048",
+          "DELL-2024-p0248",
+          "DELL-2024-p0094"
+        ],
+        "generation_passage_ids": [
+          "DELL-2024-p0047",
+          "DELL-2024-p0100",
+          "DELL-2024-p0248",
+          "DELL-2024-p0493"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "DELL-2024-p0046",
+            "passage_ids": [
+              "DELL-2024-p0047"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2024-p0047",
+                "quote": "We also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain.",
+                "start": 22421,
+                "end": 22700
+              }
+            ],
+            "text": "We also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain.",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "DELL-2024-p0046:s3"
+          },
+          {
+            "id": "E2",
+            "passage_id": "DELL-2024-p0100",
+            "passage_ids": [
+              "DELL-2024-p0100"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2024-p0100",
+                "quote": "Although these relationships generate cost efficiencies, they limit our direct control over production.",
+                "start": 67814,
+                "end": 67917
+              }
+            ],
+            "text": "Although these relationships generate cost efficiencies, they limit our direct control over production.",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "DELL-2024-p0100:s8"
+          },
+          {
+            "id": "E3",
+            "passage_id": "DELL-2024-p0248",
+            "passage_ids": [
+              "DELL-2024-p0248"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2024-p0248",
+                "quote": "Our gross margin is affected by our ability to achieve competitive pricing with our vendors and contract manufacturers, including through our negotiation of a variety of vendor rebate programs to achieve lower net costs for the various components we include in our products.",
+                "start": 189986,
+                "end": 190260
+              }
+            ],
+            "text": "Our gross margin is affected by our ability to achieve competitive pricing with our vendors and contract manufacturers, including through our negotiation of a variety of vendor rebate programs to achieve lower net costs for the various components we include in our products.",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "DELL-2024-p0248:s0"
+          },
+          {
+            "id": "E4",
+            "passage_id": "DELL-2024-p0493",
+            "passage_ids": [
+              "DELL-2024-p0493"
+            ],
+            "fragments": [
+              {
+                "citation": "DELL-2024-p0493",
+                "quote": "The Company utilizes a limited number of contract manufacturers that assemble a portion of its products.",
+                "start": 404213,
+                "end": 404317
+              }
+            ],
+            "text": "The Company utilizes a limited number of contract manufacturers that assemble a portion of its products.",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "source_sentence_id": "DELL-2024-p0493:s7"
+          }
+        ],
+        "omitted": [
+          {
+            "id": "DELL-2024-p0047:s3",
+            "reason": "near_duplicate"
+          }
+        ],
+        "estimated_prompt_tokens_including_reserve": 572,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "114c74645389bc96122d630484574a24b60ee172927001473f7a0cee1eab188d",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] DELL FY2024\nWe also utilize contract manufacturers throughout the world to manufacture or assemble our products under the Dell Technologies brand to provide operational flexibility, achieve cost efficiencies, deliver products faster, better serve our customers, and enhance our supply chain.\n\n[E2] DELL FY2024\nAlthough these relationships generate cost efficiencies, they limit our direct control over production.\n\n[E3] DELL FY2024\nOur gross margin is affected by our ability to achieve competitive pricing with our vendors and contract manufacturers, including through our negotiation of a variety of vendor rebate programs to achieve lower net costs for the various components we include in our products.\n\n[E4] DELL FY2024\nThe Company utilizes a limited number of contract manufacturers that assemble a portion of its products.\n\nQUESTION: Explain the operational benefits and production-control risks of Dell contract manufacturers in FY2024.",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "R14",
+      "question": "Which third-party technology licensing risks could weaken HP competitive position in FY2023?",
+      "status": "answered",
+      "origin": "generated_text",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Risks from third-party technology licensing, including open source license terms requiring public disclosure of IP without compensation or on undesirable terms, could adversely affect HP's competitive position.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2023-p0171"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2023-p0171",
+                "quote": "In order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP without compensation or on undesirable terms.",
+                "start": 122445,
+                "end": 122736,
+                "sentence_id": "E4"
+              }
+            ]
+          },
+          {
+            "text": "Such licensing requirements may expose HP to loss of trade secrets or uncontrolled IP exposure, potentially weakening its competitive edge.",
+            "kind": "interpretation",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2023-p0171"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2023-p0171",
+                "quote": "In order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP without compensation or on undesirable terms.",
+                "start": 122445,
+                "end": 122736,
+                "sentence_id": "E4"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "answer_sha256": "fd41679575ad03674740302fc43a1c046505acf4e05dd98ad61ca5b9fb983e23",
+      "evidence": [
+        {
+          "id": "HPQ-2023-p0170",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 121632,
+          "end": 121791,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "adequately against unauthorized third-party copying or use, which could adversely affect our ability to sell products or services and our competitive position.",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0.11489114246386656,
+          "excerpt_truncated": false
+        },
+        {
+          "id": "HPQ-2023-p0119",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 79955,
+          "end": 80892,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "Our internal control over financial reporting may not prevent or detect misstatements because of its inherent limitations, including the possibility of human error, failure or interruption of information technology systems, the circumvention or overriding of controls, or fraud. Even effective internal controls can provide only reasonable assurance with respect to the preparation and fair presentation of financial statements. If we fail to maintain the adequacy of our internal controls, including any failure to implement required new or improved controls, or if we experience difficulties in their implementation, our business and operating results could be harmed and the company could fail to meet its financial reporting obligations.\nSTRATEGIC AND OPERATIONAL RISKS\nWe are heavily dependent on third-party suppliers and supply chain issues have adversely affected, and could adversely affect ",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0.11310901127485512,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2023-p0171",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 121792,
+          "end": 122736,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "In addition, certain of our businesses and products rely on key technologies developed or licensed by third parties. We may not be able to obtain or continue to obtain licenses and technologies from these third parties at all or on reasonable terms, or such third parties may demand cross-licenses to our IP. Third-party components may become obsolete, defective or incompatible with future versions of our products, our relationship with the third party may deteriorate, or our agreements may expire or be terminated. We may face legal or business disputes with licensors that may threaten or lead to the disruption of inbound licensing relationships. In order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP w",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0.10499441960836466,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2023-p0169",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 120561,
+          "end": 121631,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "We rely upon patent, copyright, trademark, trade secret and other intellectual property (\u201cIP\u201d) laws in the United States, similar laws in other countries, and agreements with our employees, customers, suppliers and other parties, to establish and maintain IP rights in the products and services we sell, provide or otherwise use in our operations. However, our IP rights could be challenged, invalidated, infringed or circumvented, or such IP rights may not be sufficient to permit us to take advantage of current market trends or to otherwise provide competitive advantages, either of which could result in costly product redesign efforts, discontinuance of certain product offerings or other harm to our competitive position. In addition, we may choose to not apply for patent protection or may fail to apply for patent protection in a timely fashion. Further, the laws of certain countries do not ",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0.10285771324720724,
+          "excerpt_truncated": true
+        },
+        {
+          "id": "HPQ-2023-p0128",
+          "document_id": "HPQ-2023",
+          "company": "HPQ",
+          "fiscal_year": 2023,
+          "filed": "2023-12-18",
+          "section": "ITEM 1A. Risk Factors.",
+          "anchor": "",
+          "start": 87657,
+          "end": 88691,
+          "offset_basis": "normalized text; html-normalized-v2",
+          "text": "could be limited. The practice employed by our Personal Systems business of purchasing product components and transferring those components to OMs may create large supplier receivables with the OMs that, depending on the financial condition of the OMs, may create collectability risks. In addition, to secure components, we may accept contractual terms and conditions that are less favorable to us.\n\u2022 Contingent workers. We also rely on third-party suppliers for the provision of contingent workers, and our failure to effectively manage this workforce could adversely affect our financial results. Our ability to manage the costs associated with engaging a contingent workforce may be impacted by evolving local labor rights laws.\n\u2022 Working conditions, human rights and materials sourcing . Our brand perception, customer loyalty and legal compliance could be adversely impacted by a supplier\u2019s impr",
+          "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+          "accession": "0000047217-23-000100",
+          "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+          "score": 0.096426766380067,
+          "excerpt_truncated": true
+        }
+      ],
+      "context_audit": {
+        "strategy": "neighbors_dedup",
+        "search_ids": [
+          "HPQ-2023-p0170",
+          "HPQ-2023-p0119",
+          "HPQ-2023-p0171",
+          "HPQ-2023-p0177",
+          "HPQ-2023-p0169",
+          "HPQ-2023-p0173",
+          "HPQ-2023-p0128",
+          "HPQ-2023-p0136"
+        ],
+        "generation_passage_ids": [
+          "HPQ-2023-p0119",
+          "HPQ-2023-p0128",
+          "HPQ-2023-p0169",
+          "HPQ-2023-p0170",
+          "HPQ-2023-p0171"
+        ],
+        "sentences": [
+          {
+            "id": "E1",
+            "passage_id": "HPQ-2023-p0169",
+            "passage_ids": [
+              "HPQ-2023-p0169",
+              "HPQ-2023-p0170"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2023-p0169",
+                "quote": "Therefore, in certain jurisdictions we may be unable to protect our proprietary technology",
+                "start": 121541,
+                "end": 121631
+              },
+              {
+                "citation": "HPQ-2023-p0170",
+                "quote": "adequately against unauthorized third-party copying or use, which could adversely affect our ability to sell products or services and our competitive position.",
+                "start": 121632,
+                "end": 121791
+              }
+            ],
+            "text": "Therefore, in certain jurisdictions we may be unable to protect our proprietary technology adequately against unauthorized third-party copying or use, which could adversely affect our ability to sell products or services and our competitive position.",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "source_sentence_id": "HPQ-2023-p0169:s6"
+          },
+          {
+            "id": "E2",
+            "passage_id": "HPQ-2023-p0118",
+            "passage_ids": [
+              "HPQ-2023-p0119"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2023-p0119",
+                "quote": "STRATEGIC AND OPERATIONAL RISKS\nWe are heavily dependent on third-party suppliers and supply chain issues have adversely affected, and could adversely affect in the future, our financial results.",
+                "start": 80697,
+                "end": 80892
+              }
+            ],
+            "text": "STRATEGIC AND OPERATIONAL RISKS\nWe are heavily dependent on third-party suppliers and supply chain issues have adversely affected, and could adversely affect in the future, our financial results.",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "source_sentence_id": "HPQ-2023-p0118:s6"
+          },
+          {
+            "id": "E3",
+            "passage_id": "HPQ-2023-p0128",
+            "passage_ids": [
+              "HPQ-2023-p0128"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2023-p0128",
+                "quote": "We also rely on third-party suppliers for the provision of contingent workers, and our failure to effectively manage this workforce could adversely affect our financial results.",
+                "start": 88078,
+                "end": 88255
+              }
+            ],
+            "text": "We also rely on third-party suppliers for the provision of contingent workers, and our failure to effectively manage this workforce could adversely affect our financial results.",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "source_sentence_id": "HPQ-2023-p0128:s3"
+          },
+          {
+            "id": "E4",
+            "passage_id": "HPQ-2023-p0170",
+            "passage_ids": [
+              "HPQ-2023-p0171"
+            ],
+            "fragments": [
+              {
+                "citation": "HPQ-2023-p0171",
+                "quote": "In order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP without compensation or on undesirable terms.",
+                "start": 122445,
+                "end": 122736
+              }
+            ],
+            "text": "In order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP without compensation or on undesirable terms.",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "source_sentence_id": "HPQ-2023-p0170:s9"
+          }
+        ],
+        "omitted": [
+          {
+            "id": "HPQ-2023-p0170:s4",
+            "reason": "near_duplicate"
+          },
+          {
+            "id": "HPQ-2023-p0119:s6",
+            "reason": "near_duplicate"
+          }
+        ],
+        "estimated_prompt_tokens_including_reserve": 608,
+        "prompt_token_limit": 2400,
+        "output_token_limit": 650,
+        "context_sha256": "cd1fa95b4c4db653b9d0b716c11035c482d0e417707397f5be80aca86463e1e7",
+        "support_status": "Source identity and sentence presence only; semantic support requires review.",
+        "transmitted_context": "UNTRUSTED SOURCES:\n[E1] HPQ FY2023\nTherefore, in certain jurisdictions we may be unable to protect our proprietary technology adequately against unauthorized third-party copying or use, which could adversely affect our ability to sell products or services and our competitive position.\n\n[E2] HPQ FY2023\nSTRATEGIC AND OPERATIONAL RISKS\nWe are heavily dependent on third-party suppliers and supply chain issues have adversely affected, and could adversely affect in the future, our financial results.\n\n[E3] HPQ FY2023\nWe also rely on third-party suppliers for the provision of contingent workers, and our failure to effectively manage this workforce could adversely affect our financial results.\n\n[E4] HPQ FY2023\nIn order to remain in compliance with the terms of our licenses, we must monitor and manage our use of third-party components, including both proprietary and open source license terms that may require the licensing or public disclosure of our IP without compensation or on undesirable terms.\n\nQUESTION: Which third-party technology licensing risks could weaken HP competitive position in FY2023?",
+        "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+      },
+      "verified_financials": null,
+      "human_status": "pending",
+      "judgment": {
+        "reviewer": null,
+        "date": null,
+        "factual_correctness": null,
+        "citation_support": null,
+        "relevance": null,
+        "completeness": null,
+        "fact_vs_interpretation": null,
+        "notes": null
+      }
+    }
+  ]
+}

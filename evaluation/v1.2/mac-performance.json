@@ -1,0 +1,161 @@
+{
+  "host": {
+    "machine": "MacBookPro17,1 Apple M1, 8 CPU cores",
+    "physical_memory_bytes": 8589934592,
+    "os": "macOS-26.0.1-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "run": "evaluation/v1.2/runs/20261101T003024066201Z",
+  "financial_without_optional_ai": {
+    "n": 9,
+    "median_seconds": 0.0031953330617398024,
+    "p95_seconds": 0.06076210830360648
+  },
+  "financial_with_optional_ai": {
+    "id": "R03",
+    "wall_seconds": 32.134320915909484,
+    "calculation_status": "answered",
+    "optional_status": "invalid_model_answer",
+    "note": "Includes cold model setup and rejected optional explanation. Valid financial result retained; UI requests optional prose after displaying the result."
+  },
+  "qualitative_all_attempts": {
+    "n": 6,
+    "median_seconds": 11.752024104003794,
+    "p95_seconds": 13.426192906219512
+  },
+  "model_calls_including_repairs": 12,
+  "max_call_prompt_tokens": 2067,
+  "max_call_output_tokens": 82,
+  "peak_process_rss_mib": 863.6875,
+  "peak_mlx_allocator_mib": 2991.7881927490234,
+  "memory_note": "Process RSS and MLX allocator peaks overlap; do not add. Operational process budget 5120 MiB; target physical RAM 8192 MiB. Not an OS reservation or a measure of total system memory pressure.",
+  "context_reference_recall": [
+    {
+      "id": "R09",
+      "search": 1.0,
+      "actual_generation": 1.0,
+      "search_ids": [
+        "AAPL-2024-p0045",
+        "AAPL-2024-p0122",
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0120",
+        "AAPL-2024-p0067",
+        "AAPL-2024-p0066",
+        "AAPL-2024-p0044",
+        "AAPL-2024-p0035"
+      ],
+      "generation_ids": [
+        "AAPL-2024-p0044",
+        "AAPL-2024-p0045",
+        "AAPL-2024-p0060",
+        "AAPL-2024-p0067",
+        "AAPL-2024-p0068"
+      ]
+    },
+    {
+      "id": "R10",
+      "search": 1.0,
+      "actual_generation": 1.0,
+      "search_ids": [
+        "DELL-2023-p0124",
+        "DELL-2023-p0087",
+        "DELL-2023-p0111",
+        "DELL-2023-p0053",
+        "DELL-2023-p0118",
+        "DELL-2023-p0569",
+        "DELL-2023-p0176",
+        "DELL-2023-p0123"
+      ],
+      "generation_ids": [
+        "DELL-2023-p0052",
+        "DELL-2023-p0117",
+        "DELL-2023-p0118",
+        "DELL-2023-p0124"
+      ]
+    },
+    {
+      "id": "R11",
+      "search": 1.0,
+      "actual_generation": 1.0,
+      "search_ids": [
+        "HPQ-2024-p0118",
+        "HPQ-2024-p0116",
+        "HPQ-2024-p0114",
+        "HPQ-2024-p0117",
+        "HPQ-2024-p0120",
+        "HPQ-2024-p0119",
+        "HPQ-2024-p0089",
+        "HPQ-2024-p0032"
+      ],
+      "generation_ids": [
+        "HPQ-2024-p0089",
+        "HPQ-2024-p0116",
+        "HPQ-2024-p0117",
+        "HPQ-2024-p0118"
+      ]
+    },
+    {
+      "id": "R12",
+      "search": 1.0,
+      "actual_generation": 1.0,
+      "search_ids": [
+        "AAPL-2023-p0115",
+        "AAPL-2023-p0117",
+        "AAPL-2023-p0116",
+        "AAPL-2023-p0096",
+        "AAPL-2023-p0094",
+        "AAPL-2023-p0106",
+        "AAPL-2023-p0091",
+        "AAPL-2023-p0114"
+      ],
+      "generation_ids": [
+        "AAPL-2023-p0095",
+        "AAPL-2023-p0115",
+        "AAPL-2023-p0116"
+      ]
+    },
+    {
+      "id": "R13",
+      "search": 1.0,
+      "actual_generation": 1.0,
+      "search_ids": [
+        "DELL-2024-p0100",
+        "DELL-2024-p0047",
+        "DELL-2024-p0108",
+        "DELL-2024-p0493",
+        "DELL-2024-p0150",
+        "DELL-2024-p0048",
+        "DELL-2024-p0248",
+        "DELL-2024-p0094"
+      ],
+      "generation_ids": [
+        "DELL-2024-p0047",
+        "DELL-2024-p0100",
+        "DELL-2024-p0248",
+        "DELL-2024-p0493"
+      ]
+    },
+    {
+      "id": "R14",
+      "search": 0.5,
+      "actual_generation": 0.5,
+      "search_ids": [
+        "HPQ-2023-p0170",
+        "HPQ-2023-p0119",
+        "HPQ-2023-p0171",
+        "HPQ-2023-p0177",
+        "HPQ-2023-p0169",
+        "HPQ-2023-p0173",
+        "HPQ-2023-p0128",
+        "HPQ-2023-p0136"
+      ],
+      "generation_ids": [
+        "HPQ-2023-p0119",
+        "HPQ-2023-p0128",
+        "HPQ-2023-p0169",
+        "HPQ-2023-p0170",
+        "HPQ-2023-p0171"
+      ]
+    }
+  ]
+}

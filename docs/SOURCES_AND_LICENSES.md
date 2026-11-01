@@ -9,11 +9,12 @@ Issuer-created filings may contain copyright or third-party rights despite publi
 | Component | Pinned revision | License / role |
 |---|---|---|
 | [Qwen MLX 1.5B 4-bit](https://huggingface.co/mlx-community/Qwen2.5-1.5B-Instruct-4bit) | `8b403126fc14f14cfc99bb4cfa72ecbc129ea677` | Apache-2.0, local generation; quantized derivative of Qwen2.5-1.5B-Instruct |
+| [Qwen3 MLX 4B 4-bit](https://huggingface.co/mlx-community/Qwen3-4B-Instruct-2507-4bit) | `50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b` | Apache-2.0; v1.2 local default, upstream [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) |
 | [Qwen upstream](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct) | See derivative model card | Apache-2.0 |
 | [MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | `1110a243fdf4706b3f48f1d95db1a4f5529b4d41` | Apache-2.0, 384-dimensional local sentence embeddings |
 | [MLX-LM](https://github.com/ml-explore/mlx-lm) | Python lockfile | MIT, Apple Silicon inference runtime |
 
-Embeddings use the official ONNX `model_qint8_arm64.onnx`, attention-mask mean pooling, L2 normalization and a 256-token limit. Long passages can lose tail context at embedding time; complete retrieved text is retained for inspection. No model is fine-tuned. Real runs record package versions via `uv.lock`, model revision, temperature, token cap and accessible token usage. Host tested: Apple M1 (8 cores), 8 GB RAM. Inference quality is limited; the first smoke test incorrectly summarized page footers, recorded as a failure in the journal. No energy or GPU-memory measurement is claimed.
+Embeddings use the official ONNX `model_qint8_arm64.onnx`, attention-mask mean pooling, L2 normalization and a 256-token limit. Long passages can lose tail context at embedding time; complete retrieved text is retained for inspection. No model is fine-tuned. Real runs record package versions via `uv.lock`, model revision, temperature, token cap and accessible token usage. Host tested: Apple M1 (8 cores), 8 GB RAM. Inference quality is limited; the first smoke test incorrectly summarized page footers, recorded as a failure in the journal. No energy measurement is claimed. v1.2 records MLX allocator peaks separately from process RSS; they overlap and are not additive. The earlier 1.5B rows describe historical runs.
 
 Source code in this repository is MIT-licensed. Third-party libraries retain their licenses, specified by their package metadata. The repository license does not relicense issuer documents or model weights. No cost, subscription, hosted-model data transfer or public inference service was used.
 

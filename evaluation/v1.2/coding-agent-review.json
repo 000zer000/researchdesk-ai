@@ -1,0 +1,205 @@
+{
+  "reviewer": "coding agent; not independent human",
+  "status": "completed coding-agent assessment only; human remains pending",
+  "run": "evaluation/v1.2/runs/20261101T003024066201Z",
+  "method": "Inspect whole assertions against actual evidence spans and complete source reference aspects. Fully supported means the entire assertion follows; partial/unsupported are not successes. Interpretation labels do not establish support. Completeness includes false refusals in its denominator.",
+  "responses": [
+    {
+      "id": "R09",
+      "answer_sha256": "48f97ab82490838d9b01255ec074109d2b8a3ac7618647123306872bea929ab7",
+      "claims": [
+        {
+          "index": 1,
+          "text": "Holiday demand increases first-quarter net sales due to seasonal consumer spending.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        },
+        {
+          "index": 2,
+          "text": "Product launches lead to inventory replenishment in indirect distribution channels, causing declines in older product inventory.",
+          "support": "partial",
+          "model_label": "disclosed_fact",
+          "label_judgment": "not fully established as disclosed"
+        }
+      ],
+      "reference_aspects": [
+        {
+          "text": "Holiday demand contributes to historically higher first-quarter sales",
+          "assessment": "covered"
+        },
+        {
+          "text": "New launches fill channel inventory; older product inventory declines ahead of launches; anticipation affects sales",
+          "assessment": "partial"
+        }
+      ],
+      "reason": "Holiday demand is supported. The launch sentence conflates inventory filling after launch with older inventory declining before a newer launch; the causal timing is not established. Anticipatory sales effect is omitted."
+    },
+    {
+      "id": "R10",
+      "answer_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "claims": [],
+      "reference_aspects": [
+        {
+          "text": "Integration difficulties particularly when key acquired personnel are not retained",
+          "assessment": "missing"
+        },
+        {
+          "text": "Customer uncertainty can delay or reduce sales; management/resources diverted",
+          "assessment": "missing"
+        },
+        {
+          "text": "Acquisitions can harm partner relationships if they create competition",
+          "assessment": "missing"
+        }
+      ],
+      "reason": "No accepted answer. Search/context selected cybersecurity boilerplate and only the partner sentence from the relevant acquisition paragraph; the model falsely refused. Literal E3 in its refusal then triggered the numerical-prose validator. Retrieval/context, generation and validation all contribute."
+    },
+    {
+      "id": "R11",
+      "answer_sha256": "757d2c1f26aa56a080704dccdfec79cc7ec78850c07ec5a65aa5665777521bf2",
+      "claims": [
+        {
+          "index": 1,
+          "text": "Channel inventory can adversely impact demand and pricing, and the extent and timing are difficult to predict.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        },
+        {
+          "index": 2,
+          "text": "Unauthorized resale by channel partners complicates forecasting and inventory management, potentially impacting pricing.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        }
+      ],
+      "reference_aspects": [
+        {
+          "text": "Multi-tier indirect channels reduce visibility into inventory, demand and prices",
+          "assessment": "missing"
+        },
+        {
+          "text": "Distributors overorder in shortages, cancel when stocks high or delay ahead of new products",
+          "assessment": "missing"
+        },
+        {
+          "text": "Elevated channel inventory can adversely affect demand and pricing",
+          "assessment": "covered"
+        }
+      ],
+      "reason": "Selected claims are supported by the full joined sentence and unauthorized-resale disclosure. The answer omits multi-tier visibility and distributors increasing/canceling/delaying orders, so it is incomplete for the question."
+    },
+    {
+      "id": "R12",
+      "answer_sha256": "a5b10e6b5b3b0e3787ed4a9102cfa0cfe980ff49dc061ff4fd65077d4d85fce5",
+      "claims": [
+        {
+          "index": 1,
+          "text": "Laws restrict transfers of personal information among Apple and its international subsidiaries.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        }
+      ],
+      "reference_aspects": [
+        {
+          "text": "Laws restrict transfers within group as well as third-party transactions",
+          "assessment": "covered"
+        },
+        {
+          "text": "Jurisdictional requirements evolve and can be inconsistent",
+          "assessment": "missing"
+        },
+        {
+          "text": "Compliance costs and business practice changes; noncompliance penalties/legal liability",
+          "assessment": "missing"
+        }
+      ],
+      "reason": "The transfer restriction is supported. The actual four-sentence input omits the nearby compliance costs, evolving inconsistent jurisdictions and penalties; answer omits them too. Source presence at search level did not guarantee context completeness."
+    },
+    {
+      "id": "R13",
+      "answer_sha256": "741af4edf1934a54f6e617aa04fc8cd01d7d07b1ba24fd21e71a4f1670fcd49f",
+      "claims": [
+        {
+          "index": 1,
+          "text": "Contract manufacturers provide operational flexibility, cost efficiencies, faster product delivery, and better customer service.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        },
+        {
+          "index": 2,
+          "text": "These relationships limit direct control over production.",
+          "support": "supported",
+          "model_label": "disclosed_fact",
+          "label_judgment": "consistent with disclosed source"
+        },
+        {
+          "index": 3,
+          "text": "Limited control may affect quality and timing consistency.",
+          "support": "unsupported",
+          "model_label": "interpretation",
+          "label_judgment": "interpretation is an unsupported addition"
+        }
+      ],
+      "reference_aspects": [
+        {
+          "text": "Operational flexibility, cost efficiency or faster delivery",
+          "assessment": "covered"
+        },
+        {
+          "text": "Outsourcing limits direct control, increases shortages/schedule/cost risks",
+          "assessment": "partial"
+        }
+      ],
+      "reason": "Benefits and limited production control are explicit. Quality/timing consistency is an added interpretation not established by its selected E1/E2 evidence. Shortage, schedule and component-cost mechanisms from the full reference passage are missing from the packed input and answer."
+    },
+    {
+      "id": "R14",
+      "answer_sha256": "fd41679575ad03674740302fc43a1c046505acf4e05dd98ad61ca5b9fb983e23",
+      "claims": [
+        {
+          "index": 1,
+          "text": "Risks from third-party technology licensing, including open source license terms requiring public disclosure of IP without compensation or on undesirable terms, could adversely affect HP's competitive position.",
+          "support": "partial",
+          "model_label": "disclosed_fact",
+          "label_judgment": "not fully established as disclosed"
+        },
+        {
+          "index": 2,
+          "text": "Such licensing requirements may expose HP to loss of trade secrets or uncontrolled IP exposure, potentially weakening its competitive edge.",
+          "support": "unsupported",
+          "model_label": "interpretation",
+          "label_judgment": "interpretation is an unsupported addition"
+        }
+      ],
+      "reference_aspects": [
+        {
+          "text": "Licenses may be unavailable or not on acceptable competitive terms",
+          "assessment": "missing"
+        },
+        {
+          "text": "Obsolete/incompatible components, disputes, expiration or termination can disrupt reliance",
+          "assessment": "missing"
+        },
+        {
+          "text": "Refusal or less favorable terms than competitors can reduce advantage or require costly arrangements",
+          "assessment": "missing"
+        }
+      ],
+      "reason": "The source establishes possible open-source licensing/disclosure obligations. The competitive-position consequence is an inferred extension, and loss of trade secrets is not established by the selected source. Both should not be treated as fully supported. Predeclared availability, incompatibility/disputes and unfavorable licensing-term aspects are absent."
+    }
+  ],
+  "generated_claim_support_counts": {
+    "supported": 6,
+    "partial": 2,
+    "unsupported": 2
+  },
+  "reference_aspect_completeness_counts": {
+    "covered": 4,
+    "partial": 2,
+    "missing": 10
+  }
+}

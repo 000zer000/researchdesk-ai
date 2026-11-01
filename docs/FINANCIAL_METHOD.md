@@ -6,7 +6,7 @@ Coverage: Apple (CIK 0000320193), Dell (0001571996), HP (0000047217), original F
 
 Publication filtering is inclusive at **end of the chosen calendar day**, not an intraday backtest. The original SEC filing date is used, not the report period end. No sources published later are retrieved or exposed by the evidence API. This is a small frozen corpus, not a current financial-data feed.
 
-`evaluation/v1.1/financial-source-checks.json` records a second parser's check of the original inline XBRL context, scale, sign, unit and value. That is independent of Company Facts selection, but it is not independent human validation.
+`evaluation/v1.2/financial-source-checks.json` records a second parser's check of the original inline XBRL context, scale, sign, unit and value. That is independent of Company Facts selection, but it is not independent human validation.
 
 ## Definitions and signs
 
@@ -51,3 +51,12 @@ Multiple same-metric observations are compared before selection. Different compa
 The model proposes structured measures; code validates every field and renders the accepted financial wording. Financial assertions cannot bypass the contract through qualitative prose or limitations. Source excerpts may contain other reported figures: these remain labeled source evidence, not approved calculations. Unsupported paraphrases of intent can lead to abstention or incomplete interpretation; the small dataset does not establish universal natural-language understanding.
 
 Reporting-week comparisons are also typed measures. For a verified annual start/end pair, inclusive days are `(end - start).days + 1`; only a duration exactly divisible by seven supports a whole-week count. Both periods and complete period-source IDs are required for the change. This corrects a measured prose equality error. HP's date-based annual periods must not be silently labeled 52-week calendars.
+
+
+## v1.2 request execution
+
+The current financial response is produced directly by the server after validating company, metric, years, operation, unit, consolidated scope and definition. No model copy proposal is required. Supported operations are reported levels, chronological comparison/change/growth, operating margin, inclusive whole-week calendars, and CFO less gross PPE capex. USD million/billion/raw USD conversion is deterministic; currency exchange is unsupported. Ambiguous years, cash or FCF definitions require clarification.
+
+Each verified result carries formula text, complete input records and original source identifiers. Optional generated explanation has a separate origin/status and cannot hide the result on failure. Percentage growth requires a positive starting value. Whole-week calendars are not assumed for HP's October-year-end durations. Historical v1.1 consistency-contract wording above describes the previous implementation, not the current execution dependency.
+
+The consumed first v1.2 evaluator used an incorrect HP FY2023 capex reference of 593; the independently checked original observation is **609 USD million**. Its actual CFO-less-gross-capex proxy is therefore 2,962, and the change to FY2024's 3,157 is +195. Those erroneous reference expectations remain visible in the consumed batch and are not silently rewritten.

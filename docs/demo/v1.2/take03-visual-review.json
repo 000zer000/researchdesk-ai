@@ -1,0 +1,6 @@
+{
+  "status": "Completed actual take; superseded after visual QA",
+  "issue": "Full-page screenshot temporarily resized captured browser surface, leaving reduced content and gray area in recorded frames. Product output and calls were actual; final capture uses viewport-only screenshots.",
+  "raw_sha256": "4ebc061bd78b5e4c659f34cc4752ab85fc6fff23829834337f36806af42f5205",
+  "published_provisional_clip_sha256": "ac08bd4dd09e6f315c4467b1822d789c243b85976ce13fa28c3c1b44b813a240"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "failed recording take, not an evaluation run",
+  "failure": "Desktop walkthrough attempted the hidden mobile Covered company selector after successful PDF export. No model explanation was reached in this take.",
+  "raw_take_sha256": "e8754570d9e3f76542285e4d62da9f51df00053372ee2f13ad7cb134ad067186",
+  "raw_take_bytes": 5242880,
+  "retained_locally": "work/v12-recordings/page@bd75a6a5a042ddd9a779b72f70d1b5ba.webm",
+  "fix": "Use the visible desktop company button in docs/demo/v1.2/record.mjs. Frozen runtime and evaluation sources remain unchanged."
+}

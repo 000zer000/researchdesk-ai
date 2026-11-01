@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-01T12:19:07.130080+00:00",
+  "evaluated_runtime_commit": "99edbefcabf2cf42f82e3322e5e4734083ff28a9",
+  "source_hashes_unchanged": true,
+  "pytest_native_postgresql": {
+    "tests": 144,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "typescript_vite_build": "passed",
+  "chromium_mock": {
+    "passed": 3,
+    "note": "Explicit provider/conflict/transport doubles; real finance/PDF API on isolated test DB"
+  },
+  "chromium_live": {
+    "passed": 4,
+    "note": "Actual generated documentary question and deterministic calculation/scenario/PDF; the two fault-injection journeys remain simulated even in live mode."
+  },
+  "original_inline_xbrl": {
+    "verified": 48,
+    "total": 48
+  },
+  "final_evaluation": "First distinct post-correction batch retained with all failures; not overall quality pass",
+  "pending_human_reviews": 10,
+  "pdf_visual_review": {
+    "pages": 3,
+    "status": "all pages rendered with Poppler and visually inspected; no clipping, overlap or unreadable text",
+    "discount_rate_percent": 12,
+    "initial_renderer_failure": "Bundled Fontconfig had invalid build-host config/cache. Stopped owned renderer and used workspace-local configuration/cache; no application source change."
+  },
+  "media_receipt": "docs/demo/v1.2/media-verification.json",
+  "demonstration_seconds": 90
+}

@@ -1,0 +1,155 @@
+{
+  "recorded_at": "2026-11-01T12:19:19.069Z",
+  "commit": "5c47ef6ddd8d2c2bd943572c12cae1bd9d47e6f0",
+  "actions": [
+    {
+      "at_seconds": 0,
+      "action": "Actual local workspace"
+    },
+    {
+      "at_seconds": 5.267,
+      "action": "Verified result without model approval"
+    },
+    {
+      "at_seconds": 19.021,
+      "action": "Original evidence, dates and source identifier"
+    },
+    {
+      "at_seconds": 26.349,
+      "action": "Changed discount-rate assumption; same server finance engine"
+    },
+    {
+      "at_seconds": 34.176,
+      "action": "Actual PDF exported"
+    },
+    {
+      "at_seconds": 40.435,
+      "action": "Actual local explanation request; development walkthrough question"
+    },
+    {
+      "at_seconds": 55.148,
+      "action": "AI claims separately labeled with evidence"
+    },
+    {
+      "at_seconds": 76.096,
+      "action": "Source register, evaluation and pending human review"
+    }
+  ],
+  "actual_calls": [
+    {
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "AAPL · 2022-09-25/2023-09-30 · consolidated: Operating margin: 29.82 percent (level). Definition: operating_income/revenue.",
+            "citations": [
+              "AAPL-2023-operating_income",
+              "AAPL-2023-revenue"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL · 2023-10-01/2024-09-28 · consolidated: Operating margin: 31.51 percent (level). Definition: operating_income/revenue.",
+            "citations": [
+              "AAPL-2024-operating_income",
+              "AAPL-2024-revenue"
+            ],
+            "origin": "deterministic_calculation"
+          },
+          {
+            "text": "AAPL · 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 · consolidated: Operating margin change: 1.69 percentage points (increased). Definition: delta(operating_income/revenue)*100.",
+            "citations": [
+              "AAPL-2023-operating_income",
+              "AAPL-2023-revenue",
+              "AAPL-2024-operating_income",
+              "AAPL-2024-revenue"
+            ],
+            "origin": "deterministic_calculation"
+          }
+        ],
+        "limitations": [
+          "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+        ]
+      },
+      "elapsed_seconds": 0.03225762490183115
+    },
+    {
+      "status": "answered",
+      "origin": "generated_text",
+      "model": {
+        "provider": "mlx",
+        "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+        "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+        "license": "Apache-2.0",
+        "quantization": "4bit MLX",
+        "temperature": 0,
+        "max_tokens": 650,
+        "elapsed_seconds": 13.792801833013073,
+        "prompt_tokens": 536,
+        "generation_tokens": 69,
+        "peak_mlx_memory_bytes": 2911782132,
+        "attempts": 1
+      },
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Debt financings may involve restrictive covenants that might limit capital-raising activities and operating flexibility.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "DELL-2023-p0125"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2023-p0125",
+                "quote": "Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.",
+                "start": 87951,
+                "end": 88082,
+                "sentence_id": "E1"
+              }
+            ]
+          },
+          {
+            "text": "Covenants in credit agreements and indentures impose limitations on creating liens and sale and lease-back transactions, which could affect acquisition-related financing.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "DELL-2023-p0125",
+              "DELL-2023-p0482"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "DELL-2023-p0482",
+                "quote": "Covenants — The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.",
+                "start": 385400,
+                "end": 385688,
+                "sentence_id": "E3"
+              },
+              {
+                "citation": "DELL-2023-p0125",
+                "quote": "Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.",
+                "start": 87951,
+                "end": 88082,
+                "sentence_id": "E1"
+              },
+              {
+                "citation": "DELL-2023-p0482",
+                "quote": "Covenants — The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.",
+                "start": 385400,
+                "end": 385688,
+                "sentence_id": "E3"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "elapsed_seconds": 14.637451499933377
+    }
+  ],
+  "note": "Actual local Chromium walkthrough. No mocked routes, cached answers or authored model output. Scripted development question, not an independent evaluation. Reading pauses are intentional. Final WebM trims only the idle tail to 90 seconds; PDF was actually downloaded after changing WACC to 12%."
+}

@@ -1,0 +1,65 @@
+{
+  "version": "1.2.0",
+  "split": "final",
+  "execution_kind": "first execution of this batch",
+  "context_mode": "neighbors_dedup",
+  "questions": 25,
+  "statuses": {
+    "answered": 15,
+    "invalid_model_answer": 1,
+    "clarification_required": 4,
+    "abstained": 3,
+    "source_conflict": 2
+  },
+  "coverage_on_answerable": {
+    "answered": 15,
+    "n": 16
+  },
+  "accepted_numeric_accuracy": {
+    "correct": 10,
+    "accepted": 10,
+    "reference_questions": 10
+  },
+  "false_refusals": 1,
+  "false_acceptances": 0,
+  "latency_seconds_by_category": {
+    "absent": {
+      "n": 3,
+      "median": 0.0014333748258650303,
+      "p95": 0.0017579376231878995
+    },
+    "ambiguity": {
+      "n": 4,
+      "median": 0.0023418545024469495,
+      "p95": 0.007107416959479449
+    },
+    "distinct_context": {
+      "n": 2,
+      "median": 0.003687791875563562,
+      "p95": 0.004622854047920555
+    },
+    "explanation": {
+      "n": 6,
+      "median": 11.752024104003794,
+      "p95": 13.426192906219512
+    },
+    "financial": {
+      "n": 8,
+      "median": 0.004295437480323017,
+      "p95": 20.918540889129492
+    },
+    "incompatible_context": {
+      "n": 2,
+      "median": 0.003906853613443673,
+      "p95": 0.004736934963148087
+    }
+  },
+  "peak_process_rss_mib": 863.6875,
+  "semantic_citation_support": "Pending separately labeled coding-agent assessment and independent human review. Exact sentence presence is not entailment.",
+  "completeness": "Pending reference-aspect assessment; not inferred from answered status.",
+  "human_review": {
+    "status": "pending",
+    "completed": 0
+  },
+  "interpretation": "Financial results are deterministic execution of a validated request; availability gains are architecture changes, not improved LLM numerical reasoning. Local model/prompt and actual context are recorded. No overall quality score."
+}
