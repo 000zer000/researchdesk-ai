@@ -48,6 +48,7 @@ class ModelAnswer(BaseModel):
 class AskInput(SearchInput):
     method: Literal["lexical", "hybrid"] = "hybrid"
     explain: bool = False
+    response_mode: Literal["generated", "extractive"] = "generated"
 
 
 def validate_answer(raw: str, ids: set[str], spans: dict | None = None) -> ModelAnswer:
@@ -75,7 +76,12 @@ def validate_answer(raw: str, ids: set[str], spans: dict | None = None) -> Model
 
 
 def research(
-    session: Session, args: AskInput, llm=None, *, context_mode="neighbors_dedup", token_count=None
+    session: Session,
+    args: AskInput,
+    llm=None,
+    *,
+    context_mode="coverage_budgeted",
+    token_count=None,
 ) -> dict:
     """Financial execution never depends on successful local text generation."""
     from .explanations import generate_explanation

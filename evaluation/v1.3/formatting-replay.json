@@ -1,0 +1,97 @@
+{
+  "classification": "Deterministic parsing replay of retained raw text; zero new generation calls; no semantic-quality claim; original first-run results unchanged",
+  "records": [
+    {
+      "id": "V305",
+      "schema_accepted_after_dedup": false,
+      "error": "1 validation error for GeneratedClaim\nevidence_ids\n  List should have at most 3 items after validation, not 5 [type=too_long, input_value=['E5', 'E8', 'E1', 'E2', 'E4'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.14/v/too_long",
+      "raw_sha256": "1352537bd39bd6b4f217df469c30ae7f83a35f7d0b4ce8ae173396edc15b2197"
+    },
+    {
+      "id": "V308",
+      "schema_accepted_after_dedup": true,
+      "answer": {
+        "abstain": false,
+        "claims": [
+          {
+            "text": "Due diligence may fail to identify significant issues with the target\u2019s product quality, financial disclosures, accounting practices, or internal controls, including due to reliance on third-party statements and actions.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2023-p0164"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2023-p0164",
+                "quote": "\u2022 Our due diligence may fail to identify significant issues with the target\u2019s product quality, financial disclosures, accounting practices or internal controls, including as a result of being dependent on the veracity and completeness of statements and disclosures made or actions taken by third parties.",
+                "start": 116673,
+                "end": 116977,
+                "sentence_id": "E1"
+              }
+            ]
+          },
+          {
+            "text": "Acquisition targets may have inadequate or differing cybersecurity and data protection controls.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2023-p0164"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2023-p0164",
+                "quote": "\u2022 An acquisition target may have differing or inadequate cybersecurity and data protection controls.",
+                "start": 117169,
+                "end": 117269,
+                "sentence_id": "E2"
+              }
+            ]
+          },
+          {
+            "text": "Risks of data misappropriation, compromise, or breach exist outside direct control due to reliance on third parties handling data.",
+            "kind": "disclosed_fact",
+            "origin": "generated_text",
+            "citations": [
+              "HPQ-2023-p0164",
+              "HPQ-2023-p0176",
+              "HPQ-2023-p0177"
+            ],
+            "evidence_spans": [
+              {
+                "citation": "HPQ-2023-p0176",
+                "quote": "While we make efforts to assess and validate the implementation of cybersecurity requirements",
+                "start": 126910,
+                "end": 127003,
+                "sentence_id": "E4"
+              },
+              {
+                "citation": "HPQ-2023-p0177",
+                "quote": "and controls by these third parties with respect to the services provided and the data handled on our behalf, there remains a risk of misappropriation, compromise or breach of data outside of our direct control.",
+                "start": 127004,
+                "end": 127215,
+                "sentence_id": "E4"
+              },
+              {
+                "citation": "HPQ-2023-p0164",
+                "quote": "\u2022 Our due diligence may fail to identify significant issues with the target\u2019s product quality, financial disclosures, accounting practices or internal controls, including as a result of being dependent on the veracity and completeness of statements and disclosures made or actions taken by third parties.",
+                "start": 116673,
+                "end": 116977,
+                "sentence_id": "E1"
+              },
+              {
+                "citation": "HPQ-2023-p0164",
+                "quote": "\u2022 An acquisition target may have differing or inadequate cybersecurity and data protection controls.",
+                "start": 117169,
+                "end": 117269,
+                "sentence_id": "E2"
+              }
+            ]
+          }
+        ],
+        "limitations": [],
+        "conflicts": []
+      },
+      "raw_sha256": "64f5922af1bc0e9565b2ec75af2c553936d973c7f42f505d752d2b53eec2d69d"
+    }
+  ]
+}

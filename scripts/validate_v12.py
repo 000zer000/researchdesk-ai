@@ -6,7 +6,7 @@ import json
 from researchdesk.config import ROOT
 from researchdesk.evaluation_v12 import EVAL, summarize, validate_final_freeze
 
-cases, freeze = validate_final_freeze()
+cases, freeze = validate_final_freeze(historical_ref="v1.2.0")
 latest = json.loads((EVAL / "latest-final.json").read_text())
 run = ROOT / latest["run"]
 assert run.is_relative_to(EVAL / "runs")

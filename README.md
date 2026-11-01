@@ -10,9 +10,36 @@ ResearchDesk combines FastAPI, PostgreSQL, React/TypeScript, local MiniLM retrie
 
 ![Actual v1.2 verified calculation and original evidence](docs/demo/v1.2/financial-evidence.png)
 
-**Final distinct batch:** 15/16 answerable questions accepted; 10/10 accepted financial targets matched; one explanation falsely refused. Both ambiguous structured-source fixtures withheld conclusions with both proofs. These are narrow pipeline measurements, not an overall quality score.
+**Historical v1.2 final distinct batch:** 15/16 answerable questions accepted; 10/10 accepted financial targets matched; one explanation falsely refused. Both ambiguous structured-source fixtures withheld conclusions with both proofs. These are narrow pipeline measurements, not an overall quality score.
 
 **Narrative quality remains insufficient for unattended use.** Coding-agent source inspection of ten accepted generated claims found six fully supported, two partial and two unsupported. Only four of sixteen predeclared explanation aspects were fully covered. That assessment is not independent human review; all ten human-review forms remain pending. The first consumed v1.2 batch, reference mistakes, malformed outputs and initial model hallucinations are preserved. See [measured limitations](docs/EVALUATION.md).
+
+## v1.3 — inspectable documentary excerpts
+
+Select **Verbatim source excerpts · no AI synthesis** for documentary questions.
+Complete source sentences retain their fragment citations, including adjacent
+passage boundaries. This path makes no model call and adds no new conclusions;
+relevance, omissions and conflicting disclosures still need review. The existing
+AI synthesis remains an explicit alternative, with unchanged review requirements.
+Verified financial results use the same deterministic engine in either mode.
+
+The new context selector uses a bounded eight-sentence budget, lexical normalization,
+rare-topic weighting and neighboring source context. This improves source coverage;
+it does not establish better semantic understanding by the model.
+
+The separate frozen acceptance batch returned excerpts for **5/5 documentary cases**
+with zero inference calls (median 0.28 s on this Mac). Generated prose passed format
+checks for **3/5** (median 15.90 s), which does not establish support or completeness.
+Two accepted financial targets were correct; a third requested an unsupported
+free-text working-capital operation and was refused. The authored target and refusal
+are retained. Five new human-review responses remain pending. These are narrow
+engineering measurements on a familiar corpus, not an independent quality score.
+
+**Final engineering checks:** 152 native PostgreSQL tests without skips, four Chromium journeys, TypeScript/build and Ruff passed. A post-evaluation repeated-citation formatting correction has a separately labelled parser replay; the frozen first-run scores above remain unchanged.
+
+[Current changes and limitations](docs/V13_VERIFICATION.md) ·
+[First-run results](evaluation/v1.3/summary.json) ·
+[Pending review](evaluation/v1.3/human-review-pending.json)
 
 ## Run locally
 
@@ -40,7 +67,7 @@ Linux/Windows require a separately installed **local** OpenAI-compatible server:
 ## Demonstrate
 
 1. In **Research**, ask “Compare Apple operating margin in 2023 and 2024. Show percentage point change.” Inspect the deterministic origin, formula, inputs and original evidence. Optional AI text has its own status.
-2. Ask a documentary question such as “How can acquisition debt covenants constrain Dell capital raising and operating flexibility in 2023?” Inspect each actual generated claim against its sources. A valid source ID alone does not establish support.
+2. For documentary source inspection choose the verbatim-excerpt mode, or deliberately select AI synthesis for review. Ask a documentary question such as “How can acquisition debt covenants constrain Dell capital raising and operating flexibility in 2023?” Inspect each actual generated claim against its sources. A valid source ID alone does not establish support.
 3. In **Financials & Valuation**, change the discount rate to 12%, inspect enterprise value/sensitivity and export the current three-page PDF. All finance executes server-side; forecasts are explicit assumptions.
 4. In **Sources & Evaluation**, inspect dates/accessions, historical results and pending human review. [Recording details and captions](docs/demo/v1.2/README.md) distinguish this scripted development walkthrough from final evaluation.
 
@@ -66,11 +93,11 @@ uv run python scripts/verify_inline_facts.py
 uv run python scripts/summarize_review.py --validate-only
 uv run python scripts/validate_v11.py
 uv run python scripts/validate_v12.py
-# Optional real inference on already consumed questions, stored as a REPLAY:
-uv run researchdesk evaluate --split final
+uv run python scripts/evaluate_v13.py validate
+# Historical inference evaluators require their corresponding immutable release checkout.
 ```
 
-Local checks: **144 native PostgreSQL tests, zero skipped; three mock Chromium journeys; four live-mode journeys; 48 original inline-XBRL fact checks**. CI separately checks PostgreSQL/Chromium and a clean Compose migration/import/restart-persistence flow with original synthetic fixtures. CI test doubles do not prove model quality. [Verification ledger](docs/VERIFICATION.md).
+Historical v1.2 checks: **144 native PostgreSQL tests, zero skipped; three mock Chromium journeys; four live-mode journeys; 48 original inline-XBRL fact checks**. CI separately checks PostgreSQL/Chromium and a clean Compose migration/import/restart-persistence flow with original synthetic fixtures. CI test doubles do not prove model quality. [Verification ledger](docs/VERIFICATION.md).
 
 Evaluation is append-only. Final cases were committed after corrections and before inference; code/source/result hashes and model revision are validated. Exact questions are distinct from prior batches, but the corpus and financial concepts are familiar. No blind independent benchmark is claimed. Reference values never enter prompts. Synthetic conflict variants use disposable `_test` schemas, not demo-data writes.
 

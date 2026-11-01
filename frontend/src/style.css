@@ -11,6 +11,16 @@
   font-weight: 400;
   font-size: 14px;
 }
+.response-mode {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  color: var(--muted, #516575);
+}
+.response-mode select {
+  width: 100%;
+  min-width: 0;
+}
 .mobile-company {
   display: none;
 }

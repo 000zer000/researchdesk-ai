@@ -52,10 +52,17 @@ def source_hashes():
     return {str(p.relative_to(ROOT)): sha(p) for p in sorted(files)}
 
 
-def validate_final_freeze():
+def validate_final_freeze(historical_ref=None):
     freeze = json.loads((EVAL / "final-freeze.json").read_text())
     assert sha(EVAL / "final-cases.json") == freeze["cases_sha256"]
-    assert source_hashes() == freeze["source_sha256"], "Runtime changed after final freeze"
+    if historical_ref:
+        for name, expected in freeze["source_sha256"].items():
+            original = subprocess.check_output(
+                ["git", "show", historical_ref + ":" + name], cwd=ROOT
+            )
+            assert hashlib.sha256(original).hexdigest() == expected, name
+    else:
+        assert source_hashes() == freeze["source_sha256"], "Runtime changed after final freeze"
     cases = json.loads((EVAL / "final-cases.json").read_text())
     old = []
     for p in [
