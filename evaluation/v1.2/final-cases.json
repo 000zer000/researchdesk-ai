@@ -1,0 +1,533 @@
+[
+  {
+    "id": "R01",
+    "company": "AAPL",
+    "question": "How much did Apple operating cash flow grow in percentage terms between FY2023 and FY2024?",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cfo_growth:2023:2024",
+        "value": 6.975566069312395,
+        "unit": "percent",
+        "direction": "increased",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": true
+  },
+  {
+    "id": "R02",
+    "company": "DELL",
+    "question": "State the FY2024 Dell annual revenue using USD billions.",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "revenue:2024",
+        "value": 88.425,
+        "unit": "USD billion",
+        "direction": "level",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": true
+  },
+  {
+    "id": "R03",
+    "company": "HPQ",
+    "question": "Compute HP operating margin for FY2024 from operating income and revenue.",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "operating_margin:2024",
+        "value": 7.128587165555742,
+        "unit": "percent",
+        "direction": "level",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": true,
+    "explain": true
+  },
+  {
+    "id": "R04",
+    "company": "AAPL",
+    "question": "How did Apple CFO less gross PPE capex change between FY2023 and FY2024?",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cfo_less_capex_change:2023:2024",
+        "value": 9223.0,
+        "unit": "USD million",
+        "direction": "increased",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": true
+  },
+  {
+    "id": "R05",
+    "company": "DELL",
+    "question": "What is the change in Dell fiscal year length in weeks from FY2023 to FY2024?",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "period_weeks_change:2023:2024",
+        "value": -1.0,
+        "unit": "weeks",
+        "direction": "decreased",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R06",
+    "company": "HPQ",
+    "question": "Find the movement in HP cash and cash equivalents from FY2023 to FY2024.",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cash_change:2023:2024",
+        "value": 131.0,
+        "unit": "USD million",
+        "direction": "increased",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R07",
+    "company": "AAPL",
+    "question": "What was the percentage change in Apple gross capital expenditures between FY2023 and FY2024?",
+    "as_of": "2024-12-31",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "capex_growth:2023:2024",
+        "value": -13.796879277306324,
+        "unit": "percent",
+        "direction": "decreased",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R08",
+    "company": "DELL",
+    "question": "At the analysis date, identify Dell consolidated current assets for FY2023.",
+    "as_of": "2024-02-15",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "current_assets:2023",
+        "value": 42351.0,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R09",
+    "company": "AAPL",
+    "question": "Explain Apple FY2024 seasonality risks: how do holiday demand and product introductions affect its distribution channels?",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "AAPL-2024-p0045"
+    ],
+    "reference_aspects": [
+      "Holiday demand contributes to historically higher first-quarter sales",
+      "New launches fill channel inventory; older product inventory declines ahead of launches; anticipation affects sales"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R10",
+    "company": "DELL",
+    "question": "What acquisition integration risks for staff, customers and strategic partners does Dell disclose in FY2023?",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "DELL-2023-p0124"
+    ],
+    "reference_aspects": [
+      "Integration difficulties particularly when key acquired personnel are not retained",
+      "Customer uncertainty can delay or reduce sales; management/resources diverted",
+      "Acquisitions can harm partner relationships if they create competition"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R11",
+    "company": "HPQ",
+    "question": "Why is HP channel inventory forecasting difficult in FY2024, and how can distributor ordering affect demand and pricing?",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "HPQ-2024-p0116",
+      "HPQ-2024-p0117"
+    ],
+    "reference_aspects": [
+      "Multi-tier indirect channels reduce visibility into inventory, demand and prices",
+      "Distributors overorder in shortages, cancel when stocks high or delay ahead of new products",
+      "Elevated channel inventory can adversely affect demand and pricing"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R12",
+    "company": "AAPL",
+    "question": "In FY2023, what privacy compliance risks and costs does Apple describe for personal information transfers among international subsidiaries?",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "AAPL-2023-p0115"
+    ],
+    "reference_aspects": [
+      "Laws restrict transfers within group as well as third-party transactions",
+      "Jurisdictional requirements evolve and can be inconsistent",
+      "Compliance costs and business practice changes; noncompliance penalties/legal liability"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R13",
+    "company": "DELL",
+    "question": "Explain the operational benefits and production-control risks of Dell contract manufacturers in FY2024.",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "DELL-2024-p0047",
+      "DELL-2024-p0100"
+    ],
+    "reference_aspects": [
+      "Operational flexibility, cost efficiency or faster delivery",
+      "Outsourcing limits direct control, increases shortages/schedule/cost risks"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R14",
+    "company": "HPQ",
+    "question": "Which third-party technology licensing risks could weaken HP competitive position in FY2023?",
+    "as_of": "2024-12-31",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "HPQ-2023-p0171",
+      "HPQ-2023-p0172"
+    ],
+    "reference_aspects": [
+      "Licenses may be unavailable or not on acceptable competitive terms",
+      "Obsolete/incompatible components, disputes, expiration or termination can disrupt reliance",
+      "Refusal or less favorable terms than competitors can reduce advantage or require costly arrangements"
+    ],
+    "human_review": true
+  },
+  {
+    "id": "R15",
+    "company": "AAPL",
+    "question": "Convert Apple FY2024 consolidated revenue from USD into euros.",
+    "as_of": "2024-12-31",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R16",
+    "company": "HPQ",
+    "question": "Give HP operating income without choosing a fiscal year for me.",
+    "as_of": "2024-12-31",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R17",
+    "company": "DELL",
+    "question": "What is Dell free cash flow in FY2023 on a net-capex basis?",
+    "as_of": "2024-12-31",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R18",
+    "company": "HPQ",
+    "question": "Calculate the HP FY2024 margin without specifying its definition.",
+    "as_of": "2024-12-31",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R19",
+    "company": "DELL",
+    "question": "Find Dell verified annual operating income for FY2025.",
+    "as_of": "2024-12-31",
+    "category": "absent",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R20",
+    "company": "HPQ",
+    "question": "Report HP monthly revenue during FY2024.",
+    "as_of": "2024-12-31",
+    "category": "absent",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R21",
+    "company": "AAPL",
+    "question": "Please retrieve Fabrikam's annual revenue for FY2023.",
+    "as_of": "2024-12-31",
+    "category": "absent",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false
+  },
+  {
+    "id": "R22",
+    "company": "HPQ",
+    "question": "Establish HP FY2024 consolidated cash balance when different source observations coexist.",
+    "as_of": "2024-12-31",
+    "category": "incompatible_context",
+    "answerable": false,
+    "expected_statuses": [
+      "source_conflict"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false,
+    "synthetic_fixture": {
+      "year": 2024,
+      "metric": "cash",
+      "changes": {
+        "value": 3500000000
+      }
+    }
+  },
+  {
+    "id": "R23",
+    "company": "DELL",
+    "question": "Resolve Dell FY2023 revenue when source observations have different annual end dates.",
+    "as_of": "2024-12-31",
+    "category": "incompatible_context",
+    "answerable": false,
+    "expected_statuses": [
+      "source_conflict"
+    ],
+    "reference_targets": [],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false,
+    "synthetic_fixture": {
+      "year": 2023,
+      "metric": "revenue",
+      "changes": {
+        "end": "2023-02-02"
+      }
+    }
+  },
+  {
+    "id": "R24",
+    "company": "AAPL",
+    "question": "Identify Apple FY2023 consolidated USD cash balance while excluding the separate EUR source.",
+    "as_of": "2024-12-31",
+    "category": "distinct_context",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cash:2023",
+        "value": 29965.0,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false,
+    "synthetic_fixture": {
+      "year": 2023,
+      "metric": "cash",
+      "changes": {
+        "unit": "EUR",
+        "currency": "EUR",
+        "value": 28000000000
+      }
+    }
+  },
+  {
+    "id": "R25",
+    "company": "DELL",
+    "question": "Identify Dell FY2024 consolidated current liabilities; exclude the Europe segment observation.",
+    "as_of": "2024-12-31",
+    "category": "distinct_context",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "current_liabilities:2024",
+        "value": 48494.0,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 1e-06
+      }
+    ],
+    "reference_passages": [],
+    "reference_aspects": [],
+    "human_review": false,
+    "synthetic_fixture": {
+      "year": 2024,
+      "metric": "current_liabilities",
+      "changes": {
+        "scope": "segment:Europe",
+        "value": 7000000000
+      }
+    }
+  }
+]
