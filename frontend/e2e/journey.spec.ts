@@ -64,7 +64,7 @@ test("company → research → evidence → scenario → PDF", async ({ page }) 
     page.getByRole("link", { name: "Open official filing" }),
   ).toBeVisible();
   if (live)
-    await expect(page.getByText(/live local inference/).first()).toBeVisible();
+    await expect(page.getByText("AI generated explanation", { exact: true }).first()).toBeVisible();
   await page
     .getByRole("button", { name: "Financials & Valuation", exact: true })
     .click();
@@ -216,7 +216,7 @@ test("financial guard displays verified data and both conflicting source proofs"
 });
 
 if (live)
-  test("real financial proposal retains canonical evidence in the UI", async ({
+  test("real deterministic calculation retains canonical evidence in the UI", async ({
     page,
   }) => {
     await page.goto("/");

@@ -1,0 +1,12 @@
+{
+  "classification": "Consumed first final batch, retained unchanged; no independent successful-final claim",
+  "issues": {
+    "V01": "Intent error: grow in percentage terms became monetary change; wrong requested operation despite arithmetically valid values",
+    "V04": "Evaluator reference wrong: HP FY2023 gross capex is 609, not 593; correct proxy change is 195, not 179",
+    "V08": "Evaluator reference wrong: 592/609-1, not 592/593-1. Displayed percentage is source-consistent",
+    "V09/V11/V13": "Capability keyword gate rejected answerable documentary questions before search/generation",
+    "V22": "Different source amounts misread as a temporal comparison requiring two years",
+    "browser": "Live check still expected old origin text, a stale test assertion"
+  },
+  "raw_metrics": "Unchanged, including 7/10 reference matches. Reference errors are disclosed separately rather than silently replacing this score."
+}

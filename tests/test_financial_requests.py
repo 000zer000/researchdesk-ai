@@ -190,3 +190,31 @@ def test_optional_direction_statement_cannot_override_verified_result(populated,
     r = research(populated, AskInput(question="2024 revenue", explain=True))
     assert r["status"] == "answered" and r["explanation"]["status"] == "invalid_model_answer"
     assert r["verified_financials"]["measures"][0]["value"] == 110
+
+
+@pytest.mark.integration
+@pytest.mark.parametrize(
+    "question",
+    [
+        "How much did revenue grow in percentage terms from 2023 to 2024?",
+        "What was the percentage increase in revenue between FY2023 and FY2024?",
+        "Give revenue growth from 2023 to 2024 as a percentage rate",
+    ],
+)
+def test_percentage_wording_selects_growth_not_absolute_change(populated, question):
+    r = research(populated, AskInput(question=question), NeverModel())
+    assert r["status"] == "answered"
+    assert r["financial_request"]["operation"] == "growth"
+    assert r["verified_financials"]["measures"][-1]["value"] == pytest.approx(10)
+    assert r["verified_financials"]["measures"][-1]["unit"] == "percent"
+
+
+@pytest.mark.integration
+def test_one_period_source_comparison_does_not_require_two_fiscal_years(populated):
+    r = research(
+        populated,
+        AskInput(question="Revenue in 2024 with different source observations"),
+        NeverModel(),
+    )
+    assert r["status"] == "answered"
+    assert r["financial_request"]["operation"] == "level"

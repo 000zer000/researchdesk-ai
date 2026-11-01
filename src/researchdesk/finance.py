@@ -740,7 +740,8 @@ def interpret_financial_request(
     comparative = bool(re.search(COMPARISON_PATTERN, q))
     growth = bool(
         re.search(
-            r"\bgrowth\b|\bpercentage change\b|\bpercent(?:age)? (?:growth |change )?rate\b", q
+            r"\b(?:growth|grow|grew|growing)\b|\bpercentage (?:change|terms|increase|decrease)\b|\b(?:by |what )?percent(?:age)? (?:growth |change )?rate\b",
+            q,
         )
     )
     operation = (
@@ -756,6 +757,13 @@ def interpret_financial_request(
         operation = "level"
     years = sorted(requested_years(q))
     selection = "explicit"
+    if (
+        operation == "compare"
+        and len(years) == 1
+        and re.search(r"\b(observations?|sources?|reporting bases)\b", q)
+    ):
+        # Comparing source identities for one period is not a time-series operation.
+        operation = "level"
     if not years:
         if operation == "level" and re.search(r"\b(latest|most recent|current)\b", q) and rows:
             years, selection = [rows[-1]["fiscal_year"]], "latest_published"

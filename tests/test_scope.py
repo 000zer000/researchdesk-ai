@@ -36,3 +36,16 @@ def test_unsupported_capabilities_fail_closed(question):
 )
 def test_supported_scope_remains_available(question):
     assert capability_gap(question, "AAPL") is None
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Explain how trade restrictions affect costs in FY2024",
+        "Describe inventory practices and customization in FY2023",
+        "Why are third-party software developers important in 2024?",
+        "Describe the consequences of tariffs in 2023",
+    ],
+)
+def test_documentary_business_mechanisms_are_not_blocked_by_topic_keywords(question):
+    assert capability_gap(question, "AAPL") is None

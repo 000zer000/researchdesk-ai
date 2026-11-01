@@ -1,0 +1,1596 @@
+{
+  "classification": "Declared diagnostic replay of consumed first v1.2 final cases after general-rule fixes. Not new final tests. Original reference mistakes preserved in attempt-01 and disclosed separately.",
+  "created_at": "2026-11-01T00:28:51.225788+00:00",
+  "source_sha256": {
+    ".env.example": "7bdfeaf4a6792f77b67bc15df4d7a751e879b4d060ef93e7297368e04ae3f617",
+    ".github/workflows/ci.yml": "806b3515e5ae79d801dd674de66c1f455a3c0d1f075f7b1c02ff0f97625684ff",
+    "frontend/e2e/journey.spec.ts": "b6da8715e15dd1480355fe08464ec049a232a44e10b847c27d6f78864f4389cf",
+    "frontend/package-lock.json": "e354e33cd966cd3ab13d3da9f2a67e51bbdf096a385c97d12d430cdf8dbe9608",
+    "frontend/package.json": "b5513da8c4a8545888d89463baa11a7692f007afba790914436ecd8e291c328f",
+    "frontend/playwright.config.ts": "9e63035ecb9da526d847d8c04a5e532002ff886a901b3c26ae40086af009cbb0",
+    "frontend/src/main.tsx": "05e3a8a39aa18a78d99f18189f657c6d6520c24a156dd5bbe21506312dd2b6fb",
+    "frontend/src/style.css": "b13fee4bf3b5a02d9c59214a5489ac8e061f2e91dda501c5789f8b5796c7f3d2",
+    "pyproject.toml": "ac98dfd7681f195c01637f989bd6ee711395a6fe184a5779dd24d8d63e6685fc",
+    "scripts/audit_publication.py": "afd5065d1693c04d5724d60679210c450ee5a27c7dc5a7ede959bc6a2c52184f",
+    "scripts/build_eval_cases.py": "93fe16d392a8e34a7420dae0a928e78e9443402c575e48deed595ab58ddc34f3",
+    "scripts/ci_checks.py": "6678b96a1d2abbd3aed9835a7d16b1a04fb8b3417c6a6cd595b7f17cb0951797",
+    "scripts/prepare_human_review.py": "1711d64a0dd6327e4e6cb694fe3844665e87e827405219fffb19124f3a8f35b9",
+    "scripts/prepare_review_v12.py": "59c90555db55afe8840ed6312dc014d5d4564b79fda63731101adcdd9a9524a9",
+    "scripts/record_demo.mjs": "dc081fbd75dce83a595614f62254f611ee625d0b12e4436a61b9764c19f30c99",
+    "scripts/record_v12.mjs": "b483173ad32c63042fdb56c47edeeff6fe5c207bd29f084de5bc4b42fd9a4464",
+    "scripts/summarize_review.py": "db956184887cdfd91969695bdf11aa213f1fae3de81fddaf8d7553f8f1778f5c",
+    "scripts/validate_v11.py": "fe7385f20644fca3fe41d659a764dedd7b764bcb30e4d5c8317be6c488007ab0",
+    "scripts/validate_v12.py": "a1546969af298f56df67ce8cac67de1f3c9e46d1855c5638d70a571141b60755",
+    "scripts/verify_inline_facts.py": "537e35588b23221ef4a5d4e7cce7729c5d98b18e212cbb7005702a7f272be340",
+    "src/researchdesk/__init__.py": "37792e37abf249abfff814064011790c237923daeebe48d29a6166627387f208",
+    "src/researchdesk/api.py": "4d63edbc53556a7bc612f7c20f0e3584448f7fba0952d8b7ef1bd7a3f3eb5d5a",
+    "src/researchdesk/ci_fixture.py": "4915fbecc6f44bf0d07632f346f5dd24890e8786688538dc1b4415766a9da314",
+    "src/researchdesk/cli.py": "ad26b8f96492af2f6a49634262c500db3f36034a7fe6a05a01eb9e75d8c1e8bc",
+    "src/researchdesk/config.py": "a8d1418ef7dc0ec1822b9d4a6d361be6b33c115acda3cafe8dc2aa02a606bd4e",
+    "src/researchdesk/context.py": "59bcd4071edbde96dced74563fcb78d02847c8b0c9bd5cb0881bb100e813c49f",
+    "src/researchdesk/db.py": "d9b581b7397a6683f731cb6896d6f0c90599e9b307ae05b030f306249b8f4695",
+    "src/researchdesk/embeddings.py": "b9b248bc4ab7307373eb4f1039a8e1a0c6b8ac4f4258047422ee248316795406",
+    "src/researchdesk/evaluation.py": "f89587a352899e4591db3cefd6104eca30ef0e377dca035e3bfe08b0ba832f5d",
+    "src/researchdesk/evaluation_v12.py": "05fd69ad0908202bc661ecdc6866aea25c6c7538d9e9cd06cf9e0cf636474c4d",
+    "src/researchdesk/explanations.py": "01e6138f6d112b2ede914cf5097f7b13f83efc72285d74e9397d48afa2edf0a7",
+    "src/researchdesk/finance.py": "8a8d248cd43be5f15d30f4d34f33c2615e2394ca45ced45e05bb5eb366bc9f77",
+    "src/researchdesk/grounding.py": "4d6d8eb451b4eb42da360c8fc463599ffaf8c6170d1f9136aa93c8f15947f997",
+    "src/researchdesk/ingestion.py": "b5c265bd72e21e4c1abacfa2119787cb46b21c19df613c35c70a55890d368589",
+    "src/researchdesk/legacy_contracts.py": "5736b8d114725ba653b63c3e2681ff2c74c6d7f4a95ced3ee7c8c276a2e7f3fb",
+    "src/researchdesk/provider.py": "ad80c785692437767596ed85d2e8e57b2da18995a05981295181cd041251ec16",
+    "src/researchdesk/report.py": "0018ceaf00e68827e9cc2015679e9e45f557de1a4d7397b788b3f84ddc5b6e96",
+    "src/researchdesk/research.py": "aede0acdf01feaa5038a88352cb93fe6debe73853289f23160218ec903748685",
+    "src/researchdesk/scope.py": "474b1fb17ca8c4a367de185ab8a1ee24e2e365c269694074950d3955b9204485",
+    "src/researchdesk/search.py": "4b8b4a750c0d53e2700b6d52aa5d627f3b120725e462ecd15c89c30a2f5917b6",
+    "tests/conftest.py": "1e47c610e3b16edc37ccc8b3d021b5dab63323b3f9da9c83e6c151f7e66dc21a",
+    "tests/test_api.py": "dd7cdd4965023e06a6d0b24da924fca274399387dad28a8886253e29762af828",
+    "tests/test_context_v12.py": "e79c603a769a04c831614116044a90545b8efb7dee645ef60a80cdc9a24c1597",
+    "tests/test_finance.py": "e88c5a2fd3feb429dae3572b686696593d72c058e80247e87b1c8df5eaac9ea9",
+    "tests/test_financial_requests.py": "b285d5acdf91d66ac27dd5b7741a202131fd97f765db82e39b8d71e583ab5b35",
+    "tests/test_grounding.py": "8d741247a234f669fef857b75d6f5d2cf13dcfc4b8632f1704077854d5a7179d",
+    "tests/test_ingestion.py": "ca1bdaf13507b1c0095ede5a65bb4ed4e7226607c1bad1765c99ba401f2042c3",
+    "tests/test_provider_threads.py": "662df216c7f6b79f9434c0846300af664efeca8cb727dad9e2f36b4a296fed48",
+    "tests/test_research.py": "1d122b22cdbc3d1f052d36b2964a2072ead6740eb99929245cc224911feeaa6c",
+    "tests/test_scope.py": "08c02ed27ef90d7d2d2857c7bde58065ee236643c9a40e343e537b6ec15fade0",
+    "tests/test_structure_retry.py": "bb15ffa45e3f550050233d569fb6390621baf70a9ff4f0fdbed71fff19dcc685",
+    "uv.lock": "519c01c269014a50290b30659c345e5f7c2047f7d1448d30ace2b1e25032c057"
+  },
+  "records": [
+    {
+      "id": "V01",
+      "wall_seconds": 0.0217077920679003,
+      "result": {
+        "status": "answered",
+        "origin": "deterministic finance engine",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "HPQ \u00b7 2022-11-01/2023-10-31 \u00b7 consolidated: Revenue: 53,718.00 USD million (level). Definition: us-gaap:Revenues.",
+              "citations": [
+                "HPQ-2023-revenue"
+              ],
+              "origin": "deterministic_calculation"
+            },
+            {
+              "text": "HPQ \u00b7 2023-11-01/2024-10-31 \u00b7 consolidated: Revenue: 53,559.00 USD million (level). Definition: us-gaap:Revenues.",
+              "citations": [
+                "HPQ-2024-revenue"
+              ],
+              "origin": "deterministic_calculation"
+            },
+            {
+              "text": "HPQ \u00b7 2022-11-01/2023-10-31, 2023-11-01/2024-10-31 \u00b7 consolidated: Revenue change: -159.00 USD million (decreased). Definition: delta:us-gaap:Revenues.",
+              "citations": [
+                "HPQ-2023-revenue",
+                "HPQ-2024-revenue"
+              ],
+              "origin": "deterministic_calculation"
+            },
+            {
+              "text": "HPQ \u00b7 2022-11-01/2023-10-31, 2023-11-01/2024-10-31 \u00b7 consolidated: Revenue growth: -0.30 percent (decreased). Definition: growth:us-gaap:Revenues.",
+              "citations": [
+                "HPQ-2023-revenue",
+                "HPQ-2024-revenue"
+              ],
+              "origin": "deterministic_calculation"
+            }
+          ],
+          "limitations": [
+            "Calculated by server code from the validated request and original consolidated sources. Fiscal calendars and metric definitions can limit comparability."
+          ]
+        },
+        "financial_request": {
+          "company": "HPQ",
+          "metrics": [
+            "revenue"
+          ],
+          "years": [
+            2023,
+            2024
+          ],
+          "operation": "growth",
+          "unit": "percent",
+          "scope": "consolidated",
+          "definition": "as_reported",
+          "period_selection": "explicit"
+        },
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "revenue:2023",
+              "company": "HPQ",
+              "periods": [
+                "2022-11-01/2023-10-31"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "us-gaap:Revenues",
+              "value": 53718.0,
+              "direction": "level",
+              "citations": [
+                "HPQ-2023-revenue"
+              ],
+              "label": "Revenue",
+              "formula": "us-gaap:Revenues",
+              "origin": "deterministic_calculation",
+              "inputs": [
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53718.0,
+                  "raw_value": 53718000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2022-11-01",
+                  "end": "2023-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2023-revenue",
+                  "evidence_ids": [
+                    "HPQ-2023-revenue"
+                  ],
+                  "document_id": "HPQ-2023",
+                  "accession": "0000047217-23-000100",
+                  "filed": "2023-12-18",
+                  "fiscal_year": 2023
+                }
+              ],
+              "formula_display": "Reported consolidated value; output normalized to USD million"
+            },
+            {
+              "id": "revenue:2024",
+              "company": "HPQ",
+              "periods": [
+                "2023-11-01/2024-10-31"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "us-gaap:Revenues",
+              "value": 53559.0,
+              "direction": "level",
+              "citations": [
+                "HPQ-2024-revenue"
+              ],
+              "label": "Revenue",
+              "formula": "us-gaap:Revenues",
+              "origin": "deterministic_calculation",
+              "inputs": [
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53559.0,
+                  "raw_value": 53559000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2023-11-01",
+                  "end": "2024-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2024-revenue",
+                  "evidence_ids": [
+                    "HPQ-2024-revenue"
+                  ],
+                  "document_id": "HPQ-2024",
+                  "accession": "0000047217-24-000080",
+                  "filed": "2024-12-13",
+                  "fiscal_year": 2024
+                }
+              ],
+              "formula_display": "Reported consolidated value; output normalized to USD million"
+            },
+            {
+              "id": "revenue_change:2023:2024",
+              "company": "HPQ",
+              "periods": [
+                "2022-11-01/2023-10-31",
+                "2023-11-01/2024-10-31"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "delta:us-gaap:Revenues",
+              "value": -159.0,
+              "direction": "decreased",
+              "citations": [
+                "HPQ-2023-revenue",
+                "HPQ-2024-revenue"
+              ],
+              "label": "Revenue change",
+              "formula": "delta:us-gaap:Revenues",
+              "origin": "deterministic_calculation",
+              "inputs": [
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53718.0,
+                  "raw_value": 53718000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2022-11-01",
+                  "end": "2023-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2023-revenue",
+                  "evidence_ids": [
+                    "HPQ-2023-revenue"
+                  ],
+                  "document_id": "HPQ-2023",
+                  "accession": "0000047217-23-000100",
+                  "filed": "2023-12-18",
+                  "fiscal_year": 2023
+                },
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53559.0,
+                  "raw_value": 53559000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2023-11-01",
+                  "end": "2024-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2024-revenue",
+                  "evidence_ids": [
+                    "HPQ-2024-revenue"
+                  ],
+                  "document_id": "HPQ-2024",
+                  "accession": "0000047217-24-000080",
+                  "filed": "2024-12-13",
+                  "fiscal_year": 2024
+                }
+              ],
+              "formula_display": "To-period value \u2212 from-period value"
+            },
+            {
+              "id": "revenue_growth:2023:2024",
+              "company": "HPQ",
+              "periods": [
+                "2022-11-01/2023-10-31",
+                "2023-11-01/2024-10-31"
+              ],
+              "scope": "consolidated",
+              "unit": "percent",
+              "definition": "growth:us-gaap:Revenues",
+              "value": -0.2959901708924383,
+              "direction": "decreased",
+              "citations": [
+                "HPQ-2023-revenue",
+                "HPQ-2024-revenue"
+              ],
+              "label": "Revenue growth",
+              "formula": "growth:us-gaap:Revenues",
+              "origin": "deterministic_calculation",
+              "inputs": [
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53718.0,
+                  "raw_value": 53718000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2022-11-01",
+                  "end": "2023-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2023-revenue",
+                  "evidence_ids": [
+                    "HPQ-2023-revenue"
+                  ],
+                  "document_id": "HPQ-2023",
+                  "accession": "0000047217-23-000100",
+                  "filed": "2023-12-18",
+                  "fiscal_year": 2023
+                },
+                {
+                  "metric": "revenue",
+                  "company": "HPQ",
+                  "value": 53559.0,
+                  "raw_value": 53559000000.0,
+                  "concept": "us-gaap:Revenues",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": "2023-11-01",
+                  "end": "2024-10-31",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "HPQ-2024-revenue",
+                  "evidence_ids": [
+                    "HPQ-2024-revenue"
+                  ],
+                  "document_id": "HPQ-2024",
+                  "accession": "0000047217-24-000080",
+                  "filed": "2024-12-13",
+                  "fiscal_year": 2024
+                }
+              ],
+              "formula_display": "(To-period value / from-period value \u2212 1) \u00d7 100"
+            }
+          ],
+          "issues": [],
+          "observations": [
+            {
+              "metric": "revenue",
+              "company": "HPQ",
+              "value": 53718.0,
+              "raw_value": 53718000000.0,
+              "concept": "us-gaap:Revenues",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2022-11-01",
+              "end": "2023-10-31",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "HPQ-2023-revenue",
+              "evidence_ids": [
+                "HPQ-2023-revenue"
+              ],
+              "document_id": "HPQ-2023",
+              "accession": "0000047217-23-000100",
+              "filed": "2023-12-18",
+              "fiscal_year": 2023
+            },
+            {
+              "metric": "revenue",
+              "company": "HPQ",
+              "value": 53559.0,
+              "raw_value": 53559000000.0,
+              "concept": "us-gaap:Revenues",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-11-01",
+              "end": "2024-10-31",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "HPQ-2024-revenue",
+              "evidence_ids": [
+                "HPQ-2024-revenue"
+              ],
+              "document_id": "HPQ-2024",
+              "accession": "0000047217-24-000080",
+              "filed": "2024-12-13",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": [],
+          "request": {
+            "company": "HPQ",
+            "metrics": [
+              "revenue"
+            ],
+            "years": [
+              2023,
+              2024
+            ],
+            "operation": "growth",
+            "unit": "percent",
+            "scope": "consolidated",
+            "definition": "as_reported",
+            "period_selection": "explicit"
+          },
+          "result_ids": [
+            "revenue_growth:2023:2024"
+          ]
+        },
+        "evidence": [
+          {
+            "id": "HPQ-2023-revenue",
+            "document_id": "HPQ-2023",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "filed": "2023-12-18",
+            "section": "XBRL / revenue",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "HPQ FY2023, consolidated annual XBRL. revenue (Revenues) = 53718000000 USD. Period 2022-11-01 to 2023-10-31. Filed 2023-12-18; accession 0000047217-23-000100. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+            "accession": "0000047217-23-000100",
+            "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+            "score": 0
+          },
+          {
+            "id": "HPQ-2024-revenue",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "XBRL / revenue",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "HPQ FY2024, consolidated annual XBRL. revenue (Revenues) = 53559000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0
+          }
+        ],
+        "calculations": null,
+        "trace": [
+          {
+            "tool": "validate_financial_request",
+            "status": "ok",
+            "request": {
+              "company": "HPQ",
+              "metrics": [
+                "revenue"
+              ],
+              "years": [
+                2023,
+                2024
+              ],
+              "operation": "growth",
+              "unit": "percent",
+              "scope": "consolidated",
+              "definition": "as_reported",
+              "period_selection": "explicit"
+            }
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "ok",
+            "measure_ids": [
+              "revenue:2023",
+              "revenue:2024",
+              "revenue_change:2023:2024",
+              "revenue_growth:2023:2024"
+            ]
+          }
+        ],
+        "explanation": {
+          "status": "not_requested",
+          "origin": "generated_text"
+        },
+        "citation_support": "Structured input provenance checked; generated text requires separate semantic review.",
+        "elapsed_seconds": 0.020097499946132302
+      }
+    },
+    {
+      "id": "V09",
+      "wall_seconds": 14.23342595808208,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "AAPL-2024-p0057",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 29040,
+            "end": 30001,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "actions, including changing suppliers, restructuring business relationships and operations, and ceasing to offer and distribute affected products, services and third-party applications to its customers. Changing the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s operations. Such restrictions can be announced with little or no advance notice, which can create uncertainty, and the Company may not be able to effectively mitigate all adverse impacts from such measures. For example, tensions between governments, including the U.S. and China, have in the past led to tariffs and other restrictions affecting the Company\u2019s business. If disputes and conflicts further escalate in the future, actions by governments in response could be significantly more severe and restrictive and could materially adversely affect the Company\u2019s business.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.11558931133268677
+          },
+          {
+            "id": "AAPL-2024-p0056",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 28053,
+            "end": 29039,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company has a large, global business with sales outside the U.S. representing a majority of the Company\u2019s total net sales, and the Company believes that it generally benefits from growth in international trade. Substantially all of the Company\u2019s manufacturing is performed in whole or in part by outsourcing partners located primarily in China mainland, India, Japan, South Korea, Taiwan and Vietnam. Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain. The impact can be particularly significant if these restrictive measures apply to countries and regions where the Company derives a significant portion of its revenues and/or has significant supply chain operations. Restrictive measures can increase the cost of the Company\u2019s products and the components and raw materials that go into them, and can require the Company to take various",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.11532490096780047
+          },
+          {
+            "id": "AAPL-2024-p0106",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 69766,
+            "end": 70833,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company is subject to complex and changing laws and regulations worldwide, which exposes the Company to potential liabilities, increased costs and other adverse effects on the Company\u2019s business.\nThe Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.10211535314209538
+          },
+          {
+            "id": "AAPL-2024-p0107",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 70834,
+            "end": 71866,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Compliance with these laws and regulations is onerous and expensive. New and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s business or supply chain. New and changing laws and regulations can also create uncertainty about how such laws and regulations will be interpreted and applied. These risks and costs may increase as the Company\u2019s products and services are introduced into specialized applications, including health and financial services, or as the Company expands the use of technologies, such as machine learning and artificial intelligence features, and must navigate new legal, regulatory and ethical considerations relating to such technologies. The Company has implemented policies and procedures",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "AAPL-2024-p0057",
+            "AAPL-2024-p0056",
+            "AAPL-2024-p0106",
+            "AAPL-2024-p0116",
+            "AAPL-2024-p0054",
+            "AAPL-2024-p0109",
+            "AAPL-2024-p0128",
+            "AAPL-2024-p0127"
+          ],
+          "generation_passage_ids": [
+            "AAPL-2024-p0056",
+            "AAPL-2024-p0057",
+            "AAPL-2024-p0106",
+            "AAPL-2024-p0107"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "AAPL-2024-p0055",
+              "passage_ids": [
+                "AAPL-2024-p0056"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0056",
+                  "quote": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.",
+                  "start": 28458,
+                  "end": 28654
+                }
+              ],
+              "text": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0055:s6"
+            },
+            {
+              "id": "E2",
+              "passage_id": "AAPL-2024-p0056",
+              "passage_ids": [
+                "AAPL-2024-p0057"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0057",
+                  "quote": "Changing the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s operations.",
+                  "start": 29243,
+                  "end": 29438
+                }
+              ],
+              "text": "Changing the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s operations.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0056:s6"
+            },
+            {
+              "id": "E3",
+              "passage_id": "AAPL-2024-p0106",
+              "passage_ids": [
+                "AAPL-2024-p0107"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0107",
+                  "quote": "New and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s business or supply chain.",
+                  "start": 70903,
+                  "end": 71306
+                }
+              ],
+              "text": "New and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s business or supply chain.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0106:s7"
+            },
+            {
+              "id": "E4",
+              "passage_id": "AAPL-2024-p0106",
+              "passage_ids": [
+                "AAPL-2024-p0106"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0106",
+                  "quote": "The Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.",
+                  "start": 69966,
+                  "end": 70833
+                }
+              ],
+              "text": "The Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0106:s5"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "AAPL-2024-p0056:s3",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2024-p0057:s2",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2024-p0057:s5",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2024-p0107:s1",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 738,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "305b37b4e2785ccaa13aa101d44dcec222da8904e7c9174bc7fb65aa219d69fc",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2024\nRestrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.\n\n[E2] AAPL FY2024\nChanging the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s operations.\n\n[E3] AAPL FY2024\nNew and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s business or supply chain.\n\n[E4] AAPL FY2024\nThe Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.\n\nQUESTION: In the FY2024 filing, how can international trade restrictions affect Apple costs and force operational changes?",
+          "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Restrictions on international trade, such as tariffs and controls on imports or exports, can materially adversely affect the Company\u2019s business and supply chain [E1].  \nDisclosure: Changing the business and supply chain in response to such restrictions can be expensive, time-consuming and disruptive to operations [E2].  \nDisclosure: New laws and regulations, including trade restrictions, can increase costs and require changes to product design, business operations, or supply chain [E3].  \nDisclosure: The Company\u2019s global operations face complex and changing trade-related regulations, including import, export and trade controls [E4].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 10.175824292004108,
+              "prompt_tokens": 651,
+              "generation_tokens": 120,
+              "peak_mlx_memory_bytes": 2934818472
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Restrictions on international trade, such as tariffs and controls on imports or exports, can materially adversely affect the Company\u2019s business and supply chain.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0056"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0056",
+                  "quote": "Restrictions on international trade, such as tariffs and other controls on imports or exports of goods, technology or data, can materially adversely affect the Company\u2019s business and supply chain.",
+                  "start": 28458,
+                  "end": 28654,
+                  "sentence_id": "E1"
+                }
+              ]
+            },
+            {
+              "text": "Changing the business and supply chain in response to such restrictions can be expensive, time-consuming and disruptive to operations.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0057"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0057",
+                  "quote": "Changing the Company\u2019s business and supply chain in accordance with new or changed restrictions on international trade can be expensive, time-consuming and disruptive to the Company\u2019s operations.",
+                  "start": 29243,
+                  "end": 29438,
+                  "sentence_id": "E2"
+                }
+              ]
+            },
+            {
+              "text": "New laws and regulations, including trade restrictions, can increase costs and require changes to product design, business operations, or supply chain.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0107"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0107",
+                  "quote": "New and changing laws and regulations can adversely affect the Company\u2019s business by increasing the Company\u2019s costs, limiting the Company\u2019s ability to offer a product, service or feature to customers, imposing changes to the design of the Company\u2019s products and services, impacting customer demand for the Company\u2019s products and services, and requiring changes to the Company\u2019s business or supply chain.",
+                  "start": 70903,
+                  "end": 71306,
+                  "sentence_id": "E3"
+                }
+              ]
+            },
+            {
+              "text": "The Company\u2019s global operations face complex and changing trade-related regulations, including import, export and trade controls.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0106"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0106",
+                  "quote": "The Company\u2019s global operations are subject to complex and changing laws and regulations on subjects, including antitrust; privacy, data security and data localization; consumer protection; advertising, sales, billing and e-commerce; financial services and technology; product liability; intellectual property ownership and infringement; digital platforms; machine learning and artificial intelligence; internet, telecommunications and mobile communications; media, television, film and digital content; availability of third-party software applications and services; labor and employment; anticorruption; import, export and trade; foreign exchange controls and cash repatriation restrictions; anti\u2013money laundering; foreign ownership and investment; tax; and environmental, health and safety, including electronic waste, recycling, product design and climate change.",
+                  "start": 69966,
+                  "end": 70833,
+                  "sentence_id": "E4"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 10.175824292004108,
+          "prompt_tokens": 651,
+          "generation_tokens": 120,
+          "peak_mlx_memory_bytes": 2934818472,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 14.22311033308506,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "V11",
+      "wall_seconds": 6.451740042073652,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "HPQ-2023-p0047",
+            "document_id": "HPQ-2023",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "filed": "2023-12-18",
+            "section": "ITEM 1. Business.",
+            "anchor": "",
+            "start": 22655,
+            "end": 23340,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "We utilize two primary methods of fulfilling demand for products: building products to order and configuring products to order. We build products to order to maximize manufacturing and logistics efficiencies by producing high volumes of basic product configurations. Alternatively, configuring products to order enables units to match a customer\u2019s hardware and software customization requirements. Our inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+            "accession": "0000047217-23-000100",
+            "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+            "score": 0.2120439253842503
+          },
+          {
+            "id": "HPQ-2023-p0157",
+            "document_id": "HPQ-2023",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "filed": "2023-12-18",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 110473,
+            "end": 111464,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Our inventory management is complex, as we continue to sell a significant mix of products through distributors. We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations). Our forecasts may not accurately predict demand, and distributors have and may continue to increase orders during periods of product shortages, cancel orders if their inventory is too high or delay orders in anticipation of new products. Distributors also may adjust their orders in response to the supply of our products and the products of our competitors and seasonal fluctuations in end-user demand. Our reliance upon indirect distribution methods, including a multi-tiered channel, may reduce our visibility into inventories, demand and pricing trends, and may therefore make forecasting and managing multi-tiered channel inventory more difficult.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+            "accession": "0000047217-23-000100",
+            "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+            "score": 0.10340217842285052
+          },
+          {
+            "id": "HPQ-2023-p0105",
+            "document_id": "HPQ-2023",
+            "company": "HPQ",
+            "fiscal_year": 2023,
+            "filed": "2023-12-18",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 69494,
+            "end": 70520,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The increasing concern over climate change has resulted, and we expect will continue to result, in transition risks such as shifting customer preferences and regulations, including with regard to our products and their environmental impact. These demands have, and we expect will continue to, cause us to incur additional costs and make other changes to our operations. If we fail to manage transition risks effectively, customer demand for our products and services could diminish, and our profitability and cash flow could suffer. Additionally, concerns over climate change have resulted in, and are expected to continue to result in, the adoption of regulatory requirements designed to address climate change, such as imposing a price on carbon emissions, requirements of increased circularity in products, product efficiency and environmental certification requirements and climate-related disclosures. As a result, we may experience market access issues, restrictions on our ability to sell products to certain customers,",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721723000100/hpq-20231031.htm",
+            "accession": "0000047217-23-000100",
+            "sha256": "722e0b35613857016d8870db5b92b8559d4e1b8ccf968b30369f1451e2611e36",
+            "score": 0.0733853203008949
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "HPQ-2023-p0047",
+            "HPQ-2023-p0157",
+            "HPQ-2023-p0050",
+            "HPQ-2023-p0222",
+            "HPQ-2023-p0160",
+            "HPQ-2023-p0126",
+            "HPQ-2023-p0051",
+            "HPQ-2023-p0105"
+          ],
+          "generation_passage_ids": [
+            "HPQ-2023-p0047",
+            "HPQ-2023-p0105",
+            "HPQ-2023-p0157"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "HPQ-2023-p0046",
+              "passage_ids": [
+                "HPQ-2023-p0047"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2023-p0047",
+                  "quote": "Our inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.",
+                  "start": 23053,
+                  "end": 23340
+                }
+              ],
+              "text": "Our inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.",
+              "company": "HPQ",
+              "fiscal_year": 2023,
+              "source_sentence_id": "HPQ-2023-p0046:s9"
+            },
+            {
+              "id": "E2",
+              "passage_id": "HPQ-2023-p0105",
+              "passage_ids": [
+                "HPQ-2023-p0105"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2023-p0105",
+                  "quote": "Additionally, concerns over climate change have resulted in, and are expected to continue to result in, the adoption of regulatory requirements designed to address climate change, such as imposing a price on carbon emissions, requirements of increased circularity in products, product efficiency and environmental certification requirements and climate-related disclosures.",
+                  "start": 70027,
+                  "end": 70400
+                }
+              ],
+              "text": "Additionally, concerns over climate change have resulted in, and are expected to continue to result in, the adoption of regulatory requirements designed to address climate change, such as imposing a price on carbon emissions, requirements of increased circularity in products, product efficiency and environmental certification requirements and climate-related disclosures.",
+              "company": "HPQ",
+              "fiscal_year": 2023,
+              "source_sentence_id": "HPQ-2023-p0105:s3"
+            },
+            {
+              "id": "E3",
+              "passage_id": "HPQ-2023-p0157",
+              "passage_ids": [
+                "HPQ-2023-p0157"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2023-p0157",
+                  "quote": "We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).",
+                  "start": 110585,
+                  "end": 110811
+                }
+              ],
+              "text": "We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).",
+              "company": "HPQ",
+              "fiscal_year": 2023,
+              "source_sentence_id": "HPQ-2023-p0157:s1"
+            },
+            {
+              "id": "E4",
+              "passage_id": "HPQ-2023-p0157",
+              "passage_ids": [
+                "HPQ-2023-p0157"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2023-p0157",
+                  "quote": "Our forecasts may not accurately predict demand, and distributors have and may continue to increase orders during periods of product shortages, cancel orders if their inventory is too high or delay orders in anticipation of new products.",
+                  "start": 110812,
+                  "end": 111049
+                }
+              ],
+              "text": "Our forecasts may not accurately predict demand, and distributors have and may continue to increase orders during periods of product shortages, cancel orders if their inventory is too high or delay orders in anticipation of new products.",
+              "company": "HPQ",
+              "fiscal_year": 2023,
+              "source_sentence_id": "HPQ-2023-p0157:s2"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "HPQ-2023-p0047:s9",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "HPQ-2023-p0048:s3",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 637,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "3c0d0d59374495dd2ca6ad7084edfa47bec9b74247491872081633d17d504478",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] HPQ FY2023\nOur inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.\n\n[E2] HPQ FY2023\nAdditionally, concerns over climate change have resulted in, and are expected to continue to result in, the adoption of regulatory requirements designed to address climate change, such as imposing a price on carbon emissions, requirements of increased circularity in products, product efficiency and environmental certification requirements and climate-related disclosures.\n\n[E3] HPQ FY2023\nWe must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).\n\n[E4] HPQ FY2023\nOur forecasts may not accurately predict demand, and distributors have and may continue to increase orders during periods of product shortages, cancel orders if their inventory is too high or delay orders in anticipation of new products.\n\nQUESTION: Describe how HP build-to-order and configure-to-order practices in FY2023 address efficiency, customization and inventory holding periods.",
+          "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: HP's build-to-order and configure-to-order practices minimize inventory holding periods by taking delivery of inventory and manufacturing shortly before sale to customers [E1].  \nDisclosure: These practices support customization by allowing product configuration to meet specific customer needs, reducing the need for large pre-manufactured inventories [E1] [E3].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 6.137056207982823,
+              "prompt_tokens": 550,
+              "generation_tokens": 69,
+              "peak_mlx_memory_bytes": 2934818472
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "HP's build-to-order and configure-to-order practices minimize inventory holding periods by taking delivery of inventory and manufacturing shortly before sale to customers.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "HPQ-2023-p0047"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "HPQ-2023-p0047",
+                  "quote": "Our inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.",
+                  "start": 23053,
+                  "end": 23340,
+                  "sentence_id": "E1"
+                }
+              ]
+            },
+            {
+              "text": "These practices support customization by allowing product configuration to meet specific customer needs, reducing the need for large pre-manufactured inventories.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "HPQ-2023-p0047",
+                "HPQ-2023-p0157"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "HPQ-2023-p0047",
+                  "quote": "Our inventory management and distribution practices in both building products to order and configuring products to order seek to minimize inventory holding periods by taking delivery of the inventory and manufacturing shortly before the sale or distribution of products to our customers.",
+                  "start": 23053,
+                  "end": 23340,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "HPQ-2023-p0157",
+                  "quote": "We must manage both owned and channel inventory effectively, particularly with respect to sales to distributors, which involves forecasting demand and pricing (and factoring in supply chain challenges and order cancellations).",
+                  "start": 110585,
+                  "end": 110811,
+                  "sentence_id": "E3"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 6.137056207982823,
+          "prompt_tokens": 550,
+          "generation_tokens": 69,
+          "peak_mlx_memory_bytes": 2934818472,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 6.435490124858916,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "V13",
+      "wall_seconds": 6.824999541975558,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "AAPL-2024-p0085",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 51438,
+            "end": 52454,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company\u2019s minority market share in the global smartphone, personal computer and tablet markets can make developers less inclined to develop or upgrade software for the Company\u2019s products and more inclined to devote their resources to developing and upgrading software for competitors\u2019 products with larger market share. When developers focus their efforts on these competing platforms, the availability and quality of applications for the Company\u2019s devices can suffer.\nThe Company relies on the continued availability and development of compelling and innovative software applications for its products. The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.1259084444118227
+          },
+          {
+            "id": "AAPL-2024-p0083",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 49819,
+            "end": 50724,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "use such intellectual property on commercially reasonable terms, can require the Company to modify certain products, services or features or preclude the Company from selling certain products or services, or otherwise have a material adverse impact on the Company\u2019s business, results of operations and financial condition.\nThe Company\u2019s future performance depends in part on support from third-party software developers.\nThe Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services. There can be no assurance third-party developers will continue to develop and maintain software applications and services for the Company\u2019s products. If third-party software applications and services cease to be developed and maintained for the Company\u2019s products, customers may choose not to buy the Company\u2019s products.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.10872684105808807
+          },
+          {
+            "id": "AAPL-2024-p0037",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1. Business",
+            "anchor": "",
+            "start": 13676,
+            "end": 14404,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company\u2019s ability to compete successfully depends heavily on ensuring the continuing and timely introduction of innovative new products, services and technologies to the marketplace. The Company designs and develops nearly the entire solution for its products, including the hardware, operating system, numerous software applications and related services. Principal competitive factors important to the Company include price, product and service features (including security features), relative price and performance, product and service quality and reliability, design innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, and corporate reputation.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0.10311623187499483
+          },
+          {
+            "id": "AAPL-2024-p0082",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 48811,
+            "end": 49818,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company\u2019s products and services are designed to include intellectual property owned by third parties, which requires licenses from those third parties. In addition, because of technological changes in the industries in which the Company currently competes or in the future may compete, current extensive patent coverage and the rapid rate of issuance of new patents, the Company\u2019s products and services can unknowingly infringe existing patents or intellectual property rights of others. From time to time, the Company has been notified that it may be infringing certain patents or other intellectual property rights of third parties. Based on experience and industry practice, the Company believes licenses to such third-party intellectual property can generally be obtained on commercially reasonable terms. However, there can be no assurance the necessary licenses can be obtained on commercially reasonable terms or at all. Failure to obtain the right to use third-party intellectual property, or to",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "AAPL-2024-p0085",
+            "AAPL-2024-p0077",
+            "AAPL-2024-p0083",
+            "AAPL-2024-p0038",
+            "AAPL-2024-p0037",
+            "AAPL-2024-p0067",
+            "AAPL-2024-p0086",
+            "AAPL-2024-p0126"
+          ],
+          "generation_passage_ids": [
+            "AAPL-2024-p0037",
+            "AAPL-2024-p0082",
+            "AAPL-2024-p0083",
+            "AAPL-2024-p0085"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "AAPL-2024-p0083",
+              "passage_ids": [
+                "AAPL-2024-p0082",
+                "AAPL-2024-p0083"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0082",
+                  "quote": "Failure to obtain the right to use third-party intellectual property, or to",
+                  "start": 49743,
+                  "end": 49818
+                },
+                {
+                  "citation": "AAPL-2024-p0083",
+                  "quote": "use such intellectual property on commercially reasonable terms, can require the Company to modify certain products, services or features or preclude the Company from selling certain products or services, or otherwise have a material adverse impact on the Company\u2019s business, results of operations and financial condition.",
+                  "start": 49819,
+                  "end": 50141
+                }
+              ],
+              "text": "Failure to obtain the right to use third-party intellectual property, or to use such intellectual property on commercially reasonable terms, can require the Company to modify certain products, services or features or preclude the Company from selling certain products or services, or otherwise have a material adverse impact on the Company\u2019s business, results of operations and financial condition.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0083:s5"
+            },
+            {
+              "id": "E2",
+              "passage_id": "AAPL-2024-p0083",
+              "passage_ids": [
+                "AAPL-2024-p0083"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0083",
+                  "quote": "The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.",
+                  "start": 50240,
+                  "end": 50403
+                }
+              ],
+              "text": "The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0083:s7"
+            },
+            {
+              "id": "E3",
+              "passage_id": "AAPL-2024-p0084",
+              "passage_ids": [
+                "AAPL-2024-p0085"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0085",
+                  "quote": "The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+                  "start": 52045,
+                  "end": 52454
+                }
+              ],
+              "text": "The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0084:s9"
+            },
+            {
+              "id": "E4",
+              "passage_id": "AAPL-2024-p0036",
+              "passage_ids": [
+                "AAPL-2024-p0037"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2024-p0037",
+                  "quote": "Principal competitive factors important to the Company include price, product and service features (including security features), relative price and performance, product and service quality and reliability, design innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, and corporate reputation.",
+                  "start": 14036,
+                  "end": 14404
+                }
+              ],
+              "text": "Principal competitive factors important to the Company include price, product and service features (including security features), relative price and performance, product and service quality and reliability, design innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, and corporate reputation.",
+              "company": "AAPL",
+              "fiscal_year": 2024,
+              "source_sentence_id": "AAPL-2024-p0036:s4"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "AAPL-2024-p0084:s1",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2024-p0085:s5",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 672,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "311e45ff334182c68287104a180befa4aa611225e31e0bb9ab91f4c44261aa58",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2024\nFailure to obtain the right to use third-party intellectual property, or to use such intellectual property on commercially reasonable terms, can require the Company to modify certain products, services or features or preclude the Company from selling certain products or services, or otherwise have a material adverse impact on the Company\u2019s business, results of operations and financial condition.\n\n[E2] AAPL FY2024\nThe Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.\n\n[E3] AAPL FY2024\nThe Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.\n\n[E4] AAPL FY2024\nPrincipal competitive factors important to the Company include price, product and service features (including security features), relative price and performance, product and service quality and reliability, design innovation, a strong third-party software and accessories ecosystem, marketing and distribution capability, service and support, and corporate reputation.\n\nQUESTION: Why does continued third-party application development matter to purchases of Apple hardware in FY2024?",
+          "system_sha256": "4662871b584ede8e57981b870864b009a8518ff4f5fd520aaf85ca054c7f6eaa"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Customers\u2019 decisions to purchase Apple hardware depend in part on the availability of third-party software applications and services [E2].  \nDisclosure: When third-party developers fail to keep up with rapid technological changes, applications may operate incorrectly or fail to deliver improved customer experiences, leading to dissatisfied customers and lower demand for Apple products [E3].  \n[E2] [E3]",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 6.681381583213806,
+              "prompt_tokens": 585,
+              "generation_tokens": 78,
+              "peak_mlx_memory_bytes": 2960213696
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Customers\u2019 decisions to purchase Apple hardware depend in part on the availability of third-party software applications and services.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0083"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0083",
+                  "quote": "The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.",
+                  "start": 50240,
+                  "end": 50403,
+                  "sentence_id": "E2"
+                }
+              ]
+            },
+            {
+              "text": "When third-party developers fail to keep up with rapid technological changes, applications may operate incorrectly or fail to deliver improved customer experiences, leading to dissatisfied customers and lower demand for Apple products.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2024-p0083",
+                "AAPL-2024-p0085"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2024-p0085",
+                  "quote": "The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+                  "start": 52045,
+                  "end": 52454,
+                  "sentence_id": "E3"
+                },
+                {
+                  "citation": "AAPL-2024-p0083",
+                  "quote": "The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services.",
+                  "start": 50240,
+                  "end": 50403,
+                  "sentence_id": "E2"
+                },
+                {
+                  "citation": "AAPL-2024-p0085",
+                  "quote": "The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products.",
+                  "start": 52045,
+                  "end": 52454,
+                  "sentence_id": "E3"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 6.681381583213806,
+          "prompt_tokens": 585,
+          "generation_tokens": 78,
+          "peak_mlx_memory_bytes": 2960213696,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 6.815686542075127,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "V22",
+      "wall_seconds": 0.008863541996106505,
+      "result": {
+        "status": "source_conflict",
+        "origin": "deterministic finance engine",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "Conflicting or incomparable source observations remain unresolved; both proofs are retained below.",
+            "One or more required annual facts are missing or unresolved."
+          ]
+        },
+        "financial_request": {
+          "company": "DELL",
+          "metrics": [
+            "cash"
+          ],
+          "years": [
+            2024
+          ],
+          "operation": "level",
+          "unit": "USD million",
+          "scope": "consolidated",
+          "definition": "as_reported",
+          "period_selection": "explicit"
+        },
+        "verified_financials": {
+          "measures": [],
+          "issues": [
+            "Conflicting or incomparable source observations remain unresolved; both proofs are retained below.",
+            "One or more required annual facts are missing or unresolved."
+          ],
+          "observations": [
+            {
+              "metric": "cash",
+              "company": "DELL",
+              "value": 7366.0,
+              "raw_value": 7366000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-02-02",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "DELL-2024-cash",
+              "evidence_ids": [
+                "DELL-2024-cash"
+              ],
+              "document_id": "DELL-2024",
+              "accession": "0001571996-24-000036",
+              "filed": "2024-03-25",
+              "fiscal_year": 2024
+            },
+            {
+              "metric": "cash",
+              "company": "DELL",
+              "value": 8000.0,
+              "raw_value": 8000000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-02-02",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "SYNTHETIC-V22-proof",
+              "evidence_ids": [
+                "SYNTHETIC-V22-proof"
+              ],
+              "document_id": "SYNTHETIC-V22",
+              "accession": "SYNTHETIC-ACCESSION-V22",
+              "filed": "2024-12-20",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": [
+            {
+              "metric": "cash",
+              "fiscal_year": 2024,
+              "reason": "No single comparable consolidated USD observation: check value, period, definition and reporting basis. No filing was preferred by recency.",
+              "observations": [
+                {
+                  "metric": "cash",
+                  "company": "DELL",
+                  "value": 7366.0,
+                  "raw_value": 7366000000.0,
+                  "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": null,
+                  "end": "2024-02-02",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "DELL-2024-cash",
+                  "evidence_ids": [
+                    "DELL-2024-cash"
+                  ],
+                  "document_id": "DELL-2024",
+                  "accession": "0001571996-24-000036",
+                  "filed": "2024-03-25"
+                },
+                {
+                  "metric": "cash",
+                  "company": "DELL",
+                  "value": 8000.0,
+                  "raw_value": 8000000000.0,
+                  "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+                  "unit": "USD",
+                  "currency": "USD",
+                  "start": null,
+                  "end": "2024-02-02",
+                  "scope": "consolidated",
+                  "reporting_basis": "as_reported",
+                  "restates_accession": null,
+                  "evidence_id": "SYNTHETIC-V22-proof",
+                  "evidence_ids": [
+                    "SYNTHETIC-V22-proof"
+                  ],
+                  "document_id": "SYNTHETIC-V22",
+                  "accession": "SYNTHETIC-ACCESSION-V22",
+                  "filed": "2024-12-20"
+                }
+              ]
+            }
+          ],
+          "request": {
+            "company": "DELL",
+            "metrics": [
+              "cash"
+            ],
+            "years": [
+              2024
+            ],
+            "operation": "level",
+            "unit": "USD million",
+            "scope": "consolidated",
+            "definition": "as_reported",
+            "period_selection": "explicit"
+          },
+          "result_ids": []
+        },
+        "evidence": [
+          {
+            "id": "DELL-2024-cash",
+            "document_id": "DELL-2024",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "filed": "2024-03-25",
+            "section": "XBRL / cash",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "DELL FY2024, consolidated annual XBRL. cash (CashAndCashEquivalentsAtCarryingValue) = 7366000000 USD. Period instant to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+            "accession": "0001571996-24-000036",
+            "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+            "score": 0
+          },
+          {
+            "id": "SYNTHETIC-V22-proof",
+            "document_id": "SYNTHETIC-V22",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "filed": "2024-12-20",
+            "section": "Explicit synthetic provenance test",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "SYNTHETIC EVALUATION SOURCE, NOT AN OFFICIAL DISCLOSURE. {\"document_id\": \"SYNTHETIC-V22\", \"company\": \"DELL\", \"fiscal_year\": \"2024\", \"metric\": \"cash\", \"concept\": \"us-gaap:CashAndCashEquivalentsAtCarryingValue\", \"value\": \"8000000000\", \"unit\": \"USD\", \"currency\": \"USD\", \"start\": \"None\", \"end\": \"2024-02-02\", \"scope\": \"consolidated\", \"reporting_basis\": \"as_reported\", \"restates_accession\": \"None\"}",
+            "url": "https://example.invalid/researchdesk-synthetic-fixture",
+            "accession": "SYNTHETIC-ACCESSION-V22",
+            "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "score": 0
+          }
+        ],
+        "calculations": null,
+        "trace": [
+          {
+            "tool": "validate_financial_request",
+            "status": "ok",
+            "request": {
+              "company": "DELL",
+              "metrics": [
+                "cash"
+              ],
+              "years": [
+                2024
+              ],
+              "operation": "level",
+              "unit": "USD million",
+              "scope": "consolidated",
+              "definition": "as_reported",
+              "period_selection": "explicit"
+            }
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "withheld",
+            "measure_ids": []
+          }
+        ],
+        "explanation": {
+          "status": "not_requested",
+          "origin": "generated_text"
+        },
+        "citation_support": "Structured input provenance checked; generated text requires separate semantic review.",
+        "elapsed_seconds": 0.0044984580017626286
+      }
+    }
+  ]
+}

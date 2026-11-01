@@ -65,6 +65,8 @@ def validate_final_freeze():
         EVAL / "dev-cases.json",
     ]:
         old += json.loads(p.read_text())
+    for p in EVAL.glob("attempt-*/final-cases.json"):
+        old += json.loads(p.read_text())
 
     def normalize(text):
         return " ".join(text.casefold().split())
