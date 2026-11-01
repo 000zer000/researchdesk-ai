@@ -1,0 +1,591 @@
+{
+  "classification": "Known v1.1 blocked-case diagnostic replay. Not new independent evaluation. Same verified engine; the model-copy gate was removed. No LLM numerical-reasoning improvement is claimed.",
+  "records": [
+    {
+      "id": "N04",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.04723679111339152,
+      "request": {
+        "company": "AAPL",
+        "metrics": [
+          "period_weeks"
+        ],
+        "years": [
+          2024
+        ],
+        "operation": "level",
+        "unit": "weeks",
+        "scope": "consolidated",
+        "definition": "inclusive_fiscal_days/7",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "period_weeks:2024"
+      ],
+      "measures": [
+        {
+          "id": "period_weeks:2024",
+          "company": "AAPL",
+          "periods": [
+            "2023-10-01/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "weeks",
+          "definition": "inclusive_fiscal_days/7",
+          "value": 52.0,
+          "direction": "level",
+          "citations": [
+            "AAPL-2024-revenue"
+          ],
+          "label": "Fiscal period length",
+          "formula": "inclusive_fiscal_days/7",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "revenue",
+              "company": "AAPL",
+              "value": 391035.0,
+              "raw_value": 391035000000.0,
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-revenue",
+              "evidence_ids": [
+                "AAPL-2024-revenue"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "(Inclusive period end \u2212 start + 1 day) / 7 days"
+        }
+      ]
+    },
+    {
+      "id": "N08",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.0021636669989675283,
+      "request": {
+        "company": "AAPL",
+        "metrics": [
+          "capex"
+        ],
+        "years": [
+          2024
+        ],
+        "operation": "level",
+        "unit": "USD million",
+        "scope": "consolidated",
+        "definition": "as_reported",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "capex:2024"
+      ],
+      "measures": [
+        {
+          "id": "capex:2024",
+          "company": "AAPL",
+          "periods": [
+            "2023-10-01/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "value": 9447.0,
+          "direction": "level",
+          "citations": [
+            "AAPL-2024-capex"
+          ],
+          "label": "Capex",
+          "formula": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "capex",
+              "company": "AAPL",
+              "value": 9447.0,
+              "raw_value": 9447000000.0,
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-capex",
+              "evidence_ids": [
+                "AAPL-2024-capex"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        }
+      ]
+    },
+    {
+      "id": "N09",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.0019850421231240034,
+      "request": {
+        "company": "DELL",
+        "metrics": [
+          "cash"
+        ],
+        "years": [
+          2024
+        ],
+        "operation": "level",
+        "unit": "USD million",
+        "scope": "consolidated",
+        "definition": "as_reported",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "cash:2024"
+      ],
+      "measures": [
+        {
+          "id": "cash:2024",
+          "company": "DELL",
+          "periods": [
+            "instant/2024-02-02"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": 7366.0,
+          "direction": "level",
+          "citations": [
+            "DELL-2024-cash"
+          ],
+          "label": "Cash",
+          "formula": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "DELL",
+              "value": 7366.0,
+              "raw_value": 7366000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-02-02",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "DELL-2024-cash",
+              "evidence_ids": [
+                "DELL-2024-cash"
+              ],
+              "document_id": "DELL-2024",
+              "accession": "0001571996-24-000036",
+              "filed": "2024-03-25",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.004895291058346629,
+      "request": {
+        "company": "AAPL",
+        "metrics": [
+          "cash"
+        ],
+        "years": [
+          2023,
+          2024
+        ],
+        "operation": "growth",
+        "unit": "percent",
+        "scope": "consolidated",
+        "definition": "as_reported",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "cash_growth:2023:2024"
+      ],
+      "measures": [
+        {
+          "id": "cash:2023",
+          "company": "AAPL",
+          "periods": [
+            "instant/2023-09-30"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": 29965.0,
+          "direction": "level",
+          "citations": [
+            "AAPL-2023-cash"
+          ],
+          "label": "Cash",
+          "formula": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29965.0,
+              "raw_value": 29965000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2023-09-30",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2023-cash",
+              "evidence_ids": [
+                "AAPL-2023-cash"
+              ],
+              "document_id": "AAPL-2023",
+              "accession": "0000320193-23-000106",
+              "filed": "2023-11-03",
+              "fiscal_year": 2023
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        },
+        {
+          "id": "cash:2024",
+          "company": "AAPL",
+          "periods": [
+            "instant/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": 29943.0,
+          "direction": "level",
+          "citations": [
+            "AAPL-2024-cash"
+          ],
+          "label": "Cash",
+          "formula": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29943.0,
+              "raw_value": 29943000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-cash",
+              "evidence_ids": [
+                "AAPL-2024-cash"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        },
+        {
+          "id": "cash_change:2023:2024",
+          "company": "AAPL",
+          "periods": [
+            "instant/2023-09-30",
+            "instant/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "delta:us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": -22.0,
+          "direction": "decreased",
+          "citations": [
+            "AAPL-2023-cash",
+            "AAPL-2024-cash"
+          ],
+          "label": "Cash change",
+          "formula": "delta:us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29965.0,
+              "raw_value": 29965000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2023-09-30",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2023-cash",
+              "evidence_ids": [
+                "AAPL-2023-cash"
+              ],
+              "document_id": "AAPL-2023",
+              "accession": "0000320193-23-000106",
+              "filed": "2023-11-03",
+              "fiscal_year": 2023
+            },
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29943.0,
+              "raw_value": 29943000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-cash",
+              "evidence_ids": [
+                "AAPL-2024-cash"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "To-period value \u2212 from-period value"
+        },
+        {
+          "id": "cash_growth:2023:2024",
+          "company": "AAPL",
+          "periods": [
+            "instant/2023-09-30",
+            "instant/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "percent",
+          "definition": "growth:us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": -0.07341898882029034,
+          "direction": "decreased",
+          "citations": [
+            "AAPL-2023-cash",
+            "AAPL-2024-cash"
+          ],
+          "label": "Cash growth",
+          "formula": "growth:us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29965.0,
+              "raw_value": 29965000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2023-09-30",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2023-cash",
+              "evidence_ids": [
+                "AAPL-2023-cash"
+              ],
+              "document_id": "AAPL-2023",
+              "accession": "0000320193-23-000106",
+              "filed": "2023-11-03",
+              "fiscal_year": 2023
+            },
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29943.0,
+              "raw_value": 29943000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-cash",
+              "evidence_ids": [
+                "AAPL-2024-cash"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "(To-period value / from-period value \u2212 1) \u00d7 100"
+        }
+      ]
+    },
+    {
+      "id": "N23",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.008435625117272139,
+      "request": {
+        "company": "HPQ",
+        "metrics": [
+          "current_liabilities"
+        ],
+        "years": [
+          2024
+        ],
+        "operation": "level",
+        "unit": "USD million",
+        "scope": "consolidated",
+        "definition": "as_reported",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "current_liabilities:2024"
+      ],
+      "measures": [
+        {
+          "id": "current_liabilities:2024",
+          "company": "HPQ",
+          "periods": [
+            "instant/2024-10-31"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:LiabilitiesCurrent",
+          "value": 28687.0,
+          "direction": "level",
+          "citations": [
+            "HPQ-2024-current_liabilities"
+          ],
+          "label": "Current liabilities",
+          "formula": "us-gaap:LiabilitiesCurrent",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "current_liabilities",
+              "company": "HPQ",
+              "value": 28687.0,
+              "raw_value": 28687000000.0,
+              "concept": "us-gaap:LiabilitiesCurrent",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-10-31",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "HPQ-2024-current_liabilities",
+              "evidence_ids": [
+                "HPQ-2024-current_liabilities"
+              ],
+              "document_id": "HPQ-2024",
+              "accession": "0000047217-24-000080",
+              "filed": "2024-12-13",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        }
+      ]
+    },
+    {
+      "id": "N24",
+      "status": "answered",
+      "origin": "deterministic finance engine",
+      "wall_seconds": 0.005613499786704779,
+      "request": {
+        "company": "AAPL",
+        "metrics": [
+          "cash"
+        ],
+        "years": [
+          2024
+        ],
+        "operation": "level",
+        "unit": "USD million",
+        "scope": "consolidated",
+        "definition": "as_reported",
+        "period_selection": "explicit"
+      },
+      "result_ids": [
+        "cash:2024"
+      ],
+      "measures": [
+        {
+          "id": "cash:2024",
+          "company": "AAPL",
+          "periods": [
+            "instant/2024-09-28"
+          ],
+          "scope": "consolidated",
+          "unit": "USD million",
+          "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "value": 29943.0,
+          "direction": "level",
+          "citations": [
+            "AAPL-2024-cash"
+          ],
+          "label": "Cash",
+          "formula": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "origin": "deterministic_calculation",
+          "inputs": [
+            {
+              "metric": "cash",
+              "company": "AAPL",
+              "value": 29943.0,
+              "raw_value": 29943000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-cash",
+              "evidence_ids": [
+                "AAPL-2024-cash"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "formula_display": "Reported consolidated value; output normalized to USD million"
+        }
+      ]
+    }
+  ]
+}

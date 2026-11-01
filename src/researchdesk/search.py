@@ -1,3 +1,4 @@
+import math
 import re
 from datetime import date
 from typing import Literal
@@ -43,7 +44,7 @@ def serialize(p: Passage, d: Document, score: float = 0) -> dict:
     }
 
 
-def search_documents(session: Session, args: SearchInput) -> list[dict]:
+def search_documents(session: Session, args: SearchInput, profile: str = "focused") -> list[dict]:
     base = (
         select(Passage, Document)
         .join(Document)
@@ -57,7 +58,7 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
     )
     words = [w for w in re.findall(r"[a-zA-Z]+", args.question.lower()) if w not in stop]
     cleaned = " ".join(words) or args.question
-    focus = retrieval_focus(args.question)
+    focus = retrieval_focus(args.question, profile)
     expanded = words + [w for group in focus for w in group]
     query = func.websearch_to_tsquery("english", " OR ".join(expanded) or args.question)
     vector = func.to_tsvector("english", Passage.text)
@@ -66,11 +67,36 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
         .order_by(func.ts_rank_cd(vector, query).desc(), Passage.id)
         .limit(30)
     ).all()
+    corpus = session.execute(base).all() if profile == "focused" else []
+    idf_scores = {}
+    anchors = []
+    if corpus:
+        # Rarer query terms recover split paragraphs that lack their topic noun
+        # (for example a continuation containing digitization but not printing).
+        terms = sorted(set(w for w in words if len(w) >= 4))
+        frequencies = {
+            w: sum(bool(re.search(r"\b" + re.escape(w), p.text, re.I)) for p, _ in corpus)
+            for w in terms
+        }
+        weights = {w: math.log(1 + len(corpus) / (1 + df)) for w, df in frequencies.items() if df}
+        idf_scores = {
+            p.id: sum(
+                weight
+                for word, weight in weights.items()
+                if re.search(r"\b" + re.escape(word), p.text, re.I)
+            )
+            for p, _ in corpus
+        }
+        anchors = sorted(corpus, key=lambda pair: (-idf_scores[pair[0].id], pair[0].id))[:20]
     if args.method == "lexical":
-        ranked = [(p, d, 1 / (60 + i + 1)) for i, (p, d) in enumerate(lexical)]
-        return rerank(ranked, focus, args.k)
-    # RRF is transparent and needs no learned reranker. Corpus is intentionally small.
-    candidates = session.execute(base.where(Passage.embedding.is_not(None))).all()
+        lookup = {p.id: (p, d) for p, d in lexical + anchors}
+        ranked = [(p, d, 1 / (60 + i + 1)) for i, (p, d) in enumerate(lookup.values())]
+        return rerank(ranked, focus, args.k, idf_scores)
+    candidates = (
+        [(p, d) for p, d in corpus if p.embedding is not None]
+        if corpus
+        else session.execute(base.where(Passage.embedding.is_not(None))).all()
+    )
     if not candidates:
         if session.execute(base.limit(1)).first() is None:
             return []
@@ -84,11 +110,13 @@ def search_documents(session: Session, args: SearchInput) -> list[dict]:
     semantic = [candidates[int(i)] for i in order]
     scores: dict[str, float] = {}
     lookup = {}
-    for ranked in (lexical, semantic):
+    for ranked in (lexical, semantic, anchors):
         for rank, (p, d) in enumerate(ranked, 1):
             scores[p.id] = scores.get(p.id, 0) + 1 / (60 + rank)
             lookup[p.id] = (p, d)
-    return rerank([(p, d, scores[key]) for key, (p, d) in lookup.items()], focus, args.k)
+    return rerank(
+        [(p, d, scores[key]) for key, (p, d) in lookup.items()], focus, args.k, idf_scores
+    )
 
 
 # Query expansion and specificity are topic rules, never question IDs or company-
@@ -126,13 +154,19 @@ FOCUSES = [
 ]
 
 
-def retrieval_focus(question: str) -> list[tuple[str, ...]]:
-    return [
-        tuple(group)
-        for pattern, groups in FOCUSES
-        if re.search(pattern, question, re.I)
-        for group in groups
+def retrieval_focus(question: str, profile: str = "focused") -> list[tuple[str, ...]]:
+    matching = [
+        (pattern, groups) for pattern, groups in FOCUSES if re.search(pattern, question, re.I)
     ]
+    if profile == "focused":
+        # Explicit subject outranks incidental supplier vocabulary. Otherwise a
+        # printing/privacy question is misrouted to general procurement risks.
+        for index in (2, 3, 1):
+            pattern, groups = FOCUSES[index]
+            if re.search(pattern, question, re.I):
+                matching = [(pattern, groups)]
+                break
+    return [tuple(group) for _, groups in matching for group in groups]
 
 
 def specificity(text: str, groups: list[tuple[str, ...]]) -> float:
@@ -150,11 +184,19 @@ def specificity(text: str, groups: list[tuple[str, ...]]) -> float:
     return score
 
 
-def rerank(candidates: list, focus: list, k: int) -> list[dict]:
+def rerank(candidates: list, focus: list, k: int, idf_scores=None) -> list[dict]:
+    idf_scores = idf_scores or {}
+    weight = 0.002 if idf_scores else 0.012
+
+    def score(item):
+        return (
+            item[2]
+            + weight * specificity(item[0].text, focus)
+            + 0.006 * idf_scores.get(item[0].id, 0)
+        )
+
     ordered = sorted(
         candidates,
-        key=lambda item: (-(item[2] + 0.012 * specificity(item[0].text, focus)), item[0].id),
+        key=lambda item: (-score(item), item[0].id),
     )
-    return [
-        serialize(p, d, score + 0.012 * specificity(p.text, focus)) for p, d, score in ordered[:k]
-    ]
+    return [serialize(p, d, score((p, d, base_score))) for p, d, base_score in ordered[:k]]

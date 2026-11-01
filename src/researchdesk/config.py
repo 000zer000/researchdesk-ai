@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -12,10 +13,10 @@ class Settings(BaseSettings):
     )
     sec_user_agent: str = ""
     llm_backend: str = "mlx"
-    llm_model: str = "mlx-community/Qwen2.5-1.5B-Instruct-4bit"
+    llm_model: str = "mlx-community/Qwen3-4B-Instruct-2507-4bit"
     local_llm_url: str = "http://127.0.0.1:8081/v1/chat/completions"
-    llm_timeout: int = 90
-    llm_max_tokens: int = 1200
+    llm_timeout: int = Field(default=90, ge=1, le=90)
+    llm_max_tokens: int = Field(default=650, ge=1, le=650)
     data_dir: Path = ROOT / "data"
 
 

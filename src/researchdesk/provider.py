@@ -12,13 +12,19 @@ from huggingface_hub import snapshot_download
 
 from .config import settings
 
+REVIEWED_MODELS = {
+    "mlx-community/Qwen2.5-1.5B-Instruct-4bit": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+    "mlx-community/Qwen3-4B-Instruct-2507-4bit": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+}
+
 
 def download_llm() -> str:
-    if settings.llm_model != "mlx-community/Qwen2.5-1.5B-Instruct-4bit":
+    if settings.llm_model not in REVIEWED_MODELS:
         raise ValueError("Model downloader is restricted to the reviewed default model and license")
     path = snapshot_download(
         settings.llm_model,
-        revision="8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+        revision=REVIEWED_MODELS[settings.llm_model],
+        allow_patterns=["*.json", "*.safetensors", "*.jinja", "LICENSE*", "README.md"],
         cache_dir=settings.data_dir / "models" / "hf",
     )
     target = settings.data_dir / "runtime" / "llm.json"
@@ -41,6 +47,8 @@ def download_llm() -> str:
 class MLXProvider:
     def __init__(self):
         self.metadata = json.loads((settings.data_dir / "runtime" / "llm.json").read_text())
+        if self.metadata.get("model", settings.llm_model) != settings.llm_model:
+            raise ValueError("Cached model differs from configured model; run researchdesk models")
         self.lock = threading.Lock()
         # MLX streams belong to the thread that creates them. FastAPI can use a
         # different worker on the next request, so imports, loading and generation
@@ -68,6 +76,7 @@ class MLXProvider:
             self.lock.release()
 
     def _generate(self, messages: list[dict], timeout_seconds: float | None):
+        import mlx.core as mx
         from mlx_lm import stream_generate
         from mlx_lm.sample_utils import make_sampler
 
@@ -97,6 +106,9 @@ class MLXProvider:
                 "elapsed_seconds": time.monotonic() - start,
                 "prompt_tokens": last.prompt_tokens if last else 0,
                 "generation_tokens": last.generation_tokens if last else 0,
+                "peak_mlx_memory_bytes": int(mx.get_peak_memory())
+                if hasattr(mx, "get_peak_memory")
+                else None,
             }
         finally:
             # Unwind the stream-affine cache on the owner thread, even on timeout.

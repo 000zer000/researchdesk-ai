@@ -1,0 +1,311 @@
+{
+  "classification": "Diagnostic replay on immutable v1.1 source, not an independent new evaluation. Original raw proposals were not retained, so replay errors cannot be asserted as the exact original cause.",
+  "records": [
+    {
+      "id": "N04",
+      "question": "State the verified number of reporting weeks in Apple fiscal 2024.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\nThis JSON data provides the verified number of reporting weeks in Apple's fiscal year 2024, which is 52 weeks.",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.2164082089439034,
+            "prompt_tokens": 270,
+            "generation_tokens": 144,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/202",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 23.04060595901683,
+            "prompt_tokens": 448,
+            "generation_tokens": 1200
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        },
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        }
+      ],
+      "original_raw_available": false
+    },
+    {
+      "id": "N08",
+      "question": "State Apple capex for fiscal 2024 using its original annual observation.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAc",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 23.726440040860325,
+            "prompt_tokens": 280,
+            "generation_tokens": 1200,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAc",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 27.25685395882465,
+            "prompt_tokens": 1515,
+            "generation_tokens": 1200
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        },
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        }
+      ],
+      "original_raw_available": false
+    },
+    {
+      "id": "N09",
+      "question": "Give the Dell cash balance at fiscal year-end 2024.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": {\"company\": \"DELL\", \"periods\": [\"instant/2024-02-02\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:CashAndCashEquivalentsAtCarryingValue\", \"value\": 7366.0, \"direction\": \"level\", \"citations\": [\"DELL-2024-cash\"]}}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 2.729269750183448,
+            "prompt_tokens": 270,
+            "generation_tokens": 114,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": {\"company\": \"DELL\", \"periods\": [\"instant/2024-02-02\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:CashAndCashEquivalentsAtCarryingValue\", \"value\": 7366.0, \"direction\": \"level\", \"citations\": [\"DELL-2024-cash\"]}}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 2.803204125026241,
+            "prompt_tokens": 418,
+            "generation_tokens": 114
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "10 validation errors for FinancialAnswer\nassertions.0.id\n  Field required [type=missing, input_value={'cash:2024': {'company':...s': ['DELL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.company\n  Field required [type=missing, input_value={'cash:2024': {'company':...s': ['DELL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.periods\n  Field required "
+        },
+        {
+          "category": "format",
+          "detail": "10 validation errors for FinancialAnswer\nassertions.0.id\n  Field required [type=missing, input_value={'cash:2024': {'company':...s': ['DELL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.company\n  Field required [type=missing, input_value={'cash:2024': {'company':...s': ['DELL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.periods\n  Field required "
+        }
+      ],
+      "original_raw_available": false
+    },
+    {
+      "id": "N11",
+      "question": "Compare Apple cash and cash equivalents in 2023 versus 2024 and give the percentage change.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2023\": 29965.0, \"cash:2024\": 29943.0, \"cash_change:2023:2024\": -22.0, \"cash_growth:2023:2024\": -0.07341898882029034}][]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.0970302920322865,
+            "prompt_tokens": 673,
+            "generation_tokens": 102,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2023\": 29965.0, \"cash:2024\": 29943.0, \"cash_change:2023:2024\": -22.0, \"cash_growth:2023:2024\": -0.07341898882029034}][]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.5101769999600947,
+            "prompt_tokens": 809,
+            "generation_tokens": 102
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        },
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        }
+      ],
+      "original_raw_available": false
+    },
+    {
+      "id": "N23",
+      "question": "Identify HP consolidated USD current liabilities for 2024 while keeping a foreign-currency observation separate.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\nThis JSON data contains a verified measure for HPQ's consolidated USD current liabilities for the period ending October 31, 2024. The value is 28687.0 USD million, which represents the total current liabilities for the company at that specific date. This information is sourced from the HPQ-2024-current_liabilities document.",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 4.045424417126924,
+            "prompt_tokens": 274,
+            "generation_tokens": 190,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:LiabilitiesCurrent\", \"value\": 28687.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-current_liabilities\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"current_liabilities:2024\", \"company\": \"HPQ\", \"periods\": [\"instant/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-g",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 28.156841333955526,
+            "prompt_tokens": 498,
+            "generation_tokens": 1200
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        },
+        {
+          "category": "format",
+          "detail": "The local model did not return complete structured JSON"
+        }
+      ],
+      "original_raw_available": false
+    },
+    {
+      "id": "N24",
+      "question": "Select Apple consolidated cash balance for 2024 without substituting a regional segment.",
+      "original_status": "financial_conclusion_withheld",
+      "replay_status": "financial_conclusion_withheld",
+      "ledger_issues": [],
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": {\"AAPL\": 29943.0, \"period\": \"instant/2024-09-28\", \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:CashAndCashEquivalentsAtCarryingValue\", \"value\": 29943.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-cash\"]}}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 2.9594066669233143,
+            "prompt_tokens": 274,
+            "generation_tokens": 120,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": {\"AAPL\": 29943.0, \"period\": \"instant/2024-09-28\", \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:CashAndCashEquivalentsAtCarryingValue\", \"value\": 29943.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-cash\"]}}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.704167874995619,
+            "prompt_tokens": 428,
+            "generation_tokens": 120
+          }
+        }
+      ],
+      "observed_replay_errors": [
+        {
+          "category": "format",
+          "detail": "10 validation errors for FinancialAnswer\nassertions.0.id\n  Field required [type=missing, input_value={'cash:2024': {'AAPL': 29...s': ['AAPL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.company\n  Field required [type=missing, input_value={'cash:2024': {'AAPL': 29...s': ['AAPL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.periods\n  Field required "
+        },
+        {
+          "category": "format",
+          "detail": "10 validation errors for FinancialAnswer\nassertions.0.id\n  Field required [type=missing, input_value={'cash:2024': {'AAPL': 29...s': ['AAPL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.company\n  Field required [type=missing, input_value={'cash:2024': {'AAPL': 29...s': ['AAPL-2024-cash']}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nassertions.0.periods\n  Field required "
+        }
+      ],
+      "original_raw_available": false
+    }
+  ]
+}

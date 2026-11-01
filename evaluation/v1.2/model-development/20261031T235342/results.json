@@ -1,0 +1,95 @@
+{
+  "classification": "Declared model comparison on consumed development cases; no independent final claim. First execution per model on this fixed protocol.",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "d61cb67fdf42a23cd6295a05ef314e75a8709d02a32af86abfbb21ddc6c03abd",
+    "frontend/e2e/journey.spec.ts": "58c75361cc4a4e99967f345660bf339b69ce443c2b09ef4928b88c2b48b2f0e0",
+    "frontend/package-lock.json": "e354e33cd966cd3ab13d3da9f2a67e51bbdf096a385c97d12d430cdf8dbe9608",
+    "frontend/src/main.tsx": "4466742311289d8d94f48775ff5fa68abb01e8549471ee7f56feef48cc743920",
+    "frontend/src/style.css": "ba29828b6c0c3ac620d96e2af4bf63cd69207834aca5957fa740b4a1d5197e3d",
+    "pyproject.toml": "ac98dfd7681f195c01637f989bd6ee711395a6fe184a5779dd24d8d63e6685fc",
+    "scripts/audit_publication.py": "afd5065d1693c04d5724d60679210c450ee5a27c7dc5a7ede959bc6a2c52184f",
+    "scripts/build_eval_cases.py": "93fe16d392a8e34a7420dae0a928e78e9443402c575e48deed595ab58ddc34f3",
+    "scripts/ci_checks.py": "6678b96a1d2abbd3aed9835a7d16b1a04fb8b3417c6a6cd595b7f17cb0951797",
+    "scripts/prepare_human_review.py": "1711d64a0dd6327e4e6cb694fe3844665e87e827405219fffb19124f3a8f35b9",
+    "scripts/summarize_review.py": "db956184887cdfd91969695bdf11aa213f1fae3de81fddaf8d7553f8f1778f5c",
+    "scripts/validate_v11.py": "fe7385f20644fca3fe41d659a764dedd7b764bcb30e4d5c8317be6c488007ab0",
+    "scripts/verify_inline_facts.py": "a1af1f54e315e972267b1b6676df6ec8c0fdfa5cabb8917b4a28c9a3140008c1",
+    "src/researchdesk/__init__.py": "37792e37abf249abfff814064011790c237923daeebe48d29a6166627387f208",
+    "src/researchdesk/api.py": "d71f361a394205d723baf6aa5c2fd6c6e98efde05352ce8a5308eac309d9004e",
+    "src/researchdesk/ci_fixture.py": "4915fbecc6f44bf0d07632f346f5dd24890e8786688538dc1b4415766a9da314",
+    "src/researchdesk/cli.py": "ad26b8f96492af2f6a49634262c500db3f36034a7fe6a05a01eb9e75d8c1e8bc",
+    "src/researchdesk/config.py": "19206ba5a2843ad1a8e34daf47b9301100166ec5f7458d66a3f5c25e94eb9a40",
+    "src/researchdesk/context.py": "59bcd4071edbde96dced74563fcb78d02847c8b0c9bd5cb0881bb100e813c49f",
+    "src/researchdesk/db.py": "d9b581b7397a6683f731cb6896d6f0c90599e9b307ae05b030f306249b8f4695",
+    "src/researchdesk/embeddings.py": "b9b248bc4ab7307373eb4f1039a8e1a0c6b8ac4f4258047422ee248316795406",
+    "src/researchdesk/evaluation.py": "f89587a352899e4591db3cefd6104eca30ef0e377dca035e3bfe08b0ba832f5d",
+    "src/researchdesk/evaluation_v12.py": "3ff4ff703857545cd5d49025dca0279710182f25c6611af8f002cdc4fb77c78b",
+    "src/researchdesk/explanations.py": "791d56168d6a7e4abb0952fdad39828019e87c31e4c6226f4ebe543d1726714c",
+    "src/researchdesk/finance.py": "5a780d95ca94c0e2639b6dd2ca73bdec5b1a11da39e53d240d53018ead7ef145",
+    "src/researchdesk/grounding.py": "f12f878dc877bcbde3b116483edbdffbfd98f3d49f0f0b56babadbebb1236144",
+    "src/researchdesk/ingestion.py": "b5c265bd72e21e4c1abacfa2119787cb46b21c19df613c35c70a55890d368589",
+    "src/researchdesk/provider.py": "2b871c07c988faef1735b2140f1ae9cdcbf16f42ce999e652e170e148fa68356",
+    "src/researchdesk/report.py": "0018ceaf00e68827e9cc2015679e9e45f557de1a4d7397b788b3f84ddc5b6e96",
+    "src/researchdesk/research.py": "03257a9df9fbb974d30cb26cc79da3c152d43711bfd99ba6de16b5cc15497e5e",
+    "src/researchdesk/scope.py": "952912c7e9f95d51682d00c425af7b649881edb98e0ec5518ea0708b61fa6fce",
+    "src/researchdesk/search.py": "4b8b4a750c0d53e2700b6d52aa5d627f3b120725e462ecd15c89c30a2f5917b6",
+    "tests/conftest.py": "1e47c610e3b16edc37ccc8b3d021b5dab63323b3f9da9c83e6c151f7e66dc21a",
+    "tests/test_api.py": "dd7cdd4965023e06a6d0b24da924fca274399387dad28a8886253e29762af828",
+    "tests/test_context_v12.py": "e79c603a769a04c831614116044a90545b8efb7dee645ef60a80cdc9a24c1597",
+    "tests/test_finance.py": "e88c5a2fd3feb429dae3572b686696593d72c058e80247e87b1c8df5eaac9ea9",
+    "tests/test_financial_requests.py": "4ce03a853bcfc6e8a3049c3928e4b918fd5c8c6795f45224afe49db5149a5069",
+    "tests/test_grounding.py": "b973571f1713fb5807ad31cece1f4e4249e644ebec4a5baddbac7b2ef4639546",
+    "tests/test_ingestion.py": "ca1bdaf13507b1c0095ede5a65bb4ed4e7226607c1bad1765c99ba401f2042c3",
+    "tests/test_provider_threads.py": "d425dce94b397ae6519eb4deaf2e5fc2c2d81d796e3924d6d187cfb5b38fdf59",
+    "tests/test_research.py": "1d122b22cdbc3d1f052d36b2964a2072ead6740eb99929245cc224911feeaa6c",
+    "tests/test_scope.py": "5678f06fed6c70678a8f3650bf177a6f2aed2aef411d8324c0e6293eb15d33da",
+    "tests/test_structure_retry.py": "bb15ffa45e3f550050233d569fb6390621baf70a9ff4f0fdbed71fff19dcc685",
+    "uv.lock": "519c01c269014a50290b30659c345e5f7c2047f7d1448d30ace2b1e25032c057"
+  },
+  "records": [
+    {
+      "id": "D05",
+      "wall_seconds": 0.04841929208487272,
+      "peak_rss_mib": 107.71875,
+      "result": {
+        "status": "error",
+        "answer": null,
+        "error": "NameError: name 'calculation' is not defined",
+        "evidence": []
+      }
+    },
+    {
+      "id": "D06",
+      "wall_seconds": 0.0017592499498277903,
+      "peak_rss_mib": 107.828125,
+      "result": {
+        "status": "error",
+        "answer": null,
+        "error": "NameError: name 'calculation' is not defined",
+        "evidence": []
+      }
+    },
+    {
+      "id": "D07",
+      "wall_seconds": 0.0017069168388843536,
+      "peak_rss_mib": 107.828125,
+      "result": {
+        "status": "error",
+        "answer": null,
+        "error": "NameError: name 'calculation' is not defined",
+        "evidence": []
+      }
+    },
+    {
+      "id": "D08",
+      "wall_seconds": 0.0012732921168208122,
+      "peak_rss_mib": 107.828125,
+      "result": {
+        "status": "error",
+        "answer": null,
+        "error": "NameError: name 'calculation' is not defined",
+        "evidence": []
+      }
+    }
+  ]
+}

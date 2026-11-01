@@ -1,0 +1,202 @@
+[
+  {
+    "id": "D01",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "What amount of capex was reported by Apple in FY2024?",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "capex:2024",
+        "value": 9447,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 0.005000001
+      }
+    ],
+    "reference_passages": []
+  },
+  {
+    "id": "D02",
+    "company": "DELL",
+    "as_of": "2024-12-31",
+    "question": "State Dell cash and cash equivalents for FY2024.",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cash:2024",
+        "value": 7366,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 0.005000001
+      }
+    ],
+    "reference_passages": []
+  },
+  {
+    "id": "D03",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "Compare the 2023 and 2024 Apple fiscal calendars in weeks.",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "period_weeks_change:2023:2024",
+        "value": -1,
+        "unit": "weeks",
+        "direction": "decreased",
+        "tolerance": 0.005000001
+      }
+    ],
+    "reference_passages": []
+  },
+  {
+    "id": "D04",
+    "company": "HPQ",
+    "as_of": "2024-12-31",
+    "question": "Calculate HP CFO minus gross capex for 2024.",
+    "category": "financial",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [
+      {
+        "id": "cfo_less_capex:2024",
+        "value": 3157,
+        "unit": "USD million",
+        "direction": "level",
+        "tolerance": 0.005000001
+      }
+    ],
+    "reference_passages": []
+  },
+  {
+    "id": "D05",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "Explain how limited component sources expose Apple to supply shortages and pricing pressures in FY2023.",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "AAPL-2023-p0072"
+    ]
+  },
+  {
+    "id": "D06",
+    "company": "DELL",
+    "as_of": "2024-12-31",
+    "question": "How can acquisition debt covenants constrain Dell capital raising and operating flexibility in 2023?",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "DELL-2023-p0125"
+    ]
+  },
+  {
+    "id": "D07",
+    "company": "HPQ",
+    "as_of": "2024-12-31",
+    "question": "Explain the separate effects of digitization and third-party supplies on HP printing demand in 2024.",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "HPQ-2024-p0074",
+      "HPQ-2024-p0075"
+    ]
+  },
+  {
+    "id": "D08",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "What specific consequences can unauthorized access to personal information cause for Apple in 2023?",
+    "category": "explanation",
+    "answerable": true,
+    "expected_statuses": [
+      "answered"
+    ],
+    "reference_targets": [],
+    "reference_passages": [
+      "AAPL-2023-p0092",
+      "AAPL-2023-p0094"
+    ]
+  },
+  {
+    "id": "D09",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "What was Apple free cash flow for 2024?",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": []
+  },
+  {
+    "id": "D10",
+    "company": "AAPL",
+    "as_of": "2024-12-31",
+    "question": "Calculate margin for 2024.",
+    "category": "ambiguity",
+    "answerable": false,
+    "expected_statuses": [
+      "clarification_required",
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": []
+  },
+  {
+    "id": "D11",
+    "company": "DELL",
+    "as_of": "2024-12-31",
+    "question": "Report Dell 2024 Q4 revenue.",
+    "category": "absent",
+    "answerable": false,
+    "expected_statuses": [
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": []
+  },
+  {
+    "id": "D12",
+    "company": "HPQ",
+    "as_of": "2024-12-31",
+    "question": "Give HP revenue for FY2025.",
+    "category": "absent",
+    "answerable": false,
+    "expected_statuses": [
+      "abstained"
+    ],
+    "reference_targets": [],
+    "reference_passages": []
+  }
+]

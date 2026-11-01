@@ -1,9 +1,10 @@
-"""USD millions throughout. No model or frontend performs these calculations."""
+"""Internal monetary basis: USD million. Explicit display conversions are server-owned."""
 
 import math
 import re
 from datetime import date
 from decimal import Decimal
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 from sqlalchemy import select
@@ -242,7 +243,7 @@ METRIC_PATTERNS = {
     "revenue": r"\b(revenues?|sales)\b",
     "operating_income": r"\b(operating (income|profits?|earnings))\b",
     "cfo": r"\b(cfo|operating cash(?: flows?)?|cash (?:flows?|generated|provided) (?:from|by) (?:operating activities|operations))\b",
-    "capex": r"\b(capex|capital (?:expenditure|spending)s?|purchases of (?:property|ppe))\b",
+    "capex": r"\b(capex|capital (?:expenditure|spending)s?|purchases of (?:property|ppe)|(?:gross )?ppe purchases)\b",
     "da": r"\b(depreciation|amortization|d&a)\b",
     "cash": r"\b(cash balances?|cash (?:and cash )?equivalents)\b",
     "current_assets": r"\bcurrent assets\b",
@@ -557,3 +558,361 @@ def calculate_metrics(rows: list[dict]) -> dict:
         "margin_change_pp": (o1 / r1 - o0 / r0) * 100,
         "unit": "USD millions; ratios as fractions",
     }
+
+
+class FinancialRequest(BaseModel):
+    """Validated, bounded server request. No model code or query is accepted."""
+
+    model_config = ConfigDict(extra="forbid")
+    company: Literal["AAPL", "DELL", "HPQ"]
+    metrics: list[
+        Literal[
+            "revenue",
+            "operating_income",
+            "cfo",
+            "capex",
+            "da",
+            "cash",
+            "current_assets",
+            "current_liabilities",
+            "operating_margin",
+            "cfo_less_capex",
+            "period_weeks",
+        ]
+    ] = Field(min_length=1, max_length=3)
+    years: list[int] = Field(min_length=1, max_length=2)
+    operation: Literal["level", "compare", "change", "growth"]
+    unit: Literal["USD million", "USD billion", "USD", "percent", "percentage points", "weeks"]
+    scope: Literal["consolidated"] = "consolidated"
+    definition: Literal[
+        "as_reported", "operating_income/revenue", "cfo-gross_PPE_capex", "inclusive_fiscal_days/7"
+    ]
+    period_selection: Literal["explicit", "latest_published"] = "explicit"
+
+    @model_validator(mode="after")
+    def bounded_operation(self):
+        if len(set(self.metrics)) != len(self.metrics) or self.years != sorted(set(self.years)):
+            raise ValueError("Unique metrics and chronological years required")
+        if self.operation != "level" and len(self.years) != 2:
+            raise ValueError("A comparison requires two explicit periods")
+        derived = {"operating_margin", "cfo_less_capex", "period_weeks"} & set(self.metrics)
+        if derived and len(self.metrics) != 1:
+            raise ValueError("Ask a derived metric separately to avoid ambiguous operations")
+        required = {
+            "operating_margin": "operating_income/revenue",
+            "cfo_less_capex": "cfo-gross_PPE_capex",
+            "period_weeks": "inclusive_fiscal_days/7",
+        }
+        expected = required.get(self.metrics[0], "as_reported")
+        if self.definition != expected:
+            raise ValueError("Metric and definition disagree")
+        if self.metrics == ["period_weeks"] and self.unit != "weeks":
+            raise ValueError("Reporting-week unit required")
+        if self.metrics == ["operating_margin"]:
+            if self.operation == "growth":
+                raise ValueError(
+                    "Specify percentage-point change rather than relative margin growth"
+                )
+            if self.unit not in {"percent", "percentage points"}:
+                raise ValueError("Margin requires percentage units")
+        elif self.metrics != ["period_weeks"] and self.unit not in {
+            "USD",
+            "USD million",
+            "USD billion",
+            *({"percent"} if self.operation == "growth" else set()),
+        }:
+            raise ValueError("Monetary metric requires an explicit USD display basis")
+        return self
+
+
+def interpret_financial_request(
+    question: str, company: str, rows: list[dict]
+) -> tuple[FinancialRequest | None, str | None]:
+    """A deliberately bounded grammar; uncertain intent is never completed by an LLM."""
+    q = question.lower().replace("−", "-").replace("–", "-")
+    metrics = [m for m, pattern in METRIC_PATTERNS.items() if re.search(pattern, q)]
+    calendar = bool(re.search(r"\b(weeks?|calendar|fiscal period)\b", q))
+    margin = bool(re.search(r"\boperating(?: profit| income)? margins?\b", q))
+    fcf = bool(re.search(r"\b(fcf|free cash flow|cash.flow proxy)\b", q))
+    financial = bool(
+        metrics
+        or calendar
+        or margin
+        or fcf
+        or re.search(r"\b(margins?|growth|ebitda|net income|cash)\b", q)
+    )
+    if not financial or (
+        not calendar and re.search(r"\b(risks?|could|drivers?|factors?|reasons?)\b", q)
+    ):
+        return None, None
+    # Explicit subtraction is authorized; a negated net-capex constraint is not
+    # an instruction to substitute net capex. Affirmative net definitions refuse.
+    subtraction = (
+        "cfo" in metrics
+        and "capex" in metrics
+        and bool(re.search(r"\b(minus|less|subtract|after)\b|\bcfo\s*-\s*capex", q))
+    )
+    definition_text = (
+        re.sub(
+            r"\b(?:without|not|excluding)\s+(?:(?:switching to|using|substituting|company.reported)\s+)?net capex\b",
+            "",
+            q,
+        )
+        if subtraction
+        else q
+    )
+    if re.search(
+        r"\b(net capex|net capital|adjusted|non.gaap|ebitda|net income|gross margins?|net margins?)\b",
+        definition_text,
+    ):
+        return (
+            None,
+            "That definition is not verified in the annual ledger. CFO less gross PPE capex is available; company-reported net-capex FCF is a different measure.",
+        )
+    if fcf and not subtraction:
+        return (
+            None,
+            "Which cash-flow definition do you mean? Specify CFO less gross PPE capex. Company-reported or adjusted free cash flow is not interchangeable with that proxy.",
+        )
+    if re.search(r"\bmargin\b", q) and not margin:
+        return (
+            None,
+            "Specify operating margin. Gross and net margin definitions are not verified here.",
+        )
+    foreign = bool(re.search(r"\b(eur|euros?|gbp|sterling|jpy|yen)\b", q))
+    currency_exclusion = bool(re.search(r"\b(ignore|exclude|separate|not|without)\b", q))
+    conversion = bool(
+        re.search(
+            r"\b(convert|conversion|exchange rate)\b|\b(?:in|into|to)\s+(?:eur|euros?|gbp|jpy)\b", q
+        )
+    )
+    if foreign and (conversion or not re.search(r"\busd\b", q) or not currency_exclusion):
+        return (
+            None,
+            "Only consolidated USD observations are verified. No exchange-rate conversion is available; specify a USD result and keep other currency observations separate.",
+        )
+    incompatible_scope = re.search(r"\b(segment|regional|europe|americas|product.only)\b", q)
+    excluded_scope = (
+        re.search(r"\b(without|separate|ignore|exclude|not substitut)\b", q) and "consolidated" in q
+    )
+    if incompatible_scope and not excluded_scope:
+        return (
+            None,
+            "Do you mean the consolidated company? Segment and regional amounts are outside the verified calculation scope.",
+        )
+    if (
+        re.search(
+            r"\b(divide|divided|multiply|times|ratio|sum|add together)\b|as (?:a )?percentage of", q
+        )
+        and not margin
+    ):
+        return (
+            None,
+            "Specify a supported operation: reported level, change, growth, operating margin or CFO less gross PPE capex. Arbitrary formulas are not executed.",
+        )
+    if (
+        margin
+        and "revenue" in metrics
+        and re.search(r"revenues?\s+and|and\s+(?:operating\s+)?margins?", q)
+    ):
+        return (
+            None,
+            "This request mixes monetary revenue and a margin formula. Ask each calculation separately so its operation and units are explicit.",
+        )
+    if re.search(r"\b(subtract|minus)\b|\bless(?!\s+than)\b", q) and not subtraction:
+        return (
+            None,
+            "Both subtraction inputs must be identified. The supported cash-flow operation is CFO less gross PPE capex; no other formula is assumed.",
+        )
+    if calendar:
+        chosen = ["period_weeks"]
+    elif margin:
+        chosen = ["operating_margin"]
+    elif subtraction:
+        chosen = ["cfo_less_capex"]
+    else:
+        chosen = metrics
+    if not chosen:
+        return (
+            None,
+            "Specify the financial metric, for example revenue, cash balance, CFO or operating margin.",
+        )
+    comparative = bool(re.search(COMPARISON_PATTERN, q))
+    growth = bool(
+        re.search(
+            r"\bgrowth\b|\bpercentage change\b|\bpercent(?:age)? (?:growth |change )?rate\b", q
+        )
+    )
+    operation = (
+        "growth"
+        if growth
+        else "change"
+        if re.search(r"\b(change|movement|difference|increase|decrease)\b", q)
+        else "compare"
+        if comparative
+        else "level"
+    )
+    if subtraction and operation == "level":
+        operation = "level"
+    years = sorted(requested_years(q))
+    selection = "explicit"
+    if not years:
+        if operation == "level" and re.search(r"\b(latest|most recent|current)\b", q) and rows:
+            years, selection = [rows[-1]["fiscal_year"]], "latest_published"
+        else:
+            return (
+                None,
+                "Which fiscal year or two fiscal years should be used? Specify the period before calculating.",
+            )
+    if len(years) == 2 and operation == "level":
+        operation = "compare"
+    if re.search(r"\bfrom\s+(?:fy\s*)?(20\d{2})\s+(?:back\s+)?to\s+(?:fy\s*)?(20\d{2})", q):
+        pair = re.search(r"\bfrom\s+(?:fy\s*)?(20\d{2})\s+(?:back\s+)?to\s+(?:fy\s*)?(20\d{2})", q)
+        if pair.group(1) > pair.group(2):
+            return (
+                None,
+                "Specify a chronological comparison. Reverse chronological change is not silently assumed.",
+            )
+    unit = (
+        "weeks"
+        if calendar
+        else "percentage points"
+        if margin and operation != "level"
+        else "percent"
+        if margin or operation == "growth"
+        else "USD billion"
+        if re.search(r"\bbillions?\b", q)
+        else "USD"
+        if re.search(r"\b(?:raw usd|usd dollars|dollars)\b", q)
+        else "percent"
+        if operation == "growth"
+        else "USD million"
+    )
+    definition = {
+        "period_weeks": "inclusive_fiscal_days/7",
+        "operating_margin": "operating_income/revenue",
+        "cfo_less_capex": "cfo-gross_PPE_capex",
+    }.get(chosen[0], "as_reported")
+    try:
+        return FinancialRequest(
+            company=company,
+            metrics=chosen,
+            years=years,
+            operation=operation,
+            unit=unit,
+            definition=definition,
+            period_selection=selection,
+        ), None
+    except ValueError as error:
+        # User-facing constraints, not reflected model text.
+        return (
+            None,
+            "The requested metric, period, unit or operation is ambiguous or incompatible. Specify one supported metric and the required fiscal years. "
+            + str(error).split("[type=", 1)[0].split("\n")[-1][:180],
+        )
+
+
+def execute_financial_request(request: FinancialRequest, rows: list[dict]) -> dict:
+    """Reuse the existing finance engine with a server-authored canonical plan."""
+    names = {
+        "operating_margin": "operating margin",
+        "cfo_less_capex": "CFO minus gross capex",
+        "period_weeks": "weeks",
+        "operating_income": "operating income",
+        "da": "depreciation",
+        "cash": "cash balance",
+        "current_assets": "current assets",
+        "current_liabilities": "current liabilities",
+    }
+    phrase = " and ".join(names.get(m, m) for m in request.metrics)
+    canonical = f"{request.operation} {phrase} " + " versus ".join(str(y) for y in request.years)
+    if request.operation == "growth":
+        canonical += " percentage growth"
+    plan = financial_plan(canonical, rows, request.company)
+    assert plan is not None
+    plan["request"] = request.model_dump()
+    if set(request.years) - {r["fiscal_year"] for r in rows}:
+        plan["issues"].append("A requested fiscal year is unavailable at the analysis date.")
+    if (
+        request.metrics == ["cfo_less_capex"]
+        and request.operation in {"change", "growth"}
+        and not plan["issues"]
+    ):
+        levels = plan["measures"]
+        observations = plan["observations"]
+        compatible = len({o["reporting_basis"] for o in observations}) == 1 and all(
+            len({o["concept"] for o in observations if o["metric"] == metric}) == 1
+            for metric in ("cfo", "capex")
+        )
+        if len(levels) != 2 or not compatible:
+            plan["issues"].append(
+                "Comparable proxy definitions and reporting bases are required across both periods."
+            )
+        else:
+            first, second = levels
+            left, right = Decimal(str(first["value"])), Decimal(str(second["value"]))
+            if request.operation == "growth" and left <= 0:
+                plan["issues"].append("Positive starting proxy required for a growth rate.")
+            else:
+                value = right - left if request.operation == "change" else (right / left - 1) * 100
+                plan["measures"].append(
+                    {
+                        **second,
+                        "id": "cfo_less_capex_"
+                        + request.operation
+                        + ":"
+                        + ":".join(str(y) for y in request.years),
+                        "periods": first["periods"] + second["periods"],
+                        "value": float(value),
+                        "unit": "USD million" if request.operation == "change" else "percent",
+                        "definition": ("delta" if request.operation == "change" else "growth")
+                        + "(cfo-gross_PPE_capex)",
+                        "direction": "increased"
+                        if value > 0
+                        else "decreased"
+                        if value < 0
+                        else "unchanged",
+                        "citations": sorted(set(first["citations"] + second["citations"])),
+                        "label": "CFO less gross PPE capex " + request.operation,
+                    }
+                )
+    for measure in plan["measures"]:
+        measure["formula"] = measure["definition"]
+        measure["origin"] = "deterministic_calculation"
+        measure["inputs"] = [
+            o for o in plan["observations"] if o["evidence_id"] in measure["citations"]
+        ]
+        if measure["unit"] == "USD million" and request.unit in {"USD", "USD billion"}:
+            multiplier = Decimal(1000000) if request.unit == "USD" else Decimal("0.001")
+            measure["value"] = float(Decimal(str(measure["value"])) * multiplier)
+            measure["unit"] = request.unit
+            measure["formula"] += f"; monetary output converted from USD million to {request.unit}"
+    targets = [m["id"] for m in plan["measures"]]
+    if request.operation in {"change", "growth"}:
+        marker = "_" + request.operation + ":"
+        targets = [m["id"] for m in plan["measures"] if marker in m["id"]]
+        if not targets and not plan["issues"]:
+            plan["issues"].append(
+                "This operation is not available for the selected derived metric; no result is assumed."
+            )
+    plan["result_ids"] = targets
+    for m in plan["measures"]:
+        definition = m["definition"]
+        m["formula_display"] = (
+            "(To-period value / from-period value − 1) × 100"
+            if definition.startswith(("growth:", "growth(cfo"))
+            else "To-period value − from-period value"
+            if definition.startswith(("delta:", "delta(cfo"))
+            else "(To operating income / to revenue − from operating income / from revenue) × 100 percentage points"
+            if definition.startswith("delta(operating_income")
+            else "Operating income / revenue × 100"
+            if definition == "operating_income/revenue"
+            else "Operating cash flow − gross PPE capital expenditure"
+            if definition == "cfo-gross_PPE_capex"
+            else "(Inclusive period end − start + 1 day) / 7 days"
+            if definition == "inclusive_fiscal_days/7"
+            else "To-period weeks − from-period weeks"
+            if definition.startswith("delta(inclusive")
+            else "Reported consolidated value; output normalized to " + m["unit"]
+        )
+    return plan

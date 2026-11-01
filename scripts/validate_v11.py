@@ -2,14 +2,20 @@
 
 import hashlib
 import json
+import subprocess
 
 from researchdesk.config import ROOT
-from researchdesk.evaluation import EVAL, summarize, validate_freeze
+from researchdesk.evaluation import EVAL, summarize
 
 for manifest in (ROOT / "evaluation/v1.1").glob("attempt-*/archive-sha256.json"):
     for name, expected in json.loads(manifest.read_text()).items():
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected, name
-cases, freeze = validate_freeze()
+cases = json.loads((EVAL / "cases.json").read_text())
+freeze = json.loads((EVAL / "freeze.json").read_text())
+assert hashlib.sha256((EVAL / "cases.json").read_bytes()).hexdigest() == freeze["cases_sha256"]
+for name, expected in freeze["source_sha256"].items():
+    historical_source = subprocess.check_output(["git", "show", "v1.1.0:" + name], cwd=ROOT)
+    assert hashlib.sha256(historical_source).hexdigest() == expected, name
 latest = json.loads((EVAL / "latest.json").read_text())
 run = ROOT / latest["run"]
 assert run.is_relative_to(EVAL / "runs")
@@ -21,7 +27,7 @@ assert [r["id"] for r in data["records"]] == [c["id"] for c in cases]
 assert data.get("completed_at"), "Incomplete evaluation cannot be a release result"
 assert data["started_at"] >= freeze["created_at"]
 assert summarize(data) == json.loads((run / "summary.json").read_text())
-assert summarize(data) == json.loads((ROOT / "evaluation/summary.json").read_text())
+assert summarize(data) == json.loads((EVAL / "historical-summary.json").read_text())
 packet = json.loads((EVAL / "human-review.json").read_text())
 assert packet["status"] == "pending" and packet["human_reviews_completed"] == 0
 selected = [c["id"] for c in cases if c.get("human_review")]

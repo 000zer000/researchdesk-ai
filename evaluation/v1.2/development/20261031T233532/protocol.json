@@ -1,0 +1,11 @@
+{
+  "classification": "First development ablation, all failures retained. Original long IDs and output field named sentences caused copying of sentence text or schema placeholders. This is a format failure, not a valid semantic-quality comparison. Later short-ID protocol is a declared development replay, not an independent new test.",
+  "strategies": [
+    "legacy_fragments",
+    "sentences",
+    "neighbors_dedup"
+  ],
+  "model_unchanged": true,
+  "input_budget": 2400,
+  "output_budget": 650
+}

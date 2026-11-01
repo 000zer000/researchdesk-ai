@@ -1,0 +1,18 @@
+{
+  "cases": [
+    "D05",
+    "D06",
+    "D07",
+    "D08"
+  ],
+  "classification": "Consumed development questions; explicit model comparison, not final tests. Same server context strategy and prompt; context hashes must be compared because model tokenizers can affect packing.",
+  "context_mode": "neighbors_dedup",
+  "system_sha256": "19981dc66db9987dfad9c982c02c6375569a83b8ad431729e3038aa6d385ef09",
+  "max_input_tokens": 2400,
+  "max_output_tokens": 650,
+  "request_timeout_seconds": 90,
+  "process_peak_rss_budget_mib": 5120,
+  "mac_physical_memory_mib": 8192,
+  "memory_note": "RSS and MLX allocator peaks overlap and must not be added. This is a measured local operational budget, not an OS reservation.",
+  "selection_rule": "Choose only after inspecting actual generated assertions/source support and measuring resource fit. Numerical request execution is unchanged and does not use either model."
+}

@@ -61,3 +61,15 @@ def test_busy_owner_rejects_a_second_generation(monkeypatch, tmp_path):
             pending.result()
     finally:
         p.executor.shutdown(wait=True)
+
+
+def test_cached_model_must_match_selected_runtime(monkeypatch, tmp_path):
+    import researchdesk.provider as module
+
+    (tmp_path / "runtime").mkdir()
+    (tmp_path / "runtime/llm.json").write_text(
+        json.dumps({"model": "different-model", "path": "EXPLICIT TEST DOUBLE"})
+    )
+    monkeypatch.setattr(module.settings, "data_dir", tmp_path)
+    with pytest.raises(ValueError, match="Cached model differs"):
+        MLXProvider()

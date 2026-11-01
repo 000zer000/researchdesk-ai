@@ -1,0 +1,5 @@
+{
+  "created_at": "2026-10-31T23:35:29.706738+00:00",
+  "sha256": "c01818e785d8aaba44e021a83f52ae30caa584b701b2a1aca8f43d863fd7b284",
+  "status": "Development cases for diagnosis/tuning; not independent final tests. Same cases used for declared baseline and context ablations. No reference targets sent to model."
+}

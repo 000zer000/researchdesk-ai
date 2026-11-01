@@ -1,0 +1,1673 @@
+{
+  "system": "immutable v1.1.0, Qwen 1.5B local, numerical copy gate, original 3-passage fragments",
+  "classification": "First baseline execution on v1.2 development cases, same batch for comparison; not final/independent",
+  "records": [
+    {
+      "id": "D01",
+      "result": {
+        "status": "financial_conclusion_withheld",
+        "origin": "live local inference rejected",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "The model proposal failed the financial contract (value, unit, period, company, scope, definition, direction or complete citations). Its conclusion is withheld. Use the verified data below."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "AAPL-2024-capex",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "XBRL / capex",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "AAPL FY2024, consolidated annual XBRL. capex (PaymentsToAcquirePropertyPlantAndEquipment) = 9447000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": [
+              "AAPL-2024-capex"
+            ]
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "ok",
+            "verified_measures": [
+              {
+                "id": "capex:2024",
+                "company": "AAPL",
+                "periods": [
+                  "2023-10-01/2024-09-28"
+                ],
+                "scope": "consolidated",
+                "unit": "USD million",
+                "definition": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+                "value": 9447.0,
+                "direction": "level",
+                "citations": [
+                  "AAPL-2024-capex"
+                ],
+                "label": "Capex"
+              }
+            ]
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "capex:2024",
+              "company": "AAPL",
+              "periods": [
+                "2023-10-01/2024-09-28"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "value": 9447.0,
+              "direction": "level",
+              "citations": [
+                "AAPL-2024-capex"
+              ],
+              "label": "Capex"
+            }
+          ],
+          "issues": [],
+          "observations": [
+            {
+              "metric": "capex",
+              "company": "AAPL",
+              "value": 9447.0,
+              "raw_value": 9447000000.0,
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-capex",
+              "evidence_ids": [
+                "AAPL-2024-capex"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 49.12106033298187,
+          "prompt_tokens": 1793,
+          "generation_tokens": 2400,
+          "attempts": 2
+        },
+        "elapsed_seconds": 49.21224645804614
+      },
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAc",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 22.87966962507926,
+            "prompt_tokens": 279,
+            "generation_tokens": 1200,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAcquirePropertyPlantAndEquipment\", \"value\": 9447.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-capex\"]}]}\n\n{\"abstain\": false, \"assertions\": [{\"id\": \"capex:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"us-gaap:PaymentsToAc",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 26.24139070790261,
+            "prompt_tokens": 1514,
+            "generation_tokens": 1200
+          }
+        }
+      ],
+      "wall_seconds": 49.24600129108876,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D02",
+      "result": {
+        "status": "financial_conclusion_withheld",
+        "origin": "live local inference rejected",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "The model proposal failed the financial contract (value, unit, period, company, scope, definition, direction or complete citations). Its conclusion is withheld. Use the verified data below."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "DELL-2024-cash",
+            "document_id": "DELL-2024",
+            "company": "DELL",
+            "fiscal_year": 2024,
+            "filed": "2024-03-25",
+            "section": "XBRL / cash",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "DELL FY2024, consolidated annual XBRL. cash (CashAndCashEquivalentsAtCarryingValue) = 7366000000 USD. Period instant to 2024-02-02. Filed 2024-03-25; accession 0001571996-24-000036. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199624000036/dell-20240202.htm",
+            "accession": "0001571996-24-000036",
+            "sha256": "e60f6cdfcb8a1096915c55214bdef58db83414577e85e2149b19067f868bd3d0",
+            "score": 0
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": [
+              "DELL-2024-cash"
+            ]
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "ok",
+            "verified_measures": [
+              {
+                "id": "cash:2024",
+                "company": "DELL",
+                "periods": [
+                  "instant/2024-02-02"
+                ],
+                "scope": "consolidated",
+                "unit": "USD million",
+                "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+                "value": 7366.0,
+                "direction": "level",
+                "citations": [
+                  "DELL-2024-cash"
+                ],
+                "label": "Cash"
+              }
+            ]
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "cash:2024",
+              "company": "DELL",
+              "periods": [
+                "instant/2024-02-02"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "value": 7366.0,
+              "direction": "level",
+              "citations": [
+                "DELL-2024-cash"
+              ],
+              "label": "Cash"
+            }
+          ],
+          "issues": [],
+          "observations": [
+            {
+              "metric": "cash",
+              "company": "DELL",
+              "value": 7366.0,
+              "raw_value": 7366000000.0,
+              "concept": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+              "unit": "USD",
+              "currency": "USD",
+              "start": null,
+              "end": "2024-02-02",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "DELL-2024-cash",
+              "evidence_ids": [
+                "DELL-2024-cash"
+              ],
+              "document_id": "DELL-2024",
+              "accession": "0001571996-24-000036",
+              "filed": "2024-03-25",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 4.79147612513043,
+          "prompt_tokens": 690,
+          "generation_tokens": 149,
+          "attempts": 2
+        },
+        "elapsed_seconds": 4.867612125119194
+      },
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": 7366.0}]}\n\nThis JSON data provides the verified financial measure for Dell's cash and cash equivalents for the period ending February 2, 2024. The value is USD million, and the definition is \"us-gaap:CashAndCashEquivalentsAtCarryingValue.\" The direction is \"level,\" indicating a snapshot of the financial position at a specific point in time. The source citation is \"DELL-2024-cash.\"",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.340804500039667,
+            "prompt_tokens": 268,
+            "generation_tokens": 120,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"cash:2024\": 7366.0}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 1.450671625090763,
+            "prompt_tokens": 422,
+            "generation_tokens": 29
+          }
+        }
+      ],
+      "wall_seconds": 4.892037041019648,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D03",
+      "result": {
+        "status": "answered",
+        "origin": "live model proposal + deterministic rendering",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "AAPL \u00b7 2022-09-25/2023-09-30 \u00b7 consolidated: Fiscal period length: 53.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+              "citations": [
+                "AAPL-2023-revenue"
+              ]
+            },
+            {
+              "text": "AAPL \u00b7 2023-10-01/2024-09-28 \u00b7 consolidated: Fiscal period length: 52.00 weeks (level). Definition: inclusive_fiscal_days/7.",
+              "citations": [
+                "AAPL-2024-revenue"
+              ]
+            },
+            {
+              "text": "AAPL \u00b7 2022-09-25/2023-09-30, 2023-10-01/2024-09-28 \u00b7 consolidated: Fiscal period length change: -1.00 weeks (decreased). Definition: delta(inclusive_fiscal_days/7).",
+              "citations": [
+                "AAPL-2023-revenue",
+                "AAPL-2024-revenue"
+              ]
+            }
+          ],
+          "limitations": [
+            "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "AAPL-2023-revenue",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "XBRL / revenue",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "AAPL FY2023, consolidated annual XBRL. revenue (RevenueFromContractWithCustomerExcludingAssessedTax) = 383285000000 USD. Period 2022-09-25 to 2023-09-30. Filed 2023-11-03; accession 0000320193-23-000106. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0
+          },
+          {
+            "id": "AAPL-2024-revenue",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "XBRL / revenue",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "AAPL FY2024, consolidated annual XBRL. revenue (RevenueFromContractWithCustomerExcludingAssessedTax) = 391035000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": [
+              "AAPL-2023-revenue",
+              "AAPL-2024-revenue"
+            ]
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "ok",
+            "verified_measures": [
+              {
+                "id": "period_weeks:2023",
+                "company": "AAPL",
+                "periods": [
+                  "2022-09-25/2023-09-30"
+                ],
+                "scope": "consolidated",
+                "unit": "weeks",
+                "definition": "inclusive_fiscal_days/7",
+                "value": 53.0,
+                "direction": "level",
+                "citations": [
+                  "AAPL-2023-revenue"
+                ],
+                "label": "Fiscal period length"
+              },
+              {
+                "id": "period_weeks:2024",
+                "company": "AAPL",
+                "periods": [
+                  "2023-10-01/2024-09-28"
+                ],
+                "scope": "consolidated",
+                "unit": "weeks",
+                "definition": "inclusive_fiscal_days/7",
+                "value": 52.0,
+                "direction": "level",
+                "citations": [
+                  "AAPL-2024-revenue"
+                ],
+                "label": "Fiscal period length"
+              },
+              {
+                "id": "period_weeks_change:2023:2024",
+                "company": "AAPL",
+                "periods": [
+                  "2022-09-25/2023-09-30",
+                  "2023-10-01/2024-09-28"
+                ],
+                "scope": "consolidated",
+                "unit": "weeks",
+                "definition": "delta(inclusive_fiscal_days/7)",
+                "value": -1.0,
+                "direction": "decreased",
+                "citations": [
+                  "AAPL-2023-revenue",
+                  "AAPL-2024-revenue"
+                ],
+                "label": "Fiscal period length change"
+              }
+            ]
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "period_weeks:2023",
+              "company": "AAPL",
+              "periods": [
+                "2022-09-25/2023-09-30"
+              ],
+              "scope": "consolidated",
+              "unit": "weeks",
+              "definition": "inclusive_fiscal_days/7",
+              "value": 53.0,
+              "direction": "level",
+              "citations": [
+                "AAPL-2023-revenue"
+              ],
+              "label": "Fiscal period length"
+            },
+            {
+              "id": "period_weeks:2024",
+              "company": "AAPL",
+              "periods": [
+                "2023-10-01/2024-09-28"
+              ],
+              "scope": "consolidated",
+              "unit": "weeks",
+              "definition": "inclusive_fiscal_days/7",
+              "value": 52.0,
+              "direction": "level",
+              "citations": [
+                "AAPL-2024-revenue"
+              ],
+              "label": "Fiscal period length"
+            },
+            {
+              "id": "period_weeks_change:2023:2024",
+              "company": "AAPL",
+              "periods": [
+                "2022-09-25/2023-09-30",
+                "2023-10-01/2024-09-28"
+              ],
+              "scope": "consolidated",
+              "unit": "weeks",
+              "definition": "delta(inclusive_fiscal_days/7)",
+              "value": -1.0,
+              "direction": "decreased",
+              "citations": [
+                "AAPL-2023-revenue",
+                "AAPL-2024-revenue"
+              ],
+              "label": "Fiscal period length change"
+            }
+          ],
+          "issues": [],
+          "observations": [
+            {
+              "metric": "revenue",
+              "company": "AAPL",
+              "value": 383285.0,
+              "raw_value": 383285000000.0,
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2023-revenue",
+              "evidence_ids": [
+                "AAPL-2023-revenue"
+              ],
+              "document_id": "AAPL-2023",
+              "accession": "0000320193-23-000106",
+              "filed": "2023-11-03",
+              "fiscal_year": 2023
+            },
+            {
+              "metric": "revenue",
+              "company": "AAPL",
+              "value": 391035.0,
+              "raw_value": 391035000000.0,
+              "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-revenue",
+              "evidence_ids": [
+                "AAPL-2024-revenue"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 8.89146954100579,
+          "prompt_tokens": 522,
+          "generation_tokens": 364,
+          "attempts": 1
+        },
+        "elapsed_seconds": 8.970204957993701
+      },
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"period_weeks:2023\", \"company\": \"AAPL\", \"periods\": [\"2022-09-25/2023-09-30\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 53.0, \"direction\": \"level\", \"citations\": [\"AAPL-2023-revenue\"]}, {\"id\": \"period_weeks:2024\", \"company\": \"AAPL\", \"periods\": [\"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"inclusive_fiscal_days/7\", \"value\": 52.0, \"direction\": \"level\", \"citations\": [\"AAPL-2024-revenue\"]}, {\"id\": \"period_weeks_change:2023:2024\", \"company\": \"AAPL\", \"periods\": [\"2022-09-25/2023-09-30\", \"2023-10-01/2024-09-28\"], \"scope\": \"consolidated\", \"unit\": \"weeks\", \"definition\": \"delta(inclusive_fiscal_days/7)\", \"value\": -1.0, \"direction\": \"decreased\", \"citations\": [\"AAPL-2023-revenue\", \"AAPL-2024-revenue\"]}]",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 8.89146954100579,
+            "prompt_tokens": 522,
+            "generation_tokens": 364,
+            "attempts": 1
+          }
+        }
+      ],
+      "wall_seconds": 9.0138162500225,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D04",
+      "result": {
+        "status": "answered",
+        "origin": "live model proposal + deterministic rendering",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "HPQ \u00b7 2023-11-01/2024-10-31 \u00b7 consolidated: CFO less gross PPE capex (not company-reported net-capex FCF): 3,157.00 USD million (level). Definition: cfo-gross_PPE_capex.",
+              "citations": [
+                "HPQ-2024-capex",
+                "HPQ-2024-cfo"
+              ]
+            }
+          ],
+          "limitations": [
+            "Model-generated structured proposal checked against deterministic values, periods, units, definitions, direction and complete input citations. Displayed wording and figures are rendered by code. Actual fiscal dates can have different week counts."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "HPQ-2024-capex",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "XBRL / capex",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "HPQ FY2024, consolidated annual XBRL. capex (PaymentsToAcquireProductiveAssets) = 592000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0
+          },
+          {
+            "id": "HPQ-2024-cfo",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "XBRL / cfo",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "HPQ FY2024, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 3749000000 USD. Period 2023-11-01 to 2024-10-31. Filed 2024-12-13; accession 0000047217-24-000080. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": [
+              "HPQ-2024-capex",
+              "HPQ-2024-cfo"
+            ]
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "ok",
+            "verified_measures": [
+              {
+                "id": "cfo_less_capex:2024",
+                "company": "HPQ",
+                "periods": [
+                  "2023-11-01/2024-10-31"
+                ],
+                "scope": "consolidated",
+                "unit": "USD million",
+                "definition": "cfo-gross_PPE_capex",
+                "value": 3157.0,
+                "direction": "level",
+                "citations": [
+                  "HPQ-2024-capex",
+                  "HPQ-2024-cfo"
+                ],
+                "label": "CFO less gross PPE capex (not company-reported net-capex FCF)"
+              }
+            ]
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "cfo_less_capex:2024",
+              "company": "HPQ",
+              "periods": [
+                "2023-11-01/2024-10-31"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "cfo-gross_PPE_capex",
+              "value": 3157.0,
+              "direction": "level",
+              "citations": [
+                "HPQ-2024-capex",
+                "HPQ-2024-cfo"
+              ],
+              "label": "CFO less gross PPE capex (not company-reported net-capex FCF)"
+            }
+          ],
+          "issues": [],
+          "observations": [
+            {
+              "metric": "capex",
+              "company": "HPQ",
+              "value": 592.0,
+              "raw_value": 592000000.0,
+              "concept": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-11-01",
+              "end": "2024-10-31",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "HPQ-2024-capex",
+              "evidence_ids": [
+                "HPQ-2024-capex"
+              ],
+              "document_id": "HPQ-2024",
+              "accession": "0000047217-24-000080",
+              "filed": "2024-12-13",
+              "fiscal_year": 2024
+            },
+            {
+              "metric": "cfo",
+              "company": "HPQ",
+              "value": 3749.0,
+              "raw_value": 3749000000.0,
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-11-01",
+              "end": "2024-10-31",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "HPQ-2024-cfo",
+              "evidence_ids": [
+                "HPQ-2024-cfo"
+              ],
+              "document_id": "HPQ-2024",
+              "accession": "0000047217-24-000080",
+              "filed": "2024-12-13",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 8.976086500799283,
+          "prompt_tokens": 804,
+          "generation_tokens": 332,
+          "attempts": 2
+        },
+        "elapsed_seconds": 9.058101291069761
+      },
+      "calls": [
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"cfo_less_capex:2024\", \"company\": \"HPQ\", \"periods\": [\"2023-11-01/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"cfo-gross_PPE_capex\", \"value\": 3157.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-capex\", \"HPQ-2024-cfo\"]}]}\n\nThis JSON data contains a verified measure for HPQ's CFO minus gross capex for the period from 2023-11-01 to 2024-10-31. The value is 3157.0 USD million, indicating a level of financial measure.",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 5.151996166910976,
+            "prompt_tokens": 286,
+            "generation_tokens": 198,
+            "attempts": 1
+          }
+        },
+        {
+          "raw": "{\"abstain\": false, \"assertions\": [{\"id\": \"cfo_less_capex:2024\", \"company\": \"HPQ\", \"periods\": [\"2023-11-01/2024-10-31\"], \"scope\": \"consolidated\", \"unit\": \"USD million\", \"definition\": \"cfo-gross_PPE_capex\", \"value\": 3157.0, \"direction\": \"level\", \"citations\": [\"HPQ-2024-capex\", \"HPQ-2024-cfo\"]}]}",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 3.824090333888307,
+            "prompt_tokens": 518,
+            "generation_tokens": 134
+          }
+        }
+      ],
+      "wall_seconds": 9.09525274997577,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D05",
+      "result": {
+        "status": "answered",
+        "origin": "live local inference",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Apple is exposed to supply shortages and pricing pressures due to reliance on single or limited sources for certain components.",
+              "citations": [
+                "AAPL-2023-p0039",
+                "AAPL-2023-p0072",
+                "AAPL-2023-p0211"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0072",
+                  "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "AAPL-2023-p0211",
+                  "quote": "obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many",
+                  "span_id": "s1"
+                },
+                {
+                  "citation": "AAPL-2023-p0039",
+                  "quote": "personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and",
+                  "span_id": "s2"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "evidence": [
+          {
+            "id": "AAPL-2023-p0072",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 40905,
+            "end": 41919,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition. For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms or at all. Such disruptions could occur in the future. While the Company has entered into agreements for the supply of many components, there can be no assurance the Company will be able to extend or renew these agreem",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.15252247488101534
+          },
+          {
+            "id": "AAPL-2023-p0211",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 8. Financial Statements and Supplementary Data",
+            "anchor": "f-1069-1",
+            "start": 162852,
+            "end": 163470,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Concentrations in the Available Sources of Supply of Materials and Product\nAlthough most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm#f-1069-1",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.1384147465437788
+          },
+          {
+            "id": "AAPL-2023-p0039",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1. Business",
+            "anchor": "",
+            "start": 15421,
+            "end": 16105,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.\nSupply of Components\nAlthough most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.13836576949620427
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "search_documents",
+            "method": "hybrid",
+            "status": "ok",
+            "passage_ids": [
+              "AAPL-2023-p0072",
+              "AAPL-2023-p0211",
+              "AAPL-2023-p0039",
+              "AAPL-2023-p0057",
+              "AAPL-2023-p0071"
+            ]
+          }
+        ],
+        "calculations": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 4.802870291052386,
+          "prompt_tokens": 1090,
+          "generation_tokens": 155,
+          "attempts": 1
+        },
+        "citation_support": "not independently verified at runtime",
+        "elapsed_seconds": 5.2940860411617905
+      },
+      "calls": [
+        {
+          "raw": "```json\n{\n  \"abstain\": false,\n  \"claims\": [\n    {\n      \"text\": \"Apple is exposed to supply shortages and pricing pressures due to reliance on single or limited sources for certain components.\",\n      \"evidence_spans\": [\n        {\n          \"citation\": \"AAPL-2023-p0072\",\n          \"span_id\": \"s0\"\n        },\n        {\n          \"citation\": \"AAPL-2023-p0211\",\n          \"span_id\": \"s1\"\n        },\n        {\n          \"citation\": \"AAPL-2023-p0039\",\n          \"span_id\": \"s2\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 4.802870291052386,
+            "prompt_tokens": 1090,
+            "generation_tokens": 155,
+            "attempts": 1
+          }
+        }
+      ],
+      "wall_seconds": 5.298248916165903,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D06",
+      "result": {
+        "status": "answered",
+        "origin": "live local inference",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Dell's acquisition debt covenants constrain capital raising and operating flexibility.",
+              "citations": [
+                "DELL-2023-p0125",
+                "DELL-2023-p0163"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "DELL-2023-p0163",
+                  "quote": "As of February 3, 2023, we and our subsidiaries had approximately $29.6 billion aggregate principal amount of indebtedness. As of the same date, we and our subsidiaries also had an additional $6.0 billion available for",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "DELL-2023-p0125",
+                  "quote": "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve",
+                  "span_id": "s0"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "evidence": [
+          {
+            "id": "DELL-2023-p0163",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 117995,
+            "end": 118993,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "As of February 3, 2023, we and our subsidiaries had approximately $29.6 billion aggregate principal amount of indebtedness. As of the same date, we and our subsidiaries also had an additional $6.0 billion available for borrowing under our revolving credit facility and $5.0 billion of availability under our commercial paper program. Although continued debt paydown is part of our overall capital allocation strategy, a substantial portion of our cash flow from operations is used to make interest and other debt service payments, which reduces funds available to us for other purposes such as working capital, capital expenditures, other general corporate purposes, and potential acquisitions. Our indebtedness could also reduce our flexibility in responding to current and changing industry and financial market conditions. We may be able to incur significant additional secured and unsecured indeb",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.15201844262295083
+          },
+          {
+            "id": "DELL-2023-p0125",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 87771,
+            "end": 88619,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility. Further, an acquisition may negatively affect our results of operations because it may expose us to unexpected liabilities, require the incurrence of charges and substantial indebtedness or other liabilities, have adverse tax consequences, result in acquired in-process research and development expenses, or in the future require the amortization, write-down, or impairment of amounts related to deferred compensation, goodwill, and other intangible assets, or fail to generate a financial return sufficient to offset acquisition costs.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.15200204813108037
+          },
+          {
+            "id": "DELL-2023-p0132",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 93271,
+            "end": 94295,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "We may access debt and capital sources to provide financing for customers and to obtain funds for general corporate purposes, including working capital, acquisitions, capital expenditures, and funding of customer receivables. In addition, we maintain customer financing relationships with some companies that rely on access to the debt and capital markets to meet significant funding needs. Any inability of these companies to access such markets could compel us to self-fund transactions with such companies or to forgo customer financing opportunities, which could harm our financial performance. The debt and capital markets may experience extreme volatility and disruption from time to time, which could result in higher credit spreads in such markets and higher funding costs for us. Deterioration in our business performance, a credit rating downgrade, volatility in the securitization markets,",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.12677651515151517
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "search_documents",
+            "method": "hybrid",
+            "status": "ok",
+            "passage_ids": [
+              "DELL-2023-p0163",
+              "DELL-2023-p0125",
+              "DELL-2023-p0132",
+              "DELL-2023-p0298",
+              "DELL-2023-p0336"
+            ]
+          }
+        ],
+        "calculations": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 4.399907334009185,
+          "prompt_tokens": 1234,
+          "generation_tokens": 118,
+          "attempts": 1
+        },
+        "citation_support": "not independently verified at runtime",
+        "elapsed_seconds": 4.629498542053625
+      },
+      "calls": [
+        {
+          "raw": "```json\n{\n  \"abstain\": false,\n  \"claims\": [\n    {\n      \"text\": \"Dell's acquisition debt covenants constrain capital raising and operating flexibility.\",\n      \"evidence_spans\": [\n        {\n          \"citation\": \"DELL-2023-p0163\",\n          \"span_id\": \"s0\"\n        },\n        {\n          \"citation\": \"DELL-2023-p0125\",\n          \"span_id\": \"s0\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 4.399907334009185,
+            "prompt_tokens": 1234,
+            "generation_tokens": 118,
+            "attempts": 1
+          }
+        }
+      ],
+      "wall_seconds": 4.634568833978847,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D07",
+      "result": {
+        "status": "answered",
+        "origin": "live local inference",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "HPQ's printing demand in 2024 is affected by digitization and third-party supplies.",
+              "citations": [
+                "HPQ-2024-p0087",
+                "HPQ-2024-p0214"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "HPQ-2024-p0214",
+                  "quote": "\u2022 In Personal Systems, we face challenges with a competitive pricing environment, variability in commodity costs, and demand softness in certain geographic regions.\n\u2022 In Printing, we face challenges from changing",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "HPQ-2024-p0087",
+                  "quote": "weaknesses, disputes with suppliers (some of whom are also our customers), disruptions in the operations of component suppliers, supplier ability to demonstrate regulatory compliance, regulatory restrictions on specific",
+                  "span_id": "s1"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "evidence": [
+          {
+            "id": "HPQ-2024-p0214",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations.",
+            "anchor": "",
+            "start": 156963,
+            "end": 157611,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "\u2022 In Personal Systems, we face challenges with a competitive pricing environment, variability in commodity costs, and demand softness in certain geographic regions.\n\u2022 In Printing, we face challenges from changing customer behaviors as well as competitors with a favorable foreign currency environment and non-original supplies (which includes imitation, refill, or remanufactured alternatives). We also obtain many Printing components from single source suppliers due to technology, availability, price, quality, or other considerations.\nHP INC. AND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.17212903225806453
+          },
+          {
+            "id": "HPQ-2024-p0087",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 55702,
+            "end": 56694,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "\u2022 Component shortages. We have at times experienced and may in the future experience a shortage of, or a delay in receiving, certain components as a result of strong demand, capacity constraints, supplier financial weaknesses, disputes with suppliers (some of whom are also our customers), disruptions in the operations of component suppliers, supplier ability to demonstrate regulatory compliance, regulatory restrictions on specific components in certain markets, other problems experienced by suppliers or problems we face during the transition to new suppliers. For example, a market shortage of integrated circuits and panels and other component supply has at times affected, and may affect in the future, lead times, the cost of that supply, and our ability to meet customer demand for our products. Additionally, our Personal Systems business relies heavily upon OMs to manufacture our product",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.10209207275993713
+          },
+          {
+            "id": "HPQ-2024-p0092",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 60674,
+            "end": 61655,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "\u2022 Single-source suppliers. We obtain a significant number of components from a single source due to technology, availability, price, quality or other considerations. For example, we rely on Canon for certain laser printer engines and laser toner cartridges and certain key suppliers for application specific integrated circuits (\u201cASICs\u201d). We also rely on Intel, AMD and NVIDIA to provide us with a sufficient supply of processors for the majority of our PCs and workstations. Some of those processors may be customized for our products. New products that we introduce may utilize custom components obtained initially from only one source until we have determined whether there is a need for additional suppliers. Replacing a single-source supplier could delay production of some products as replacement suppliers may be subject to capacity constraints or other output limitations. For some components",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.10098550724637682
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "search_documents",
+            "method": "hybrid",
+            "status": "ok",
+            "passage_ids": [
+              "HPQ-2024-p0214",
+              "HPQ-2024-p0087",
+              "HPQ-2024-p0092",
+              "HPQ-2024-p0103",
+              "HPQ-2024-p0046"
+            ]
+          }
+        ],
+        "calculations": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 5.403444541851059,
+          "prompt_tokens": 1204,
+          "generation_tokens": 124,
+          "attempts": 1
+        },
+        "citation_support": "not independently verified at runtime",
+        "elapsed_seconds": 5.661339292069897
+      },
+      "calls": [
+        {
+          "raw": "```json\n{\n  \"abstain\": false,\n  \"claims\": [\n    {\n      \"text\": \"HPQ's printing demand in 2024 is affected by digitization and third-party supplies.\",\n      \"evidence_spans\": [\n        {\n          \"citation\": \"HPQ-2024-p0214\",\n          \"span_id\": \"s0\"\n        },\n        {\n          \"citation\": \"HPQ-2024-p0087\",\n          \"span_id\": \"s1\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 5.403444541851059,
+            "prompt_tokens": 1204,
+            "generation_tokens": 124,
+            "attempts": 1
+          }
+        }
+      ],
+      "wall_seconds": 5.683100666850805,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D08",
+      "result": {
+        "status": "answered",
+        "origin": "live local inference",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Unauthorized access to personal information can cause significant financial losses for Apple.",
+              "citations": [
+                "AAPL-2023-p0093",
+                "AAPL-2023-p0094",
+                "AAPL-2023-p0096"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0093",
+                  "quote": "The Company\u2019s business also requires it to share confidential information with suppliers and other third parties. The Company relies on global suppliers that are also exposed to ransomware and other malicious attacks",
+                  "span_id": "s0"
+                },
+                {
+                  "citation": "AAPL-2023-p0096",
+                  "quote": "including through the use of encryption and authentication technologies. As with all companies, these security measures may not be sufficient for all eventualities and may be vulnerable to hacking, ransomware attacks,",
+                  "span_id": "s1"
+                },
+                {
+                  "citation": "AAPL-2023-p0094",
+                  "quote": "damage commercial relationships, and expose the Company to litigation or government investigations, which could result in penalties, fines or judgments against the Company. Globally, attacks are expected to continue",
+                  "span_id": "s2"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "evidence": [
+          {
+            "id": "AAPL-2023-p0093",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 59857,
+            "end": 60548,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company\u2019s business also requires it to share confidential information with suppliers and other third parties. The Company relies on global suppliers that are also exposed to ransomware and other malicious attacks that can disrupt business operations. Although the Company takes steps to secure confidential information that is provided to or accessible by third parties working on the Company\u2019s behalf, such measures are not always effective and losses or unauthorized access to, or releases of, confidential information occur. Such incidents and other malicious attacks could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.14025806451612904
+          },
+          {
+            "id": "AAPL-2023-p0096",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 61980,
+            "end": 63053,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company has implemented systems and processes intended to secure its information technology systems and prevent unauthorized access to or loss of sensitive data, and mitigate the impact of unauthorized access, including through the use of encryption and authentication technologies. As with all companies, these security measures may not be sufficient for all eventualities and may be vulnerable to hacking, ransomware attacks, employee error, malfeasance, system error, faulty password management or other irregularities. For example, third parties can fraudulently induce the Company\u2019s or its vendors\u2019 employees or customers into disclosing usernames, passwords or other sensitive information, which can, in turn, be used for unauthorized access to the Company\u2019s or its vendors\u2019 systems and services. To help protect customers and the Company, the Company deploys and makes available technologi",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.13974603174603173
+          },
+          {
+            "id": "AAPL-2023-p0094",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 60549,
+            "end": 61630,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company experiences malicious attacks and other attempts to gain unauthorized access to its systems on a regular basis. These attacks seek to compromise the confidentiality, integrity or availability of confidential information or disrupt normal business operations, and can, among other things, impair the Company\u2019s ability to attract and retain customers for its products and services, impact the Company\u2019s stock price, materially damage commercial relationships, and expose the Company to litigation or government investigations, which could result in penalties, fines or judgments against the Company. Globally, attacks are expected to continue accelerating in both frequency and sophistication with increasing use by actors of tools and techniques that are designed to circumvent controls, avoid detection, and remove or obfuscate forensic evidence, all of which hinders the Company\u2019s abilit",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.13833088235294116
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "search_documents",
+            "method": "hybrid",
+            "status": "ok",
+            "passage_ids": [
+              "AAPL-2023-p0093",
+              "AAPL-2023-p0096",
+              "AAPL-2023-p0094",
+              "AAPL-2023-p0092",
+              "AAPL-2023-p0095"
+            ]
+          }
+        ],
+        "calculations": null,
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+          "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 1200,
+          "elapsed_seconds": 5.4718197078909725,
+          "prompt_tokens": 1223,
+          "generation_tokens": 147,
+          "attempts": 1
+        },
+        "citation_support": "not independently verified at runtime",
+        "elapsed_seconds": 5.879616083810106
+      },
+      "calls": [
+        {
+          "raw": "```json\n{\n  \"abstain\": false,\n  \"claims\": [\n    {\n      \"text\": \"Unauthorized access to personal information can cause significant financial losses for Apple.\",\n      \"evidence_spans\": [\n        {\n          \"citation\": \"AAPL-2023-p0093\",\n          \"span_id\": \"s0\"\n        },\n        {\n          \"citation\": \"AAPL-2023-p0096\",\n          \"span_id\": \"s1\"\n        },\n        {\n          \"citation\": \"AAPL-2023-p0094\",\n          \"span_id\": \"s2\"\n        }\n      ]\n    }\n  ]\n}\n```",
+          "metadata": {
+            "provider": "mlx",
+            "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+            "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+            "license": "Apache-2.0",
+            "quantization": "4bit MLX",
+            "temperature": 0,
+            "max_tokens": 1200,
+            "elapsed_seconds": 5.4718197078909725,
+            "prompt_tokens": 1223,
+            "generation_tokens": 147,
+            "attempts": 1
+          }
+        }
+      ],
+      "wall_seconds": 5.894294125027955,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D09",
+      "result": {
+        "status": "abstained",
+        "origin": "verified ledger; no inference",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "The requested definition is not verified in the structured ledger. Company-reported net-capex free cash flow must not be substituted for CFO less gross PPE capex."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "AAPL-2024-capex",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "XBRL / capex",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "AAPL FY2024, consolidated annual XBRL. capex (PaymentsToAcquirePropertyPlantAndEquipment) = 9447000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          },
+          {
+            "id": "AAPL-2024-cfo",
+            "document_id": "AAPL-2024",
+            "company": "AAPL",
+            "fiscal_year": 2024,
+            "filed": "2024-11-01",
+            "section": "XBRL / cfo",
+            "anchor": "",
+            "start": -1,
+            "end": -1,
+            "offset_basis": "structured XBRL evidence; no HTML offsets",
+            "text": "AAPL FY2024, consolidated annual XBRL. cfo (NetCashProvidedByUsedInOperatingActivities) = 118254000000 USD. Period 2023-10-01 to 2024-09-28. Filed 2024-11-01; accession 0000320193-24-000123. Source: SEC Company Facts, exact accession and period filter.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "accession": "0000320193-24-000123",
+            "sha256": "d6ea4f7627919648b92db893c19f8b26a2ba9c187c2b99d0b15c642a724a09ab",
+            "score": 0
+          }
+        ],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": [
+              "AAPL-2024-capex",
+              "AAPL-2024-cfo"
+            ]
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "withheld",
+            "verified_measures": [
+              {
+                "id": "cfo_less_capex:2024",
+                "company": "AAPL",
+                "periods": [
+                  "2023-10-01/2024-09-28"
+                ],
+                "scope": "consolidated",
+                "unit": "USD million",
+                "definition": "cfo-gross_PPE_capex",
+                "value": 108807.0,
+                "direction": "level",
+                "citations": [
+                  "AAPL-2024-capex",
+                  "AAPL-2024-cfo"
+                ],
+                "label": "CFO less gross PPE capex (not company-reported net-capex FCF)"
+              }
+            ]
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [
+            {
+              "id": "cfo_less_capex:2024",
+              "company": "AAPL",
+              "periods": [
+                "2023-10-01/2024-09-28"
+              ],
+              "scope": "consolidated",
+              "unit": "USD million",
+              "definition": "cfo-gross_PPE_capex",
+              "value": 108807.0,
+              "direction": "level",
+              "citations": [
+                "AAPL-2024-capex",
+                "AAPL-2024-cfo"
+              ],
+              "label": "CFO less gross PPE capex (not company-reported net-capex FCF)"
+            }
+          ],
+          "issues": [
+            "The requested definition is not verified in the structured ledger. Company-reported net-capex free cash flow must not be substituted for CFO less gross PPE capex."
+          ],
+          "observations": [
+            {
+              "metric": "capex",
+              "company": "AAPL",
+              "value": 9447.0,
+              "raw_value": 9447000000.0,
+              "concept": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-capex",
+              "evidence_ids": [
+                "AAPL-2024-capex"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            },
+            {
+              "metric": "cfo",
+              "company": "AAPL",
+              "value": 118254.0,
+              "raw_value": 118254000000.0,
+              "concept": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "unit": "USD",
+              "currency": "USD",
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "scope": "consolidated",
+              "reporting_basis": "as_reported",
+              "restates_accession": null,
+              "evidence_id": "AAPL-2024-cfo",
+              "evidence_ids": [
+                "AAPL-2024-cfo"
+              ],
+              "document_id": "AAPL-2024",
+              "accession": "0000320193-24-000123",
+              "filed": "2024-11-01",
+              "fiscal_year": 2024
+            }
+          ],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "elapsed_seconds": 0.02681970805861056
+      },
+      "calls": [],
+      "wall_seconds": 0.028624207945540547,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D10",
+      "result": {
+        "status": "abstained",
+        "origin": "verified ledger; no inference",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "The requested financial measure has no verified definition in this ledger."
+          ]
+        },
+        "evidence": [],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          },
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "evidence_ids": []
+          },
+          {
+            "tool": "calculate_metrics",
+            "status": "withheld",
+            "verified_measures": []
+          }
+        ],
+        "calculations": null,
+        "verified_financials": {
+          "measures": [],
+          "issues": [
+            "The requested financial measure has no verified definition in this ledger."
+          ],
+          "observations": [],
+          "conflicts": []
+        },
+        "citation_support": "structured source inputs checked; human review pending",
+        "elapsed_seconds": 0.005691250087693334
+      },
+      "calls": [],
+      "wall_seconds": 0.005852292058989406,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D11",
+      "result": {
+        "status": "abstained",
+        "origin": "deterministic capability policy; no inference",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "Only annual consolidated financial periods are supported; monthly and quarterly figures are outside coverage."
+          ]
+        },
+        "evidence": [],
+        "trace": [
+          {
+            "policy": "bounded capabilities",
+            "decision": "abstain"
+          }
+        ],
+        "calculations": null,
+        "elapsed_seconds": 3.1916890293359756e-05
+      },
+      "calls": [],
+      "wall_seconds": 5.570915527641773e-05,
+      "process_peak_rss_mib": 311.203125
+    },
+    {
+      "id": "D12",
+      "result": {
+        "status": "abstained",
+        "origin": "scope validation; no inference",
+        "answer": {
+          "abstain": true,
+          "claims": [],
+          "limitations": [
+            "Requested fiscal year is outside the published corpus at this analysis date."
+          ]
+        },
+        "evidence": [],
+        "trace": [
+          {
+            "tool": "get_financial_facts",
+            "status": "ok",
+            "annual_periods": 2
+          }
+        ],
+        "calculations": null,
+        "elapsed_seconds": 0.001344416057690978
+      },
+      "calls": [],
+      "wall_seconds": 0.001451791962608695,
+      "process_peak_rss_mib": 311.203125
+    }
+  ]
+}

@@ -9,6 +9,7 @@ def main():
         description="Local ResearchDesk administration; never exposed as HTTP"
     )
     parser.add_argument("command", choices=["models", "ingest", "stats", "evaluate"])
+    parser.add_argument("--split", choices=["dev", "final"], default="final")
     args = parser.parse_args()
     if args.command == "models":
         from .embeddings import download_embeddings
@@ -22,9 +23,9 @@ def main():
         with Session() as session:
             print(json.dumps(ingest(session), indent=2))
     elif args.command == "evaluate":
-        from .evaluation import evaluate
+        from .evaluation_v12 import evaluate
 
-        evaluate()
+        evaluate(split=args.split)
     else:
         from .db import Document, Fact, Passage
 

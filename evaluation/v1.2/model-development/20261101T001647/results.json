@@ -1,0 +1,1296 @@
+{
+  "classification": "Declared model comparison on consumed development cases; no independent final claim. First execution per model on this fixed protocol.",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "806b3515e5ae79d801dd674de66c1f455a3c0d1f075f7b1c02ff0f97625684ff",
+    "frontend/e2e/journey.spec.ts": "0374776799479697c474d63223070c20b81a2e6a61d374790ff282b9c85efd6f",
+    "frontend/package-lock.json": "e354e33cd966cd3ab13d3da9f2a67e51bbdf096a385c97d12d430cdf8dbe9608",
+    "frontend/src/main.tsx": "05e3a8a39aa18a78d99f18189f657c6d6520c24a156dd5bbe21506312dd2b6fb",
+    "frontend/src/style.css": "b13fee4bf3b5a02d9c59214a5489ac8e061f2e91dda501c5789f8b5796c7f3d2",
+    "pyproject.toml": "ac98dfd7681f195c01637f989bd6ee711395a6fe184a5779dd24d8d63e6685fc",
+    "scripts/audit_publication.py": "afd5065d1693c04d5724d60679210c450ee5a27c7dc5a7ede959bc6a2c52184f",
+    "scripts/build_eval_cases.py": "93fe16d392a8e34a7420dae0a928e78e9443402c575e48deed595ab58ddc34f3",
+    "scripts/ci_checks.py": "6678b96a1d2abbd3aed9835a7d16b1a04fb8b3417c6a6cd595b7f17cb0951797",
+    "scripts/prepare_human_review.py": "1711d64a0dd6327e4e6cb694fe3844665e87e827405219fffb19124f3a8f35b9",
+    "scripts/prepare_review_v12.py": "59c90555db55afe8840ed6312dc014d5d4564b79fda63731101adcdd9a9524a9",
+    "scripts/summarize_review.py": "db956184887cdfd91969695bdf11aa213f1fae3de81fddaf8d7553f8f1778f5c",
+    "scripts/validate_v11.py": "fe7385f20644fca3fe41d659a764dedd7b764bcb30e4d5c8317be6c488007ab0",
+    "scripts/validate_v12.py": "a1546969af298f56df67ce8cac67de1f3c9e46d1855c5638d70a571141b60755",
+    "scripts/verify_inline_facts.py": "a1af1f54e315e972267b1b6676df6ec8c0fdfa5cabb8917b4a28c9a3140008c1",
+    "src/researchdesk/__init__.py": "37792e37abf249abfff814064011790c237923daeebe48d29a6166627387f208",
+    "src/researchdesk/api.py": "4d63edbc53556a7bc612f7c20f0e3584448f7fba0952d8b7ef1bd7a3f3eb5d5a",
+    "src/researchdesk/ci_fixture.py": "4915fbecc6f44bf0d07632f346f5dd24890e8786688538dc1b4415766a9da314",
+    "src/researchdesk/cli.py": "ad26b8f96492af2f6a49634262c500db3f36034a7fe6a05a01eb9e75d8c1e8bc",
+    "src/researchdesk/config.py": "30a033c40fcfeabf16c2f9a9e2ba9bb46d4be5f02ffab5cc9062d899842f629d",
+    "src/researchdesk/context.py": "59bcd4071edbde96dced74563fcb78d02847c8b0c9bd5cb0881bb100e813c49f",
+    "src/researchdesk/db.py": "d9b581b7397a6683f731cb6896d6f0c90599e9b307ae05b030f306249b8f4695",
+    "src/researchdesk/embeddings.py": "b9b248bc4ab7307373eb4f1039a8e1a0c6b8ac4f4258047422ee248316795406",
+    "src/researchdesk/evaluation.py": "f89587a352899e4591db3cefd6104eca30ef0e377dca035e3bfe08b0ba832f5d",
+    "src/researchdesk/evaluation_v12.py": "3ff4ff703857545cd5d49025dca0279710182f25c6611af8f002cdc4fb77c78b",
+    "src/researchdesk/explanations.py": "3fbd4911fcd90d69cada6e6e8190f19b1cc05eff80b8fd718e20f98eafac1bfb",
+    "src/researchdesk/finance.py": "de2a3997797581d50e5de13d7f7f536ba35d8a2140cae0f3f43174c9adb187c3",
+    "src/researchdesk/grounding.py": "4d6d8eb451b4eb42da360c8fc463599ffaf8c6170d1f9136aa93c8f15947f997",
+    "src/researchdesk/ingestion.py": "b5c265bd72e21e4c1abacfa2119787cb46b21c19df613c35c70a55890d368589",
+    "src/researchdesk/legacy_contracts.py": "5736b8d114725ba653b63c3e2681ff2c74c6d7f4a95ced3ee7c8c276a2e7f3fb",
+    "src/researchdesk/provider.py": "2b871c07c988faef1735b2140f1ae9cdcbf16f42ce999e652e170e148fa68356",
+    "src/researchdesk/report.py": "0018ceaf00e68827e9cc2015679e9e45f557de1a4d7397b788b3f84ddc5b6e96",
+    "src/researchdesk/research.py": "aede0acdf01feaa5038a88352cb93fe6debe73853289f23160218ec903748685",
+    "src/researchdesk/scope.py": "26e3b2388569c5ad256c63fa6df9df6021ac9cfe4c4a9beace609969ed9f24df",
+    "src/researchdesk/search.py": "4b8b4a750c0d53e2700b6d52aa5d627f3b120725e462ecd15c89c30a2f5917b6",
+    "tests/conftest.py": "1e47c610e3b16edc37ccc8b3d021b5dab63323b3f9da9c83e6c151f7e66dc21a",
+    "tests/test_api.py": "dd7cdd4965023e06a6d0b24da924fca274399387dad28a8886253e29762af828",
+    "tests/test_context_v12.py": "e79c603a769a04c831614116044a90545b8efb7dee645ef60a80cdc9a24c1597",
+    "tests/test_finance.py": "e88c5a2fd3feb429dae3572b686696593d72c058e80247e87b1c8df5eaac9ea9",
+    "tests/test_financial_requests.py": "5c59e8c40fa2ea88e5aaa17dd5c6b1450ebe4f19038af84f13f8a8d12e6edd5e",
+    "tests/test_grounding.py": "8d741247a234f669fef857b75d6f5d2cf13dcfc4b8632f1704077854d5a7179d",
+    "tests/test_ingestion.py": "ca1bdaf13507b1c0095ede5a65bb4ed4e7226607c1bad1765c99ba401f2042c3",
+    "tests/test_provider_threads.py": "d425dce94b397ae6519eb4deaf2e5fc2c2d81d796e3924d6d187cfb5b38fdf59",
+    "tests/test_research.py": "1d122b22cdbc3d1f052d36b2964a2072ead6740eb99929245cc224911feeaa6c",
+    "tests/test_scope.py": "5678f06fed6c70678a8f3650bf177a6f2aed2aef411d8324c0e6293eb15d33da",
+    "tests/test_structure_retry.py": "bb15ffa45e3f550050233d569fb6390621baf70a9ff4f0fdbed71fff19dcc685",
+    "uv.lock": "519c01c269014a50290b30659c345e5f7c2047f7d1448d30ace2b1e25032c057"
+  },
+  "records": [
+    {
+      "id": "D05",
+      "wall_seconds": 13.418899125186726,
+      "peak_rss_mib": 586.125,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "AAPL-2023-p0072",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 40905,
+            "end": 41919,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks. Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition. For example, the global semiconductor industry has in the past experienced high demand and shortages of supply, which adversely affected the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms or at all. Such disruptions could occur in the future. While the Company has entered into agreements for the supply of many components, there can be no assurance the Company will be able to extend or renew these agreements on similar terms, or at all. Component suppliers may suffer from poor financial conditions, which can lead to",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.18603577831604823
+          },
+          {
+            "id": "AAPL-2023-p0119",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 80979,
+            "end": 82030,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company\u2019s profit margins vary across its products, services, geographic segments and distribution channels. For example, the gross margins on the Company\u2019s products and services vary significantly and can change over time. The Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.15919165614309316
+          },
+          {
+            "id": "AAPL-2023-p0039",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1. Business",
+            "anchor": "",
+            "start": 15421,
+            "end": 16105,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "their products, or collaborate to offer integrated solutions that are more competitive than those they currently offer.\nSupply of Components\nAlthough most components essential to the Company\u2019s business are generally available from multiple sources, certain components are currently obtained from single or limited sources. The Company also competes for various components with other participants in the markets for smartphones, personal computers, tablets, wearables and accessories. Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.15742474190191658
+          },
+          {
+            "id": "AAPL-2023-p0120",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 82031,
+            "end": 82398,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures. These and other factors could have a materially adverse impact on the Company\u2019s results of operations and financial condition.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "AAPL-2023-p0072",
+            "AAPL-2023-p0119",
+            "AAPL-2023-p0039",
+            "AAPL-2023-p0211",
+            "AAPL-2023-p0058",
+            "AAPL-2023-p0123",
+            "AAPL-2023-p0073",
+            "AAPL-2023-p0125"
+          ],
+          "generation_passage_ids": [
+            "AAPL-2023-p0039",
+            "AAPL-2023-p0072",
+            "AAPL-2023-p0119",
+            "AAPL-2023-p0120"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "AAPL-2023-p0119",
+              "passage_ids": [
+                "AAPL-2023-p0119",
+                "AAPL-2023-p0120"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0119",
+                  "quote": "The Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to",
+                  "start": 81206,
+                  "end": 82030
+                },
+                {
+                  "citation": "AAPL-2023-p0120",
+                  "quote": "modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures.",
+                  "start": 82031,
+                  "end": 82271
+                }
+              ],
+              "text": "The Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0119:s6"
+            },
+            {
+              "id": "E2",
+              "passage_id": "AAPL-2023-p0072",
+              "passage_ids": [
+                "AAPL-2023-p0072"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0072",
+                  "quote": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition.",
+                  "start": 41058,
+                  "end": 41335
+                }
+              ],
+              "text": "Many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0072:s4"
+            },
+            {
+              "id": "E3",
+              "passage_id": "AAPL-2023-p0038",
+              "passage_ids": [
+                "AAPL-2023-p0039"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0039",
+                  "quote": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+                  "start": 15905,
+                  "end": 16105
+                }
+              ],
+              "text": "Therefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0038:s9"
+            },
+            {
+              "id": "E4",
+              "passage_id": "AAPL-2023-p0072",
+              "passage_ids": [
+                "AAPL-2023-p0072"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0072",
+                  "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+                  "start": 40905,
+                  "end": 41057
+                }
+              ],
+              "text": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0072:s3"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "AAPL-2023-p0039:s9",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 647,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "f67132ec80cd8411eeda7a79d9c86b1ae5821838aed5cb16e9f48fee68cfaf48",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2023\nThe Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures.\n\n[E2] AAPL FY2023\nMany components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations and financial condition.\n\n[E3] AAPL FY2023\nTherefore, many components used by the Company, including those that are available from multiple sources, are at times subject to industry-wide shortage and significant commodity pricing fluctuations.\n\n[E4] AAPL FY2023\nBecause the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.\n\nQUESTION: Explain how limited component sources expose Apple to supply shortages and pricing pressures in FY2023.",
+          "system_sha256": "19981dc66db9987dfad9c982c02c6375569a83b8ad431729e3038aa6d385ef09"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Apple\u2019s reliance on single or limited sources for certain components increases exposure to supply shortages, as these suppliers may lack capacity or face their own operational constraints, disrupting production timelines and forcing potential delays or cost escalations [E4].  \nInterpretation: Such dependency amplifies pricing pressures due to limited negotiation leverage, potentially leading to higher component costs, which could compress gross margins and impact profitability, especially amid industry-wide commodity price volatility [E1] [E4].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 9.879999250173569,
+              "prompt_tokens": 560,
+              "generation_tokens": 96,
+              "peak_mlx_memory_bytes": 2935260500
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Apple\u2019s reliance on single or limited sources for certain components increases exposure to supply shortages, as these suppliers may lack capacity or face their own operational constraints, disrupting production timelines and forcing potential delays or cost escalations.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2023-p0072"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0072",
+                  "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+                  "start": 40905,
+                  "end": 41057,
+                  "sentence_id": "E4"
+                }
+              ]
+            },
+            {
+              "text": "Such dependency amplifies pricing pressures due to limited negotiation leverage, potentially leading to higher component costs, which could compress gross margins and impact profitability, especially amid industry-wide commodity price volatility.",
+              "kind": "interpretation",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2023-p0072",
+                "AAPL-2023-p0119",
+                "AAPL-2023-p0120"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0119",
+                  "quote": "The Company\u2019s gross margins are subject to volatility and downward pressure due to a variety of factors, including: continued industry-wide global product pricing pressures and product pricing actions that the Company may take in response to such pressures; increased competition; the Company\u2019s ability to effectively stimulate demand for certain of its products and services; compressed product life cycles; supply shortages; potential increases in the cost of components, outside manufacturing services, and developing, acquiring and delivering content for the Company\u2019s services; the Company\u2019s ability to manage product quality and warranty costs effectively; shifts in the mix of products and services, or in the geographic, currency or channel mix, including to the extent that regulatory changes require the Company to",
+                  "start": 81206,
+                  "end": 82030,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "AAPL-2023-p0120",
+                  "quote": "modify its product and service offerings; fluctuations in foreign exchange rates; inflation and other macroeconomic pressures; and the introduction of new products or services, including new products or services with higher cost structures.",
+                  "start": 82031,
+                  "end": 82271,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "AAPL-2023-p0072",
+                  "quote": "Because the Company currently obtains certain components from single or limited sources, the Company is subject to significant supply and pricing risks.",
+                  "start": 40905,
+                  "end": 41057,
+                  "sentence_id": "E4"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 9.879999250173569,
+          "prompt_tokens": 560,
+          "generation_tokens": 96,
+          "peak_mlx_memory_bytes": 2935260500,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 13.385007916018367,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "D06",
+      "wall_seconds": 7.7636562921106815,
+      "peak_rss_mib": 586.125,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "DELL-2023-p0125",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 87771,
+            "end": 88619,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "To complete an acquisition, we may be required to use substantial amounts of cash, engage in equity or debt financings, or enter into credit agreements to secure additional funds. Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility. Further, an acquisition may negatively affect our results of operations because it may expose us to unexpected liabilities, require the incurrence of charges and substantial indebtedness or other liabilities, have adverse tax consequences, result in acquired in-process research and development expenses, or in the future require the amortization, write-down, or impairment of amounts related to deferred compensation, goodwill, and other intangible assets, or fail to generate a financial return sufficient to offset acquisition costs.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.2170704054785026
+          },
+          {
+            "id": "DELL-2023-p0163",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 117995,
+            "end": 118993,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "As of February 3, 2023, we and our subsidiaries had approximately $29.6 billion aggregate principal amount of indebtedness. As of the same date, we and our subsidiaries also had an additional $6.0 billion available for borrowing under our revolving credit facility and $5.0 billion of availability under our commercial paper program. Although continued debt paydown is part of our overall capital allocation strategy, a substantial portion of our cash flow from operations is used to make interest and other debt service payments, which reduces funds available to us for other purposes such as working capital, capital expenditures, other general corporate purposes, and potential acquisitions. Our indebtedness could also reduce our flexibility in responding to current and changing industry and financial market conditions. We may be able to incur significant additional secured and unsecured indebtedness under the terms of our existing debt, which generally do not restrict our ability to incur",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.13984551207191367
+          },
+          {
+            "id": "DELL-2023-p0482",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 8 \u2014 FINANCIAL STATEMENTS",
+            "anchor": "ie7890d4d5c99489393a12baee1a4e122",
+            "start": 385400,
+            "end": 386495,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Covenants \u2014 The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions. The foregoing credit agreement and indentures contain customary events of default, including failure to make required payments, failure to comply with covenants, and the occurrence of certain events of bankruptcy and insolvency. The 2021 Revolving Credit Facility is also subject to an interest coverage ratio covenant that is tested at the end of each fiscal quarter with respect to the Company\u2019s preceding four fiscal quarters. The Company was in compliance with this financial covenant as of February 3, 2023.\nDELL TECHNOLOGIES INC.\nNOTES TO THE CONSOLIDATED FINANCIAL STATEMENTS (continued)\nAggregate Future Maturities\nThe following table presents the aggregate future maturities of the Company\u2019s debt as of February 3, 2023 for the periods indicated:\nMaturities by Fiscal Year\n2024\n2025\n2026\n2027\n2028",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm#ie7890d4d5c99489393a12baee1a4e122",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0.07473288178038241
+          },
+          {
+            "id": "DELL-2023-p0164",
+            "document_id": "DELL-2023",
+            "company": "DELL",
+            "fiscal_year": 2023,
+            "filed": "2023-03-30",
+            "section": "ITEM 1A \u2014 RISK FACTORS",
+            "anchor": "",
+            "start": 118994,
+            "end": 120023,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "additional unsecured debt and contain significant exceptions to the covenant restricting our ability to incur additional secured debt.\nRisks Relating to Ownership of Our Class C Common Stock\nOur multi-class common stock structure with different voting rights may adversely affect the trading price of the Class C Common Stock.\nEach share of our Class A Common Stock and each share of our Class B Common Stock has ten votes, while each share of our Class C Common Stock has one vote. Because of these disparate voting rights, Michael Dell and the Susan Lieberman Dell Separate Property Trust (the \u201cMD stockholders\u201d) and certain investment funds affiliated with Silver Lake Partners (the \u201cSLP stockholders\u201d) collectively held common stock representing approximately 95.2% of the total voting power of our outstanding common stock as of February 3, 2023. The limited ability of holders of the Class C Common Stock to influence matters requiring stockholder approval may adversely affect the market price of the Class C Common Stock.",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199623000007/dell-20230203.htm",
+            "accession": "0001571996-23-000007",
+            "sha256": "51046dee27307520efb556042e3aa8e904f586e785109d530f7d4d7a36ea14fa",
+            "score": 0
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "DELL-2023-p0125",
+            "DELL-2023-p0163",
+            "DELL-2023-p0132",
+            "DELL-2023-p0360",
+            "DELL-2023-p0299",
+            "DELL-2023-p0249",
+            "DELL-2023-p0291",
+            "DELL-2023-p0482"
+          ],
+          "generation_passage_ids": [
+            "DELL-2023-p0125",
+            "DELL-2023-p0163",
+            "DELL-2023-p0164",
+            "DELL-2023-p0482"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "DELL-2023-p0124",
+              "passage_ids": [
+                "DELL-2023-p0125"
+              ],
+              "fragments": [
+                {
+                  "citation": "DELL-2023-p0125",
+                  "quote": "Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.",
+                  "start": 87951,
+                  "end": 88082
+                }
+              ],
+              "text": "Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.",
+              "company": "DELL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "DELL-2023-p0124:s5"
+            },
+            {
+              "id": "E2",
+              "passage_id": "DELL-2023-p0163",
+              "passage_ids": [
+                "DELL-2023-p0163",
+                "DELL-2023-p0164"
+              ],
+              "fragments": [
+                {
+                  "citation": "DELL-2023-p0163",
+                  "quote": "We may be able to incur significant additional secured and unsecured indebtedness under the terms of our existing debt, which generally do not restrict our ability to incur",
+                  "start": 118821,
+                  "end": 118993
+                },
+                {
+                  "citation": "DELL-2023-p0164",
+                  "quote": "additional unsecured debt and contain significant exceptions to the covenant restricting our ability to incur additional secured debt.",
+                  "start": 118994,
+                  "end": 119128
+                }
+              ],
+              "text": "We may be able to incur significant additional secured and unsecured indebtedness under the terms of our existing debt, which generally do not restrict our ability to incur additional unsecured debt and contain significant exceptions to the covenant restricting our ability to incur additional secured debt.",
+              "company": "DELL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "DELL-2023-p0163:s6"
+            },
+            {
+              "id": "E3",
+              "passage_id": "DELL-2023-p0482",
+              "passage_ids": [
+                "DELL-2023-p0482"
+              ],
+              "fragments": [
+                {
+                  "citation": "DELL-2023-p0482",
+                  "quote": "Covenants \u2014 The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.",
+                  "start": 385400,
+                  "end": 385688
+                }
+              ],
+              "text": "Covenants \u2014 The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.",
+              "company": "DELL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "DELL-2023-p0482:s0"
+            },
+            {
+              "id": "E4",
+              "passage_id": "DELL-2023-p0482",
+              "passage_ids": [
+                "DELL-2023-p0482"
+              ],
+              "fragments": [
+                {
+                  "citation": "DELL-2023-p0482",
+                  "quote": "The foregoing credit agreement and indentures contain customary events of default, including failure to make required payments, failure to comply with covenants, and the occurrence of certain events of bankruptcy and insolvency.",
+                  "start": 385689,
+                  "end": 385917
+                }
+              ],
+              "text": "The foregoing credit agreement and indentures contain customary events of default, including failure to make required payments, failure to comply with covenants, and the occurrence of certain events of bankruptcy and insolvency.",
+              "company": "DELL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "DELL-2023-p0482:s1"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "DELL-2023-p0125:s5",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 542,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "c3a10f7b4f1ddb7c0a270f8bfe02d74d0f714e1941f48adebf0cf32d65e07cfa",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] DELL FY2023\nSuch debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.\n\n[E2] DELL FY2023\nWe may be able to incur significant additional secured and unsecured indebtedness under the terms of our existing debt, which generally do not restrict our ability to incur additional unsecured debt and contain significant exceptions to the covenant restricting our ability to incur additional secured debt.\n\n[E3] DELL FY2023\nCovenants \u2014 The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.\n\n[E4] DELL FY2023\nThe foregoing credit agreement and indentures contain customary events of default, including failure to make required payments, failure to comply with covenants, and the occurrence of certain events of bankruptcy and insolvency.\n\nQUESTION: How can acquisition debt covenants constrain Dell capital raising and operating flexibility in 2023?",
+          "system_sha256": "19981dc66db9987dfad9c982c02c6375569a83b8ad431729e3038aa6d385ef09"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Acquisition debt covenants may restrict Dell\u2019s ability to raise capital by limiting new debt issuances or additional secured financing, especially if covenants require minimum interest coverage or leverage ratios that are not met [E1] [E3].  \nInterpretation: These restrictions could reduce operating flexibility by limiting access to liquidity for strategic acquisitions, as the company may need to pre-approve or pre-fund deals under strict financial thresholds [E2] [E4].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 7.348095499910414,
+              "prompt_tokens": 455,
+              "generation_tokens": 97,
+              "peak_mlx_memory_bytes": 2935260500
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Acquisition debt covenants may restrict Dell\u2019s ability to raise capital by limiting new debt issuances or additional secured financing, especially if covenants require minimum interest coverage or leverage ratios that are not met.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "DELL-2023-p0125",
+                "DELL-2023-p0482"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "DELL-2023-p0125",
+                  "quote": "Such debt financings could involve restrictive covenants that might limit our capital-raising activities and operating flexibility.",
+                  "start": 87951,
+                  "end": 88082,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "DELL-2023-p0482",
+                  "quote": "Covenants \u2014 The credit agreement governing the 2021 Revolving Credit Facility and the indentures governing the Senior Notes and the Legacy Notes and Debentures impose various limitations, subject to exceptions, on creating certain liens and entering into sale and lease-back transactions.",
+                  "start": 385400,
+                  "end": 385688,
+                  "sentence_id": "E3"
+                }
+              ]
+            },
+            {
+              "text": "These restrictions could reduce operating flexibility by limiting access to liquidity for strategic acquisitions, as the company may need to pre-approve or pre-fund deals under strict financial thresholds.",
+              "kind": "interpretation",
+              "origin": "generated_text",
+              "citations": [
+                "DELL-2023-p0163",
+                "DELL-2023-p0164",
+                "DELL-2023-p0482"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "DELL-2023-p0163",
+                  "quote": "We may be able to incur significant additional secured and unsecured indebtedness under the terms of our existing debt, which generally do not restrict our ability to incur",
+                  "start": 118821,
+                  "end": 118993,
+                  "sentence_id": "E2"
+                },
+                {
+                  "citation": "DELL-2023-p0164",
+                  "quote": "additional unsecured debt and contain significant exceptions to the covenant restricting our ability to incur additional secured debt.",
+                  "start": 118994,
+                  "end": 119128,
+                  "sentence_id": "E2"
+                },
+                {
+                  "citation": "DELL-2023-p0482",
+                  "quote": "The foregoing credit agreement and indentures contain customary events of default, including failure to make required payments, failure to comply with covenants, and the occurrence of certain events of bankruptcy and insolvency.",
+                  "start": 385689,
+                  "end": 385917,
+                  "sentence_id": "E4"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 7.348095499910414,
+          "prompt_tokens": 455,
+          "generation_tokens": 97,
+          "peak_mlx_memory_bytes": 2935260500,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 7.725632749963552,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "D07",
+      "wall_seconds": 14.779892959166318,
+      "peak_rss_mib": 586.125,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "HPQ-2024-p0075",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 45997,
+            "end": 47054,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives. We also need to ensure our existing offerings in this space, such as managed services and print software, remain sufficiently differentiated. Our efforts to mitigate the impact of these challenges, such as by seeking to increase our margin and market share and drive demand in subscription services and other recurring-revenue based business models, may not be successful, and shifting to recurring-revenue based business may require us to forego upfront revenue. In addition, we may be unable to successfully execute our strategy, sufficiently invest in, prioritize research and development, market and scale, or accurately project the financial performance of our key growth areas, other strategic growth initiatives and existing offerings, accurately predict technological or business trends or control costs. Moreover, the process of developing new high-technology products, services and solutions and enhancing existing products,",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.10460313497424642
+          },
+          {
+            "id": "HPQ-2024-p0103",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 69744,
+            "end": 70838,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Industry consolidation may also affect competition by creating larger, more homogeneous and potentially stronger competitors in the markets in which we operate. Our competitors may also affect our business by entering into exclusive arrangements with our existing or potential customers or suppliers. Furthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business. We may not be able to prevent the use of imitation print supplies with our printers using technological protection measures, including due to regulatory issues or other legal challenges. In addition, online and omnichannel retailers, resellers and distributors often sell our products alongside competing products, including non-original supplies, or they may highlight the availability of lower cost non-original supplies. We expect this competition will continue.\nIf we cannot continue to produce high-quality and secure products and services, our reputation, business and financial performance may suffer.",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.09851734364585081
+          },
+          {
+            "id": "HPQ-2024-p0209",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations.",
+            "anchor": "",
+            "start": 152212,
+            "end": 153281,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Report on Form 10-K for the fiscal year ended October 31, 2023.\nHP INC. AND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations\nOVERVIEW\nHP delivers innovative and sustainable devices, services, and subscriptions for personal computing, printing, 3D printing, hybrid work, gaming and other related technologies. We have three reportable segments: Personal Systems, Printing, and Corporate Investments. The Personal Systems segment offers commercial and consumer desktops, notebooks and workstations (including HP\u2019s portfolio of AI PCs and workstations), thin clients, retail POS systems, displays, hybrid systems, software, solutions including endpoint security, and services. The Printing segment provides consumer and commercial printer hardware, supplies, solutions and services. Corporate Investments include certain business incubation and investment projects.\n\u2022 In Personal Systems, our long-term strategic focus is on:\n\u25e6 profitable growth through innovation, market segmentation and simplification of our portfolio;",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.09575010769076228
+          },
+          {
+            "id": "HPQ-2024-p0074",
+            "document_id": "HPQ-2024",
+            "company": "HPQ",
+            "fiscal_year": 2024,
+            "filed": "2024-12-13",
+            "section": "ITEM 1A. Risk Factors.",
+            "anchor": "",
+            "start": 44938,
+            "end": 45996,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "To execute our strategy, we must, among other things, optimize our cost structure, make long-term investments, develop or acquire and appropriately protect intellectual property, commit significant research and development and other resources, evolve our go-to-market strategy and business model to meet changing market dynamics, forces and demand. In addition, we need to innovate, develop and execute on evolutionary strategies in a rapidly changing and increasingly hybrid environment, seize on disruptive opportunities and effectively respond to secular trends and shifts in customer preferences. Our financial performance will depend in part on our ability to remain competitive in offerings geared towards new or emerging market trends, such as artificial intelligence and hybrid consumption. For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products",
+            "url": "https://www.sec.gov/Archives/edgar/data/47217/000004721724000080/hpq-20241031.htm",
+            "accession": "0000047217-24-000080",
+            "sha256": "0886f64e5a35a1f1c6bfcca4e02d5bacfb034a7d076e302f0638cf46d688a639",
+            "score": 0.09200038581491736
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "HPQ-2024-p0242",
+            "HPQ-2024-p0214",
+            "HPQ-2024-p0032",
+            "HPQ-2024-p0075",
+            "HPQ-2024-p0046",
+            "HPQ-2024-p0103",
+            "HPQ-2024-p0209",
+            "HPQ-2024-p0074"
+          ],
+          "generation_passage_ids": [
+            "HPQ-2024-p0074",
+            "HPQ-2024-p0075",
+            "HPQ-2024-p0103",
+            "HPQ-2024-p0209"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "HPQ-2024-p0075",
+              "passage_ids": [
+                "HPQ-2024-p0074",
+                "HPQ-2024-p0075"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2024-p0074",
+                  "quote": "For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products",
+                  "start": 45737,
+                  "end": 45996
+                },
+                {
+                  "citation": "HPQ-2024-p0075",
+                  "quote": "and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.",
+                  "start": 45997,
+                  "end": 46119
+                }
+              ],
+              "text": "For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.",
+              "company": "HPQ",
+              "fiscal_year": 2024,
+              "source_sentence_id": "HPQ-2024-p0075:s3"
+            },
+            {
+              "id": "E2",
+              "passage_id": "HPQ-2024-p0103",
+              "passage_ids": [
+                "HPQ-2024-p0103"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2024-p0103",
+                  "quote": "Furthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business.",
+                  "start": 70045,
+                  "end": 70229
+                }
+              ],
+              "text": "Furthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business.",
+              "company": "HPQ",
+              "fiscal_year": 2024,
+              "source_sentence_id": "HPQ-2024-p0103:s2"
+            },
+            {
+              "id": "E3",
+              "passage_id": "HPQ-2024-p0209",
+              "passage_ids": [
+                "HPQ-2024-p0209"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2024-p0209",
+                  "quote": "AND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations\nOVERVIEW\nHP delivers innovative and sustainable devices, services, and subscriptions for personal computing, printing, 3D printing, hybrid work, gaming and other related technologies.",
+                  "start": 152284,
+                  "end": 152570
+                }
+              ],
+              "text": "AND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations\nOVERVIEW\nHP delivers innovative and sustainable devices, services, and subscriptions for personal computing, printing, 3D printing, hybrid work, gaming and other related technologies.",
+              "company": "HPQ",
+              "fiscal_year": 2024,
+              "source_sentence_id": "HPQ-2024-p0209:s1"
+            },
+            {
+              "id": "E4",
+              "passage_id": "HPQ-2024-p0209",
+              "passage_ids": [
+                "HPQ-2024-p0209"
+              ],
+              "fragments": [
+                {
+                  "citation": "HPQ-2024-p0209",
+                  "quote": "The Printing segment provides consumer and commercial printer hardware, supplies, solutions and services.",
+                  "start": 152936,
+                  "end": 153041
+                }
+              ],
+              "text": "The Printing segment provides consumer and commercial printer hardware, supplies, solutions and services.",
+              "company": "HPQ",
+              "fiscal_year": 2024,
+              "source_sentence_id": "HPQ-2024-p0209:s4"
+            }
+          ],
+          "omitted": [],
+          "estimated_prompt_tokens_including_reserve": 544,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "cda14f736ae89ace12d5b7b683d9011836991903810f22419eba907a4a58f7a3",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] HPQ FY2024\nFor example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.\n\n[E2] HPQ FY2024\nFurthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business.\n\n[E3] HPQ FY2024\nAND SUBSIDIARIES\nManagement\u2019s Discussion and Analysis of\nFinancial Condition and Results of Operations\nOVERVIEW\nHP delivers innovative and sustainable devices, services, and subscriptions for personal computing, printing, 3D printing, hybrid work, gaming and other related technologies.\n\n[E4] HPQ FY2024\nThe Printing segment provides consumer and commercial printer hardware, supplies, solutions and services.\n\nQUESTION: Explain the separate effects of digitization and third-party supplies on HP printing demand in 2024.",
+          "system_sha256": "19981dc66db9987dfad9c982c02c6375569a83b8ad431729e3038aa6d385ef09"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Digitization reduces demand for printing products as users shift to digital workflows and hybrid work environments, decreasing overall printing volume and impacting printer hardware and supply sales [E1] [E2].  \nDisclosure: Third-party non-original supplies (e.g., remanufactured, refills) offer lower-cost alternatives, directly competing with HP\u2019s supply sales and eroding margins in the Printing segment [E2] [E1].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 7.222234749933705,
+              "prompt_tokens": 457,
+              "generation_tokens": 88,
+              "peak_mlx_memory_bytes": 2935260500
+            }
+          },
+          {
+            "raw": "Disclosure: Digitization drives reduced demand for printing solutions as hybrid work and digital workflows decrease paper-based output, pressuring printer hardware and supply sales [E1] [E1].  \nDisclosure: Third-party non-original supplies (e.g., remanufactured, refills) undercut HP pricing, increasing market penetration of generic alternatives and reducing supply segment revenue [E2] [E1].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 7.206428249832243,
+              "prompt_tokens": 599,
+              "generation_tokens": 80,
+              "peak_mlx_memory_bytes": 2974221808
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Digitization drives reduced demand for printing solutions as hybrid work and digital workflows decrease paper-based output, pressuring printer hardware and supply sales.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "HPQ-2024-p0074",
+                "HPQ-2024-p0075"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "HPQ-2024-p0074",
+                  "quote": "For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products",
+                  "start": 45737,
+                  "end": 45996,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "HPQ-2024-p0075",
+                  "quote": "and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.",
+                  "start": 45997,
+                  "end": 46119,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "HPQ-2024-p0074",
+                  "quote": "For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products",
+                  "start": 45737,
+                  "end": 45996,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "HPQ-2024-p0075",
+                  "quote": "and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.",
+                  "start": 45997,
+                  "end": 46119,
+                  "sentence_id": "E1"
+                }
+              ]
+            },
+            {
+              "text": "Third-party non-original supplies (e.g., remanufactured, refills) undercut HP pricing, increasing market penetration of generic alternatives and reducing supply segment revenue.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "HPQ-2024-p0074",
+                "HPQ-2024-p0075",
+                "HPQ-2024-p0103"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "HPQ-2024-p0103",
+                  "quote": "Furthermore, non-original supplies (including imitation, refill or remanufactured alternatives), which are often available at lower prices, compete with our Printing Supplies business.",
+                  "start": 70045,
+                  "end": 70229,
+                  "sentence_id": "E2"
+                },
+                {
+                  "citation": "HPQ-2024-p0074",
+                  "quote": "For example, in fiscal year 2024 we experienced continued demand softness in printing products and solutions and we believe we and others in our industry face continuing secular challenges related to, among other things, decreased demand for printing products",
+                  "start": 45737,
+                  "end": 45996,
+                  "sentence_id": "E1"
+                },
+                {
+                  "citation": "HPQ-2024-p0075",
+                  "quote": "and solutions as a result of increased digitization and hybrid work, and increasing competition from generic alternatives.",
+                  "start": 45997,
+                  "end": 46119,
+                  "sentence_id": "E1"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 14.428662999765947,
+          "prompt_tokens": 1056,
+          "generation_tokens": 168,
+          "peak_mlx_memory_bytes": 2974221808,
+          "attempts": 2
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 14.74658391601406,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    },
+    {
+      "id": "D08",
+      "wall_seconds": 7.019070292124525,
+      "peak_rss_mib": 586.125,
+      "result": {
+        "origin": "generated_text",
+        "evidence": [
+          {
+            "id": "AAPL-2023-p0092",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 59045,
+            "end": 59856,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Losses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.\nThe Company\u2019s business requires it to use and store confidential information, including personal information, with respect to the Company\u2019s customers and employees. The Company devotes significant resources to network and data security, including through the use of encryption and other security measures intended to protect its systems and data. But these measures cannot provide absolute security, and losses or unauthorized access to or releases of confidential information occur and could materially adversely affect the Company\u2019s business, reputation, results of operations and financial condition.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.15719410372752513
+          },
+          {
+            "id": "AAPL-2023-p0117",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 79260,
+            "end": 80205,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "In addition to the risks generally relating to the collection, use, retention, security and transfer of personal information, the Company is also subject to specific obligations relating to information considered sensitive under applicable laws, such as health data, financial data and biometric data. Health data and financial data are subject to additional privacy, security and breach notification requirements, and the Company is subject to audit by governmental authorities regarding the Company\u2019s compliance with these obligations. If the Company fails to adequately comply with these rules and requirements, or if health data or financial data is handled in a manner not permitted by law or under the Company\u2019s agreements with healthcare or financial institutions, the Company can be subject to litigation or government investigations, and can be liable for associated investigatory expenses, and can also incur significant fees or fines.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.11444709197606386
+          },
+          {
+            "id": "AAPL-2023-p0095",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 61631,
+            "end": 61979,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.10481567394172864
+          },
+          {
+            "id": "AAPL-2023-p0115",
+            "document_id": "AAPL-2023",
+            "company": "AAPL",
+            "fiscal_year": 2023,
+            "filed": "2023-11-03",
+            "section": "Item 1A. Risk Factors",
+            "anchor": "",
+            "start": 77784,
+            "end": 78668,
+            "offset_basis": "normalized text; html-normalized-v2",
+            "text": "The Company is subject to an increasing number of federal, state and international laws relating to the collection, use, retention, security and transfer of various types of personal information. In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries. Several jurisdictions have passed laws in this area, and additional jurisdictions are considering imposing additional restrictions or have laws that are pending. These laws continue to develop and may be inconsistent from jurisdiction to jurisdiction. Complying with emerging and changing requirements causes the Company to incur substantial costs and has required and may in the future require the Company to change its business practices. Noncompliance could result in significant penalties or legal liability.",
+            "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm",
+            "accession": "0000320193-23-000106",
+            "sha256": "845e5f986f9b3659768c37fecf7d9f6405aae4fe9969f498a164bfdaf80d336c",
+            "score": 0.09728347848017471
+          }
+        ],
+        "context_audit": {
+          "strategy": "neighbors_dedup",
+          "search_ids": [
+            "AAPL-2023-p0092",
+            "AAPL-2023-p0117",
+            "AAPL-2023-p0093",
+            "AAPL-2023-p0096",
+            "AAPL-2023-p0094",
+            "AAPL-2023-p0091",
+            "AAPL-2023-p0095",
+            "AAPL-2023-p0115"
+          ],
+          "generation_passage_ids": [
+            "AAPL-2023-p0092",
+            "AAPL-2023-p0095",
+            "AAPL-2023-p0115",
+            "AAPL-2023-p0117"
+          ],
+          "sentences": [
+            {
+              "id": "E1",
+              "passage_id": "AAPL-2023-p0091",
+              "passage_ids": [
+                "AAPL-2023-p0092"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0092",
+                  "quote": "Losses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.",
+                  "start": 59045,
+                  "end": 59252
+                }
+              ],
+              "text": "Losses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0091:s4"
+            },
+            {
+              "id": "E2",
+              "passage_id": "AAPL-2023-p0094",
+              "passage_ids": [
+                "AAPL-2023-p0095"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0095",
+                  "quote": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+                  "start": 61631,
+                  "end": 61979
+                }
+              ],
+              "text": "Although malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0094:s8"
+            },
+            {
+              "id": "E3",
+              "passage_id": "AAPL-2023-p0115",
+              "passage_ids": [
+                "AAPL-2023-p0115"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0115",
+                  "quote": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+                  "start": 77980,
+                  "end": 78155
+                }
+              ],
+              "text": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0115:s1"
+            },
+            {
+              "id": "E4",
+              "passage_id": "AAPL-2023-p0116",
+              "passage_ids": [
+                "AAPL-2023-p0117"
+              ],
+              "fragments": [
+                {
+                  "citation": "AAPL-2023-p0117",
+                  "quote": "In addition to the risks generally relating to the collection, use, retention, security and transfer of personal information, the Company is also subject to specific obligations relating to information considered sensitive under applicable laws, such as health data, financial data and biometric data.",
+                  "start": 79260,
+                  "end": 79561
+                }
+              ],
+              "text": "In addition to the risks generally relating to the collection, use, retention, security and transfer of personal information, the Company is also subject to specific obligations relating to information considered sensitive under applicable laws, such as health data, financial data and biometric data.",
+              "company": "AAPL",
+              "fiscal_year": 2023,
+              "source_sentence_id": "AAPL-2023-p0116:s9"
+            }
+          ],
+          "omitted": [
+            {
+              "id": "AAPL-2023-p0092:s4",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2023-p0093:s0",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2023-p0095:s4",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2023-p0096:s0",
+              "reason": "near_duplicate"
+            },
+            {
+              "id": "AAPL-2023-p0116:s1",
+              "reason": "near_duplicate"
+            }
+          ],
+          "estimated_prompt_tokens_including_reserve": 539,
+          "prompt_token_limit": 2400,
+          "output_token_limit": 650,
+          "context_sha256": "2fc9e8b29b4fa47ebbe2467c74bcd78d0e1b08631da9d5cd32d326e3065786f7",
+          "support_status": "Source identity and sentence presence only; semantic support requires review.",
+          "transmitted_context": "UNTRUSTED SOURCES:\n[E1] AAPL FY2023\nLosses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.\n\n[E2] AAPL FY2023\nAlthough malicious attacks perpetrated to gain access to confidential information, including personal information, affect many companies across various industries, the Company is at a relatively greater risk of being targeted because of its high profile and the value of the confidential information it creates, owns, manages, stores and processes.\n\n[E3] AAPL FY2023\nIn many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.\n\n[E4] AAPL FY2023\nIn addition to the risks generally relating to the collection, use, retention, security and transfer of personal information, the Company is also subject to specific obligations relating to information considered sensitive under applicable laws, such as health data, financial data and biometric data.\n\nQUESTION: What specific consequences can unauthorized access to personal information cause for Apple in 2023?",
+          "system_sha256": "19981dc66db9987dfad9c982c02c6375569a83b8ad431729e3038aa6d385ef09"
+        },
+        "citation_support": "Source identity checked; semantic support and completeness await review.",
+        "model_calls": [
+          {
+            "raw": "Disclosure: Unauthorized access to personal information could lead to significant reputational, financial, legal, and operational consequences for Apple [E1].  \nInterpretation: Given Apple's high profile and the sensitivity of the personal data it manages, such breaches may trigger stricter regulatory scrutiny and cross-border data transfer restrictions, especially for health, financial, and biometric data under applicable laws [E4] [E3].",
+            "metadata": {
+              "provider": "mlx",
+              "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+              "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+              "license": "Apache-2.0",
+              "quantization": "4bit MLX",
+              "temperature": 0,
+              "max_tokens": 650,
+              "elapsed_seconds": 6.823251917026937,
+              "prompt_tokens": 452,
+              "generation_tokens": 83,
+              "peak_mlx_memory_bytes": 2974221808
+            }
+          }
+        ],
+        "status": "answered",
+        "answer": {
+          "abstain": false,
+          "claims": [
+            {
+              "text": "Unauthorized access to personal information could lead to significant reputational, financial, legal, and operational consequences for Apple.",
+              "kind": "disclosed_fact",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2023-p0092"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0092",
+                  "quote": "Losses or unauthorized access to or releases of confidential information, including personal information, could subject the Company to significant reputational, financial, legal and operational consequences.",
+                  "start": 59045,
+                  "end": 59252,
+                  "sentence_id": "E1"
+                }
+              ]
+            },
+            {
+              "text": "Given Apple's high profile and the sensitivity of the personal data it manages, such breaches may trigger stricter regulatory scrutiny and cross-border data transfer restrictions, especially for health, financial, and biometric data under applicable laws.",
+              "kind": "interpretation",
+              "origin": "generated_text",
+              "citations": [
+                "AAPL-2023-p0115",
+                "AAPL-2023-p0117"
+              ],
+              "evidence_spans": [
+                {
+                  "citation": "AAPL-2023-p0117",
+                  "quote": "In addition to the risks generally relating to the collection, use, retention, security and transfer of personal information, the Company is also subject to specific obligations relating to information considered sensitive under applicable laws, such as health data, financial data and biometric data.",
+                  "start": 79260,
+                  "end": 79561,
+                  "sentence_id": "E4"
+                },
+                {
+                  "citation": "AAPL-2023-p0115",
+                  "quote": "In many cases, these laws apply not only to third-party transactions, but also restrict transfers of personal information among the Company and its international subsidiaries.",
+                  "start": 77980,
+                  "end": 78155,
+                  "sentence_id": "E3"
+                }
+              ]
+            }
+          ],
+          "limitations": [],
+          "conflicts": []
+        },
+        "model": {
+          "provider": "mlx",
+          "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+          "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+          "license": "Apache-2.0",
+          "quantization": "4bit MLX",
+          "temperature": 0,
+          "max_tokens": 650,
+          "elapsed_seconds": 6.823251917026937,
+          "prompt_tokens": 452,
+          "generation_tokens": 83,
+          "peak_mlx_memory_bytes": 2974221808,
+          "attempts": 1
+        },
+        "quality_flags": [],
+        "elapsed_seconds": 6.994792249985039,
+        "trace": [
+          {
+            "tool": "search_documents",
+            "status": "ok",
+            "context_strategy": "neighbors_dedup"
+          },
+          {
+            "tool": "generate_explanation",
+            "status": "answered"
+          }
+        ],
+        "calculations": null
+      }
+    }
+  ]
+}

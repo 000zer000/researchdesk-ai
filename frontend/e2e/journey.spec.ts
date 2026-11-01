@@ -232,11 +232,43 @@ if (live)
     await expect(
       page.getByRole("region", { name: "Verified financial data" }),
     ).toContainText("2023-10-01/2024-09-28");
-    await expect(page.locator(".model-meta")).toContainText(
-      "live local inference",
-    );
+    await expect(
+      page.getByRole("region", { name: "Verified financial data" }),
+    ).toContainText("Deterministic server calculation");
     await page.screenshot({
       path: "test-results/real-v1.1-financial-desktop.png",
       fullPage: true,
     });
   });
+
+test("verified result survives optional AI transport failure", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page
+    .getByLabel("Research question", { exact: true })
+    .fill("Revenue for 2024");
+  await page
+    .getByRole("button", { name: "Research question", exact: true })
+    .click();
+  const result = page.getByRole("region", { name: "Verified financial data" });
+  await expect(result).toContainText(live ? "391,035" : "100");
+  await result.getByText("Formula and verified inputs").first().click();
+  await expect(result).toContainText("Reported consolidated value");
+  await page.route("**/api/research", (route) => {
+    const body = route.request().postDataJSON();
+    if (body.explain) {
+      expect(body.question).toBe("Revenue for 2024");
+      return route.abort("failed");
+    }
+    return route.continue();
+  });
+  await page
+    .getByLabel("Research question", { exact: true })
+    .fill("Operating income for 2024");
+  await page.getByRole("button", { name: "Add AI explanation" }).click();
+  await expect(result).toContainText(live ? "391,035" : "100");
+  await expect(
+    page.getByRole("region", { name: "Optional AI explanation" }),
+  ).toContainText("verified result is unchanged");
+});

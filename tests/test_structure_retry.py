@@ -23,7 +23,10 @@ def test_structural_repair_is_bounded_and_usage_includes_both_calls(populated):
 
     simulated = ExplicitRetryTestDouble()
     result = research(
-        populated, AskInput(question="supply chain risks", method="lexical"), simulated
+        populated,
+        AskInput(question="supply chain risks", method="lexical"),
+        simulated,
+        token_count=lambda text: len(text) // 3,
     )
     assert simulated.calls == 2
     assert result["model"]["generation_tokens"] == 18

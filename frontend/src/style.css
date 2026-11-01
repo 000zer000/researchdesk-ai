@@ -1693,3 +1693,29 @@ footer b {
 .calculation {
   overflow-wrap: anywhere;
 }
+
+.optional-explanation {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid #dce6eb;
+  border-radius: 8px;
+}
+.optional-explanation > button {
+  color: #087e82;
+  background: #edf7f6;
+  border: 1px solid #b8d8d6;
+  border-radius: 6px;
+  padding: 9px 13px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.origin-label {
+  display: block;
+  color: #56717e;
+  font-size: 11px;
+  margin: 7px 0;
+}
+.request-summary {
+  font-size: 12px;
+  line-height: 1.7;
+}

@@ -1,0 +1,5 @@
+{
+  "classification": "Setup failure before any token generation; not model-quality evidence.",
+  "cause": "The restricted download allowed JSON/tokenizer files but omitted the model-provided external chat_template.jinja. The original small model embedded its template in tokenizer_config.json.",
+  "correction": "Retrieve only the pinned model-provided .jinja template; do not substitute an invented prompt template. Preserve all four error records."
+}

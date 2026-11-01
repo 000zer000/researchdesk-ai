@@ -46,6 +46,15 @@ def capability_gap(question: str, company: str) -> str | None:
             "our company",
         }:
             return "The question names a different or unsupported company. Select a covered company and ask about its filings."
+    possessive = re.search(
+        r"\b([A-Z][A-Za-z0-9.&-]*(?:\s+[A-Z][A-Za-z0-9.&-]*){0,2})['’]s\b", question
+    )
+    if possessive:
+        named = possessive.group(1).lower().rstrip(".")
+        if named not in ALIASES[company] | {"company", "the company"} and not re.fullmatch(
+            r"fy\d{4}", named
+        ):
+            return "The named entity is outside the selected-company scope. Select a covered company explicitly."
     explicit_risk = bool(re.search(r"\b(risks?|volatility)\b", lower))
     if (
         re.search(

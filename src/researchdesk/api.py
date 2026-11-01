@@ -17,7 +17,7 @@ from .report import make_report
 from .research import AskInput, research
 from .search import serialize
 
-app = FastAPI(title="ResearchDesk", version="1.1.0")
+app = FastAPI(title="ResearchDesk", version="1.2.0")
 logger = logging.getLogger("researchdesk")
 DB = Annotated[Session, Depends(session_dependency)]
 inference_gate = threading.BoundedSemaphore(1)
@@ -84,10 +84,8 @@ def evidence(passage_id: str, session: DB, as_of: date = date(2024, 12, 31)):
 
 @app.post("/api/research")
 def ask(args: AskInput, session: DB):
-    if not inference_gate.acquire(blocking=False):
-        raise HTTPException(429, "One local inference is already running. Retry shortly.")
     try:
-        return research(session, args)
+        return {"question": args.question, **research(session, args)}
     except TimeoutError as error:
         raise HTTPException(504, str(error)) from error
     except (RuntimeError, FileNotFoundError, ImportError, OSError) as error:
@@ -95,8 +93,6 @@ def ask(args: AskInput, session: DB):
         raise HTTPException(
             503, "Local AI unavailable. Check model setup and server logs."
         ) from error
-    finally:
-        inference_gate.release()
 
 
 @app.post("/api/dcf")
@@ -130,7 +126,7 @@ def export(args: ExportInput, session: DB):
 
 @app.get("/api/evaluation")
 def evaluation():
-    path = ROOT / "evaluation" / "summary.json"
+    path = ROOT / "evaluation" / "v1.2" / "summary.json"
     return (
         json.loads(path.read_text())
         if path.exists()

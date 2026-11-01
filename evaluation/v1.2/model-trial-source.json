@@ -1,0 +1,9 @@
+{
+  "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+  "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+  "license": "Apache-2.0",
+  "repository_size_bytes": 2278972236,
+  "upstream": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507",
+  "quantized_source": "https://huggingface.co/mlx-community/Qwen3-4B-Instruct-2507-4bit",
+  "status": "Reviewed free local default after declared development trials; all setup failures and semantic defects retained. No independent quality claim. Weights excluded from publication."
+}

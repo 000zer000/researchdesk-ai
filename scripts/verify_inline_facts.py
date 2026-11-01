@@ -61,7 +61,7 @@ with Session() as session:
                 }
             )
 assert checks and all(c["verified"] for c in checks), [c for c in checks if not c["verified"]]
-target = ROOT / "evaluation/v1.1/financial-source-checks.json"
+target = ROOT / "evaluation/v1.2/financial-source-checks.json"
 target.write_text(
     json.dumps(
         {

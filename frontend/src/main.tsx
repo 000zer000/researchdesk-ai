@@ -61,19 +61,46 @@ type Evidence = {
   context?: { id: string; text: string }[];
 };
 type Answer = {
+  question?: string;
   status: string;
   origin: string;
   error?: string;
   answer: {
     abstain: boolean;
-    claims: { text: string; citations: string[] }[];
+    claims: {
+      text: string;
+      citations: string[];
+      origin?: string;
+      kind?: string;
+    }[];
     limitations: string[];
     conflicts?: { evidence: { citation: string; quote: string }[] }[];
   } | null;
+  financial_request?: {
+    company: string;
+    years: number[];
+    metrics: string[];
+    operation: string;
+    unit: string;
+    scope: string;
+    definition: string;
+  };
+  explanation?: {
+    status: string;
+    answer?: {
+      claims: { text: string; kind: string; citations: string[] }[];
+      limitations: string[];
+    };
+    limitations?: string[];
+    quality_flags?: string[];
+  };
+  quality_flags?: string[];
+  context_audit?: unknown;
   evidence: Evidence[];
   trace: unknown[];
   calculations: Record<string, number | string> | null;
   verified_financials?: {
+    result_ids?: string[];
     measures: {
       id: string;
       label: string;
@@ -81,6 +108,17 @@ type Answer = {
       periods: string[];
       scope: string;
       definition: string;
+      formula?: string;
+      formula_display?: string;
+      inputs?: {
+        company: string;
+        fiscal_year: number;
+        metric: string;
+        value: number;
+        evidence_id: string;
+        start: string | null;
+        end: string;
+      }[];
       value: number;
       unit: string;
       direction: string;
@@ -285,22 +323,32 @@ function App() {
       c.abort();
     };
   }, [assumptions]);
-  async function ask(e: React.FormEvent) {
-    e.preventDefault();
-    if (!question.trim()) return;
+  async function ask(e?: React.FormEvent, explain = false) {
+    e?.preventDefault();
+    const requestQuestion = explain ? answer?.question || question : question;
+    if (!requestQuestion.trim()) return;
     const sequence = ++currentQuery.current;
     const c = new AbortController();
     controller.current = c;
     setBusy(true);
     setResearchError("");
-    setAnswer(null);
-    setEvidence(null);
+    if (!explain) {
+      setAnswer(null);
+      setEvidence(null);
+    }
     const timeout = setTimeout(() => c.abort("timeout"), 100000);
     try {
       const a = await request<Answer>(
         "/api/research",
         post(
-          { company, as_of: asOf, question, method: "hybrid", k: 5 },
+          {
+            company,
+            as_of: asOf,
+            question: requestQuestion,
+            method: "hybrid",
+            k: 8,
+            explain,
+          },
           c.signal,
         ),
       );
@@ -309,14 +357,29 @@ function App() {
         setEvidence(a.evidence[0] || null);
       }
     } catch (e) {
-      if (sequence === currentQuery.current)
-        setResearchError(
-          c.signal.aborted
-            ? c.signal.reason === "timeout"
-              ? "Request timed out. The local service may still be finishing its bounded inference."
-              : "Stopped waiting. The server may finish the current inference within its time budget."
-            : (e as Error).message,
-        );
+      if (sequence === currentQuery.current) {
+        if (explain) {
+          setAnswer((previous) =>
+            previous
+              ? {
+                  ...previous,
+                  explanation: {
+                    status: "unavailable",
+                    limitations: [
+                      "The optional AI request did not complete. Your verified result is unchanged.",
+                    ],
+                  },
+                }
+              : previous,
+          );
+        } else {
+          setResearchError(
+            c.signal.aborted
+              ? "Stopped waiting. The local model may finish within its time budget."
+              : (e as Error).message,
+          );
+        }
+      }
     } finally {
       clearTimeout(timeout);
       if (sequence === currentQuery.current) setBusy(false);
@@ -462,7 +525,7 @@ function App() {
             Evidence before opinion
             <small>Local AI. Explicit assumptions.</small>
           </div>
-          <span className="version">V1.1</span>
+          <span className="version">V1.2</span>
         </div>
       </aside>
       <main>
@@ -633,7 +696,7 @@ function App() {
                   <div className="suggestions">
                     <span>Try asking</span>
                     {[
-                      "How did revenue and operating margin change between 2023 and 2024?",
+                      "How did operating margin change between 2023 and 2024?",
                       "What supply-chain risks are disclosed?",
                       "Does the report disclose next year’s exact revenue?",
                     ].map((q, i) => (
@@ -654,16 +717,20 @@ function App() {
                   <div className="card-header">
                     <h2>Research findings</h2>
                     {answer && (
-                      <span className="small-tag">{answer.origin}</span>
+                      <span className="small-tag">
+                        {answer.origin === "generated_text"
+                          ? "AI generated explanation"
+                          : answer.origin}
+                      </span>
                     )}
                   </div>
-                  {busy ? (
+                  {busy && !answer ? (
                     <div className="empty-state">
                       <LoaderCircle className="spin" size={30} />
-                      <h3>Reading the evidence</h3>
+                      <h3>Preparing your answer</h3>
                       <p>
-                        Retrieving passages and generating locally. Inference is
-                        bounded to 90 seconds.
+                        Checking your request and sources. Optional AI text may
+                        take longer; verified calculations remain available.
                       </p>
                     </div>
                   ) : researchError ? (
@@ -690,23 +757,42 @@ function App() {
                         className={`result-status ${answer.status === "answered" ? "" : "muted"}`}
                       >
                         <Check size={15} />
-                        {answer.status.replaceAll("_", " ")}
+                        {answer.status === "answered"
+                          ? answer.financial_request
+                            ? "Verified result"
+                            : "Generated explanation · review required"
+                          : answer.status.replaceAll("_", " ")}
                         <span>{answer.elapsed_seconds.toFixed(1)}s</span>
                       </div>
                       {answer.error && <p className="error">{answer.error}</p>}
-                      {answer.answer?.claims.map((c, i) => (
-                        <div className="claim" key={i}>
-                          <p>{c.text}</p>
-                          <div className="citations">
-                            {c.citations.map((id) => (
-                              <button key={id} onClick={() => openEvidence(id)}>
-                                <FileText size={12} />
-                                {id}
-                              </button>
-                            ))}
+                      {answer.question && answer.question !== question && (
+                        <p className="support-note">
+                          This result answers: {answer.question}
+                        </p>
+                      )}
+                      {!answer.verified_financials &&
+                        answer.answer?.claims.map((c, i) => (
+                          <div className="claim" key={i}>
+                            <small className="origin-label">
+                              AI generated ·{" "}
+                              {c.kind === "interpretation"
+                                ? "interpretation"
+                                : "reported disclosure (model label)"}
+                            </small>
+                            <p>{c.text}</p>
+                            <div className="citations">
+                              {c.citations.map((id) => (
+                                <button
+                                  key={id}
+                                  onClick={() => openEvidence(id)}
+                                >
+                                  <FileText size={12} />
+                                  {id}
+                                </button>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
                       {answer.answer?.limitations.length ? (
                         <div className="limitations">
                           <CircleHelp size={15} />
@@ -743,34 +829,75 @@ function App() {
                           className="calculation"
                           aria-label="Verified financial data"
                         >
-                          <h3>Verified financial data</h3>
-                          <p>
-                            Conclusions above are withheld when the model or
-                            sources disagree. These records preserve the source
-                            basis.
-                          </p>
-                          {answer.verified_financials.measures.map((m) => (
-                            <div className="claim" key={m.id}>
-                              <strong>
-                                {m.label}: {money(m.value, 2)} {m.unit}
-                              </strong>
-                              <p>
-                                {m.company} · {m.periods.join(" → ")} ·{" "}
-                                {m.scope} · {m.direction}
-                              </p>
-                              <small>Definition: {m.definition}</small>
-                              <div className="citations">
-                                {m.citations.map((id) => (
-                                  <button
-                                    key={id}
-                                    onClick={() => openEvidence(id)}
-                                  >
-                                    {id}
-                                  </button>
-                                ))}
+                          <h3>
+                            {answer.status === "answered"
+                              ? "Verified calculation"
+                              : "Verified source observations"}
+                          </h3>
+                          <small className="origin-label">
+                            Deterministic server calculation · no model approval
+                            required
+                          </small>
+                          {answer.financial_request && (
+                            <p className="request-summary">
+                              {answer.financial_request.company} · FY
+                              {answer.financial_request.years.join(
+                                " → FY",
+                              )} ·{" "}
+                              {answer.financial_request.metrics
+                                .join(", ")
+                                .replaceAll("_", " ")}{" "}
+                              · {answer.financial_request.operation} ·{" "}
+                              {answer.financial_request.unit} ·{" "}
+                              {answer.financial_request.scope}
+                            </p>
+                          )}
+                          {answer.verified_financials.measures
+                            .filter(
+                              (m) =>
+                                !answer.verified_financials?.result_ids ||
+                                answer.verified_financials.result_ids.includes(
+                                  m.id,
+                                ),
+                            )
+                            .map((m) => (
+                              <div className="claim" key={m.id}>
+                                <strong>
+                                  {m.label}: {money(m.value, 2)} {m.unit}
+                                </strong>
+                                <p>
+                                  {m.company} · {m.periods.join(" → ")} ·{" "}
+                                  {m.scope} · {m.direction}
+                                </p>
+                                <details>
+                                  <summary>Formula and verified inputs</summary>
+                                  <p>
+                                    {m.formula_display ||
+                                      m.formula ||
+                                      m.definition}
+                                  </p>
+                                  {(m.inputs || []).map((input, idx) => (
+                                    <p key={idx}>
+                                      {input.company} FY{input.fiscal_year} ·{" "}
+                                      {input.metric.replaceAll("_", " ")}:{" "}
+                                      {money(input.value, 3)} USD million ·{" "}
+                                      {input.start || "instant"} / {input.end}
+                                    </p>
+                                  ))}
+                                  <small>Definition: {m.definition}</small>
+                                </details>
+                                <div className="citations">
+                                  {m.citations.map((id) => (
+                                    <button
+                                      key={id}
+                                      onClick={() => openEvidence(id)}
+                                    >
+                                      {id}
+                                    </button>
+                                  ))}
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            ))}
                           {answer.verified_financials.conflicts.map((c, i) => (
                             <p className="error" key={i}>
                               {c.metric}: {c.reason}
@@ -819,9 +946,79 @@ function App() {
                           </details>
                         </section>
                       )}
+                      {answer.financial_request &&
+                        answer.status === "answered" && (
+                          <section
+                            className="optional-explanation"
+                            aria-label="Optional AI explanation"
+                          >
+                            <h3>Optional AI explanation</h3>
+                            {!answer.explanation ||
+                            answer.explanation.status === "not_requested" ? (
+                              <button
+                                disabled={busy}
+                                onClick={() => ask(undefined, true)}
+                              >
+                                Add AI explanation
+                              </button>
+                            ) : (
+                              <>
+                                <small className="origin-label">
+                                  AI generated ·{" "}
+                                  {answer.explanation.status.replaceAll(
+                                    "_",
+                                    " ",
+                                  )}
+                                </small>
+                                {answer.explanation.answer?.claims.map(
+                                  (c, i) => (
+                                    <div className="claim" key={i}>
+                                      <small>
+                                        {c.kind === "interpretation"
+                                          ? "Interpretation"
+                                          : "Reported disclosure (model label)"}
+                                      </small>
+                                      <p>{c.text}</p>
+                                      <div className="citations">
+                                        {c.citations.map((id) => (
+                                          <button
+                                            key={id}
+                                            onClick={() => openEvidence(id)}
+                                          >
+                                            {id}
+                                          </button>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ),
+                                )}
+                                {(
+                                  answer.explanation.answer?.limitations ||
+                                  answer.explanation.limitations ||
+                                  []
+                                ).map((l, i) => (
+                                  <p key={i}>{l}</p>
+                                ))}
+                                {answer.explanation.status !== "answered" && (
+                                  <p>
+                                    The verified calculation above remains
+                                    available. AI text is optional.
+                                  </p>
+                                )}
+                              </>
+                            )}
+                          </section>
+                        )}
+                      {answer.quality_flags?.length ||
+                      answer.explanation?.quality_flags?.length ? (
+                        <p className="limitations">
+                          The explanation may be brief or incomplete. Inspect
+                          the evidence before using it.
+                        </p>
+                      ) : null}
                       <p className="support-note">
                         {answer.verified_financials
-                          ? "Financial values and complete input citations are checked against the ledger. Displayed financial wording is rendered by code."
+                          ? "Calculated from a validated request and verified inputs. Optional AI text has no authority over the result."
                           : "Citation IDs and exact evidence spans are checked. Semantic support and answer completeness still need human review."}
                       </p>
                       {answer.model && (
@@ -833,7 +1030,16 @@ function App() {
                       )}
                       <details className="trace">
                         <summary>Inspect tool trace</summary>
-                        <pre>{JSON.stringify(answer.trace, null, 2)}</pre>
+                        <pre>
+                          {JSON.stringify(
+                            {
+                              steps: answer.trace,
+                              context: answer.context_audit,
+                            },
+                            null,
+                            2,
+                          )}
+                        </pre>
                       </details>
                     </>
                   )}
@@ -1308,17 +1514,27 @@ function App() {
                   <FlaskConical size={22} />
                   <h2>Evaluation, without shortcuts</h2>
                   <p>
-                    The v1.1 evaluation uses a separately frozen question batch.
-                    Archived v1.0 runs remain available and are not relabeled as
-                    fresh tests. Actual local inference is separate from
-                    deterministic CI.
+                    The v1.2 evaluation separates deterministic execution from
+                    generated explanations and records the context actually sent
+                    to the model. Archived v1.0 runs remain available and are
+                    not relabeled as fresh tests. Actual local inference is
+                    separate from deterministic CI.
                   </p>
                   <p>
                     Ten actual answers and source excerpts are prepared for
                     human review. That review remains pending. Exact quote
                     presence does not establish semantic support.
                   </p>
-                  <details open>
+                  {evaluation && (
+                    <p>
+                      Final questions:{" "}
+                      {String(evaluation.questions ?? "not recorded")} · Human
+                      review: pending. Coverage, accepted numerical accuracy and
+                      qualitative assessment are reported separately; no
+                      aggregate quality score.
+                    </p>
+                  )}
+                  <details>
                     <summary>Recorded evaluation results</summary>
                     <pre className="evaluation-json">
                       {JSON.stringify(evaluation, null, 2)}

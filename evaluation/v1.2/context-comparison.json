@@ -1,0 +1,217 @@
+[
+  {
+    "attempt": "20261031T233532",
+    "mode": "legacy_fragments",
+    "statuses": {
+      "invalid_model_answer": 4
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T233532",
+    "mode": "neighbors_dedup",
+    "statuses": {
+      "answered": 4,
+      "invalid_model_answer": 4,
+      "clarification_required": 2,
+      "abstained": 2
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T233532",
+    "mode": "sentences",
+    "statuses": {
+      "invalid_model_answer": 4
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T233912",
+    "mode": "legacy_fragments",
+    "statuses": {
+      "abstained": 4
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T233912",
+    "mode": "neighbors_dedup",
+    "statuses": {
+      "answered": 4,
+      "abstained": 6,
+      "clarification_required": 2
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T233912",
+    "mode": "sentences",
+    "statuses": {
+      "abstained": 4
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234314",
+    "mode": "legacy_fragments",
+    "statuses": {
+      "answered": 3,
+      "invalid_model_answer": 1
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234314",
+    "mode": "neighbors_dedup",
+    "statuses": {
+      "answered": 5,
+      "invalid_model_answer": 3,
+      "clarification_required": 2,
+      "abstained": 2
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234314",
+    "mode": "sentences",
+    "statuses": {
+      "answered": 1,
+      "invalid_model_answer": 3
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234815",
+    "mode": "legacy_fragments",
+    "statuses": {
+      "invalid_model_answer": 3,
+      "answered": 1
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234815",
+    "mode": "neighbors_dedup",
+    "statuses": {
+      "answered": 4,
+      "invalid_model_answer": 4,
+      "clarification_required": 2,
+      "abstained": 2
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  },
+  {
+    "attempt": "20261031T234815",
+    "mode": "sentences",
+    "statuses": {
+      "answered": 2,
+      "invalid_model_answer": 2
+    },
+    "context_tokens": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "label": "consumed development, not independent final"
+  }
+]

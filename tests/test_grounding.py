@@ -8,7 +8,8 @@ import pytest
 
 from researchdesk.db import Document, Fact, Passage
 from researchdesk.finance import financial_plan, historical
-from researchdesk.grounding import validate_financial, validate_prose_support
+from researchdesk.grounding import validate_prose_provenance
+from researchdesk.legacy_contracts import validate_financial
 from researchdesk.research import AskInput, research
 from researchdesk.search import specificity
 
@@ -60,7 +61,7 @@ def test_margin_variants_correct_direction_and_all_four_inputs(populated, questi
         ("citations", ["AAPL-2024-cfo"]),
     ],
 )
-def test_every_financial_dimension_fails_closed(populated, key, bad):
+def test_model_copy_has_no_authority_over_financial_result(populated, key, bad):
     def corrupt(assertions):
         assertions[0][key] = bad
 
@@ -69,8 +70,8 @@ def test_every_financial_dimension_fails_closed(populated, key, bad):
         AskInput(question="2024 CFO minus capex", method="lexical"),
         ContractCopyTestDouble(corrupt),
     )
-    assert r["status"] == "financial_conclusion_withheld"
-    assert not r["answer"]["claims"] and r["answer"]["abstain"]
+    assert r["status"] == "answered"
+    assert r["answer"]["claims"] and not r["answer"]["abstain"]
     assert r["verified_financials"]["measures"][0]["value"] == 25
     assert len(r["verified_financials"]["measures"][0]["citations"]) == 2
 
@@ -233,13 +234,13 @@ def test_exact_quotes_are_required_but_not_claimed_to_prove_entailment():
         ],
         "limitations": [],
     }
-    validate_prose_support(a, [p])
+    validate_prose_provenance(a, [p])
     a["claims"][0]["evidence_spans"][0]["quote"] = "Debt could restrict borrowing."
     with pytest.raises(ValueError, match="absent"):
-        validate_prose_support(a, [p])
+        validate_prose_provenance(a, [p])
     a["claims"][0]["evidence_spans"] = []
     with pytest.raises(ValueError, match="Each citation"):
-        validate_prose_support(a, [p])
+        validate_prose_provenance(a, [p])
 
 
 @pytest.mark.parametrize(
@@ -258,7 +259,7 @@ def test_prose_cannot_bypass_financial_contract(text):
         "limitations": [],
     }
     with pytest.raises(ValueError):
-        validate_prose_support(a, [{"id": "x", "text": "A sufficiently long source quote."}])
+        validate_prose_provenance(a, [{"id": "x", "text": "A sufficiently long source quote."}])
 
 
 def test_specificity_prefers_direct_debt_and_supply_evidence_to_boilerplate():
@@ -318,10 +319,10 @@ def test_prose_conflict_requires_two_real_quotes_and_no_conclusion():
             }
         ],
     }
-    validate_prose_support(answer, passages)
+    validate_prose_provenance(answer, passages)
     answer["conflicts"][0]["evidence"][1]["citation"] = "a"
     with pytest.raises(ValueError, match="distinct"):
-        validate_prose_support(answer, passages)
+        validate_prose_provenance(answer, passages)
 
 
 @pytest.mark.integration
@@ -359,7 +360,7 @@ def test_selected_source_spans_are_bound_to_their_passage():
 
 
 @pytest.mark.integration
-def test_valid_json_wrong_value_is_not_repaired_into_agreement(populated):
+def test_financial_model_is_not_called_to_authorize_results(populated):
     class WrongProposal(ContractCopyTestDouble):
         calls = 0
 
@@ -369,7 +370,7 @@ def test_valid_json_wrong_value_is_not_repaired_into_agreement(populated):
 
     simulated = WrongProposal(lambda a: a[0].update(value=999))
     r = research(populated, AskInput(question="2024 revenue"), simulated)
-    assert r["status"] == "financial_conclusion_withheld" and simulated.calls == 1
+    assert r["status"] == "answered" and simulated.calls == 0
 
 
 @pytest.mark.integration
@@ -433,7 +434,7 @@ def test_compact_fy_notation_selects_only_requested_period(populated):
 )
 def test_gross_word_does_not_override_an_unsupported_adjusted_definition(populated, question):
     r = research(populated, AskInput(question=question), NeverCalled())
-    assert r["status"] == "abstained" and not r["answer"]["claims"]
+    assert r["status"] in {"abstained", "clarification_required"} and not r["answer"]["claims"]
 
 
 @pytest.mark.integration
@@ -463,7 +464,7 @@ def test_calendar_comparisons_cannot_bypass_financial_contract(populated, questi
 
 
 @pytest.mark.integration
-def test_calendar_wrong_unit_or_direction_withholds_conclusion(populated):
+def test_calendar_ignores_model_proposal_and_retains_verified_direction(populated):
     for year, start, end in [
         (2023, date(2022, 9, 25), date(2023, 9, 30)),
         (2024, date(2023, 10, 1), date(2024, 9, 28)),
@@ -476,7 +477,10 @@ def test_calendar_wrong_unit_or_direction_withholds_conclusion(populated):
         AskInput(question="Compare fiscal 2023 and fiscal 2024 week counts"),
         ContractCopyTestDouble(lambda a: a[-1].update(direction="unchanged")),
     )
-    assert r["status"] == "financial_conclusion_withheld" and not r["answer"]["claims"]
+    assert (
+        r["status"] == "answered"
+        and r["verified_financials"]["measures"][-1]["direction"] == "decreased"
+    )
 
 
 @pytest.mark.integration
